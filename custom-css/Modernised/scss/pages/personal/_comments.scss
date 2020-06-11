@@ -1,0 +1,56 @@
+.comments {
+    max-width: $tablet-width;
+    margin: 0 auto;
+
+    .card-header {
+        background-color: $accent;
+
+        a {
+            margin-right: 0.25rem;
+            color: $white;
+        }
+    }
+
+    .card-body {
+        .row {
+            .col-1 {
+                display: none;
+            }
+
+            .col-10 {
+                margin: 0;
+
+                .pb-3 {
+                    padding-bottom: 0 !important;
+                }
+            }
+        }
+    }
+
+    .card-footer {
+        background-color: transparent;
+
+        .float-right {
+            display: flex;
+            float: none !important;
+            width: 100%;
+            margin: 0 auto;
+
+            .btn {
+                display: block;
+
+                @media #{$mobile} {
+                    margin-top: 0;
+                }
+
+                + .btn {
+                    margin-left: 1rem;
+                }
+            }
+
+            .btn-outline-danger {
+                display: none;
+            }
+        }
+    }
+}

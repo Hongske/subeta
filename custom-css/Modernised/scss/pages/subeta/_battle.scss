@@ -1,0 +1,691 @@
+// BATTLE COLOSSEUM
+.battle-menu {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: $border-radius !important;
+    background-color: $dark-grey;
+    font-size: 0;
+
+    a {
+        padding: 0.5rem 1rem;
+        color: $white;
+        font-size: 1rem;
+    }
+
+    img,
+    a[href$='scrolls.php'],
+    a[href$='newbies.php'],
+    a[href$='battleguide.php'],
+    a[href$='scores.php'],
+    a[href$='boss_prizes.php'],
+    a[href$='dmg_tracker.php'],
+    + .row.w-100 .col-md-4,
+    + .row.w-100 .col-md-8,
+    + .text-center img[src*='subeta.net/pets'] {
+        display: none;
+    }
+
+    // CHALLENGE AN OPPONENT
+    + center + #battle_challengers {
+        .opponents-list {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            background-color: transparent;
+
+            .card.m-3 {
+                flex-basis: calc((100% - 6rem) / 6);
+                width: auto !important;
+                margin: 0 0 1rem !important;
+
+                &:not(:nth-of-type(6n - 5)) {
+                    margin-left: auto !important;
+                }
+
+                @media #{$tablet} {
+                    flex-basis: calc((100% - 1rem) / 2);
+
+                    &:not(:nth-of-type(6n - 5)) {
+                        margin-left: 0 !important;
+                    }
+
+                    &:nth-of-type(even) {
+                        margin-left: auto !important;
+                    }
+                }
+
+                @media #{$mobile} {
+                    flex-basis: 100%;
+                }
+
+                .statbar {
+                    border-color: $accent;
+                    border-radius: $border-radius;
+
+                    .stat {
+                        height: 100%;
+                        background-color: $accent;
+                    }
+                }
+
+                form {
+                    select {
+                        width: 100% !important;
+                    }
+
+                    p {
+                        display: none;
+                    }
+
+                    .btn {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    // START BATTLE
+    + .ui.segment > form[method='post'] {
+        input[value='Start Battle'] + .ui.grid {
+            margin: 0 !important;
+
+            > .column.wide {
+                width: 100%;
+                padding: 0;
+
+                &:nth-of-type(1) {
+                    td {
+                        padding: 0;
+
+                        @media #{$mobile} {
+                            display: block;
+                            width: 100% !important;
+                        }
+                    }
+
+                    td:nth-child(2) {
+                        h2 {
+                            display: none;
+                        }
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    table {
+                        display: none;
+                    }
+                }
+
+                &:nth-of-type(3),
+                &:nth-of-type(4) {
+                    display: none;
+                }
+            }
+        }
+
+        > br {
+            display: none;
+        }
+    }
+
+    // ACTUAL BATTLE
+    + center {
+        #battleSubmit #battle-ui-main {
+            display: flex;
+            flex-wrap: wrap;
+            height: auto;
+            padding: 0;
+            border: 0;
+
+            .battle-ui-arena,
+            .battle-ui-controls {
+                padding: 1rem;
+                background-color: $white;
+
+                .battle-title,
+                .battle-section-title {
+                    background-color: transparent;
+                    font-size: 1rem;
+                    font-variant: normal;
+                }
+            }
+
+            .battle-ui-arena {
+                display: flex;
+                flex-wrap: wrap;
+                border-bottom: 1px solid $light-grey;
+                border-radius: $border-radius $border-radius 0 0;
+
+                > div:first-child {
+                    flex-basis: 100%;
+                }
+
+                .battle-images,
+                .battle-commentary {
+                    display: none;
+                }
+
+                .battle-names {
+                    display: none;
+                }
+
+                .battle-healthbars {
+                    flex-basis: 70%;
+                    padding: 0;
+                    text-align: right;
+
+                    #healthPet,
+                    #healthOpponent {
+                        display: flex;
+                        width: 100%;
+                    }
+
+                    #healthOpponent {
+                        .health_bar {
+                            .health_total {
+                                border-color: $alert-red;
+
+                                .health_now {
+                                    background-color: $alert-red !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .health_bar {
+                        flex-basis: 60%;
+                        order: 1;
+                        margin-left: auto;
+
+                        .health_total {
+                            width: 100%;
+                            border-color: $accent;
+                            border-radius: $border-radius;
+
+                            .health_now {
+                                border-radius: calc(#{$border-radius} - 1px);
+                                background-color: $accent !important;
+                            }
+                        }
+                    }
+                }
+
+                .battle-status {
+                    flex-basis: 30%;
+                }
+            }
+
+            .battle-ui-controls {
+                position: relative;
+                width: 100%;
+                border: 0;
+                border-radius: 0 0 $border-radius $border-radius;
+
+                .weapons-box-options {
+                    display: block;
+                    width: 100%;
+                    height: auto;
+                    margin: 1rem auto;
+                    padding: 1rem;
+                    border: 0;
+                    background-color: $light-grey;
+                    text-align: center;
+
+                    .weapon-option {
+                        width: auto;
+                        border: 1px solid transparent;
+                        border-radius: $border-radius;
+
+                        &:nth-child(n + 2) {
+                            margin-left: 1rem;
+                        }
+
+                        img {
+                            height: auto;
+                        }
+
+                        &.selected {
+                            border-color: $accent;
+
+                            img {
+                                box-shadow: none;
+                            }
+                        }
+                    }
+                }
+
+                .battle-select {
+                    display: flex;
+                    align-items: center;
+                    width: 50%;
+                    margin: 0 auto 1rem;
+                    padding: 0;
+
+                    @media #{$mobile} {
+                        width: 100%;
+                    }
+
+                    .arrow {
+                        color: $accent;
+                        transform: rotate(-90deg);
+                    }
+
+                    .preview_img {
+                        width: auto;
+                        height: auto;
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                    }
+                }
+
+                #potion,
+                #spell {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // ARMORY
+    + .ui.basic.segment.center.aligned + .ui.basic.segment.center.aligned {
+        .button + .button {
+            margin-left: 1rem;
+
+            @media #{$mobile} {
+                margin-left: 0;
+            }
+        }
+
+        + .ui.basic.segment {
+            padding: 0;
+
+            > .ui.segment:nth-child(1) {
+                h2 {
+                    float: left;
+                    margin: 2px 0.25rem 0 0;
+                    font-weight: bold;
+                    text-transform: uppercase;
+
+                    &:after {
+                        content: ' -';
+                    }
+
+                    .label {
+                        display: none;
+                    }
+                }
+
+                .ui.basic.segment {
+                    margin-top: 0;
+
+                    br + br {
+                        display: none;
+                    }
+
+                    .button {
+                        margin-top: 1rem;
+
+                        + .button {
+                            margin-left: 1rem;
+
+                            @media #{$mobile} {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+
+                    .ui.grid {
+                        margin-top: 0 !important;
+
+                        @media #{$mobile} {
+                            margin-top: -1rem !important;
+                        }
+                    }
+                }
+            }
+
+            > .ui.segment:nth-child(2) {
+                border-radius: $border-radius;
+                background-color: $white;
+
+                .ui.grid {
+                    h2 {
+                        margin: 1rem;
+                        font-weight: bold;
+                        text-transform: uppercase;
+
+                        small {
+                            display: none;
+                        }
+                    }
+
+                    a[href*='remove'] {
+                        flex-basis: 3rem;
+                        margin-top: 0;
+                        padding: 0 !important;
+                        font-size: 0 !important;
+
+                        &:before {
+                            @include font-icon('delete');
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // STATISTICS
+    + style + .container.text-center {
+        hr {
+            display: none;
+        }
+
+        .battle-stats-title {
+            font-variant: normal;
+        }
+
+        h4.text-center {
+            display: flex;
+            justify-content: center;
+
+            img {
+                display: none;
+            }
+
+            .badge {
+                padding: 0.5rem 1rem;
+                font-size: 1rem;
+
+                @media #{$mobile} {
+                    padding: 0.5rem;
+                    font-size: 0.75rem;
+                }
+
+                br {
+                    display: none;
+                }
+
+                > .bs-count {
+                    font-size: 1rem;
+
+                    @media #{$mobile} {
+                        font-size: 0.75rem;
+                    }
+                }
+
+                &:nth-child(n + 2) {
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        hr + p + .row {
+            .col-12.col-md-6 {
+                flex-basis: calc((100% - 1rem) / 2);
+                margin: 1rem 0 !important;
+
+                @media #{$mobile} {
+                    flex-basis: 100%;
+                    margin-bottom: 0 !important;
+                }
+
+                + .col-12.col-md-6 {
+                    margin-left: auto !important;
+                }
+
+                .card-body {
+                    display: none;
+                }
+
+                .card-footer {
+                    padding-top: 0;
+                }
+
+                .form-inline {
+                    width: 100%;
+
+                    .form-group {
+                        display: block;
+                        width: 100%;
+
+                        select,
+                        .btn {
+                            width: 100%;
+                            border: 0;
+                        }
+
+                        .btn {
+                            margin-top: 1rem !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // RECORDS
+    + .text-center style + table {
+        thead[style*='font-weight:bold'] {
+            td {
+                border-bottom-width: 1px;
+            }
+
+            + tbody td {
+                font-size: 0.75rem;
+
+                &:nth-child(n + 2) {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    // SPEND EXP
+    + .row.w-100 {
+        .col-12.text-center + .text-center.rounded.border.m-3.p-3,
+        .col-12.text-center
+            + .text-center.rounded.border.m-3.p-3
+            ~ .text-center.rounded.border.m-3.p-3 {
+            width: 100%;
+        }
+    }
+    + .container .row.w-100.mb-3 + .row.w-100 {
+        .col-12 {
+            flex-basis: 100%;
+
+            &.col-md-4 {
+                img {
+                    margin-bottom: 1rem;
+
+                    @media #{$mobile} {
+                        display: none;
+                    }
+                }
+            }
+
+            &.col-md-8 {
+                .alert.alert-info {
+                    display: none;
+                }
+
+                form[action^='/games/battle/exp.php'] {
+                    .table.m-3 {
+                        @include table-cols(5);
+                        margin: 1rem 0 0 !important;
+
+                        + .text-right {
+                            text-align: center !important;
+
+                            .btn.submit-exp {
+                                margin-top: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // HEALER
+    + .row.w-100 + .row .healing-pet {
+        flex-basis: 100%;
+
+        img {
+            margin-bottom: 1rem;
+        }
+
+        center a {
+            display: block;
+            margin-top: 1rem;
+        }
+    }
+
+    // BATTLE QUESTS
+    + .row {
+        .col-sm-6.col-md-4.col-lg-3 + .col-sm-6.col-md-8.col-lg-9 {
+            @media #{$tablet} {
+                flex-basis: 100%;
+            }
+
+            .text-center a button {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    // TRAINING CENTER
+    + .row.w-100 + .row.w-100 {
+        #training-pet-875396,
+        #training-pet-971090 {
+            display: none;
+        }
+
+        .training-center-pet {
+            flex-basis: 100%;
+            padding: 0 !important;
+
+            > center {
+                margin-bottom: 1rem;
+
+                img {
+                    margin-bottom: 1rem;
+
+                    @media #{$mobile} {
+                        display: none;
+                    }
+                }
+
+                br {
+                    display: none;
+                }
+            }
+
+            div[style*='background-color:#8EC9B3'],
+            div[style*='background-color:#76BCDD'],
+            div[style*='background-color:#ffd9d9'] {
+                padding: 0.5rem 1rem !important;
+                border-radius: $border-radius;
+
+                + .p-1 {
+                    padding: 1rem !important;
+                }
+
+                center form,
+                form {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    select {
+                        width: 100% !important;
+                        margin-top: 0.5rem !important;
+                        border: 0;
+
+                        option[value='4'] {
+                            display: none;
+                        }
+                    }
+
+                    input[type='submit'] {
+                        width: calc(50% - 0.5rem);
+                        margin: 1rem 0 !important;
+
+                        @media #{$mobile} {
+                            width: 100%;
+                        }
+
+                        &[value*='Done'] {
+                            margin: 0 auto !important;
+                        }
+
+                        + input[type='submit'] {
+                            margin-left: auto !important;
+
+                            @media #{$mobile} {
+                                margin-top: 0 !important;
+                            }
+                        }
+                    }
+
+                    small {
+                        margin: 0 auto 0.5rem;
+                    }
+                }
+            }
+
+            div[style*='background-color:#8EC9B3'] {
+                @include alert-color-background($alert-green);
+            }
+
+            div[style*='background-color:#76BCDD'] {
+                @include alert-color-background($alert-blue);
+            }
+
+            div[style*='background-color:#ffd9d9'] {
+                @include alert-color-background($alert-red);
+            }
+        }
+    }
+
+    // TRAINING CENTER - TRAIN
+    + center {
+        img[src*='subeta.net/pets'] {
+            margin-bottom: 1rem;
+
+            @media #{$mobile} {
+                display: none;
+            }
+        }
+
+        a[href='train.php'] + br + .mx-auto.d-inline-block.p-3.border.rounded {
+            > p:first-child {
+                display: none;
+
+                + b + p + p {
+                    margin: 1rem 0;
+                }
+            }
+
+            select {
+                width: 100% !important;
+
+                option[value='4'] {
+                    display: none;
+                }
+            }
+
+            input[type='submit'] {
+                margin: 1rem 0 !important;
+
+                + input[type='submit'] {
+                    margin-left: 1rem !important;
+
+                    @media #{$mobile} {
+                        margin-left: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}

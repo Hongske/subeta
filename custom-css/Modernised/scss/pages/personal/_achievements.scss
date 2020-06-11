@@ -1,0 +1,194 @@
+#achievement-debug + center + p + .row {
+    margin-top: 1rem;
+
+    // NAV
+    .col-md-3 {
+        flex-basis: calc(#{$sidebar-width} * 0.5) !important;
+        max-width: none;
+        margin: 0;
+
+        .item.active {
+            border-radius: 0 !important;
+        }
+
+        @media #{$mobile} {
+            flex-basis: 100% !important;
+
+            .ui.menu.vertical {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 1rem;
+
+                > .item:nth-child(1) {
+                    flex-basis: 100%;
+
+                    .ui.input,
+                    .ui.input input[type='text'] {
+                        width: 100%;
+                    }
+                }
+
+                > a.item {
+                    flex-basis: calc(100% / 3);
+                    border-top: 1px solid $light-grey !important;
+                    border-bottom: 1px solid $light-grey !important;
+                    text-align: center;
+                }
+
+                > div.item:not(:first-child) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // CONTENT
+    .col-md-9 {
+        flex-basis: calc(100% - (#{$sidebar-width} * 0.5) - 1.5rem) !important;
+        max-width: none;
+        margin: 0;
+        margin-left: auto;
+
+        @media #{$mobile} {
+            flex-basis: 100% !important;
+        }
+
+        #username,
+        #achievement_stats {
+            display: none;
+        }
+
+        #achievementList {
+            margin-top: 0;
+
+            // SHOW-OPTIONS
+            #achievement-options .ui.text.menu {
+                margin: 0;
+
+                .item {
+                    margin: 0;
+                    color: $black;
+
+                    &:not(.header) {
+                        margin-left: 0.5rem;
+                        padding: 0 0.5rem;
+                        border-radius: $border-radius;
+
+                        @include hover {
+                            background-color: $accent;
+                            text-decoration: none;
+                        }
+                    }
+
+                    &.header {
+                        @include hover {
+                            color: $black !important;
+                            text-decoration: none;
+                        }
+                    }
+
+                    &[data-option='retired'] {
+                        display: none;
+                    }
+                }
+            }
+
+            // ACHIEVEMENTS
+            #achievementsx {
+                .achievement {
+                    margin: 0 -1rem;
+                    border-bottom: 1px solid $light-grey;
+                    border-radius: 0;
+
+                    &.completed {
+                        background-color: transparent !important;
+                        opacity: 0.5;
+                    }
+
+                    .ui.grid {
+                        .column.wide.two {
+                            display: none;
+                        }
+
+                        .column.wide.thirteen {
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            width: 100%;
+                            padding: 0;
+
+                            a h3 {
+                                display: flex;
+                                align-items: center;
+                                flex-basis: 100%;
+
+                                input[type='checkbox'] {
+                                    order: -1;
+                                    margin-right: 0.75rem;
+                                }
+                            }
+
+                            > p {
+                                flex-basis: 100%;
+                                font-size: 0.75rem;
+                            }
+
+                            .small.labels {
+                                .label {
+                                    height: $target;
+                                    margin: 1rem 1rem 0 0 !important;
+                                    padding: 0 1rem;
+                                    line-height: $target;
+
+                                    &:not(.red):not(.green) {
+                                        background-color: $light-grey !important;
+                                    }
+
+                                    .icon.star.yellow {
+                                        margin-left: 0.25rem;
+                                        color: inherit;
+                                    }
+                                }
+                            }
+
+                            .required-items {
+                                .button {
+                                    margin-top: 1rem;
+
+                                    &.close {
+                                        display: none;
+                                    }
+                                }
+
+                                .ui.grid {
+                                    margin-top: 1rem !important;
+
+                                    .column.wide.three {
+                                        display: flex;
+                                        align-items: center;
+                                        flex-basis: 100%;
+                                        min-height: 0 !important;
+                                        padding: 1rem !important;
+                                        border-bottom: 1px solid $white;
+
+                                        img {
+                                            margin-right: 1rem;
+                                        }
+
+                                        p:nth-of-type(1) {
+                                            display: none;
+                                        }
+
+                                        p:nth-of-type(2) {
+                                            margin-left: auto;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

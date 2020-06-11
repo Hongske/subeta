@@ -1,0 +1,250 @@
+// IMPORTS
+@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400, 400i, 600');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@import 'scss/_variables.scss';
+@import 'scss/_mixins.scss';
+/******************************************************************************/
+:root {
+    font-size: 15px;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: $black;
+
+    &-track {
+        background-color: $dark-grey;
+    }
+
+    &-thumb {
+        background-color: $accent;
+    }
+}
+::selection {
+    background-color: $accent;
+    $color: $white;
+}
+/******************************************************************************/
+html,
+body {
+    background-color: $light-grey;
+    color: $black !important;
+    font-family: $font-family !important;
+    font-size: 15px !important;
+}
+
+footer,
+.push {
+    display: none;
+}
+
+#page {
+    width: 100%;
+    margin: 0 !important;
+    background-color: transparent;
+}
+/******************************************************************************/
+h1,
+h2,
+h3,
+h4,
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+    margin-bottom: 1rem;
+    font-size: 1rem !important;
+    line-height: normal;
+}
+
+p {
+    margin-bottom: 0;
+
+    & + &,
+    & + center,
+    & + center + & {
+        margin-top: 1rem;
+    }
+}
+
+p,
+small {
+    &:empty {
+        display: none;
+    }
+}
+
+br[clear='all'],
+h1 + br,
+h1 + br + br {
+    display: none;
+}
+
+a {
+    &,
+    &:link,
+    &:active,
+    &:visited {
+        color: $accent;
+    }
+
+    @include hover {
+        text-decoration: underline;
+    }
+}
+
+.menu-tab,
+.bookmark a,
+.ui.input input,
+font {
+    font-family: $font-family;
+}
+
+font[color='#9400d3'] {
+    color: $black;
+}
+
+.text-muted {
+    color: $grey !important;
+}
+
+@media #{$mobile} {
+    body {
+        zoom: 300%;
+    }
+
+    p {
+        font-size: 0.75rem;
+    }
+}
+/******************************************************************************/
+div[style*='width:500px'],
+div[style*='width: 500px'],
+div[style*='width: 750px'],
+div[style*='width: 70%'],
+table[style*='width:600px'],
+table[width='595'],
+table[width='598'] {
+    width: 100% !important;
+    max-width: $tablet-width;
+}
+
+div[style*='height: 135px'],
+div[style*='height: 500px'],
+div[style*='height:500px'] {
+    height: auto !important;
+}
+
+div[style*='min-height: 260px'],
+div[style*='min-height: 100px'] {
+    min-height: 0 !important;
+}
+
+div[style*='margin: 20px'] {
+    margin: 0 !important;
+}
+
+@media #{$mobile} {
+    div[style*='width: 70%;'],
+    div[style*='width: 60%;'],
+    div[style*='width:35%;'],
+    table[width] {
+        width: 100% !important;
+    }
+}
+/******************************************************************************/
+img {
+    &:not([src*='subeta.net/avatar']) {
+        &:not([src*='subeta.net/slib/images/avatar']) {
+            &:not([src*='subeta.net/icon']) {
+                &:not([src*='subeta.net/emoji']) {
+                    &:not([src*='subeta.net/rr_']) {
+                        &:not([src*='subeta.net/scratchcards']) {
+                            padding: 1rem;
+                            border-radius: $border-radius;
+                            background-color: $white;
+                            box-sizing: content-box;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &[src*='subeta.net/items'],
+    &[src*='subeta.net/cs_'],
+    &[src*='subeta.net/shops/./../items'],
+    &[src*='subeta.net/shops/../../items'],
+    &[src*='subeta.net/spectrail_spectrum'],
+    &[src*='subeta.net/game_dm'] {
+        max-width: $img;
+        height: auto;
+        padding: 0.5rem !important;
+
+        @media #{$mobile} {
+            max-width: $img-mob;
+        }
+    }
+}
+
+h1 img,
+img[src*='subeta.net/atebus/rift.png'],
+img[src*='subeta.net/avatar/615497'],
+img[src*='subeta.net/avatar/642159'],
+img[src*='subeta.net/avatar/642161'],
+img[src*='subeta.net/bathhouse_pools_'],
+img[src*='subeta.net/bathhouse_night_'],
+img[src*='subeta.net/battle/opponents/'],
+img[src*='subeta.net/bones_bonesy'],
+img[src*='subeta.net/celesse'],
+img[src*='subeta.net/dmd_nightshade'],
+img[src*='subeta.net/hustler'],
+img[src*='subeta.net/jim'],
+img[src*='subeta.net/keeper'],
+img[src*='subeta.net/maleira'],
+img[src*='subeta.net/map_'],
+img[src*='subeta.net/majordrills'],
+img[src*='subeta.net/npc'],
+img[src*='subeta.net/not_rainy_overlay'],
+img[src*='subeta.net/pets/404.png'],
+img[src*='subeta.net/quentin'],
+img[src*='subeta.net/quest'],
+img[src*='subeta.net/robo_thankyou'] {
+    display: none !important;
+}
+
+/******************************************************************************/
+@import 'scss/elements/header';
+@import 'scss/elements/sidebar';
+@import 'scss/elements/bookmarks';
+@import 'scss/elements/content';
+@import 'scss/elements/misc';
+/******************************************************************************/
+@import 'scss/overrides/grid';
+@import 'scss/overrides/semantic';
+/******************************************************************************/
+@import 'scss/overrides/nav';
+@import 'scss/overrides/card';
+@import 'scss/overrides/forms';
+@import 'scss/overrides/tables';
+@import 'scss/overrides/pagination';
+/******************************************************************************/
+@import 'scss/pages/subeta/news';
+@import 'scss/pages/subeta/games';
+@import 'scss/pages/subeta/explore';
+@import 'scss/pages/subeta/battle';
+/******************************************************************************/
+@import 'scss/pages/interact/smail';
+@import 'scss/pages/interact/forums';
+/******************************************************************************/
+@import 'scss/pages/commerce/your-shops';
+@import 'scss/pages/commerce/shops';
+@import 'scss/pages/commerce/trades';
+/******************************************************************************/
+@import 'scss/pages/personal/inventory';
+@import 'scss/pages/personal/pets';
+@import 'scss/pages/personal/vault';
+@import 'scss/pages/personal/achievements';
+@import 'scss/pages/personal/comments';
+@import 'scss/pages/personal/wishlist';
+/******************************************************************************/

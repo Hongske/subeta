@@ -1,0 +1,87 @@
+.jumbotron.pt-3.pb-3 + .row.w-100.mx-auto {
+    display: flex;
+    flex-direction: column-reverse;
+
+    // LINKS
+    .col-3.pr-0 {
+        display: flex;
+        margin-top: 0;
+
+        .card {
+            display: none;
+
+            &:nth-child(3) {
+                display: block;
+                width: 100%;
+                margin: 0 !important;
+
+                .card-header {
+                    display: none;
+                }
+
+                .card-body {
+                    display: flex;
+
+                    hr {
+                        display: none;
+                    }
+
+                    div {
+                        flex-basis: 25%;
+
+                        @media #{$mobile} {
+                            flex-basis: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // POSTS
+    .col-9.pl-0 {
+        > .ui.header {
+            margin-top: 2rem;
+        }
+
+        .card {
+            .card-header a {
+                color: $white;
+            }
+
+            .card-footer {
+                @media #{$mobile} {
+                    font-size: 0.75rem;
+                }
+
+                i {
+                    padding-right: 0.5rem;
+                }
+
+                > a {
+                    display: none;
+                }
+
+                .float-right {
+                    margin-left: auto;
+
+                    img {
+                        display: none;
+                    }
+                }
+            }
+
+            .card-body {
+                center {
+                    .wl_item + br {
+                        display: none;
+                    }
+
+                    br + .wl_item {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

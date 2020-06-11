@@ -1,0 +1,178 @@
+#trades-content {
+    + .col-lg-8.mx-auto {
+        width: 100%;
+        max-width: $tablet-width;
+        padding: 0 !important;
+
+        > .alert:first-child {
+            margin-top: 1rem;
+        }
+
+        // SEARCH TRADES
+        form[action='/trade/search.php?action=find'] {
+            @media #{$mobile} {
+                justify-content: start !important;
+                text-align: left !important;
+            }
+
+            select[name='type'] {
+                width: 6rem;
+                margin-left: 1rem !important;
+
+                @media #{$mobile} {
+                    margin-left: auto !important;
+                }
+            }
+
+            .btn {
+                margin-left: 1rem !important;
+
+                @media #{$mobile} {
+                    margin-top: 1rem !important;
+                    margin-left: 0 !important;
+                }
+            }
+        }
+
+        // NEW TRADE
+        form#newtrade {
+            .card-header .card-title {
+                margin-bottom: 0;
+            }
+
+            .card-body {
+                .alert.alert-warning {
+                    display: none;
+                }
+
+                .btn {
+                    margin-top: 1rem !important;
+
+                    &#checkFirstTen {
+                        @media #{$mobile} {
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                }
+
+                .row {
+                    .col {
+                        flex-basis: calc((100% - 4rem) / 5);
+                        flex-grow: 0;
+                        margin-top: 1rem;
+                        padding: 0 !important;
+
+                        &:not(:nth-child(5n - 4)) {
+                            margin-left: 1rem;
+                        }
+
+                        @media #{$mobile} {
+                            display: flex;
+                            align-items: center;
+                            flex-basis: calc(100% + 2rem);
+                            max-width: none;
+                            margin: 0.5rem -1rem 0;
+                            padding: 0 1rem 0.5rem !important;
+                            border-bottom: 1px solid $light-grey;
+
+                            &:not(:nth-child(5n - 4)) {
+                                margin-left: -1rem;
+                            }
+
+                            label {
+                                display: flex;
+                                align-items: center;
+                                margin-bottom: 0;
+
+                                .wl_item {
+                                    margin-right: 1rem;
+                                }
+                            }
+
+                            input[type='checkbox'] {
+                                margin-left: auto;
+                            }
+
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &:last-of-type {
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+        }
+
+        // MY TRADES
+        h2 {
+            display: none;
+
+            + .alert.alert-warning {
+                display: none;
+            }
+        }
+        h2 + .alert.alert-warning + .card,
+        .w-100.mb-3 .card {
+            .card-header .card-title {
+                margin-bottom: 0;
+            }
+
+            .card-body {
+                .row .col {
+                    flex-basis: calc((100% - 4rem) / 5);
+                    flex-grow: 0;
+                    margin-top: 1rem;
+                    padding: 0 !important;
+
+                    &:not(:nth-child(5n - 4)) {
+                        margin-left: 1rem;
+                    }
+
+                    @media #{$mobile} {
+                        display: flex;
+                        align-items: center;
+                        flex-basis: calc(100% + 2rem);
+                        max-width: none;
+                        margin: 0.5rem -1rem 0;
+                        padding: 0 1rem 0.5rem !important;
+                        border-bottom: 1px solid $light-grey;
+
+                        &:not(:nth-child(5n - 4)) {
+                            margin-left: -1rem;
+                        }
+
+                        label {
+                            display: flex;
+                            align-items: center;
+                            margin-bottom: 0;
+
+                            .wl_item {
+                                margin-right: 1rem;
+                            }
+                        }
+
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+
+                > .text-right {
+                    margin-top: 1rem;
+                    text-align: left !important;
+
+                    .btn + .btn {
+                        margin-left: 1rem;
+
+                        @media #{$mobile} {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

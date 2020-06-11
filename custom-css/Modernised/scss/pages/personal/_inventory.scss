@@ -1,0 +1,70 @@
+// ITEM LOCK
+a[href^='?act=lock'] {
+    margin-left: auto;
+
+    &:after {
+        @include font-icon('lock');
+        font-size: 1.5rem !important;
+    }
+
+    img {
+        display: none;
+    }
+}
+.locked_info {
+    display: none;
+}
+
+// ITEM DETAILS
+.card {
+    br + br,
+    a + br {
+        display: none;
+    }
+
+    a {
+        &[href='#collapseBook'],
+        &[href='#collapseFood'],
+        &[href='#collapseMinion'],
+        &[href='#collapseToy'],
+        &[href='#collapseTreasure'],
+        &[href*='act=donate'],
+        &[href*='act=delete'],
+        &[href*='act=send'] {
+            display: none !important;
+        }
+
+        &[href*='?act=shop'],
+        &[href*='?act=movetovault'],
+        &[href*='?act=zoo'] {
+            display: block;
+        }
+    }
+
+    .collapse {
+        &#collapseBook,
+        &#collapseFood,
+        &#collapseTreasure {
+            display: block;
+        }
+
+        a {
+            &[href*='petid=875396'],
+            &[href*='petid=971090'] {
+                display: none;
+            }
+        }
+    }
+}
+
+// ACCOUNT SEARCH
+.twitter-typeahead + .input-group-btn button {
+    margin-top: 0;
+    font-size: 0 !important;
+
+    &:after {
+        @include font-icon('search');
+        width: 1.75rem;
+        font-size: 1.5rem;
+    }
+}

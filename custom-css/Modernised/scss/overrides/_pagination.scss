@@ -1,0 +1,47 @@
+.pagination {
+    width: 100%;
+    max-width: $tablet-width;
+    margin-bottom: 1rem;
+    border-radius: $border-radius;
+
+    &:empty {
+        display: none;
+    }
+
+    @media #{$mobile} {
+        max-width: 100%;
+    }
+
+    .page-item {
+        flex: 1 1 auto;
+        text-align: center;
+
+        &:only-child {
+            display: none;
+        }
+
+        &:nth-child(n + 2) {
+            margin-left: 2px;
+        }
+
+        @media #{$mobile} {
+            &:nth-child(n + 4):nth-last-child(n + 4):not(.active) {
+                display: none;
+            }
+        }
+
+        .page-link {
+            border: 0;
+            background-color: $dark-grey;
+            color: $white;
+
+            @include hover {
+                background-color: $accent;
+            }
+        }
+
+        &.active .page-link {
+            background-color: $accent;
+        }
+    }
+}

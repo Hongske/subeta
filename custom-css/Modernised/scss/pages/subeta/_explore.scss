@@ -1,0 +1,344 @@
+// EXPLORE MAP
+map,
+style,
+div {
+    + div + .row.w-100 .col-md-12 > .card,
+    + map + .row.w-100 .col-md-12 > .card {
+        margin-top: 0 !important;
+
+        .d-flex {
+            justify-content: start !important;
+            text-align: left !important;
+
+            > .p-3,
+            > .p-4 {
+                @include cols($border: true);
+                position: relative;
+
+                @media #{$mobile} {
+                    padding: 0.5rem 1rem !important;
+                }
+
+                a {
+                    display: block;
+                }
+
+                p {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: calc(#{$img} + 3rem);
+
+                    @media #{$mobile} {
+                        left: calc(#{$img-mob} + 3rem);
+                    }
+
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    a[href='index.php'] {
+        display: none;
+    }
+
+    @at-root div[style*='text-align: center;'] {
+        h1 + br + center div[style*='text-align:justify; width:750px'],
+        h1 + br + br + center div[style*='text-align:justify; width:750px'] {
+            display: none;
+
+            + br {
+                display: none;
+            }
+        }
+    }
+
+    @at-root div[style*='text-align: center; width: 750px; margin: auto;'] {
+        font-size: 0.75rem;
+        text-align: left !important;
+
+        img + br,
+        img + br + br {
+            display: none;
+        }
+    }
+}
+
+// CARNIVAL - RUFFIE RAFFLE - TICKETS
+#choices {
+    margin-top: 1rem !important;
+
+    .rr-ticket {
+        flex-basis: calc(100% / 6);
+
+        @media #{$mobile} {
+            flex-basis: calc(100% / 3);
+        }
+    }
+
+    // CHOSEN RUFFIE TICKET
+    .ruffie-ticket.flipInX {
+        display: none;
+    }
+}
+
+// CARNIVAL - RUFFIE RAFFLE - TRADE
+.rr-main {
+    .rr-item {
+        width: auto;
+        height: auto;
+        margin: 1rem;
+        padding: 0;
+        border: 2px solid transparent !important;
+        border-radius: $border-radius;
+        font-size: 0;
+
+        @media #{$mobile} {
+            width: 100%;
+            height: $target;
+            margin: 1rem 0;
+            background-color: $white;
+            font-size: 0.75rem;
+            line-height: $target;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &.rr-selected {
+            border-color: scale-color($color: $alert-green, $lightness: 50%) !important;
+            @include alert-color($alert-green);
+        }
+
+        img {
+            @media #{$mobile} {
+                display: none;
+            }
+
+            + br {
+                display: none;
+            }
+        }
+    }
+}
+
+// SHENGUI GUO - DARA'S DARLINGS
+img[src*='subeta.net/npc_dara'] {
+    + br,
+    + br + br,
+    + br + br + div {
+        display: none;
+
+        + .ui.message {
+            margin-top: 0;
+
+            &,
+            + .ui.segment,
+            + .ui.segment + .ui.message,
+            + .ui.segment + .ui.message + .ui.grid {
+                max-width: $tablet-width;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            + .ui.segment + .ui.message + .ui.grid {
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+
+                .column.wide {
+                    &.five,
+                    &.six {
+                        flex-basis: calc((100% - 2rem) / 3);
+                        padding: 0;
+
+                        @media #{$mobile} {
+                            display: flex;
+                            align-items: center;
+                            flex-basis: 100%;
+
+                            .wl_item {
+                                margin-right: 1rem;
+                            }
+
+                            .button {
+                                width: auto;
+                                margin-left: auto;
+                            }
+
+                            br {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    &.five + .six,
+                    &.five + .six + .five {
+                        margin-left: 1rem;
+
+                        @media #{$mobile} {
+                            margin-left: 0;
+                        }
+                    }
+                }
+
+                @media #{$mobile} {
+                    + br,
+                    + br + br {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// SHENGUI GUO - FINE FABRICS
+img[src*='subeta.net/npc_jogoh'] {
+    + .ui.segment {
+        display: none;
+
+        + .ui.message {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+    }
+
+    @at-root .ui.button.basic {
+        &.color-button {
+            width: $target;
+            height: $target;
+            margin: 0 0.5rem 1rem;
+            padding: 0 !important;
+
+            @media #{$mobile} {
+                display: inline-block;
+                margin-top: 0;
+
+                + br {
+                    display: none;
+                }
+            }
+
+            .ui.button.circular {
+                display: block;
+                width: 100% !important;
+                height: 100% !important;
+                padding: 0 !important;
+                border: 1px solid rgba($dark-grey, 0.5) !important;
+
+                @media #{$mobile} {
+                    margin-top: 0;
+                }
+            }
+        }
+
+        &.layer-button {
+            width: calc((100% - 4rem) / 5);
+            height: auto;
+            margin-top: 1rem;
+            padding: 0 !important;
+            color: $black !important;
+            text-align: center;
+
+            @media #{$mobile} {
+                display: inline-block;
+                width: calc((100% - 2.5rem) / 3);
+                font-size: 0.75rem !important;
+
+                br,
+                + br,
+                + br + br {
+                    display: none;
+                }
+            }
+
+            img {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @at-root .ui.grid.items-list {
+        margin: 0 !important;
+        border-radius: $border-radius;
+        background-color: $white;
+
+        &[style*='display: none'] {
+            display: none !important;
+        }
+
+        .column.wide.four {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-basis: calc((100% - 3rem) / 4);
+            padding: 1rem !important;
+            font-size: 0.75rem !important;
+
+            @media #{$mobile} {
+                flex-basis: 100%;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: start;
+            }
+
+            &:not(:nth-child(4n - 3)) {
+                margin-left: 1rem;
+
+                @media #{$mobile} {
+                    margin-left: 0;
+                }
+            }
+
+            &:nth-child(n + 2) {
+                @media #{$mobile} {
+                    border-top: 1px solid $light-grey;
+                }
+            }
+
+            .wl_item {
+                order: 1;
+            }
+
+            .scode-item-name {
+                order: 2;
+                flex-basis: 100%;
+                margin: 1rem 0;
+
+                @media #{$mobile} {
+                    flex-basis: calc(100% - 60px - 4rem);
+                    margin: 0 1rem;
+                    text-align: left;
+                }
+            }
+
+            .button {
+                order: 3;
+
+                @media #{$mobile} {
+                    width: 4rem;
+                    margin-top: 0;
+                    margin-left: auto;
+                }
+            }
+
+            br {
+                display: none;
+            }
+        }
+
+        + br,
+        + br + br {
+            @media #{$mobile} {
+                display: none;
+            }
+        }
+    }
+}

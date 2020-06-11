@@ -1,0 +1,219 @@
+.ui.menu + .ui.header {
+    // OVERVIEW
+    + .card {
+        .card-body {
+            form[action='/wishlists.php/searchcats/'] {
+                input[name='term'] {
+                    margin: 0 1rem !important;
+
+                    @media #{$mobile} {
+                        width: 100%;
+                        margin: 1rem 0 !important;
+                    }
+                }
+            }
+
+            #category-list {
+                .category {
+                    @include cols();
+                    margin: 0;
+                    padding: 0 !important;
+
+                    .card {
+                        &-header {
+                            background-color: $accent;
+
+                            .fa.fa-arrows {
+                                @media #{$mobile} {
+                                    display: none;
+                                }
+                            }
+
+                            a {
+                                color: $white;
+                            }
+
+                            .badge {
+                                margin-left: 1rem;
+                                border-radius: $border-radius;
+                                background-color: $white;
+                                color: $accent;
+                                text-transform: uppercase;
+                            }
+                        }
+
+                        &-body {
+                            border: 1px solid $accent;
+                            border-radius: 0 0 $border-radius $border-radius;
+
+                            .wl_item {
+                                border-color: transparent;
+                                background-color: transparent;
+
+                                img {
+                                    opacity: 1;
+                                }
+
+                                .wl_plus {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+
+                    &.wl-private .card-body {
+                        background-color: $light-grey;
+                    }
+                }
+            }
+        }
+    }
+
+    // LIST
+    + .border.rounded.p-3.mb-3 {
+        background-color: $white;
+
+        form[method='post'] {
+            display: flex;
+
+            .form-group {
+                margin-bottom: 0;
+
+                label {
+                    display: none;
+                }
+            }
+
+            .btn {
+                margin-left: 1rem !important;
+
+                @media #{$mobile} {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        + form[method='post'] {
+            input[type='hidden'][name='edit'][value='true'] + .card {
+                .card-header h2 {
+                    display: flex;
+                    flex-basis: 100%;
+                    align-items: center;
+                    white-space: nowrap;
+
+                    .ui.button {
+                        height: auto;
+                        margin-left: auto;
+                        padding: 0 !important;
+                        color: $white !important;
+                        box-shadow: none;
+
+                        @include hover {
+                            background-color: transparent !important;
+                            text-decoration: underline !important;
+                        }
+
+                        @media #{$mobile} {
+                            width: auto;
+                            margin-top: 0;
+                        }
+                    }
+                }
+
+                .card-body {
+                    .nav {
+                        margin: 1rem 0;
+                    }
+
+                    .row {
+                        padding: 0 !important;
+
+                        .wishlist-item {
+                            flex-basis: calc((100% - 3rem) / 4);
+                            margin: 0;
+                            padding: 0 !important;
+
+                            &:not(:nth-child(4n-3)) {
+                                margin-left: 1rem;
+
+                                @media #{$tablet} {
+                                    margin-left: 0;
+                                }
+                            }
+
+                            @media #{$tablet} {
+                                flex-basis: calc((100% - 1rem) / 2);
+
+                                &:nth-child(even) {
+                                    margin-left: 1rem;
+                                }
+                            }
+
+                            @media #{$mobile} {
+                                flex-basis: 100%;
+
+                                &:nth-child(even) {
+                                    margin-left: 0;
+                                }
+                            }
+
+                            .border.rounded.p-2 {
+                                padding: 0 !important;
+
+                                label {
+                                    display: grid;
+                                    grid-template-areas:
+                                        'wl-item wl-title wl-title'
+                                        'wl-item wl-select wl-buttons';
+                                    grid-template-columns: 82px auto auto;
+                                    margin-bottom: 1rem;
+                                    text-align: left;
+
+                                    @media #{$mobile} {
+                                        grid-template-columns: 66px auto auto;
+                                        margin: 0 -1rem 0.5rem;
+                                        padding: 0 1rem 0.5rem;
+                                        border-bottom: 1px solid $light-grey;
+                                    }
+
+                                    br {
+                                        display: none;
+                                    }
+
+                                    .wl_item {
+                                        grid-area: wl-item;
+                                        height: 63px;
+                                        margin-right: 1rem;
+
+                                        @media #{$mobile} {
+                                            height: 51px;
+                                        }
+                                    }
+
+                                    .wl_item + p + p {
+                                        grid-area: wl-title;
+                                        margin-top: 0;
+                                    }
+
+                                    .wl_item + p + p + p {
+                                        grid-area: wl-select;
+                                        font-size: 0;
+
+                                        select {
+                                            display: none;
+                                        }
+                                    }
+
+                                    .wl_item + p + p + p + p {
+                                        grid-area: wl-buttons;
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
