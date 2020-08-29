@@ -1,0 +1,6 @@
+#postcards, #header, #menu, #events-bubble-wrapper, #bookmarks, #sidebar { display: none; }
+#page { width: 100%; margin: 0!important; }
+#content { height: 100%!important; padding: 0; }
+#pet_info { min-width: 0; margin: 0; }
+#pet_friends:after { content: ''; display: table; clear: both; }
+.friend_div { height: auto; }
