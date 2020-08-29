@@ -1,0 +1,148 @@
+@mixin form-field($full-width: false, $auto-height: false) {
+    padding: 0 0.5rem;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    background-color: $white;
+
+    @if $full-width {
+        display: block;
+        width: 100% !important;
+    }
+
+    @if $auto-height {
+        height: auto !important;
+    } @else {
+        height: $target !important;
+    }
+
+    @media #{$mobile-only} {
+        font-size: 0.75rem !important;
+    }
+
+    @media #{$tablet} {
+        font-size: 1rem !important;
+    }
+}
+
+@mixin form-select($full-width: false) {
+    @include form-field($full-width: $full-width);
+    cursor: pointer;
+}
+
+/******************************************************************************/
+
+input,
+.input input {
+    margin: 0;
+
+    &[type='text'],
+    &[type='number'] {
+        @include form-field();
+    }
+
+    &[type='checkbox'] {
+        margin-right: 0.5rem;
+    }
+}
+
+label {
+    margin-bottom: 0;
+}
+
+select {
+    @include form-field();
+}
+
+textarea {
+    @include form-field($auto-height: true);
+    margin: 0;
+}
+
+/******************************************************************************/
+
+.form-row {
+    margin: 0;
+}
+
+.form-group {
+    margin-bottom: 0;
+    padding: 0 !important;
+
+    @media #{$mobile-only} {
+        &:nth-child(n + 2) {
+            margin-top: 1rem;
+        }
+
+        label {
+            display: none;
+        }
+    }
+
+    @media #{$tablet-only} {
+        flex-basis: calc((100% - 1rem) / 2);
+
+        &:nth-child(even) {
+            margin-left: 1rem;
+        }
+
+        &:nth-child(n + 3) {
+            margin-top: 1rem;
+        }
+    }
+
+    @media #{$desktop} {
+        flex-basis: calc((100% - 2rem) / 3);
+        margin-left: 0 !important;
+
+        &:not(:nth-child(3n + 1)) {
+            margin-left: 1rem !important;
+        }
+
+        &:nth-child(n + 4) {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.form-control {
+    @include form-field();
+}
+
+.input-group {
+    &-addon {
+        select {
+            height: 2rem !important;
+        }
+    }
+
+    label,
+    input[type='checkbox'] {
+        line-height: 1rem;
+    }
+}
+
+.ui.input.icon {
+    > input {
+        padding: 0 0.5rem !important;
+    }
+
+    &.left > input {
+        padding-left: 2.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+
+    &.right > input {
+        padding-left: 0.5rem !important;
+        padding-right: 2.5rem !important;
+    }
+
+    .icon {
+        width: 2rem;
+        padding: 0 0 0 0.5rem;
+        border-radius: 0 !important;
+        left: 0 !important;
+        text-align: left;
+        line-height: $target;
+        opacity: 1;
+    }
+}

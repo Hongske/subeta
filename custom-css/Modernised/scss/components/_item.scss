@@ -1,0 +1,91 @@
+.wl_item {
+    width: auto;
+    max-height: none;
+    margin: 0;
+    border: 2px solid $white;
+    background-color: $white;
+    text-align: center;
+
+    @media #{$tablet} {
+        box-sizing: content-box;
+    }
+
+    & + & {
+        margin-left: 1rem;
+    }
+
+    &:hover .wl_plus {
+        max-height: none !important;
+        border-bottom: 0;
+    }
+
+    &.wishlist {
+        border-color: $alert-red;
+        background-color: $alert-red;
+
+        img {
+            opacity: 0.5;
+        }
+
+        .wl_plus:after {
+            @include icon('remove', $font-size: 1rem);
+            background-color: $alert-red;
+            line-height: 1rem;
+        }
+    }
+
+    .wl_plus {
+        width: auto;
+        max-height: none;
+        top: -0.5rem;
+        left: -0.5rem;
+        z-index: auto;
+        background-color: transparent;
+        color: $white;
+
+        &:after {
+            @include icon('add', $font-size: 1rem);
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: $alert-green;
+            line-height: 1rem;
+        }
+
+        small {
+            display: none;
+        }
+    }
+
+    .custom_wearable {
+        top: -0.5rem;
+        right: -0.5rem;
+        bottom: auto !important;
+        left: auto !important;
+    }
+}
+
+// FLOATING ITEMS
+.floating_item {
+    position: fixed !important;
+    border: 10px solid $alert-red;
+    border-radius: $border-radius;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+    z-index: 999 !important;
+    background-color: $alert-red;
+
+    img {
+        padding: 0 !important;
+        box-shadow: none !important;
+    }
+}
+
+// TOOLTIPS
+.tpd-tooltip {
+    @media #{$mobile-only} {
+        display: none !important;
+    }
+}

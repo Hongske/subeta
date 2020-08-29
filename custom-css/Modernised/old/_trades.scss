@@ -10,7 +10,7 @@
 
         // SEARCH TRADES
         form[action='/trade/search.php?action=find'] {
-            @media #{$mobile} {
+            @media #{$mobile-only} {
                 justify-content: start !important;
                 text-align: left !important;
             }
@@ -19,7 +19,7 @@
                 width: 6rem;
                 margin-left: 1rem !important;
 
-                @media #{$mobile} {
+                @media #{$mobile-only} {
                     margin-left: auto !important;
                 }
             }
@@ -27,7 +27,7 @@
             .btn {
                 margin-left: 1rem !important;
 
-                @media #{$mobile} {
+                @media #{$mobile-only} {
                     margin-top: 1rem !important;
                     margin-left: 0 !important;
                 }
@@ -49,7 +49,7 @@
                     margin-top: 1rem !important;
 
                     &#checkFirstTen {
-                        @media #{$mobile} {
+                        @media #{$mobile-only} {
                             margin-bottom: 0.5rem;
                         }
                     }
@@ -66,14 +66,14 @@
                             margin-left: 1rem;
                         }
 
-                        @media #{$mobile} {
+                        @media #{$mobile-only} {
                             display: flex;
                             align-items: center;
                             flex-basis: calc(100% + 2rem);
                             max-width: none;
                             margin: 0.5rem -1rem 0;
                             padding: 0 1rem 0.5rem !important;
-                            border-bottom: 1px solid $light-grey;
+                            border-bottom: 1px solid $grey-light;
 
                             &:not(:nth-child(5n - 4)) {
                                 margin-left: -1rem;
@@ -131,14 +131,14 @@
                         margin-left: 1rem;
                     }
 
-                    @media #{$mobile} {
+                    @media #{$mobile-only} {
                         display: flex;
                         align-items: center;
                         flex-basis: calc(100% + 2rem);
                         max-width: none;
                         margin: 0.5rem -1rem 0;
                         padding: 0 1rem 0.5rem !important;
-                        border-bottom: 1px solid $light-grey;
+                        border-bottom: 1px solid $grey-light;
 
                         &:not(:nth-child(5n - 4)) {
                             margin-left: -1rem;
@@ -167,7 +167,7 @@
                     .btn + .btn {
                         margin-left: 1rem;
 
-                        @media #{$mobile} {
+                        @media #{$mobile-only} {
                             margin-left: 0;
                         }
                     }

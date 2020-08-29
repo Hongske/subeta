@@ -1,0 +1,95 @@
+@mixin table-cols($column-count) {
+    thead th {
+        &:nth-last-child(#{$column-count}):first-child,
+        &:nth-last-child(#{$column-count}):first-child ~ th {
+            flex-basis: calc(100% / #{$column-count});
+        }
+    }
+
+    tbody td {
+        &:nth-last-child(#{$column-count}):first-child,
+        &:nth-last-child(#{$column-count}):first-child ~ td {
+            flex-basis: calc(100% / #{$column-count});
+        }
+    }
+}
+
+/******************************************************************************/
+
+.table,
+table {
+    tr {
+        display: flex;
+
+        @media #{$mobile-only} {
+            flex-wrap: wrap;
+        }
+
+        &:nth-child(n + 2) {
+            border-top: 1px solid $grey-light;
+        }
+
+        &:last-child {
+            td {
+                &:first-child {
+                    border-bottom-left-radius: $border-radius;
+                }
+
+                &:last-child {
+                    border-bottom-right-radius: $border-radius;
+                }
+            }
+        }
+    }
+
+    thead th,
+    tbody td {
+        padding: 0.5rem;
+        overflow: hidden;
+        border: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &:first-child {
+            padding-left: 1rem;
+            text-align: left;
+        }
+
+        &:last-child {
+            padding-right: 1rem;
+            text-align: right;
+        }
+    }
+
+    thead th {
+        background-color: $primary;
+        color: $white;
+
+        &:first-child {
+            border-top-left-radius: $border-radius;
+        }
+
+        &:last-child {
+            border-top-right-radius: $border-radius;
+        }
+    }
+
+    tbody td {
+        background-color: $white;
+        $color: $black;
+    }
+
+    &-bordered {
+        th,
+        td {
+            border: 0;
+        }
+    }
+}
+
+/******************************************************************************/
+
+.sp-sub {
+    border: 0;
+    background-color: transparent;
+}

@@ -1,0 +1,141 @@
+// DARK MATTER DICE
+#dark-matter-dice {
+    // MAIN PAGE
+    @at-root table[width='598']
+            font[face='verdana'][color='#9400d3']
+            form[action='dmd.php?start=true'] {
+        margin-top: 1rem;
+    }
+
+    // HIDE HIGH SCORES LINK IN BODY
+    @at-root h1 + a[href='/games/scores.php?gameid=38'] {
+        display: none;
+    }
+
+    // CURRENT TURN
+    @at-root form[method='POST'] {
+        table[width='595'][cellpadding='5'] {
+            border-radius: $border-radius;
+            background-color: $white;
+
+            tr:nth-child(1) {
+                td {
+                    padding: 1rem;
+                    text-align: center;
+
+                    br,
+                    h2 {
+                        display: none;
+                    }
+
+                    table {
+                        width: auto;
+                        border: 0 !important;
+
+                        td {
+                            padding: 0;
+
+                            br {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+
+            tr:nth-child(2) {
+                td {
+                    padding: 0;
+
+                    table {
+                        border: 0 !important;
+                    }
+                }
+            }
+
+            tr:nth-child(3) {
+                td {
+                    padding: 1rem 0;
+                }
+            }
+        }
+
+        + center h2 {
+            display: none;
+        }
+
+        + center + form[method='POST'] table[cellpadding='10'] > tbody {
+            margin-top: 1rem;
+            border-radius: $border-radius;
+            background-color: $white;
+
+            > tr:nth-child(1) {
+                display: flex;
+                flex-wrap: wrap;
+
+                > td {
+                    flex-basis: 100%;
+                    width: 100%;
+
+                    table {
+                        border: 0 !important;
+
+                        tr td {
+                            padding: 0;
+                        }
+                    }
+
+                    &:nth-child(1) {
+                        // TODO: CONTINUE STYLING
+                        background: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// DECANTER OF INDESTRUCTIBILITY
+#decanter {
+    @at-root .row.w-100.mx-auto
+            + .col-12.col-sm-10.col-md-8.col-lg-6.mx-auto.p-3
+            h1
+            + h2
+            + .card-body
+            + h3
+            + .row.text-center
+            .col.p-2.text-center {
+        padding: 0 !important;
+
+        a {
+            &[href='?act=1'],
+            &[href='?act=2'],
+            &[href='?act=3'],
+            &[href='?act=4'],
+            &[href='?act=5'] {
+                font-size: 0;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+// MEMORY
+@media #{$mobile-only} {
+    #memory_game {
+        width: 100%;
+
+        img[id^='tile'] {
+            width: calc(100% / 5);
+            height: auto;
+        }
+    }
+}
+
+// SLOTS
+div[style='position: relative; margin: auto; width: 358px; height: 474px; overflow: hidden;'] {
+    display: none;
+}

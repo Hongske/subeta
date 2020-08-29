@@ -1,0 +1,111 @@
+// MODALS
+.modal {
+    &-dialog {
+        width: 50%;
+        max-width: $tablet-width;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        @media #{$mobile-only} {
+            width: calc(100% - 2rem);
+        }
+
+        .modal.show & {
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &-content {
+        border: 0;
+    }
+
+    &-body .alert {
+        margin-bottom: 0;
+    }
+
+    &-footer .btn {
+        margin-top: 0;
+    }
+}
+
+// EVENTS
+#event_listing {
+    border-radius: $border-radius;
+
+    h1 {
+        display: none;
+
+        + .p-1 {
+            padding: 1rem !important;
+            border-radius: $border-radius;
+            background-color: $grey-dark;
+            color: $white;
+
+            + p {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    h3 {
+        margin: 1rem 0 0;
+        padding: 1rem;
+        border-radius: $border-radius $border-radius 0 0;
+        background-color: $primary;
+        color: $white;
+        font-weight: bold;
+
+        .btn-link {
+            color: $white;
+        }
+    }
+
+    hr {
+        display: none;
+    }
+
+    .table {
+        border-radius: 0 0 $border-radius $border-radius;
+
+        tr {
+            display: flex;
+            flex-wrap: wrap;
+
+            th {
+                display: none;
+            }
+
+            td {
+                border-top: 0;
+                font-size: 0.75rem;
+
+                &:nth-child(1) {
+                    flex-basis: $target;
+                    order: 2;
+                }
+
+                &:nth-child(2) {
+                    flex-basis: 100%;
+                    order: 1;
+                    padding-bottom: 0;
+                }
+
+                &:nth-child(3) {
+                    order: 3;
+                    padding-left: 0;
+                    text-align: left;
+                }
+
+                .btn-link {
+                    color: $primary;
+                }
+            }
+
+            &:nth-child(n + 2) {
+                border-top: 1px solid $grey-light;
+            }
+        }
+    }
+}

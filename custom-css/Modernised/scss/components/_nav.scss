@@ -1,0 +1,55 @@
+.nav {
+    justify-content: flex-start !important;
+    border-radius: $border-radius;
+    background-color: $grey-dark;
+    color: $white;
+
+    &-item {
+        &:first-child {
+            border-radius: $border-radius;
+        }
+
+        &.bg-light,
+        &.active {
+            border-radius: $border-radius;
+            background-color: $primary !important;
+        }
+
+        a {
+            color: $white;
+
+            @include hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &-tabs {
+        .nav-item {
+            margin-bottom: 0;
+        }
+
+        .nav-link {
+            border-radius: $border-radius;
+            border: 0;
+
+            &.active {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+
+    a {
+        color: $white;
+
+        @include hover {
+            text-decoration: underline;
+        }
+    }
+
+    img,
+    br {
+        display: none;
+    }
+}

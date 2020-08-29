@@ -41,7 +41,7 @@
 
             &:nth-child(n + 2) {
                 @media #{$tablet} {
-                    border-top: 1px solid $light-grey;
+                    border-top: 1px solid $grey-light;
                 }
             }
 
@@ -53,7 +53,7 @@
                     height: auto;
                     margin-left: 0 !important;
 
-                    @media #{$mobile} {
+                    @media #{$mobile-only} {
                         display: none;
                     }
                 }
@@ -64,7 +64,7 @@
                         font-weight: bold;
                     }
 
-                    @media #{$mobile} {
+                    @media #{$mobile-only} {
                         font-size: 0;
 
                         i,
@@ -99,7 +99,7 @@
         .breadcrumb {
             margin-bottom: 1rem !important;
             border-radius: $border-radius;
-            background-color: $dark-grey;
+            background-color: $grey-dark;
         }
     }
 
@@ -151,7 +151,7 @@
     thead {
         background-color: transparent !important;
 
-        @media #{$mobile} {
+        @media #{$mobile-only} {
             display: none;
         }
 
@@ -164,7 +164,7 @@
         tr {
             background-color: $white !important;
 
-            @media #{$mobile} {
+            @media #{$mobile-only} {
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
@@ -205,7 +205,7 @@
             }
 
             &:nth-child(n + 2) {
-                border-top: 1px solid $light-grey;
+                border-top: 1px solid $grey-light;
             }
 
             td {
@@ -257,13 +257,13 @@
             }
 
             &.tertiary {
-                background-color: $dark-grey !important;
+                background-color: $grey-dark !important;
             }
 
             > span.ui {
                 left: 0;
                 line-height: normal;
-                @media #{$mobile} {
+                @media #{$mobile-only} {
                     font-size: 0.75rem !important;
                 }
             }
@@ -293,7 +293,7 @@
 
         .ui.attached.segment.post {
             padding: 0 !important;
-            background-color: $light-grey !important;
+            background-color: $grey-light !important;
 
             .ui.grid {
                 > .column.wide {
@@ -309,7 +309,7 @@
                             grid-template-columns: 4rem auto 4rem;
                             align-items: center;
                             padding: 1rem !important;
-                            border-bottom: 1px solid $light-grey;
+                            border-bottom: 1px solid $grey-light;
                             border-radius: 0;
                             box-shadow: none !important;
 
@@ -338,9 +338,9 @@
                                 height: 4rem;
                                 overflow: hidden;
                                 border-radius: 50%;
-                                background-color: $light-grey;
+                                background-color: $grey-light;
 
-                                @media #{$mobile} {
+                                @media #{$mobile-only} {
                                     width: calc(#{$img-mob} * 2);
                                     height: calc(#{$img-mob} * 2);
                                 }
@@ -356,7 +356,7 @@
                                     margin-bottom: 0 !important;
                                     padding: 0 !important;
                                     border-radius: $border-radius;
-                                    background-color: $accent !important;
+                                    background-color: $primary !important;
                                     font-size: 0 !important;
 
                                     + .ui.label {
@@ -380,13 +380,13 @@
 
                                     &:nth-child(1) {
                                         a:after {
-                                            @include font-icon('face');
+                                            @include icon('face');
                                         }
                                     }
 
                                     &:nth-child(2) {
                                         a:after {
-                                            @include font-icon('ballot');
+                                            @include icon('ballot');
                                         }
 
                                         span {
@@ -407,7 +407,7 @@
                             background-color: $white;
 
                             .post-editable {
-                                @media #{$mobile} {
+                                @media #{$mobile-only} {
                                     font-size: 0.75rem;
                                 }
 
@@ -441,7 +441,7 @@
             .pagination {
                 margin-bottom: 290px;
 
-                @media #{$mobile} {
+                @media #{$mobile-only} {
                     margin-bottom: 160px;
                 }
             }
@@ -449,13 +449,13 @@
             + .card.bg-light.m-3 {
                 position: fixed;
                 bottom: 0;
-                left: $sidebar-width;
-                width: calc(100% - #{$sidebar-width} - #{$target});
+                left: $sidebar;
+                width: calc(100% - #{$sidebar} - #{$target});
                 border-radius: 0;
                 z-index: 999;
-                background-color: $dark-grey !important;
+                background-color: $grey-dark !important;
 
-                @media #{$mobile} {
+                @media #{$mobile-only} {
                     left: 0;
                     width: 100%;
                 }
@@ -467,7 +467,7 @@
                             padding: 0;
                             font-size: 0;
 
-                            @media #{$mobile} {
+                            @media #{$mobile-only} {
                                 display: none;
                             }
 
@@ -491,7 +491,7 @@
                             border-radius: $border-radius $border-radius 0 0;
                             font-size: 1rem !important;
 
-                            @media #{$mobile} {
+                            @media #{$mobile-only} {
                                 height: 8em !important;
                                 border-radius: $border-radius;
                                 font-size: 0.75rem !important;
@@ -504,10 +504,10 @@
                             border-radius: 0 0 $border-radius $border-radius;
                             opacity: 0.75;
                             background-color: $white;
-                            color: $dark-grey !important;
+                            color: $grey-dark !important;
                             font-size: 0.75rem;
 
-                            @media #{$mobile} {
+                            @media #{$mobile-only} {
                                 display: none;
                             }
                         }
@@ -517,7 +517,7 @@
                         position: absolute;
                         right: 1rem;
 
-                        @media #{$mobile} {
+                        @media #{$mobile-only} {
                             position: relative;
                             right: 0;
                             width: 100%;
@@ -535,7 +535,7 @@
                                 padding: 0.5rem !important;
                                 line-height: 1.5;
 
-                                @media #{$mobile} {
+                                @media #{$mobile-only} {
                                     width: calc((100% - 1rem) / 2);
                                 }
 

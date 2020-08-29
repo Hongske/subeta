@@ -1,0 +1,72 @@
+#bookmarks {
+    display: none;
+    width: $target;
+    max-height: $target;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    transition: max-height 0.3s;
+    z-index: 5;
+
+    @include hover {
+        max-height: 100vh;
+    }
+
+    @media #{$tablet} {
+        display: block;
+    }
+
+    .bookmark {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 1px solid $black;
+        background-color: $black;
+        transition: background-color 0.3s;
+
+        @include hover {
+            background-color: $primary;
+        }
+
+        &.first {
+            height: $target;
+            padding: 0 !important;
+            border-left: 1px solid $black;
+            background-color: $grey-dark;
+            text-align: center;
+            line-height: $target;
+
+            @include hover {
+                background-color: $black;
+            }
+
+            #bookmark-add {
+                color: $primary;
+                font-size: 0;
+
+                &:before {
+                    @include icon('bookmark', $font-size: 1.5rem);
+                }
+            }
+        }
+
+        &:not(.first) {
+            padding: 1rem 0 !important;
+            border-top: 1px solid $grey-dark;
+        }
+
+        p {
+            margin: 0 auto;
+        }
+
+        a {
+            display: block;
+            font-family: $font-family;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+}

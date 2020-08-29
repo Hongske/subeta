@@ -1,0 +1,235 @@
+// SHOP LIST
+.card-body .d-inline-block[style*='width:100px;'] {
+    @include cols($useWidth: true);
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative;
+    text-align: left !important;
+
+    &:nth-child(n + 5) {
+        margin-top: 1rem !important;
+    }
+
+    @media #{$tablet} {
+        &:nth-child(n + 5) {
+            margin-top: 0 !important;
+        }
+
+        &:nth-child(n + 3) {
+            margin-top: 1rem !important;
+        }
+    }
+
+    @media #{$mobile-only} {
+        margin-left: -1rem !important;
+        margin-right: -1rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        font-size: 0.75rem;
+
+        &:first-child {
+            margin-top: -0.5rem !important;
+        }
+
+        &:nth-child(n + 2),
+        &:nth-child(n + 3) {
+            margin-top: 0.5rem !important;
+        }
+
+        &:not(:nth-child(4n-3)),
+        &:nth-child(even) {
+            margin-left: -1rem !important;
+        }
+
+        &:not(:last-child) {
+            padding-bottom: 0.5rem !important;
+            border-bottom: 1px solid $grey-light;
+        }
+
+        &:last-child {
+            margin-bottom: -0.5rem !important;
+        }
+    }
+}
+
+// SHOP
+#text-welcome {
+    display: none;
+}
+.item-list {
+    border-radius: $border-radius !important;
+
+    @media #{$mobile-only} {
+        padding: 0 !important;
+    }
+
+    .items {
+        > .p-2.text-center {
+            flex-basis: calc((100% - 7rem) / 8);
+            width: auto !important;
+            margin-bottom: 1rem;
+            padding: 0 !important;
+
+            @media #{$tablet} {
+                flex-basis: calc((100% - 2rem) / 3);
+            }
+
+            @media #{$mobile-only} {
+                flex-basis: 100%;
+                margin-bottom: 0;
+                padding: 0.5rem 1rem !important;
+            }
+
+            &:not(:nth-child(8n - 7)) {
+                margin-left: 1rem;
+
+                @media #{$tablet} {
+                    margin-left: 0;
+                }
+            }
+
+            &:not(:nth-child(3n - 2)) {
+                @media #{$tablet} {
+                    margin-left: 1rem;
+                }
+
+                @media #{$mobile-only} {
+                    margin-left: 0;
+                }
+            }
+
+            &:nth-child(n + 2) {
+                @media #{$mobile-only} {
+                    border-top: 1px solid $grey-light;
+                }
+            }
+
+            > .d-flex.flex-column {
+                @media #{$mobile-only} {
+                    flex-direction: row !important;
+                }
+
+                > .p-2 {
+                    padding: 0 !important;
+
+                    @media #{$mobile-only} {
+                        &:nth-child(1) {
+                            display: flex;
+                            align-items: center;
+                            margin-right: 1rem;
+                        }
+
+                        &:nth-child(2) {
+                            display: grid;
+                            grid-template-areas:
+                                'item-title item-buttons'
+                                'item-cost item-buttons';
+                            align-items: center;
+                            flex-grow: 1;
+                            text-align: left;
+                        }
+                    }
+
+                    .buy_buttons {
+                        grid-area: item-buttons;
+                        font-size: 0;
+
+                        @media #{$mobile-only} {
+                            order: 3;
+                            margin-left: auto !important;
+                            margin-bottom: 0 !important;
+                        }
+
+                        button {
+                            width: 100%;
+
+                            @media #{$mobile-only} {
+                                margin-top: 0;
+                            }
+
+                            &.cart_button {
+                                margin-top: 1rem;
+                            }
+                        }
+                    }
+
+                    p {
+                        font-size: 0.75rem;
+
+                        &:nth-of-type(1) {
+                            grid-area: item-title;
+                        }
+
+                        &:nth-of-type(2) {
+                            grid-area: item-cost;
+
+                            @media #{$mobile-only} {
+                                margin-top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.shop_item_container {
+    width: 100% !important;
+    padding: 0 !important;
+
+    .ui.grid {
+        .column.wide.two {
+            @include cols($border: true);
+            margin-top: 0 !important;
+            margin-bottom: 1rem !important;
+            padding: 1rem !important;
+            border-radius: $border-radius;
+            background-color: $white;
+
+            .text_center {
+                width: 100%;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                .ui.image {
+                    display: block;
+                    width: $img !important;
+                    height: $img !important;
+                    margin: 0 auto;
+                    padding: 0 !important;
+                    border: 0 !important;
+                    background-color: transparent;
+
+                    @media #{$mobile-only} {
+                        width: $img-mob !important;
+                        height: $img-mob !important;
+                    }
+                }
+
+                font {
+                    margin-top: 1rem;
+                    font-size: 1rem !important;
+
+                    br {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        + center br,
+        + center br + br {
+            display: none;
+        }
+    }
+}
+
+// CASH SHOP
+.col-12.col-md-4.col-lg-3.p-0text-center {
+    flex-basis: 100% !important;
+    max-width: $tablet-width;
+}

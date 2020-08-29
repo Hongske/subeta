@@ -2,26 +2,74 @@
 .battle-menu {
     display: flex;
     flex-wrap: wrap;
+    border: 0;
     border-radius: $border-radius !important;
-    background-color: $dark-grey;
+    background-color: $grey-dark;
     font-size: 0;
 
     a {
         padding: 0.5rem 1rem;
         color: $white;
         font-size: 1rem;
+
+        &[href$='challenge.php'] {
+            display: $display_battle-challenge;
+        }
+
+        &[href$='weapons.php'] {
+            display: $display_battle-armory;
+        }
+
+        &[href$='scrolls.php'] {
+            display: $display_battle-scrolls;
+        }
+
+        &[href$='newbies.php'] {
+            display: $display_battle-beginnerGuide;
+        }
+
+        &[href$='battleguide.php'] {
+            display: $display_battle-indepthGuide;
+        }
+
+        &[href$='stats.php'] {
+            display: $display_battle-statistics;
+        }
+
+        &[href$='exp.php'] {
+            display: $display_battle-spendExp;
+        }
+
+        &[href$='shop.php'] {
+            display: $display_battle-shop;
+        }
+
+        &[href$='scores.php'] {
+            display: $display_battle-highScores;
+        }
+
+        &[href$='boss_prizes.php'] {
+            display: $display_battle-bossPrizes;
+        }
+
+        &[href$='healer.php'] {
+            display: $display_battle-healer;
+        }
+
+        &[href$='quest.php'] {
+            display: $display_battle-quests;
+        }
+
+        &[href$='train.php'] {
+            display: $display_battle-trainingCenter;
+        }
+
+        &[href$='dmg_tracker.php'] {
+            display: $display_battle-hydragellos;
+        }
     }
 
-    img,
-    a[href$='scrolls.php'],
-    a[href$='newbies.php'],
-    a[href$='battleguide.php'],
-    a[href$='scores.php'],
-    a[href$='boss_prizes.php'],
-    a[href$='dmg_tracker.php'],
-    + .row.w-100 .col-md-4,
-    + .row.w-100 .col-md-8,
-    + .text-center img[src*='subeta.net/pets'] {
+    img {
         display: none;
     }
 
@@ -30,55 +78,93 @@
         .opponents-list {
             display: flex;
             flex-wrap: wrap;
-            padding: 0;
-            background-color: transparent;
 
-            .card.m-3 {
-                flex-basis: calc((100% - 6rem) / 6);
-                width: auto !important;
-                margin: 0 0 1rem !important;
+            > div {
+                flex-basis: 100%;
+                margin: 0 !important;
+                padding: 1rem;
+                border-radius: 0;
+                background-color: transparent;
 
-                &:not(:nth-of-type(6n - 5)) {
-                    margin-left: auto !important;
+                @media #{$mobile-only} {
+                    &:nth-of-type(n + 2) {
+                        border-top: 1px solid $grey-light;
+                    }
                 }
 
-                @media #{$tablet} {
-                    flex-basis: calc((100% - 1rem) / 2);
-
-                    &:not(:nth-of-type(6n - 5)) {
-                        margin-left: 0 !important;
-                    }
+                @media #{$tablet-only} {
+                    flex-basis: 50%;
 
                     &:nth-of-type(even) {
-                        margin-left: auto !important;
+                        border-left: 1px solid $grey-light;
+                    }
+
+                    &:nth-of-type(n + 3) {
+                        border-top: 1px solid $grey-light;
                     }
                 }
 
-                @media #{$mobile} {
-                    flex-basis: 100%;
-                }
+                @media #{$desktop} {
+                    flex-basis: 25%;
 
-                .statbar {
-                    border-color: $accent;
-                    border-radius: $border-radius;
+                    &:not(:nth-of-type(4n + 1)) {
+                        border-left: 1px solid $grey-light;
+                    }
 
-                    .stat {
-                        height: 100%;
-                        background-color: $accent;
+                    &:nth-of-type(n + 5) {
+                        border-top: 1px solid $grey-light;
                     }
                 }
 
-                form {
-                    select {
-                        width: 100% !important;
-                    }
+                .card-header {
+                    min-height: 0;
+                    margin-bottom: 1rem;
+                    padding: 0;
+                    background-color: transparent !important;
+                    color: $black;
+                }
 
-                    p {
+                .card-img-top {
+                    float: left;
+                    width: auto;
+                    margin-right: 1rem;
+
+                    img {
+                        width: 100px !important;
+                    }
+                }
+
+                .card-body {
+                    padding: 0;
+
+                    > b,
+                    > br {
                         display: none;
                     }
 
-                    .btn {
-                        width: 100%;
+                    small {
+                        display: block;
+
+                        .statbar {
+                            width: calc(100% - 100px - 1rem);
+                            margin-left: auto;
+                            border: 0;
+                            border-radius: $border-radius;
+                            background-color: $grey-light;
+
+                            .stat {
+                                border-radius: $border-radius;
+                                background-color: $primary;
+                            }
+                        }
+                    }
+
+                    form {
+                        margin-top: 1rem;
+
+                        .btn {
+                            margin-top: 1rem !important;
+                        }
                     }
                 }
             }
@@ -86,46 +172,137 @@
     }
 
     // START BATTLE
-    + .ui.segment > form[method='post'] {
-        input[value='Start Battle'] + .ui.grid {
-            margin: 0 !important;
+    + .ui.segment {
+        background-color: transparent;
 
-            > .column.wide {
-                width: 100%;
-                padding: 0;
+        > form[method='post'] {
+            input[value='Start Battle'] {
+                + .ui.grid {
+                    margin: 0 !important;
 
-                &:nth-of-type(1) {
-                    td {
+                    > .column.wide {
+                        width: 100%;
                         padding: 0;
 
-                        @media #{$mobile} {
-                            display: block;
-                            width: 100% !important;
-                        }
-                    }
+                        // OPPONENT
+                        &:nth-of-type(1) {
+                            margin-bottom: 0;
+                            border-radius: $border-radius;
+                            background-color: $white;
 
-                    td:nth-child(2) {
+                            td {
+                                align-self: center;
+                                padding: 1rem !important;
+                                border-radius: 0;
+                                background-color: transparent;
+                            }
+                        }
+
+                        // SELECT PET + PRESELECTION
+                        &:nth-of-type(2) {
+                            margin: 0;
+
+                            // SELECT PET
+                            > table {
+                                display: $display_battle-challengeSelectPet;
+                                margin-top: 1rem;
+
+                                tr:nth-child(1) {
+                                    td {
+                                        flex-basis: 100%;
+                                        padding: 0;
+                                        background-color: transparent;
+                                    }
+                                }
+
+                                tr:nth-child(2) {
+                                    border-top: 0;
+
+                                    td {
+                                        max-height: 105px;
+                                        overflow-y: auto;
+                                        padding: 1rem;
+                                        border-radius: $border-radius;
+                                        text-align: left;
+
+                                        #petselect {
+                                            border: 0 !important;
+                                            border-radius: 0 !important;
+                                            max-height: none !important;
+
+                                            td {
+                                                height: 75px;
+                                                overflow: hidden;
+                                                padding: 0 !important;
+
+                                                label {
+                                                    width: 100%;
+                                                    margin-bottom: 1rem;
+
+                                                    center {
+                                                        display: flex;
+                                                        align-items: center;
+
+                                                        img {
+                                                            margin-right: 1rem;
+                                                        }
+
+                                                        b:nth-of-type(n + 2) {
+                                                            margin-left: 1rem;
+                                                        }
+
+                                                        input[type='radio'] {
+                                                            margin-left: auto;
+                                                        }
+
+                                                        br {
+                                                            display: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            // PRESELECTION
+                            > .ui.message {
+                                display: $display_battle-challengePreselection;
+                                margin-bottom: 0 !important;
+                            }
+                        }
+
+                        // SELECT WEAPONS
+                        &:nth-of-type(3) {
+                            display: $display_battle-challengeSelectWeapons;
+                            margin-bottom: 0;
+                        }
+
+                        // SELECT SCROLLS
+                        &:nth-of-type(4) {
+                            display: $display_battle-challengeSelectScrolls;
+                            margin-bottom: 0;
+                        }
+
                         h2 {
-                            display: none;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        .ui.top.attached.tabular.menu {
+                            margin-top: 1rem;
+                        }
+
+                        .ui.bottom.attached.segment {
+                            padding: 1rem;
                         }
                     }
                 }
 
-                &:nth-of-type(2) {
-                    table {
-                        display: none;
-                    }
-                }
-
-                &:nth-of-type(3),
-                &:nth-of-type(4) {
-                    display: none;
+                ~ input[value='Start Battle'] {
+                    margin-top: 1rem;
                 }
             }
-        }
-
-        > br {
-            display: none;
         }
     }
 
@@ -154,7 +331,7 @@
             .battle-ui-arena {
                 display: flex;
                 flex-wrap: wrap;
-                border-bottom: 1px solid $light-grey;
+                border-bottom: 1px solid $grey-light;
                 border-radius: $border-radius $border-radius 0 0;
 
                 > div:first-child {
@@ -200,12 +377,12 @@
 
                         .health_total {
                             width: 100%;
-                            border-color: $accent;
+                            border-color: $primary;
                             border-radius: $border-radius;
 
                             .health_now {
-                                border-radius: calc(#{$border-radius} - 1px);
-                                background-color: $accent !important;
+                                border-radius: $border-radius - 1px;
+                                background-color: $primary !important;
                             }
                         }
                     }
@@ -213,6 +390,11 @@
 
                 .battle-status {
                     flex-basis: 30%;
+
+                    #statusPet,
+                    #statusOpponent {
+                        transform: translate(0.5rem, -15%);
+                    }
                 }
             }
 
@@ -222,14 +404,19 @@
                 border: 0;
                 border-radius: 0 0 $border-radius $border-radius;
 
+                .battle-section-title {
+                    display: $display_battle-battleWeapons;
+                }
+
                 .weapons-box-options {
-                    display: block;
+                    display: $display_battle-battleWeapons;
+                    justify-content: center;
                     width: 100%;
                     height: auto;
                     margin: 1rem auto;
                     padding: 1rem;
                     border: 0;
-                    background-color: $light-grey;
+                    background-color: $grey-light;
                     text-align: center;
 
                     .weapon-option {
@@ -246,7 +433,7 @@
                         }
 
                         &.selected {
-                            border-color: $accent;
+                            border-color: $primary;
 
                             img {
                                 box-shadow: none;
@@ -258,120 +445,146 @@
                 .battle-select {
                     display: flex;
                     align-items: center;
-                    width: 50%;
+                    width: 100%;
                     margin: 0 auto 1rem;
                     padding: 0;
 
-                    @media #{$mobile} {
+                    @media #{$tablet} {
                         width: 100%;
                     }
 
-                    .arrow {
-                        color: $accent;
-                        transform: rotate(-90deg);
+                    &#weapon_1,
+                    &#weapon_2 {
+                        display: $display_battle-battleWeapons;
+
+                        .arrow {
+                            color: $primary;
+                            transform: rotate(-90deg);
+                        }
+
+                        .preview_img {
+                            width: auto;
+                            height: auto;
+                            margin: 0 0.5rem;
+                            padding: 0;
+                            border: 0;
+                        }
                     }
 
-                    .preview_img {
-                        width: auto;
+                    &#potion {
+                        display: $display_battle-battlePotions;
+                    }
+
+                    &#spell {
+                        display: $display_battle-battleSpells;
+                    }
+
+                    .choices-box {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: flex-start;
                         height: auto;
-                        margin: 0;
-                        padding: 0;
-                        border: 0;
+                        padding: 1rem;
+
+                        .potion-choice,
+                        .spell-choice {
+                            display: flex;
+                            flex-basis: 50%;
+                            align-items: center;
+
+                            @media #{$mobile-only} {
+                                &:nth-child(n + 3) {
+                                    margin-top: 1rem;
+                                }
+                            }
+
+                            @media #{$tablet} {
+                                flex-basis: 25%;
+
+                                &:nth-child(n + 5) {
+                                    margin-top: 1rem;
+                                }
+                            }
+                        }
                     }
                 }
 
-                #potion,
-                #spell {
-                    display: none;
+                .endBattle {
+                    .btn {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+
+        p a {
+            button {
+                margin-top: 1rem;
+            }
+
+            + a button {
+                @media #{$tablet} {
+                    margin-left: 1rem;
                 }
             }
         }
     }
 
     // ARMORY
-    + .ui.basic.segment.center.aligned + .ui.basic.segment.center.aligned {
-        .button + .button {
-            margin-left: 1rem;
-
-            @media #{$mobile} {
-                margin-left: 0;
-            }
-        }
-
-        + .ui.basic.segment {
-            padding: 0;
-
-            > .ui.segment:nth-child(1) {
-                h2 {
-                    float: left;
-                    margin: 2px 0.25rem 0 0;
-                    font-weight: bold;
-                    text-transform: uppercase;
-
-                    &:after {
-                        content: ' -';
-                    }
-
-                    .label {
-                        display: none;
-                    }
+    + .ui.basic.segment.center.aligned {
+        + .ui.basic.segment.center.aligned {
+            .button + .button {
+                @media #{$mobile-only} {
+                    margin-top: 1rem;
                 }
 
-                .ui.basic.segment {
-                    margin-top: 0;
+                @media #{$tablet} {
+                    margin-left: 1rem;
+                }
+            }
 
-                    br + br {
-                        display: none;
-                    }
+            + .ui.basic.segment {
+                .ui.segment:not(:last-child) {
+                    padding: 1rem;
+                    border-radius: $border-radius;
+                    background-color: $white;
 
-                    .button {
-                        margin-top: 1rem;
+                    .ui.basic.segment {
+                        padding: 0;
 
-                        + .button {
-                            margin-left: 1rem;
+                        .button {
+                            margin: 1rem 0;
 
-                            @media #{$mobile} {
-                                margin-left: 0;
+                            + .button {
+                                margin-left: 1rem;
                             }
                         }
                     }
 
-                    .ui.grid {
-                        margin-top: 0 !important;
-
-                        @media #{$mobile} {
-                            margin-top: -1rem !important;
-                        }
+                    small {
+                        display: block;
                     }
                 }
             }
+        }
 
-            > .ui.segment:nth-child(2) {
-                border-radius: $border-radius;
-                background-color: $white;
-
-                .ui.grid {
-                    h2 {
-                        margin: 1rem;
-                        font-weight: bold;
-                        text-transform: uppercase;
-
-                        small {
-                            display: none;
-                        }
-                    }
-
-                    a[href*='remove'] {
-                        flex-basis: 3rem;
-                        margin-top: 0;
-                        padding: 0 !important;
-                        font-size: 0 !important;
-
-                        &:before {
-                            @include font-icon('delete');
-                        }
-                    }
+        ~ .ui.basic.segment {
+            .ui.form {
+                input[type='text'] {
+                    margin-bottom: 1rem;
                 }
+
+                #weapons-sortable {
+                    margin-top: 1rem;
+                }
+            }
+
+            .ui.button.tiny {
+                margin-left: auto;
+            }
+
+            .column.wide.sixteen {
+                margin: 0;
             }
         }
     }
@@ -395,12 +608,15 @@
             }
 
             .badge {
-                padding: 0.5rem 1rem;
+                padding: 0.5rem;
                 font-size: 1rem;
 
-                @media #{$mobile} {
-                    padding: 0.5rem;
+                @media #{$mobile-only} {
                     font-size: 0.75rem;
+                }
+
+                @media #{$tablet} {
+                    padding: 0.5rem 1rem;
                 }
 
                 br {
@@ -410,7 +626,7 @@
                 > .bs-count {
                     font-size: 1rem;
 
-                    @media #{$mobile} {
+                    @media #{$mobile-only} {
                         font-size: 0.75rem;
                     }
                 }
@@ -421,74 +637,136 @@
             }
         }
 
-        hr + p + .row {
-            .col-12.col-md-6 {
+        hr + p + .row .col-12.col-md-6 {
+            flex-basis: 100%;
+            margin: 1rem 0 0 !important;
+
+            @media #{$tablet} {
                 flex-basis: calc((100% - 1rem) / 2);
-                margin: 1rem 0 !important;
+                margin-bottom: 1rem !important;
+            }
 
-                @media #{$mobile} {
-                    flex-basis: 100%;
-                    margin-bottom: 0 !important;
-                }
+            + .col-12.col-md-6 {
+                margin-left: auto !important;
+            }
 
-                + .col-12.col-md-6 {
-                    margin-left: auto !important;
-                }
+            .card-header,
+            .card-footer {
+                background-color: $grey !important;
+                color: $black;
+            }
 
-                .card-body {
-                    display: none;
-                }
+            .card-footer {
+                padding-top: 0;
+            }
 
-                .card-footer {
-                    padding-top: 0;
-                }
+            .card-body {
+                display: none;
+            }
 
-                .form-inline {
+            .form-inline {
+                width: 100%;
+
+                .form-group {
+                    display: block;
                     width: 100%;
 
-                    .form-group {
-                        display: block;
+                    select,
+                    .btn {
                         width: 100%;
+                        border: 0;
+                    }
 
-                        select,
-                        .btn {
-                            width: 100%;
-                            border: 0;
-                        }
-
-                        .btn {
-                            margin-top: 1rem !important;
-                        }
+                    .btn {
+                        margin-top: 1rem !important;
                     }
                 }
             }
         }
     }
 
-    // RECORDS
+    // STATISTICS - RECORDS
     + .text-center style + table {
-        thead[style*='font-weight:bold'] {
-            td {
-                border-bottom-width: 1px;
+        width: 100% !important;
+        border-radius: $border-radius;
+        background-color: $white;
+
+        td {
+            &:nth-child(1) {
+                flex: 1 1 auto;
             }
 
-            + tbody td {
-                font-size: 0.75rem;
+            &:nth-child(n + 2) {
+                flex-basis: 12.5%;
+                text-align: center;
+            }
+        }
 
+        thead td {
+            border-radius: 0;
+            border-bottom: 1px solid $grey-light;
+            background-color: transparent;
+
+            @media #{$mobile-only} {
                 &:nth-child(n + 2) {
-                    text-align: right;
+                    padding: 0;
+                    font-size: 0;
                 }
+
+                &:before {
+                    transform: translate(0, 30%);
+                }
+
+                &:nth-child(2):before {
+                    @include icon('add_circle_outline', $font-size: 1.25rem);
+                }
+
+                &:nth-child(3):before {
+                    @include icon('pause_circle_outline', $font-size: 1.25rem);
+                }
+
+                &:nth-child(4):before {
+                    @include icon('remove_circle_outline', $font-size: 1.25rem);
+                }
+
+                &:nth-child(5):before {
+                    @include icon('error_outline', $font-size: 1.25rem);
+                }
+            }
+        }
+
+        tbody td {
+            @media #{$mobile-only} {
+                font-size: 0.75rem;
+            }
+
+            @media #{$tablet} {
+                font-size: 1rem;
             }
         }
     }
 
     // SPEND EXP
     + .row.w-100 {
-        .col-12.text-center + .text-center.rounded.border.m-3.p-3,
-        .col-12.text-center
-            + .text-center.rounded.border.m-3.p-3
-            ~ .text-center.rounded.border.m-3.p-3 {
-            width: 100%;
+        .col-12.text-center ~ .text-center.rounded.border.m-3.p-3 {
+            width: 50%;
+            margin: 0 !important;
+
+            @media #{$tablet} {
+                width: calc(100% / 3);
+            }
+
+            img + br + h2 {
+                margin: 1rem 0 0;
+
+                + br {
+                    display: block;
+                }
+            }
+
+            .btn {
+                margin-top: 1rem;
+            }
         }
     }
     + .container .row.w-100.mb-3 + .row.w-100 {
@@ -499,7 +777,7 @@
                 img {
                     margin-bottom: 1rem;
 
-                    @media #{$mobile} {
+                    @media #{$mobile-only} {
                         display: none;
                     }
                 }
@@ -512,7 +790,44 @@
 
                 form[action^='/games/battle/exp.php'] {
                     .table.m-3 {
-                        @include table-cols(5);
+                        border-radius: $border-radius;
+                        background-color: $white;
+
+                        th,
+                        td {
+                            @media #{$mobile-only} {
+                                font-size: 0.75rem;
+                            }
+
+                            &:nth-child(1) {
+                                flex: 1 1 auto;
+                            }
+
+                            &:nth-child(n + 2) {
+                                flex-basis: 17.5%;
+                                text-align: center;
+                            }
+                        }
+
+                        td {
+                            align-self: center;
+                            background-color: transparent;
+                        }
+
+                        @media #{$mobile-only} {
+                            tr:last-child td {
+                                &:nth-child(2),
+                                &:nth-child(5) {
+                                    display: none;
+                                }
+
+                                &:nth-child(3),
+                                &:nth-child(4) {
+                                    flex: 1 1 auto;
+                                }
+                            }
+                        }
+
                         margin: 1rem 0 0 !important;
 
                         + .text-right {
@@ -529,122 +844,278 @@
     }
 
     // HEALER
-    + .row.w-100 + .row .healing-pet {
-        flex-basis: 100%;
+    + .row.w-100 {
+        .col-md-8.col-lg-9 .card.bg-light.mt-3.mb-3 {
+            margin-top: 0 !important;
 
-        img {
-            margin-bottom: 1rem;
+            @media #{$mobile-only} {
+                font-size: 0.75rem;
+            }
+
+            center {
+                margin-top: 1rem;
+                text-align: left;
+            }
         }
 
-        center a {
-            display: block;
-            margin-top: 1rem;
+        + .row .healing-pet {
+            flex-basis: 100%;
+
+            img {
+                margin-bottom: 1rem;
+            }
+
+            center a {
+                display: block;
+                margin-top: 1rem;
+            }
+        }
+
+        + .alert.alert-success {
+            margin-top: 0 !important;
         }
     }
 
     // BATTLE QUESTS
-    + .row {
-        .col-sm-6.col-md-4.col-lg-3 + .col-sm-6.col-md-8.col-lg-9 {
-            @media #{$tablet} {
-                flex-basis: 100%;
+    + .row > .col-sm-6 {
+        &:nth-child(1) {
+            display: none;
+        }
+
+        &:nth-child(2) {
+            flex-basis: 100%;
+            margin-left: 0;
+
+            .border.rounded.bg-light.p-3.mb-3 {
+                @media #{$mobile-only} {
+                    font-size: 0.75rem;
+                }
+
+                p {
+                    display: $display_battle-questsIntro;
+
+                    &:last-of-type {
+                        margin-bottom: 1rem;
+                    }
+                }
             }
 
-            .text-center a button {
-                margin-top: 1rem;
+            .text_center + .border.rounded.bg-light.p-3.mb-3 {
+                p {
+                    display: block;
+                }
+            }
+
+            .alert.alert-info {
+                button {
+                    margin-top: 1rem;
+                }
+            }
+
+            .ui.message.green {
+                margin-top: 0 !important;
+
+                .content {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    .header {
+                        flex-basis: 100%;
+                    }
+
+                    strong {
+                        margin: 0 0.3em;
+                    }
+
+                    p:empty {
+                        display: block;
+                        flex-basis: 100%;
+                        margin: 0;
+                    }
+
+                    .wl_item {
+                        margin-top: 1rem;
+                        margin-right: 0.5rem;
+
+                        .wl_plus[data-action='add'] {
+                            display: none;
+                        }
+
+                        + br {
+                            display: none;
+
+                            + span {
+                                margin-top: 0.75rem;
+                            }
+                        }
+                    }
+                }
+
+                + p {
+                    text-align: center;
+                }
             }
         }
     }
 
     // TRAINING CENTER
-    + .row.w-100 + .row.w-100 {
-        #training-pet-875396,
-        #training-pet-971090 {
+    + .row.w-100 {
+        display: $display_battle-trainingIntro;
+
+        .col-md-4 {
             display: none;
         }
 
-        .training-center-pet {
-            flex-basis: 100%;
-            padding: 0 !important;
+        .ui.message {
+            margin-top: 0 !important;
+        }
 
-            > center {
-                margin-bottom: 1rem;
+        & + .row.w-100 {
+            justify-content: center;
 
-                img {
-                    margin-bottom: 1rem;
+            .training-center-pet {
+                flex-basis: 100%;
+                border-radius: $border-radius;
+                background-color: $white;
 
-                    @media #{$mobile} {
-                        display: none;
+                @media #{$mobile-only} {
+                    &:nth-child(n + 2) {
+                        margin-top: 1rem;
                     }
                 }
 
-                br {
-                    display: none;
-                }
-            }
+                @media #{$tablet-only} {
+                    flex-basis: calc((100% - 1rem) / 2);
 
-            div[style*='background-color:#8EC9B3'],
-            div[style*='background-color:#76BCDD'],
-            div[style*='background-color:#ffd9d9'] {
-                padding: 0.5rem 1rem !important;
-                border-radius: $border-radius;
+                    &:nth-child(even) {
+                        margin-left: 1rem;
+                    }
 
-                + .p-1 {
-                    padding: 1rem !important;
+                    &:nth-child(n + 3) {
+                        margin-top: 1rem;
+                    }
                 }
 
-                center form,
-                form {
-                    display: flex;
-                    flex-wrap: wrap;
+                @media #{$tablet} {
+                    &:only-child {
+                        flex-basis: 50%;
+                    }
+                }
 
-                    select {
-                        width: 100% !important;
-                        margin-top: 0.5rem !important;
-                        border: 0;
+                @media #{$desktop} {
+                    flex-basis: calc((100% - 2rem) / 3);
 
-                        option[value='4'] {
-                            display: none;
+                    &:nth-last-child(2):first-child,
+                    &:nth-last-child(2):first-child ~ .training-center-pet {
+                        flex-basis: calc((100% - 1rem) / 2);
+                    }
+
+                    &:nth-child(3n + 2),
+                    &:nth-child(3n + 3) {
+                        margin-left: 1rem;
+                    }
+
+                    &:nth-child(n + 4) {
+                        margin-top: 1rem;
+                    }
+                }
+
+                .p-1 {
+                    padding: 0 !important;
+                }
+
+                div[style*='background-color:#8EC9B3'],
+                div[style*='background-color:#76BCDD'],
+                div[style*='background-color:#ffd9d9'] {
+                    margin-top: 1rem;
+                    background-color: transparent !important;
+
+                    center form,
+                    form {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        small {
+                            margin: 0 auto 0.5rem;
                         }
                     }
+                }
+
+                div[style*='background-color:#8EC9B3'] {
+                    color: $alert-green;
 
                     input[type='submit'] {
-                        width: calc(50% - 0.5rem);
-                        margin: 1rem 0 !important;
+                        @include button($color: $alert-green, $full-width: true);
+                    }
+                }
 
-                        @media #{$mobile} {
+                div[style*='background-color:#76BCDD'] {
+                    color: $alert-red;
+
+                    input[type='submit'] {
+                        @include button($color: $alert-red, $full-width: true);
+                        margin-top: 1rem !important;
+                    }
+                }
+
+                div[style*='background-color:#ffd9d9'] {
+                    color: $alert-blue;
+
+                    input[type='submit'] {
+                        @media #{$mobile-only} {
+                            display: block;
                             width: 100%;
                         }
 
-                        &[value*='Done'] {
-                            margin: 0 auto !important;
+                        @media #{$tablet} {
+                            width: calc((100% - 1rem) / 2);
                         }
 
-                        + input[type='submit'] {
-                            margin-left: auto !important;
+                        &[name='train_normal'] {
+                            @include button($color: $alert-blue);
+                        }
 
-                            @media #{$mobile} {
-                                margin-top: 0 !important;
+                        &[name='train_auto'] {
+                            @include button($color: $alert-blue, $invert: true);
+                            margin-bottom: 1rem;
+
+                            @media #{$tablet} {
+                                margin-left: 1rem;
                             }
                         }
-                    }
 
-                    small {
-                        margin: 0 auto 0.5rem;
+                        margin-top: 1rem !important;
                     }
                 }
             }
+        }
+    }
 
-            div[style*='background-color:#8EC9B3'] {
-                @include alert-color-background($alert-green);
-            }
+    // TRAINING CENTER - TRAIN STAT
+    ~ div select[name='stat'],
+    ~ center select[name='stat'] {
+        @include form-select($full-width: true);
+        margin-top: 1rem;
 
-            div[style*='background-color:#76BCDD'] {
-                @include alert-color-background($alert-blue);
-            }
+        $stats: (
+            $display_battle-trainingStatStrength,
+            $display_battle-trainingStatDefense,
+            $display_battle-trainingStatHealth,
+            $display_battle-trainingStatLevel,
+            $display_battle-trainingStatSpeed
+        );
 
-            div[style*='background-color:#ffd9d9'] {
-                @include alert-color-background($alert-red);
+        @each $stat in $stats {
+            $i: index($stats, $stat);
+
+            option[value='#{$i}'] {
+                display: $stat;
             }
+        }
+
+        + br {
+            display: none;
         }
     }
 
@@ -652,39 +1123,45 @@
     + center {
         img[src*='subeta.net/pets'] {
             margin-bottom: 1rem;
+        }
 
-            @media #{$mobile} {
-                display: none;
-            }
+        a[href^='/alert.php'] {
+            @include button($color: $alert-green);
+            display: block;
+            width: 10em;
+            margin-top: 1rem;
         }
 
         a[href='train.php'] + br + .mx-auto.d-inline-block.p-3.border.rounded {
-            > p:first-child {
-                display: none;
-
-                + b + p + p {
-                    margin: 1rem 0;
-                }
-            }
-
-            select {
-                width: 100% !important;
-
-                option[value='4'] {
-                    display: none;
-                }
-            }
-
             input[type='submit'] {
-                margin: 1rem 0 !important;
+                @media #{$mobile-only} {
+                    display: block;
+                    width: 100%;
+                }
 
-                + input[type='submit'] {
-                    margin-left: 1rem !important;
+                @media #{$tablet} {
+                    width: calc((100% - 1rem - 4px) / 2);
+                }
 
-                    @media #{$mobile} {
-                        margin-left: 0 !important;
+                &[name='train_normal'] {
+                    @include button($color: $alert-green);
+                }
+
+                &[name='train_auto'] {
+                    @include button($color: $alert-green, $invert: true);
+                    margin-bottom: 1rem;
+
+                    @media #{$tablet} {
+                        margin-left: 1rem !important;
+                    }
+
+                    + br {
+                        display: none;
                     }
                 }
+
+                margin-top: 1rem !important;
+                margin-bottom: 1rem !important;
             }
         }
     }

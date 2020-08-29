@@ -6,13 +6,13 @@
 }
 
 .sp-header {
-    background-color: $dark-grey;
+    background-color: $grey-dark;
     color: $white;
     font-family: $font-family !important;
 }
 
 .sp-sub {
-    background-color: $accent;
+    background-color: $primary;
     border: 0;
 }
 
@@ -35,23 +35,23 @@ form[method='get'] {
             }
 
             a[href='?act=new']:after {
-                @include font-icon('create');
+                @include icon('create');
             }
 
             a[href='/friends.php']:after {
-                @include font-icon('favorite');
+                @include icon('favorite');
             }
 
             a[href='?act=block']:after {
-                @include font-icon('block');
+                @include icon('block');
             }
 
             a[href='?act=prefs']:after {
-                @include font-icon('settings');
+                @include icon('settings');
             }
 
             a[href='?act=editfolders']:after {
-                @include font-icon('folder');
+                @include icon('folder');
             }
         }
 
@@ -76,7 +76,7 @@ form[method='get'] {
                                     padding: 0;
 
                                     &:nth-child(1) {
-                                        background-color: $accent !important;
+                                        background-color: $primary !important;
                                         background-image: none !important;
                                     }
 
@@ -98,7 +98,7 @@ form[method='get'] {
                 select {
                     margin-right: 1rem !important;
 
-                    @media #{$mobile} {
+                    @media #{$mobile-only} {
                         width: calc(100% - 2rem);
                         margin-right: 0 !important;
                         margin-bottom: 1rem !important;
@@ -108,7 +108,7 @@ form[method='get'] {
                 input[type='submit'] {
                     width: $target;
 
-                    @media #{$mobile} {
+                    @media #{$mobile-only} {
                         width: calc(100% - 2rem);
                     }
                 }
@@ -123,7 +123,7 @@ form[method='post'] {
             td:first-child {
                 border-radius: $border-radius 0 0 0;
 
-                @media #{$mobile} {
+                @media #{$mobile-only} {
                     font-size: 0;
                 }
             }
@@ -141,7 +141,7 @@ form[method='post'] {
                     color: $white !important;
                 }
 
-                @media #{$mobile} {
+                @media #{$mobile-only} {
                     font-size: 0;
                 }
             }
@@ -151,11 +151,11 @@ form[method='post'] {
             background-color: $white;
 
             &:not(:nth-last-child(-n + 3)) {
-                border-bottom: 1px solid $light-grey;
+                border-bottom: 1px solid $grey-light;
             }
 
             @include hover {
-                background-color: $accent !important;
+                background-color: $primary !important;
                 color: $white;
 
                 a {
@@ -163,7 +163,7 @@ form[method='post'] {
                 }
             }
 
-            @media #{$mobile} {
+            @media #{$mobile-only} {
                 vertical-align: top;
                 font-size: 0.75rem;
 
@@ -181,7 +181,7 @@ form[method='post'] {
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
 
-                @media #{$mobile} {
+                @media #{$mobile-only} {
                     font-size: 0.75rem;
                 }
 
@@ -265,7 +265,7 @@ form[method='post'] {
     display: none;
 }
 
-@media #{$mobile} {
+@media #{$mobile-only} {
     input[name='replyid'] + table table[width='75%'] > tbody > tr {
         display: flex;
         flex-wrap: wrap;
@@ -273,7 +273,7 @@ form[method='post'] {
 
         td {
             padding: 0.5rem;
-            border-bottom: 1px solid $light-grey;
+            border-bottom: 1px solid $grey-light;
             background-color: $white;
         }
 

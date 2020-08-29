@@ -1,70 +1,171 @@
-// ITEM LOCK
-a[href^='?act=lock'] {
-    margin-left: auto;
+// ITEM
+.ui.segment.attached .ui.grid .column.wide.two {
+    padding: 1rem 0;
 
-    &:after {
-        @include font-icon('lock');
-        font-size: 1.5rem !important;
+    a[href^='item.php?n_id='] {
+        width: 100%;
+        margin-right: calc(-100% + #{$item-mob} + 2rem);
+        padding: 0 1rem;
+
+        @media #{$tablet} {
+            margin-right: calc(-100% + #{$item} + 2rem);
+        }
+
+        img {
+            margin-right: 0 !important;
+        }
+    }
+}
+
+// ITEM LOCK
+a[href^='?act=lock'],
+.locked_info {
+    img {
+        width: 1.5rem !important;
+        max-width: none;
+        height: 1.5rem !important;
+        padding: 1.5rem 0 0 !important;
+        border-radius: 50%;
+        background-size: 1rem;
+        background-repeat: no-repeat;
+        background-position: 0.25rem;
+        z-index: 0;
+
+        &[src$='lock.png'] {
+            background-image: url('https://hongske.github.io/subeta/custom-css/Modernised/svg/lock_open--white.svg');
+            background-color: $alert-green;
+        }
+
+        &[src$='lock_delete.png'] {
+            border: 0 !important;
+            background-image: url('https://hongske.github.io/subeta/custom-css/Modernised/svg/lock--white.svg');
+            background-color: $alert-red !important;
+        }
     }
 
-    img {
+    br {
         display: none;
     }
 }
-.locked_info {
-    display: none;
+a[href^='?act=lock'] {
+    margin-left: auto;
+    position: relative;
+
+    img {
+        margin-right: 0 !important;
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        transform: translate(0, -50%);
+    }
 }
 
 // ITEM DETAILS
-.card {
-    br + br,
-    a + br {
-        display: none;
-    }
+center b + br + a[href='/inventory.php'] + br + br + .container {
+    .col-6 {
+        max-width: $width-container / 2;
 
-    a {
-        &[href='#collapseBook'],
-        &[href='#collapseFood'],
-        &[href='#collapseMinion'],
-        &[href='#collapseToy'],
-        &[href='#collapseTreasure'],
-        &[href*='act=donate'],
-        &[href*='act=delete'],
-        &[href*='act=send'] {
-            display: none !important;
-        }
+        .row.w-100 {
+            .card {
+                margin-bottom: 0 !important;
 
-        &[href*='?act=shop'],
-        &[href*='?act=movetovault'],
-        &[href*='?act=zoo'] {
-            display: block;
-        }
-    }
-
-    .collapse {
-        &#collapseBook,
-        &#collapseFood,
-        &#collapseTreasure {
-            display: block;
-        }
-
-        a {
-            &[href*='petid=875396'],
-            &[href*='petid=971090'] {
-                display: none;
+                @media #{$mobile-only} {
+                    font-size: 0.75rem;
+                }
             }
         }
-    }
-}
 
-// ACCOUNT SEARCH
-.twitter-typeahead + .input-group-btn button {
-    margin-top: 0;
-    font-size: 0 !important;
+        .card {
+            margin: 1rem 0 !important;
 
-    &:after {
-        @include font-icon('search');
-        width: 1.75rem;
-        font-size: 1.5rem;
+            // ITEM INFO
+            &:nth-child(1) {
+                p b {
+                    a {
+                        display: block;
+                        margin-top: -1rem;
+                    }
+
+                    + br {
+                        display: none;
+                    }
+                }
+            }
+
+            // MOVE ITEM
+            // &:nth-child(2) {
+            // }
+
+            // DISCARD ITEM
+            // &:nth-child(3) {
+            // }
+
+            // SEND TO A FRIEND
+            &:nth-child(4) {
+                .card-title {
+                    margin-bottom: 0;
+                }
+            }
+
+            // STICKER FRIEND
+            form[action^='?act=sticker'] {
+                select,
+                input[type='text'] {
+                    width: 100% !important;
+                    margin: 1rem 0;
+                }
+
+                input[type='submit'] {
+                    @include button();
+                }
+            }
+
+            // PET TREASURE
+            a[href='#collapseTreasure'] {
+                margin-top: 1rem;
+            }
+
+            .collapse {
+                $actions: (
+                    $display_inventory-collapseFood,
+                    $display_inventory-collapseMinion,
+                    $display_inventory-collapseToy,
+                    $display_inventory-collapseBook
+                );
+
+                @each $action in $actions {
+                    $selector: str-slice($action, 25);
+
+                    &##{$selector} {
+                        display: $action;
+                    }
+                }
+
+                a {
+                    display: block;
+                }
+
+                br {
+                    display: none;
+                }
+            }
+
+            a {
+                $actions: (
+                    $display_inventory-buttonFood,
+                    $display_inventory-buttonMinion,
+                    $display_inventory-buttonToy,
+                    $display_inventory-buttonBook
+                );
+
+                @each $action in $actions {
+                    $selector: str-slice($action, 31, str-index($action, ',') - 1);
+
+                    &[href='#collapse#{$selector}'] {
+                        display: $action;
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,0 +1,11 @@
+.twitter-typeahead.twitter-typeahead {
+    input[type='text'] {
+        padding-right: 1rem !important;
+        color: $black;
+
+        &:focus {
+            border-radius: $border-radius !important;
+            box-shadow: none;
+        }
+    }
+}

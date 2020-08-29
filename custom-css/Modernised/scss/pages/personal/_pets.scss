@@ -1,36 +1,48 @@
+// PET LIST
 #pet_list {
+    justify-content: center;
     margin-top: 1rem;
+
     > .col-12 {
         margin: 0 0 1rem;
         padding: 1rem !important;
         border-radius: $border-radius;
         background-color: $white;
 
-        &:only-child {
-            flex-basis: 50%;
-            margin: 0 auto;
-        }
-
-        &:nth-last-child(n + 2),
-        &:nth-last-child(n + 2) ~ .col-12 {
-            flex-basis: calc((100% - 1rem) / 2);
-        }
-
-        &:nth-last-child(n + 3),
-        &:nth-last-child(n + 3) ~ .col-12 {
-            flex-basis: calc((100% - 2rem) / 3);
-        }
-
-        @media #{$mobile} {
+        @media #{$mobile-only} {
             flex-basis: 100% !important;
         }
 
-        &:nth-child(n + 2) {
-            margin-left: 1rem;
-
-            @media #{$mobile} {
-                margin-left: 0;
+        @media #{$tablet-only} {
+            &:not(:only-child) {
+                flex-basis: calc((100% - 1rem) / 2);
             }
+
+            &:nth-child(2n + 2) {
+                margin-left: 1rem;
+            }
+        }
+
+        @media #{$desktop} {
+            &:nth-last-child(n + 2),
+            &:nth-last-child(n + 2) ~ .col-12 {
+                flex-basis: calc((100% - 1rem) / 2);
+            }
+
+            &:nth-last-child(n + 3),
+            &:nth-last-child(n + 3) ~ .col-12 {
+                flex-basis: calc((100% - 2rem) / 3);
+            }
+
+            &:nth-child(3n + 2),
+            &:nth-child(3n + 3) {
+                margin-left: 1rem;
+            }
+        }
+
+        &:only-child {
+            flex-basis: 50%;
+            margin: 0 auto;
         }
 
         .icon.star,
@@ -82,7 +94,7 @@
 
                             // BIRTHDAY
                             &:nth-child(2):before {
-                                @include font-icon('cake');
+                                @include icon('cake');
                                 margin-right: 0.45em;
                                 transform: translate(0, 2px);
                                 color: rgba($black, 0.5);
@@ -93,7 +105,7 @@
 
                     // OPTIONS + STATUS + STATS + RESORT
                     &:nth-child(2) {
-                        margin-top: 0;
+                        margin: 0;
 
                         .pet_information {
                             display: flex;
@@ -109,7 +121,7 @@
                                 .pet-options {
                                     padding: 1rem;
                                     border-radius: $border-radius;
-                                    background-color: $accent;
+                                    background-color: $primary;
                                     color: $white;
 
                                     .pet-dropdown-toggle {
@@ -120,7 +132,7 @@
                                         }
 
                                         &:before {
-                                            @include font-icon('settings');
+                                            @include icon('settings');
                                             margin-right: 0.55em;
                                             transform: translate(0, 2px);
                                             font-size: 1rem;
@@ -181,11 +193,11 @@
                                     }
 
                                     &:nth-of-type(1):before {
-                                        @include font-icon('fastfood');
+                                        @include icon('fastfood');
                                     }
 
                                     &:nth-of-type(2):before {
-                                        @include font-icon('mood');
+                                        @include icon('mood');
                                     }
                                 }
                             }
@@ -194,24 +206,20 @@
                         // STATS
                         .pet_stats {
                             padding: 0 !important;
+
+                            .progress {
+                                margin-top: 1rem;
+                            }
                         }
 
                         // RESORT
                         .alert.alert-success {
-                            margin-bottom: 0;
+                            margin-bottom: 0 !important;
 
                             p {
                                 display: flex;
-
-                                @media #{$tablet} {
-                                    flex-direction: column;
-                                    text-align: center;
-                                }
-
-                                @media #{$mobile} {
-                                    flex-direction: row;
-                                    text-align: left;
-                                }
+                                flex-direction: row;
+                                text-align: left;
 
                                 br {
                                     display: none;
@@ -219,14 +227,6 @@
 
                                 a {
                                     margin-left: auto;
-
-                                    @media #{$tablet} {
-                                        margin-left: 0;
-                                    }
-
-                                    @media #{$mobile} {
-                                        margin-left: auto;
-                                    }
                                 }
                             }
                         }
@@ -236,3 +236,7 @@
         }
     }
 }
+
+/******************************************************************************/
+
+// TODO: PET DETAIL

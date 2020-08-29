@@ -1,0 +1,97 @@
+$font-family: 'Barlow Semi Condensed';
+
+// COLOURS - BASIC
+$primary: var(--primary);
+$black: var(--black);
+$grey-dark: var(--grey-dark);
+$grey: var(--grey);
+$grey-light: var(--grey-light);
+$white: var(--white);
+
+// COLOURS - ALERTS
+$alert-red: #fe4365;
+$alert-yellow: #fbb829;
+$alert-green: #23c174;
+$alert-blue: #00b4ff;
+
+// VIEWPORTS
+$mobile-only: 'only screen and (max-device-width: 767px)';
+$tablet: 'only screen and (min-device-width: 768px)';
+$tablet-only: 'only screen and (min-device-width: 768px) and (max-width: 1023px)';
+$desktop: 'only screen and (min-device-width: 1024px) and (min-width: 1024px)';
+$vw-mobile: calc(100vw / 3);
+$vh-mobile: calc(100vh / 3);
+
+// DIMENSIONS
+$target: 3rem;
+$sidebar: var(--sidebar, 20rem);
+$border-radius: var(--border-radius, 5px);
+$width-container: 1024px;
+$item: 48px;
+$item-mob: 32px;
+
+// PAGE - SUBETA - BATTLE
+$display_battle-challenge: var(--display_battle-challenge, block);
+$display_battle-challengeSelectPet: var(--display_battle-challengeSelectPet, block);
+$display_battle-challengePreselection: var(--display_battle-challengePreselection, block);
+$display_battle-challengeSelectWeapons: var(--display_battle-challengeSelectWeapons, block);
+$display_battle-challengeSelectScrolls: var(--display_battle-challengeSelectScrolls, block);
+$display_battle-battleWeapons: var(--display_battle-battleWeapons, flex);
+$display_battle-battlePotions: var(--display_battle-battlePotions, block);
+$display_battle-battleSpells: var(--display_battle-battleSpells, block);
+$display_battle-armory: var(--display_battle-armory, block);
+$display_battle-scrolls: var(--display_battle-scrolls, block);
+$display_battle-beginnerGuide: var(--display_battle-beginnerGuide, block);
+$display_battle-indepthGuide: var(--display_battle-indepthGuide, block);
+$display_battle-statistics: var(--display_battle-statistics, block);
+$display_battle-spendExp: var(--display_battle-spendExp, block);
+$display_battle-shop: var(--display_battle-shop, block);
+$display_battle-highScores: var(--display_battle-highScores, block);
+$display_battle-bossPrizes: var(--display_battle-bossPrizes, block);
+$display_battle-healer: var(--display_battle-healer, block);
+$display_battle-quests: var(--display_battle-quests, block);
+$display_battle-questsIntro: var(--display_battle-questsIntro, block);
+$display_battle-trainingCenter: var(--display_battle-trainingCenter, block);
+$display_battle-hydragellos: var(--display_battle-hydragellos, block);
+$display_battle-trainingIntro: var(--display_battle-trainingIntro, block);
+$display_battle-trainingInfo: var(--display_battle-trainingInfo, block);
+$display_battle-trainingStatStrength: var(--display_battle-trainingStatStrength, block);
+$display_battle-trainingStatDefense: var(--display_battle-trainingStatDefense, block);
+$display_battle-trainingStatHealth: var(--display_battle-trainingStatHealth, block);
+$display_battle-trainingStatSpeed: var(--display_battle-trainingStatSpeed, block);
+$display_battle-trainingStatLevel: var(--display_battle-trainingStatLevel, block);
+
+// PAGE - SUBETA - QUESTS
+$display_quest-blue: var(--display_quest-blue, block);
+$display_quest-carl: var(--display_quest-carl, block);
+$display_quest-cinthia: var(--display_quest-cinthia, block);
+$display_quest-cursed: var(--display_quest-cursed, block);
+$display_quest-library: var(--display_quest-library, block);
+$display_quest-maleria: var(--display_quest-maleria, block);
+$display_quest-pete: var(--display_quest-pete, block);
+$display_quest-quentin: var(--display_quest-quentin, block);
+$display_quest-saggitarius: var(--display_quest-saggitarius, block);
+$display_quest-sarah: var(--display_quest-sarah, block);
+$display_quest-wizard: var(--display_quest-wizard, block);
+
+// PAGE - COMMERCE - YOUR SHOPS
+$display_yourShops-quickStock: var(--display_yourShops-quickStock, block);
+$display_yourShops-autopricer: var(--display_yourShops-autopricer, block);
+$display_yourShops-autopricerIntro: var(--display_yourShops-autopricerIntro, block);
+$display_yourShops-profits: var(--display_yourShops-profits, block);
+$display_yourShops-salesHistory: var(--display_yourShops-salesHistory, block);
+$display_yourShops-editCategories: var(--display_yourShops-editCategories, block);
+$display_yourShops-viewShop: var(--display_yourShops-viewShop, block);
+$display_yourShops-editShop: var(--display_yourShops-editShop, block);
+$display_yourShops-yourShops: var(--display_yourShops-yourShops, block);
+
+// PAGE - PERSONAL - INVENTORY
+$display_inventory-collapseFood: var(--display_inventory-collapseFood, none);
+$display_inventory-collapseMinion: var(--display_inventory-collapseMinion, none);
+$display_inventory-collapseToy: var(--display_inventory-collapseToy, none);
+$display_inventory-collapseBook: var(--display_inventory-collapseBook, none);
+$display_inventory-buttonFood: var(--display_inventory-buttonFood, inline-block);
+$display_inventory-buttonMinion: var(--display_inventory-buttonMinion, inline-block);
+$display_inventory-buttonToy: var(--display_inventory-buttonToy, inline-block);
+$display_inventory-buttonBook: var(--display_inventory-buttonBook, inline-block);
+$display_inventory-treasure: var(--display_inventory-treasure, block);

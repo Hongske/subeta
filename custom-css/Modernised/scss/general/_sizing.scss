@@ -1,0 +1,175 @@
+@mixin cols($padding: 1rem, $spacing: 2rem, $useWidth: false, $index: 1) {
+    margin: 0;
+    padding: $padding;
+
+    @if $useWidth {
+        width: 100%;
+
+        @media #{$tablet} {
+            width: 50%;
+        }
+
+        @media #{$desktop} {
+            width: calc(100% / 3);
+        }
+    } @else {
+        flex-basis: 100%;
+
+        @media #{$tablet-only} {
+            flex-basis: calc((100% - #{$spacing}) / 2);
+
+            &:nth-child(2n + #{$index + 1}) {
+                margin-left: $spacing !important;
+            }
+        }
+
+        @media #{$desktop} {
+            flex-basis: calc((100% - (#{$spacing} * 2)) / 3);
+
+            &:nth-child(3n + #{$index + 1}),
+            &:nth-child(3n + #{$index + 2}) {
+                margin-left: $spacing !important;
+            }
+        }
+    }
+
+    br {
+        display: none;
+    }
+
+    img {
+        margin-right: 1rem;
+    }
+}
+
+/******************************************************************************/
+
+$columns: 12;
+
+@for $i from 1 through $columns {
+    $parts: $columns / $i;
+
+    .col {
+        &,
+        &-sm,
+        &-md,
+        &-lg {
+            &-#{$i} {
+                flex-basis: 100%;
+                max-width: none;
+                padding: 0;
+
+                @media #{$desktop} {
+                    flex-basis: calc((100% - ((#{$parts} - 1) * 1rem)) / #{$parts});
+
+                    + [class*='col-'] {
+                        margin-left: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.col-12 {
+    margin-left: 0 !important;
+}
+
+.col-md-3:nth-last-child(2):first-child,
+.col-md-3:nth-last-child(2):first-child ~ .col-md-3 {
+    flex-basis: 50%;
+    margin-left: 0;
+}
+
+.hidden-xs {
+    @media #{$mobile-only} {
+        display: none;
+    }
+}
+
+/******************************************************************************/
+
+.row {
+    margin: 0;
+}
+
+.column {
+    box-shadow: none !important;
+}
+
+.m-1 {
+    margin: 0 !important;
+}
+
+.mt-1,
+.mt-2 {
+    margin-top: 0 !important;
+}
+
+.mb-1,
+.mb-2 {
+    margin-bottom: 0 !important;
+}
+
+.mt-4,
+.pt-4 {
+    margin-top: 1rem !important;
+    padding-top: 0 !important;
+}
+
+.mt-4,
+.pb-4 {
+    margin-bottom: 1rem !important;
+    padding-bottom: 0 !important;
+}
+
+.p-2 {
+    padding: 0 !important;
+}
+
+/******************************************************************************/
+
+div[style*='width:500px'],
+div[style*='width:750px'],
+div[style*='width: 500px'],
+div[style*='width: 715px'],
+div[style*='width: 750px'],
+div[style*='width: 70%'],
+table[style*='width:600px'],
+table[width='595'],
+table[width='598'] {
+    width: 100% !important;
+}
+
+div[style*='height: 135px'],
+div[style*='height: 500px'],
+div[style*='height:500px'] {
+    height: auto !important;
+}
+
+div[style*='min-height: 100px'],
+div[style*='min-height: 130px'],
+div[style*='min-height: 260px'] {
+    min-height: 0 !important;
+}
+
+div[style*='margin: 20px'] {
+    margin: 0 !important;
+}
+
+@media #{$mobile-only} {
+    div[style*='width: 70%;'],
+    div[style*='width: 60%;'],
+    div[style*='width:35%;'],
+    table[width] {
+        width: 100% !important;
+    }
+}
+
+/******************************************************************************/
+
+ol,
+ul,
+dl {
+    margin-bottom: 0 !important;
+}

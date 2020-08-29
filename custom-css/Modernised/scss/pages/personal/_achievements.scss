@@ -1,188 +1,293 @@
-#achievement-debug + center + p + .row {
-    margin-top: 1rem;
+#achievement-debug + center {
+    display: none;
 
-    // NAV
-    .col-md-3 {
-        flex-basis: calc(#{$sidebar-width} * 0.5) !important;
-        max-width: none;
-        margin: 0;
+    + p + .row {
+        // NAV
+        > .col-md-3.col-lg-2 {
+            flex-basis: 100%;
 
-        .item.active {
-            border-radius: 0 !important;
-        }
-
-        @media #{$mobile} {
-            flex-basis: 100% !important;
-
-            .ui.menu.vertical {
-                display: flex;
-                flex-wrap: wrap;
-                margin-bottom: 1rem;
-
-                > .item:nth-child(1) {
-                    flex-basis: 100%;
-
-                    .ui.input,
-                    .ui.input input[type='text'] {
-                        width: 100%;
-                    }
-                }
-
-                > a.item {
-                    flex-basis: calc(100% / 3);
-                    border-top: 1px solid $light-grey !important;
-                    border-bottom: 1px solid $light-grey !important;
-                    text-align: center;
-                }
-
-                > div.item:not(:first-child) {
-                    display: none;
-                }
+            @media #{$tablet} {
+                flex-basis: calc(100% / 3);
             }
-        }
-    }
 
-    // CONTENT
-    .col-md-9 {
-        flex-basis: calc(100% - (#{$sidebar-width} * 0.5) - 1.5rem) !important;
-        max-width: none;
-        margin: 0;
-        margin-left: auto;
+            @media #{$desktop} {
+                flex-basis: 25%;
+            }
 
-        @media #{$mobile} {
-            flex-basis: 100% !important;
-        }
+            .ui.vertical.menu.fluid > .item {
+                // SEARCH
+                &:first-child {
+                    flex-basis: 100%;
+                    .ui.input.mini.icon {
+                        display: block;
 
-        #username,
-        #achievement_stats {
-            display: none;
-        }
+                        input[type='text'] {
+                            padding-left: 1.5rem !important;
+                        }
+                    }
+                }
 
-        #achievementList {
-            margin-top: 0;
+                // TOP 3 CATEGORIES
+                &.category.header {
+                    background-color: $primary;
+                    color: $white;
+                    text-align: center;
 
-            // SHOW-OPTIONS
-            #achievement-options .ui.text.menu {
-                margin: 0;
+                    @include hover {
+                        background-color: $white;
+                        color: $primary !important;
+                        text-decoration: none;
+                    }
 
-                .item {
-                    margin: 0;
-                    color: $black;
+                    @media #{$mobile-only} {
+                        font-size: 0 !important;
+                    }
 
-                    &:not(.header) {
-                        margin-left: 0.5rem;
-                        padding: 0 0.5rem;
-                        border-radius: $border-radius;
+                    &:before {
+                        width: auto;
+                        height: auto;
+                        position: relative;
+                        background-image: none;
 
-                        @include hover {
-                            background-color: $accent;
-                            text-decoration: none;
+                        @media #{$tablet} {
+                            margin-bottom: 1rem;
                         }
                     }
 
-                    &.header {
-                        @include hover {
-                            color: $black !important;
-                            text-decoration: none;
-                        }
+                    &:nth-child(2):before {
+                        @include icon('new_releases', $font-size: 1.5rem, $display: block);
                     }
 
-                    &[data-option='retired'] {
+                    &:nth-child(3):before {
+                        @include icon('save', $font-size: 1.5rem, $display: block);
+                    }
+
+                    &:nth-child(4):before {
+                        @include icon('check_circle', $font-size: 1.5rem, $display: block);
+                    }
+
+                    &.active {
+                        background-color: $white;
+                        color: $primary !important;
+                    }
+                }
+
+                // OTHER CATEGORIES
+                &:nth-child(n + 5) {
+                    color: $white;
+
+                    @include hover {
+                        text-decoration: none;
+                    }
+
+                    @media #{$tablet} {
+                        flex-basis: 100%;
+                    }
+
+                    &:before {
                         display: none;
                     }
+
+                    a {
+                        color: inherit;
+                        font-size: 1rem !important;
+
+                        strong {
+                            @media #{$mobile-only} {
+                                font-weight: normal;
+                            }
+                        }
+                    }
+
+                    .menu {
+                        @media #{$mobile-only} {
+                            display: none;
+                        }
+                    }
                 }
             }
+        }
 
-            // ACHIEVEMENTS
-            #achievementsx {
+        // CONTENT
+        > .col-md-9.col-lg-10 {
+            @media #{$mobile-only} {
+                margin-top: 1rem;
+            }
+
+            @media #{$tablet-only} {
+                flex-basis: calc(100% / 3 * 2);
+                padding-left: 1rem;
+            }
+
+            @media #{$desktop} {
+                flex-basis: calc(75% - 1rem);
+            }
+
+            #achievementList {
+                border-radius: $border-radius;
+
+                p:empty {
+                    display: none;
+                }
+
+                #achievement-options {
+                    padding: 1rem 0;
+                    border-radius: $border-radius $border-radius 0 0;
+                    background-color: $grey-dark;
+                    color: $white;
+
+                    .ui.text.menu.sort.options {
+                        margin: 0;
+
+                        .item {
+                            margin: 0;
+                            padding: 0 1rem !important;
+                            opacity: 1;
+
+                            &.header {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                .achievement-paging {
+                    .pagination {
+                        width: calc(100% - 2rem);
+                        margin: 0 1rem;
+
+                        .page-item:not(:only-child) {
+                            margin: 1rem 0;
+                        }
+                    }
+                }
+
                 .achievement {
-                    margin: 0 -1rem;
-                    border-bottom: 1px solid $light-grey;
+                    margin: 0;
+                    padding: 1rem 1rem 0;
                     border-radius: 0;
+                    background-color: transparent;
+
+                    &:nth-child(n + 2) {
+                        border-top: 1px solid $grey-light;
+                    }
 
                     &.completed {
                         background-color: transparent !important;
-                        opacity: 0.5;
+
+                        .title {
+                            color: $alert-green !important;
+                        }
                     }
 
-                    .ui.grid {
-                        .column.wide.two {
-                            display: none;
+                    > .ui.grid > .column.wide {
+                        &:nth-child(1) {
+                            position: absolute;
                         }
 
-                        .column.wide.thirteen {
+                        &:nth-child(2) {
+                            width: 100%;
                             display: flex;
                             flex-wrap: wrap;
                             align-items: center;
-                            width: 100%;
+                            margin: 0;
                             padding: 0;
 
-                            a h3 {
-                                display: flex;
-                                align-items: center;
+                            > a {
                                 flex-basis: 100%;
+                                color: transparent;
 
-                                input[type='checkbox'] {
-                                    order: -1;
-                                    margin-right: 0.75rem;
+                                .title {
+                                    display: flex;
+                                    align-items: center;
+                                    margin-left: calc(#{$item-mob} + 1rem);
+                                    line-height: $item-mob !important;
+                                    color: $alert-red;
+
+                                    @media #{$tablet} {
+                                        margin-left: calc(#{$item} + 1rem);
+                                        line-height: $item !important;
+                                    }
+
+                                    input[type='checkbox'] {
+                                        margin-left: auto;
+                                    }
                                 }
                             }
 
-                            > p {
+                            > a + p {
                                 flex-basis: 100%;
-                                font-size: 0.75rem;
+                                margin-bottom: 1rem;
+                                font-style: normal;
+
+                                @media #{$mobile-only} {
+                                    font-size: 0.75rem;
+                                }
                             }
 
-                            .small.labels {
+                            > .ui.small.labels {
                                 .label {
                                     height: $target;
-                                    margin: 1rem 1rem 0 0 !important;
+                                    margin: 0 1rem 1rem 0 !important;
                                     padding: 0 1rem;
                                     line-height: $target;
+                                }
+                            }
 
-                                    &:not(.red):not(.green) {
-                                        background-color: $light-grey !important;
-                                    }
+                            > .required-items {
+                                > .button {
+                                    margin-bottom: 1rem;
+                                }
 
-                                    .icon.star.yellow {
-                                        margin-left: 0.25rem;
-                                        color: inherit;
+                                > p {
+                                    display: none;
+                                }
+
+                                > .ui.grid {
+                                    margin-top: 1rem;
+
+                                    > .column {
+                                        min-height: 0 !important;
+                                        background-color: transparent !important;
+                                        color: $alert-red;
+
+                                        &.completed {
+                                            color: $alert-green;
+                                        }
+
+                                        p {
+                                            &:nth-of-type(1) {
+                                                display: none;
+                                            }
+
+                                            &:nth-of-type(2) {
+                                                margin-top: 0;
+                                                margin-left: auto;
+
+                                                a {
+                                                    color: $alert-red;
+                                                    font-size: 0;
+
+                                                    &:before {
+                                                        @include icon('store', $font-size: 1rem);
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             }
 
-                            .required-items {
-                                .button {
-                                    margin-top: 1rem;
+                            > .prizes {
+                                flex-basis: 100%;
+                                height: auto;
 
-                                    &.close {
-                                        display: none;
-                                    }
+                                &:not(:empty) {
+                                    margin-bottom: 1rem;
                                 }
 
-                                .ui.grid {
-                                    margin-top: 1rem !important;
-
-                                    .column.wide.three {
-                                        display: flex;
-                                        align-items: center;
-                                        flex-basis: 100%;
-                                        min-height: 0 !important;
-                                        padding: 1rem !important;
-                                        border-bottom: 1px solid $white;
-
-                                        img {
-                                            margin-right: 1rem;
-                                        }
-
-                                        p:nth-of-type(1) {
-                                            display: none;
-                                        }
-
-                                        p:nth-of-type(2) {
-                                            margin-left: auto;
-                                        }
-                                    }
+                                > .column {
+                                    width: 100%;
                                 }
                             }
                         }

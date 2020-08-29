@@ -1,0 +1,299 @@
+// CURRENCY STORAGE
+input[type='hidden'][name='act'][value='bank'] {
+    ~ .column.wide {
+        display: block;
+        flex-basis: 100%;
+        align-self: center;
+        padding: 0 1rem;
+
+        &:nth-child(2) {
+            @media #{$desktop} {
+                flex: 30%;
+            }
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            flex-basis: calc((100% - 1rem) / 2);
+            margin-bottom: 1rem;
+            padding-top: 0;
+
+            @media #{$desktop} {
+                flex-basis: 25%;
+                margin-left: 0 !important;
+                padding-top: 1rem;
+            }
+
+            .input {
+                width: 100%;
+            }
+
+            .icon.plus:before {
+                @include icon('add_circle_outline', $font-size: 1.5rem);
+            }
+
+            .icon.minus:before {
+                @include icon('remove_circle_outline', $font-size: 1.5rem);
+            }
+        }
+
+        &:nth-child(3) {
+            padding-right: 0;
+
+            @media #{$desktop} {
+                padding-left: 0;
+                padding-right: 1rem;
+            }
+        }
+
+        &:nth-child(4) {
+            margin-left: 1rem !important;
+            padding-left: 0;
+        }
+
+        &:nth-child(5) {
+            display: none;
+        }
+
+        &:nth-child(6) {
+            @media #{$desktop} {
+                flex-basis: 100px;
+                margin-bottom: 0;
+                padding-left: 0;
+            }
+        }
+
+        + .column.wide {
+            margin-top: 0;
+        }
+    }
+}
+
+// ITEM STORAGE - SEARCH
+.card-body .col-12.col-md-10 .form.bg-light.p-3.rounded.border {
+    padding: 0 !important;
+    background-color: transparent !important;
+}
+
+// ITEM STORAGE - ITEMS
+#vaults {
+    margin-top: 1rem;
+    margin-bottom: 7rem;
+
+    @media #{$tablet} {
+        margin-bottom: 3rem;
+    }
+
+    // ITEMS
+    .row.mx-auto.text-center {
+        border-radius: $border-radius;
+        background-color: $white;
+
+        @media #{$tablet} {
+            padding: 1rem;
+        }
+
+        .vault-item {
+            @include cols();
+            border-radius: 0 !important;
+            font-size: 0.75rem;
+
+            @media #{$mobile-only} {
+                padding: 1rem !important;
+
+                &:nth-child(n + 2) {
+                    border-top: 1px solid $grey-light !important;
+                }
+            }
+
+            @media #{$tablet-only} {
+                &:nth-last-child(-n + 2) > div {
+                    margin-bottom: -40px;
+                }
+            }
+
+            @media #{$desktop} {
+                &:nth-last-child(-n + 3) > div {
+                    margin-bottom: -40px;
+                }
+            }
+
+            > div {
+                display: flex;
+                align-items: center;
+                width: 100% !important;
+                margin-bottom: calc(-40px + 1rem);
+
+                label {
+                    flex-basis: 50%;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 1rem;
+                    text-align: left;
+                }
+
+                a,
+                input[type='checkbox'] {
+                    margin-left: 0.5rem;
+                }
+
+                select {
+                    flex-basis: $target;
+                    width: 100% !important;
+                    margin-left: 1rem;
+                    position: relative !important;
+                    left: 0 !important;
+                    right: 0 !important;
+                    bottom: 0 !important;
+                }
+
+                br,
+                i {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // ACTIONS
+    .col-12.p-3.rounded.border.bg-light {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border-radius: $border-radius $border-radius 0 0 !important;
+        position: fixed;
+        left: auto;
+        right: 0;
+        bottom: 0;
+        background-color: $grey-dark !important;
+        font-size: 0;
+        z-index: 2;
+
+        @media #{$tablet-only} {
+            width: calc(100% - #{$sidebar} - 2rem);
+            right: 1rem;
+
+            #content[style*='margin-left: 0'] &,
+            #content[style*='margin-left:0'] & {
+                width: calc(100% - 2rem);
+            }
+        }
+
+        @media #{$desktop} {
+            max-width: calc(#{$width-container} - 2rem);
+            right: auto;
+        }
+
+        input[type='button'] {
+            margin-right: 1rem !important;
+            font-size: 0;
+
+            @media #{$mobile-only} {
+                flex-basis: $target;
+            }
+
+            &[onclick^='checkAll'] {
+                @include button($color: $alert-green);
+            }
+
+            &[onclick^='uncheckAll'] {
+                @include button($color: $alert-red);
+            }
+        }
+
+        select {
+            width: 100%;
+        }
+
+        select[name='qv_opt'] {
+            flex-basis: $target;
+        }
+
+        select[name='destination'] {
+            flex-basis: calc(100% - (#{$target} * 3) - 3rem - 6px);
+            margin-left: 1rem;
+
+            @media #{$tablet} {
+                flex-basis: 6rem;
+                margin-right: 1rem;
+            }
+        }
+
+        input[type='submit'] {
+            @media #{$mobile-only} {
+                flex-basis: 100%;
+                margin-top: 1rem;
+            }
+
+            @media #{$tablet} {
+                flex-basis: auto;
+            }
+        }
+    }
+}
+
+// ITEM STORAGE - CATEGORIES
+#new-category-name {
+    margin: 0 1rem !important;
+    transform: translate(0, 2px);
+
+    @media #{$mobile-only} {
+        width: 100%;
+        margin: 1rem 0 !important;
+    }
+}
+#category-list {
+    width: calc(#{$vw-mobile} - 2rem);
+    margin: -1rem;
+
+    @media #{$tablet-only} {
+        width: calc(100vw - #{$sidebar} - 2.25rem);
+
+        #content[style*='margin-left: 0'] &,
+        #content[style*='margin-left:0'] & {
+            width: calc(100vw - 2rem);
+        }
+    }
+
+    @media #{$desktop} {
+        width: calc(#{$width-container} - 2rem);
+    }
+
+    .category-listing {
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 1rem;
+        background-color: $white;
+
+        &:last-child {
+            border-radius: 0 0 $border-radius $border-radius;
+        }
+
+        td {
+            flex: 1 1 auto;
+            padding: 0;
+            text-overflow: clip;
+        }
+
+        .category-move {
+            padding-right: 1rem;
+            text-align: center;
+        }
+
+        .category-delete {
+            padding-right: 0.5rem;
+
+            .btn {
+                @include button($color: $alert-red, $invert: true);
+                height: auto;
+                padding: 0.5rem !important;
+                font-size: 0 !important;
+                line-height: normal;
+
+                &:before {
+                    @include icon('delete', $font-size: 1rem);
+                }
+            }
+        }
+    }
+}

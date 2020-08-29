@@ -1,64 +1,55 @@
 // GAME ROOM
-.game-category {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    max-width: $tablet-width;
-    margin-top: 1rem;
-    border-radius: $border-radius;
-    background-color: $white;
+.game {
+    &-category {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 1rem;
+        border-radius: $border-radius;
+        background-color: $white;
 
-    .game-category-title {
-        flex-basis: 100%;
-        height: $target;
-        padding: 0 1rem;
-        text-align: left;
-        border-radius: $border-radius $border-radius 0 0;
-        background-color: $dark-grey;
-        color: $white;
+        &-title {
+            flex-basis: 100%;
+            height: $target;
+            padding: 0 1rem;
+            border-radius: $border-radius $border-radius 0 0;
+            background-color: $grey-dark;
+            color: $white;
+            text-align: left;
 
-        h1 {
-            margin: 0;
-            line-height: $target;
+            h1 {
+                margin: 0;
+                line-height: $target !important;
+            }
         }
     }
 
-    .game-icon {
-        flex-basis: 25%;
+    &-icon {
+        @include cols($index: 2);
         min-width: 0;
         min-height: 0;
-        margin: 0;
 
-        @media #{$tablet} {
-            flex-basis: 50%;
-        }
-
-        @media #{$mobile} {
-            flex-basis: 100%;
+        & + & {
+            @media #{$mobile-only} {
+                border-top: 1px solid $grey-light;
+            }
         }
 
         a {
             display: flex;
             align-items: center;
-            padding: 0.5rem 1rem;
-
-            br {
-                display: none;
-            }
-
-            img {
-                margin-right: 0.5rem;
-                padding-left: 0 !important;
-            }
+            text-align: left;
         }
     }
 }
 
+/******************************************************************************/
+
 // 2048
-@media #{$mobile} {
+@media #{$mobile-only} {
     div[id='2048_puzzle'] {
         width: 100% !important;
-        height: calc(#{$mobile-vw} - 2rem) !important;
+        height: calc(#{$vw-mobile} - 2rem) !important;
         margin-top: -1.75rem !important;
 
         #game-container {
@@ -66,14 +57,14 @@
 
             .game-container {
                 width: 100% !important;
-                height: calc(#{$mobile-vh} - 2rem);
+                height: calc(#{$vh-mobile} - 2rem);
                 background-size: contain;
                 background-repeat: no-repeat;
 
                 .grid-cell,
                 .tile {
-                    width: calc(((#{$mobile-vw} - 4rem) - 3rem) / 4);
-                    height: calc(((#{$mobile-vw} - 4rem) - 3rem) / 4);
+                    width: calc(((#{$vw-mobile} - 4rem) - 3rem) / 4);
+                    height: calc(((#{$vw-mobile} - 4rem) - 3rem) / 4);
                 }
 
                 .tile {
@@ -129,175 +120,44 @@
     }
 }
 
+/******************************************************************************/
+
 // BLACKOUT
-#blackout_board {
-    .lightoff {
+.blackout {
+    @at-root .lighton {
+        background-color: $primary;
+    }
+
+    @at-root .lightoff {
         background-color: $black;
     }
 
-    .lighton {
-        background-color: $accent;
+    @at-root .lighton,
+        .lightoff {
+        width: 100% !important;
+        height: 0 !important;
+        padding-bottom: 100%;
+        cursor: pointer;
     }
 
-    @media #{$mobile} {
-        table {
-            width: 100%;
+    @at-root #blackout_board {
+        .lighton,
+        .lightoff {
+            border: 1px solid $grey-light;
+        }
 
-            tr {
-                display: flex;
+        @media #{$mobile-only} {
+            table {
+                width: 100%;
 
-                td {
-                    flex-grow: 1;
+                tr {
+                    display: flex;
 
-                    .lighton,
-                    .lightoff {
-                        width: 100% !important;
-                        height: 0 !important;
-                        padding-bottom: 100%;
+                    td {
+                        flex-grow: 1;
                     }
                 }
             }
         }
     }
-}
-
-// DARK MATTER DICE
-#dark-matter-dice {
-    // MAIN PAGE
-    @at-root table[width='598']
-            font[face='verdana'][color='#9400d3']
-            form[action='dmd.php?start=true'] {
-        margin-top: 1rem;
-    }
-
-    // HIDE HIGH SCORES LINK IN BODY
-    @at-root h1 + a[href='/games/scores.php?gameid=38'] {
-        display: none;
-    }
-
-    // CURRENT TURN
-    @at-root form[method='POST'] {
-        table[width='595'][cellpadding='5'] {
-            border-radius: $border-radius;
-            background-color: $white;
-
-            tr:nth-child(1) {
-                td {
-                    padding: 1rem;
-                    text-align: center;
-
-                    br,
-                    h2 {
-                        display: none;
-                    }
-
-                    table {
-                        width: auto;
-                        border: 0 !important;
-
-                        td {
-                            padding: 0;
-
-                            br {
-                                display: block;
-                            }
-                        }
-                    }
-                }
-            }
-
-            tr:nth-child(2) {
-                td {
-                    padding: 0;
-
-                    table {
-                        border: 0 !important;
-                    }
-                }
-            }
-
-            tr:nth-child(3) {
-                td {
-                    padding: 1rem 0;
-                }
-            }
-        }
-
-        + center h2 {
-            display: none;
-        }
-
-        + center + form[method='POST'] table[cellpadding='10'] > tbody {
-            margin-top: 1rem;
-            border-radius: $border-radius;
-            background-color: $white;
-
-            > tr:nth-child(1) {
-                display: flex;
-                flex-wrap: wrap;
-
-                > td {
-                    flex-basis: 100%;
-                    width: 100%;
-
-                    table {
-                        border: 0 !important;
-
-                        tr td {
-                            padding: 0;
-                        }
-                    }
-
-                    &:nth-child(1) {
-                        // TODO: CONTINUE STYLING
-                    }
-                }
-            }
-        }
-    }
-}
-
-// DECANTER OF INDESTRUCTIBILITY
-#decanter {
-    @at-root .row.w-100.mx-auto
-            + .col-12.col-sm-10.col-md-8.col-lg-6.mx-auto.p-3
-            h1
-            + h2
-            + .card-body
-            + h3
-            + .row.text-center
-            .col.p-2.text-center {
-        padding: 0 !important;
-
-        a {
-            &[href='?act=1'],
-            &[href='?act=2'],
-            &[href='?act=3'],
-            &[href='?act=4'],
-            &[href='?act=5'] {
-                font-size: 0;
-
-                br {
-                    display: none;
-                }
-            }
-        }
-    }
-}
-
-// MEMORY
-@media #{$mobile} {
-    #memory_game {
-        width: 100%;
-
-        img[id^='tile'] {
-            width: calc(100% / 5);
-            height: auto;
-        }
-    }
-}
-
-// SLOTS
-div[style='position: relative; margin: auto; width: 358px; height: 474px; overflow: hidden;'] {
-    display: none;
 }
