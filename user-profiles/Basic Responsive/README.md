@@ -4,7 +4,7 @@
 Paste this into the box on your [profile](https://subeta.net/preferences.php?act=profile) page:
 ```
 <style>
-@import url('https://hongske.github.io/subeta/user-profiles/Basic%20Responsive/theme_v1.css')
+  @import url('https://hongske.github.io/subeta/user-profiles/Basic%20Responsive/theme_v1.css');
 </style>
 ```
 
@@ -13,7 +13,7 @@ There are several options to customise this theme, which have all been set using
 
 ```
 :root {
-
+  /* place your variables here */
 }
 ```
 
@@ -21,11 +21,11 @@ Then you'll have to add variables from the tables below between those brackets. 
 
 ```
 <style>
-@import url('https://hongske.github.io/subeta/user-profiles/Basic-Responsive/theme_v1.css')
+  @import url('https://hongske.github.io/subeta/user-profiles/Basic-Responsive/theme_v1.css')
 
-:root {
-  --colour_1: #b4d455;
-}
+  :root {
+    --colour_1: #b4d455;
+  }
 </style>
 ```
 
