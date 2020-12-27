@@ -199,8 +199,14 @@
                 border-bottom: 1px solid $primary;
             }
 
-            .wdidget-currency-list {
+            .widget-currency-list {
                 line-height: 1.75;
+            }
+
+            #x-notepad-content {
+                br + br {
+                    display: block;
+                }
             }
         }
 

@@ -115,50 +115,5 @@ footer,
 @import 'scss/pages/personal/achievements';
 @import 'scss/pages/personal/comments';
 @import 'scss/pages/personal/wishlist';
-//@import 'scss/pages/personal/dashboard';
+@import 'scss/pages/personal/dashboard';
 //@import 'scss/pages/personal/referrals';
-
-/******************************************************************************/
-
-// MOVE THIS TO CUSTOMCSS FIELD ON SUBETA BEFORE PUSHING
-:root {
-    --display_battle-scrolls: none;
-    --display_battle-beginnerGuide: none;
-    --display_battle-indepthGuide: none;
-    --display_battle-highScores: none;
-    --display_battle-bossPrizes: none;
-    --display_battle-hydragellos: none;
-    --display_battle-challengeSelectPet: none;
-    --display_battle-challengeSelectScrolls: none;
-    --display_battle-battleWeapons: none;
-    --display_battle-battlePotions: none;
-    --display_battle-battleSpells: none;
-    --display_battle-questsIntro: none;
-    --display_battle-trainingIntro: none;
-    --display_battle-trainingInfo: none;
-    --display_battle-trainingStatStrength: none;
-    --display_battle-trainingStatDefense: none;
-    // --display_battle-trainingStatHealth: none;
-    --display_battle-trainingStatSpeed: none;
-    --display_battle-trainingStatLevel: none;
-
-    --display_quest-sarah: none;
-
-    --display_yourShops-autopricerIntro: none;
-    --display_yourShops-editCategories: none;
-    --display_yourShops-viewShop: none;
-    --display_yourShops-editShop: none;
-    --display_yourShops-yourShops: none;
-
-    --display_inventory-collapseFood: block;
-    --display_inventory-collapseBook: block;
-    --display_inventory-buttonFood: none;
-    --display_inventory-buttonMinion: none;
-    --display_inventory-buttonToy: none;
-    --display_inventory-buttonBook: none;
-}
-
-a[href$='petid=875396'],
-a[href$='petid=971090'] {
-    display: none !important;
-}

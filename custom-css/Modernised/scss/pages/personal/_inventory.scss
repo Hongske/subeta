@@ -78,6 +78,10 @@ center b + br + a[href='/inventory.php'] + br + br + .container {
         .card {
             margin: 1rem 0 !important;
 
+            p:empty {
+                display: none;
+            }
+
             // ITEM INFO
             &:nth-child(1) {
                 p b {
@@ -120,17 +124,13 @@ center b + br + a[href='/inventory.php'] + br + br + .container {
                 }
             }
 
-            // PET TREASURE
-            a[href='#collapseTreasure'] {
-                margin-top: 1rem;
-            }
-
             .collapse {
                 $actions: (
                     $display_inventory-collapseFood,
                     $display_inventory-collapseMinion,
                     $display_inventory-collapseToy,
-                    $display_inventory-collapseBook
+                    $display_inventory-collapseBook,
+                    $display_inventory-collapseTreasure
                 );
 
                 @each $action in $actions {
@@ -155,7 +155,8 @@ center b + br + a[href='/inventory.php'] + br + br + .container {
                     $display_inventory-buttonFood,
                     $display_inventory-buttonMinion,
                     $display_inventory-buttonToy,
-                    $display_inventory-buttonBook
+                    $display_inventory-buttonBook,
+                    $display_inventory-buttonTreasure
                 );
 
                 @each $action in $actions {

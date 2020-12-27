@@ -1118,9 +1118,10 @@ input,
   margin: 0;
 }
 
-input[type='text'], input[type='number'],
+input[type='text'], input[type='number'], input[type='password'],
 .input input[type='text'],
-.input input[type='number'] {
+.input input[type='number'],
+.input input[type='password'] {
   padding: 0 0.5rem;
   border: 1px solid var(--grey);
   border-radius: 5px;
@@ -1129,17 +1130,19 @@ input[type='text'], input[type='number'],
 }
 
 @media only screen and (max-device-width: 767px) {
-  input[type='text'], input[type='number'],
+  input[type='text'], input[type='number'], input[type='password'],
   .input input[type='text'],
-  .input input[type='number'] {
+  .input input[type='number'],
+  .input input[type='password'] {
     font-size: 0.75rem !important;
   }
 }
 
 @media only screen and (min-device-width: 768px) {
-  input[type='text'], input[type='number'],
+  input[type='text'], input[type='number'], input[type='password'],
   .input input[type='text'],
-  .input input[type='number'] {
+  .input input[type='number'],
+  .input input[type='password'] {
     font-size: 1rem !important;
   }
 }
@@ -1178,7 +1181,6 @@ textarea {
   border: 1px solid var(--grey);
   border-radius: 5px;
   background-color: var(--white);
-  height: auto !important;
   margin: 0;
 }
 
@@ -2336,8 +2338,12 @@ img[src$='icons/staff.gif'] {
   border-bottom: 1px solid var(--primary);
 }
 
-.sidebar-widget-contents .wdidget-currency-list {
+.sidebar-widget-contents .widget-currency-list {
   line-height: 1.75;
+}
+
+.sidebar-widget-contents #x-notepad-content br + br {
+  display: block;
 }
 
 .sidebar-widget-sep {
@@ -6670,6 +6676,10 @@ center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card {
   margin: 1rem 0 !important;
 }
 
+center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card p:empty {
+  display: none;
+}
+
 center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card:nth-child(1) p b a {
   display: block;
   margin-top: -1rem;
@@ -6725,10 +6735,6 @@ center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card for
   display: none;
 }
 
-center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card a[href='#collapseTreasure'] {
-  margin-top: 1rem;
-}
-
 center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card .collapse#collapseFood, center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card .collapse none {
   display: var(--display_inventory-collapseFood, none);
 }
@@ -6743,6 +6749,10 @@ center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card .co
 
 center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card .collapse#collapseBook, center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card .collapse none {
   display: var(--display_inventory-collapseBook, none);
+}
+
+center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card .collapse#collapseTreasure, center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card .collapse none {
+  display: var(--display_inventory-collapseTreasure, none);
 }
 
 center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card .collapse a {
@@ -6767,6 +6777,10 @@ center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card a[h
 
 center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card a[href='#collapseBook'] {
   display: var(--display_inventory-buttonBook, inline-block);
+}
+
+center b + br + a[href='/inventory.php'] + br + br + .container .col-6 .card a[href='#collapseTreasure'] {
+  display: var(--display_inventory-buttonTreasure, inline-block);
 }
 
 #pet_list {
@@ -8274,42 +8288,85 @@ input[type='hidden'][name='act'][value='bank'] ~ .column.wide + .column.wide {
   }
 }
 
-/******************************************************************************/
-:root {
-  --display_battle-scrolls: none;
-  --display_battle-beginnerGuide: none;
-  --display_battle-indepthGuide: none;
-  --display_battle-highScores: none;
-  --display_battle-bossPrizes: none;
-  --display_battle-hydragellos: none;
-  --display_battle-challengeSelectPet: none;
-  --display_battle-challengeSelectScrolls: none;
-  --display_battle-battleWeapons: none;
-  --display_battle-battlePotions: none;
-  --display_battle-battleSpells: none;
-  --display_battle-questsIntro: none;
-  --display_battle-trainingIntro: none;
-  --display_battle-trainingInfo: none;
-  --display_battle-trainingStatStrength: none;
-  --display_battle-trainingStatDefense: none;
-  --display_battle-trainingStatSpeed: none;
-  --display_battle-trainingStatLevel: none;
-  --display_quest-sarah: none;
-  --display_yourShops-autopricerIntro: none;
-  --display_yourShops-editCategories: none;
-  --display_yourShops-viewShop: none;
-  --display_yourShops-editShop: none;
-  --display_yourShops-yourShops: none;
-  --display_inventory-collapseFood: block;
-  --display_inventory-collapseBook: block;
-  --display_inventory-buttonFood: none;
-  --display_inventory-buttonMinion: none;
-  --display_inventory-buttonToy: none;
-  --display_inventory-buttonBook: none;
+#pref_wrapper #pref_body h1.text-center {
+  display: none;
 }
 
-a[href$='petid=875396'],
-a[href$='petid=971090'] {
-  display: none !important;
+#pref_wrapper #pref_body .prefscontent {
+  margin-top: 1rem;
+}
+
+#pref_wrapper #pref_body .prefscontent center {
+  text-align: left;
+}
+
+#pref_wrapper #pref_body .prefscontent form[method='post'] {
+  margin-top: 1rem;
+}
+
+#pref_wrapper #pref_body .prefscontent form[method='post'] textarea[name='update'][style^='width:80%;'],
+#pref_wrapper #pref_body .prefscontent form[method='post'] textarea[name='update'][style^='width: 80%;'] {
+  width: 100% !important;
+}
+
+#pref_wrapper #pref_body .prefscontent form[method='post'] input[type='submit'][value='Update CustomCSS'] {
+  width: 100% !important;
+  margin-top: 1rem;
+}
+
+#pref_wrapper #pref_body .prefscontent input[type='hidden'][value='profile_do'] + b + p {
+  margin-top: 1rem;
+}
+
+#pref_wrapper #pref_body .prefscontent input[type='hidden'][value='profile_do'] + b + p + table[width='75%'] {
+  width: 100% !important;
+  margin-bottom: 1rem;
+}
+
+#pref_wrapper #pref_body .prefscontent input[type='hidden'][value='profile_do'] + b + p + table[width='75%'] td[colspan='2'] {
+  width: 100%;
+}
+
+#pref_wrapper #pref_body .prefscontent input[type='hidden'][value='profile_do'] + b + p + table[width='75%'] tr:nth-child(2) td center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pref_wrapper #pref_body .prefscontent input[type='hidden'][value='profile_do'] + b + p + table[width='75%'] tr:nth-child(2) td center input[type='text'][name='email'] {
+  margin-left: 1rem;
+}
+
+#pref_wrapper #pref_body .prefscontent input[type='hidden'][value='profile_do'] + b + p + table[width='75%'] tr:nth-child(3) td {
+  background-color: transparent;
+}
+
+#pref_wrapper #pref_body .prefscontent input[type='hidden'][value='profile_do'] + b + p + table[width='75%'] tr:nth-child(3) td center {
+  text-align: right;
+}
+
+#pref_wrapper #pref_body .prefscontent input[type='hidden'][value='profile_do'] + b + p ~ center input[type='submit'][value='Submit your Profile'] {
+  margin-top: 1rem;
+}
+
+#pref_wrapper #pref_body .prefscontent form[method='post'][action='preferences.php'] center input[type='password'] {
+  margin-left: 1rem;
+}
+
+#pref_wrapper #pref_body .prefscontent form[method='post'][action='preferences.php'] center input[type='password'],
+#pref_wrapper #pref_body .prefscontent form[method='post'][action='preferences.php'] center input[type='password'] ~ input[type='submit'] {
+  margin-top: 1rem;
+}
+
+#pref_wrapper #pref_body .prefscontent img[src$='security.gif'] {
+  display: block;
+  margin: 0 auto;
+}
+
+#pref_wrapper #pref_body .prefscontent img[src$='security.gif'] + form[method='post'] > table {
+  width: 100% !important;
 }
 /*# sourceMappingURL=theme.css.map */

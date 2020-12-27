@@ -1,4 +1,4 @@
-@mixin form-field($full-width: false, $auto-height: false) {
+@mixin form-field($full-width: false, $auto-height: false, $no-height: false) {
     padding: 0 0.5rem;
     border: 1px solid $grey;
     border-radius: 5px;
@@ -11,6 +11,7 @@
 
     @if $auto-height {
         height: auto !important;
+    } @else if $no-height {
     } @else {
         height: $target !important;
     }
@@ -36,7 +37,8 @@ input,
     margin: 0;
 
     &[type='text'],
-    &[type='number'] {
+    &[type='number'],
+    &[type='password'] {
         @include form-field();
     }
 
@@ -54,7 +56,7 @@ select {
 }
 
 textarea {
-    @include form-field($auto-height: true);
+    @include form-field($no-height: true);
     margin: 0;
 }
 
