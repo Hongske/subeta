@@ -1089,6 +1089,7 @@ form[action^='/quests.php'] .col-md-3 .btn,
 #sidebar-btn-events,
 #sidebar-toggle-button,
 .sidebar-widget-arrow,
+.topic.lock .icon.lock,
 .topic.sub .icon.checkmark,
 .wishlist-item .icon,
 .wl_item .wl_plus {
@@ -3900,6 +3901,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 font-size: var(--font-size-base);
             }
 
+            .topic.lock .icon.lock,
             .topic.sub .icon.checkmark {
                 font-size: 1rem;
                 opacity: 1;
@@ -3908,7 +3910,19 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 &:before {
                     display: none;
                 }
+            }
 
+            .topic.lock .icon.lock {
+                &:after {
+                    content: '\f09c';
+                }
+
+                &:hover:after {
+                    content: '\f023';
+                }
+            }
+
+            .topic.sub .icon.checkmark {
                 &:hover:after,
                 &.green:after {
                     content: '\f0f3';
@@ -7014,7 +7028,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         text-align: center;
                     }
 
-                    > .p-1 [style^='background-color:#'] {
+                    > .p-1[style^='background-color:#'] {
                         margin-top: 1rem;
                         padding: var(--button-padding) !important;
                         border-radius: 1em;
