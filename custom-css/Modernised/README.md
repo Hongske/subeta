@@ -4,7 +4,7 @@
 
 Paste this into the box on your [CustomCSS page](https://subeta.net/preferences.php?act=customcss):
 ```
-@import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.min.css')
+@import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css')
 ```
 
 
