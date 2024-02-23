@@ -3910,7 +3910,7 @@ PAGE-SPECIFIC STUFF
             .post-container {
                 padding: 0;
 
-                &[style='background-color: rgba(249, 238, 127, .1);'] {
+                &[style='background-color: rgba(249, 238, 127, 0.1);'] {
                     .posted,
                     .posted + .post {
                         --post-color: var(--primary) !important;
