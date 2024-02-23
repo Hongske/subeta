@@ -14,7 +14,7 @@ The theme uses CSS Variables, which can be overridden to customise the theme.
 To do so, you'll need to add the following snippet **after** your `@import` code:
 ```
 :root {
-    /* insert your CSS-variables here */
+    /* insert your theme options here */
 }
 ```
 
@@ -40,11 +40,12 @@ Then add your overrides between the curly brackets. An example would be:
 
 ### Overview of all options:
 
-| Code                      | Option                                                                    |
-|---------------------------|---------------------------------------------------------------------------|
-| `--color-primary`         | Main colour. **Default:** `#9BA84F`.                                      |
-| `--color-blue`            | Blue colour. **Default:** `#0DCAF0`.                                      |
-| `--color-green`           | Green colour. **Default:** `#20C997`.                                     |
-| `--color-red`             | Red colour. **Default:** `#DC3545`.                                       |
-| `--color-yellow`          | Red colour. **Default:** `#FFC107`.                                       |
-| `--display-floating-item` | Display for floating items (e.g. survival flowers). **Default:** `block`. |
+| Code                      | Option                                                                |
+|---------------------------|-----------------------------------------------------------------------|
+| `--color-primary`         | Main colour. **Default:** `#9BA84F`.                                  |
+| `--color-blue`            | Blue colour. **Default:** `#0DCAF0`.                                  |
+| `--color-green`           | Green colour. **Default:** `#20C997`.                                 |
+| `--color-red`             | Red colour. **Default:** `#DC3545`.                                   |
+| `--color-yellow`          | Red colour. **Default:** `#FFC107`.                                   |
+| `--display-floating-item` | Display floating items (e.g. survival flowers). **Default:** `block`. |
+| `--display-hustler`       | Display hustler                                                       |

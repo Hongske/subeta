@@ -1624,6 +1624,11 @@ img[src^='//img.subeta.net/icons/lock'] {
             background-color: var(--green) !important;
         }
     }
+
+    &.textarea,
+    &.form textarea {
+        max-height: none;
+    }
 }
 
 /* System > Subeta ---------------------------------------------------------------------------------------------------*/
@@ -1663,6 +1668,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 }
 
 .hustler {
+    display: var(--display-hustler, block);
     width: calc(var(--sidebar-width) - 2rem);
     padding: 1rem;
     border: 0;
@@ -5358,7 +5364,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     }
 
     /* Personal > Pets > Books Read / Food Eaten ---------------------------------------------------------------------*/
-    + .row.w-10.mx-auto + div[style='overflow:auto'] {
+    + .row.w-100.mx-auto + div[style='overflow:auto'] {
         display: flex;
         flex-direction: column;
         gap: var(--spacing-y);
@@ -6619,7 +6625,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     }
 
     /* Subeta > Explore > Shadowglen > Crypts ------------------------------------------------------------------------*/
-    + .row.w-10.mx-auto + center[style='width: 600px; margin: auto;'] {
+    + .row.w-100.mx-auto + center[style='width: 600px; margin: auto;'] {
         width: 100% !important;
         font-size: var(--font-size-medium);
 
@@ -7130,7 +7136,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
     /* Subeta > Games > Chance - Decanter of Indestructibility -------------------------------------------------------*/
     + .container.text-center {
-        .row.w-10.mx-auto + .col-12.col-sm-1.col-md-8.col-lg-6.mx-auto.p-3 {
+        .row.w-100.mx-auto + .col-12.col-sm-1.col-md-8.col-lg-6.mx-auto.p-3 {
             flex-basis: auto;
             max-width: 100%;
             width: 100%;
@@ -7201,7 +7207,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     }
 
     /* Subeta > Games > Chance - Fishing -----------------------------------------------------------------------------*/
-    + .row.w-10.mx-auto + center {
+    + .row.w-100.mx-auto + center {
 
         img[src*='temictzin'],
         img[src*='temictzin'] + br {
@@ -7212,7 +7218,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     }
 
     /* Subeta > Games > Chance > Scratchcards ------------------------------------------------------------------------*/
-    + .row.w-10.mx-auto + .row {
+    + .row.w-100.mx-auto + .row {
         .col-sm-6 {
             &.col-md-4.col-lg-3 {
                 @media (max-device-width: 768px) {
@@ -7546,7 +7552,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     }
 
     /* Subeta > Games > Mind > Blackout ------------------------------------------------------------------------------*/
-    + .row.w-10.mx-auto + center #blackout_board {
+    + .row.w-100.mx-auto + center #blackout_board {
         table {
             @media (max-device-width: 768px) {
                 zoom: 75%;
@@ -7569,7 +7575,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     }
 
     /* Subeta > Games > Misc - Item Hunt -----------------------------------------------------------------------------*/
-    + .row.w-10.mx-auto + .row {
+    + .row.w-100.mx-auto + .row {
         .col-sm-6 {
             padding: 0;
 
@@ -7647,7 +7653,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             }
         }
 
-        + .row.w-10.mx-auto {
+        + .row.w-100.mx-auto {
             display: flex;
 
             @media (max-width: 1300px) {
