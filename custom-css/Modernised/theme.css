@@ -124,7 +124,7 @@ html {
 }
 
 body {
-    background-color: var(--white);
+    background-color: color-mix(in srgb, var(--black) 80%, var(--white));
     font-family: inherit;
     font-size: inherit !important;
     line-height: inherit;
@@ -194,7 +194,7 @@ PAGE STRUCTURE
     max-width: var(--content-width-max);
     width: 100%;
     margin: 0 auto !important;
-    background-color: transparent;
+    background-color: var(--white);
     box-shadow: var(--box-shadow--all);
 
     #postcards,
