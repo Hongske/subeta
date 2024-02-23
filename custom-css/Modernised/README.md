@@ -1,42 +1,41 @@
 # Modernised Theme
 
 ## Basic theme
-
 Paste this into the box on your [CustomCSS](https://subeta.net/preferences.php?act=customcss) page.
-`@import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css')`
+```
+    @import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css')
+```
 
 ## Options
-
-There are several options to customise this theme, which have all been set using variables. To use these options, you'll need to overwrite the variables, which you can do by adding this snippet beneath your `@import` code:
-
+The theme uses CSS Variables, which can be overridden to customise the theme.
+To do so, you'll need to add the following snippet _above_ your `@import` code:
 ```
 :root {
-
+    /* insert your CSS-variables here */
 }
 ```
 
-Then you'll have to add variables from the tables between those brackets. An example would be:
-
+Then add your overrides between the curly brackets. An example would be:
 ```
 :root {
-  --primary: #b4d455;
+    --color-primary: #b4d455;
+    --display-floating-item: none;
 }
+
+@import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css')
 ```
 
+These are the CSS Variables you can use in the theme:
 ### Colours
+These options are to customise the colours used in the theme.
+| Code                      | Option                                                               |
+| `--color-primary`         | Main color of the theme, default is `#9BA84F`.                       |
+| `--color-blue`            | Blue color, used for alerts etc, default is #0DCAF0.                 |
+| `--color-green`           | Green color, used for alerts etc, default is #20C997.                |
+| `--color-red`             | Red color, used for alerts etc, default is #DC3545.                  |
+| `--color-yellow`          | Red color, used for alerts etc, default is #FFC107.                  |
 
-Replace `#000000` with the colour of your choice.
-
-| Option         | Code                  |
-| -------------- | --------------------- |
-| Primary colour | `--primary: #000000;` |
-
-## To do's
-
-1. Add options
-2. Remove user-specific code (add to options)
-3. Update README
-
-```
-
-```
+### Display options
+These options are to hide certain parts of the website. Default values are usually either `block` or `flex`.
+To hide these options on the website, simply use the value `none` (see example above).
+| `--display-floating-item` | Display-property for floating items (e.g. survival flowers). Default value is `block`. |

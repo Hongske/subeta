@@ -1,7 +1,0 @@
-// HOVER
-@mixin hover {
-    &:hover,
-    &:active {
-        @content;
-    }
-}
