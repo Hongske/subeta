@@ -8,7 +8,7 @@ Paste this into the box on your [CustomCSS](https://subeta.net/preferences.php?a
 
 ## Options
 The theme uses CSS Variables, which can be overridden to customise the theme.
-To do so, you'll need to add the following snippet _above_ your `@import` code:
+To do so, you'll need to add the following snippet _after_ your `@import` code:
 ```
 :root {
     /* insert your CSS-variables here */
@@ -17,12 +17,12 @@ To do so, you'll need to add the following snippet _above_ your `@import` code:
 
 Then add your overrides between the curly brackets. An example would be:
 ```
+@import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css');
+
 :root {
     --color-primary: #b4d455;
     --display-floating-item: none;
 }
-
-@import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css')
 ```
 
 These are the CSS Variables you can use in the theme:
