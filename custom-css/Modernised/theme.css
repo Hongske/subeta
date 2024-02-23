@@ -1,11 +1,11 @@
-/*==================================================================================================
+/*======================================================================================================================
 VARIABLES
-==================================================================================================*/
+======================================================================================================================*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
 :root {
-    /* Colours -----------------------------------------------------------------------------------*/
+    /* Colours -------------------------------------------------------------------------------------------------------*/
     --blue: var(--color-blue, #0DCAF0);
     --blue-dark: color-mix(in srgb, var(--blue), var(--black));
     --blue-light: color-mix(in srgb, var(--blue) 25%, var(--white));
@@ -19,25 +19,25 @@ VARIABLES
     --yellow-dark: color-mix(in srgb, var(--yellow), var(--black));
     --yellow-light: color-mix(in srgb, var(--yellow) 25%, var(--white));
 
-    /* Colours - Theme ---------------------------------------------------------------------------*/
+    /* Colours - Theme -----------------------------------------------------------------------------------------------*/
     --black: #000000;
-    --grey: #e9ecef;
-    --white: #ffffff;
+    --grey: #E9ECEF;
+    --white: #FFFFFF;
     --primary: var(--color-primary, #9BA84F);
     --primary-dark: color-mix(in srgb, var(--primary), var(--black));
     --primary-light: color-mix(in srgb, var(--primary) 25%, var(--white));
 
-    /* Fonts -------------------------------------------------------------------------------------*/
+    /* Fonts ---------------------------------------------------------------------------------------------------------*/
     --font-family: 'Roboto';
     --font-size-base: 16px;
     --font-size-title: 1.5rem;
-    --font-size-medium: 0.875rem;
-    --font-size-small: 0.75rem;
+    --font-size-medium: .875rem;
+    --font-size-small: .75rem;
 
-    /* Buttons -----------------------------------------------------------------------------------*/
-    --button-padding: 0.5em 0.75em;
+    /* Buttons -------------------------------------------------------------------------------------------------------*/
+    --button-padding: .5em .75em;
     --button-radius: var(--border-radius);
-    --button-transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+    --button-transition: border-color .2s, background-color .2s, color .2s;
     --button-bg: var(--primary);
     --button-bg-hover: var(--primary-dark);
     --button-fg: var(--white);
@@ -47,19 +47,19 @@ VARIABLES
     --button-danger-fg: var(--red);
     --button-danger-fg-hover: var(--white);
 
-    /* Other -------------------------------------------------------------------------------------*/
+    /* Other ---------------------------------------------------------------------------------------------------------*/
     --border: 2px solid var(--primary-light);
-    --border-radius: 0.25rem;
+    --border-radius: .25rem;
     --spacing: var(--spacing-y) var(--spacing-x);
     --spacing-y: 1rem;
     --spacing-x: 1rem;
-    --backdrop-blur: blur(0.5rem);
-    --box-shadow-blur: 0.75em;
+    --backdrop-blur: blur(.5rem);
+    --box-shadow-blur: .75em;
     --box-shadow-color: color-mix(in srgb, var(--black) 33%, transparent);
     --box-shadow--all: 0 0 var(--box-shadow-blur) var(--box-shadow-color);
-    --box-shadow--down: 0 0.375em var(--box-shadow-blur) var(--box-shadow-color);
+    --box-shadow--down: 0 .375em var(--box-shadow-blur) var(--box-shadow-color);
 
-    /* Defaults ----------------------------------------------------------------------------------*/
+    /* Defaults ------------------------------------------------------------------------------------------------------*/
     --content-width-max: 1300px;
     --menu-height: 4rem;
     --sidebar-width: 320px;
@@ -67,13 +67,13 @@ VARIABLES
     --alert-radius: var(--border-radius);
     --alert-padding: var(--spacing);
 
-    /* Defaults - Columns ------------------------------------------------------------------------*/
+    /* Defaults - Columns --------------------------------------------------------------------------------------------*/
     --col-2: calc((100% - 1rem) / 2);
     --col-3: calc((100% - 2rem) / 3);
     --col-4: calc((100% - 3rem) / 4);
     --col-5: calc((100% - 4rem) / 5);
 
-    /* Defaults - Item ---------------------------------------------------------------------------*/
+    /* Defaults - Item -----------------------------------------------------------------------------------------------*/
     --item-padding: var(--spacing);
     --item-radius: var(--border-radius);
     --item-size: var(--item-size-medium);
@@ -81,8 +81,8 @@ VARIABLES
     --item-size-medium: 4rem;
     --item-size-large: 8rem;
 
-    /* Defaults - Navbar -------------------------------------------------------------------------*/
-    --navbar-gap: 0.25em;
+    /* Defaults - Navbar ---------------------------------------------------------------------------------------------*/
+    --navbar-gap: .25em;
     --navbar-padding: var(--spacing);
     --navbar-radius: var(--border-radius);
     --navbar-font-size: var(--font-size-medium);
@@ -90,7 +90,7 @@ VARIABLES
     --navbar-fg: var(--black);
     --navbar-link: var(--primary);
 
-    /* Mobile Variables --------------------------------------------------------------------------*/
+    /* Mobile Variables ----------------------------------------------------------------------------------------------*/
     --mobile-zoom: 3;
 
     @media (max-device-width: 768px) {
@@ -110,9 +110,9 @@ VARIABLES
     --icon-unlock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M144 144c0-44.2 35.8-80 80-80c31.9 0 59.4 18.6 72.3 45.7c7.6 16 26.7 22.8 42.6 15.2s22.8-26.7 15.2-42.6C331 33.7 281.5 0 224 0C144.5 0 80 64.5 80 144v48H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H144V144z'/%3E%3C/svg%3E");
 }
 
-/*==================================================================================================
+/*======================================================================================================================
 GLOBAL
-==================================================================================================*/
+======================================================================================================================*/
 * {
     box-sizing: border-box;
 }
@@ -134,14 +134,16 @@ body {
     }
 }
 
-/*==================================================================================================
+/*======================================================================================================================
 TYPOGRAPHY
-==================================================================================================*/
+======================================================================================================================*/
 h1 {
     font-size: var(--font-size-title) !important;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
     font-size: var(--font-size-base);
     font-weight: bold;
 }
@@ -187,9 +189,9 @@ input {
     font-size: inherit !important;
 }
 
-/*==================================================================================================
+/*======================================================================================================================
 PAGE STRUCTURE
-==================================================================================================*/
+======================================================================================================================*/
 #page {
     max-width: var(--content-width-max);
     width: 100%;
@@ -239,12 +241,12 @@ PAGE STRUCTURE
             font-size: var(--font-size-title);
             text-align: right;
             text-transform: uppercase;
-            letter-spacing: 0.125em;
+            letter-spacing: .125em;
 
             @media (max-device-width: 768px) {
                 width: calc(var(--sidebar-width) - 2rem);
                 height: 50%;
-                padding: 0.5rem;
+                padding: .5rem;
                 padding-right: 1.5rem;
             }
 
@@ -289,7 +291,7 @@ PAGE STRUCTURE
             background-color: var(--white);
             color: var(--primary-dark);
             font-size: 0;
-            transition: var(--button-transition), transform 0.6s;
+            transition: var(--button-transition), transform .6s;
             z-index: 10;
 
             &:after {
@@ -360,7 +362,7 @@ PAGE STRUCTURE
                     flex-direction: row-reverse;
                     align-items: center;
                     justify-content: center;
-                    gap: 0.5em;
+                    gap: .5em;
                     margin: 0;
                     padding: var(--button-padding);
                     border: 2px solid var(--button-bg);
@@ -445,7 +447,7 @@ PAGE STRUCTURE
                         > a {
                             display: flex;
                             align-items: center;
-                            gap: 0.5em;
+                            gap: .5em;
                             padding: .5rem 1rem !important;
 
                             @media (max-device-width: 768px) {
@@ -460,7 +462,7 @@ PAGE STRUCTURE
                                 &[aria-haspopup='true'] {
                                     &:after {
                                         content: '\f101';
-                                        font-size: 0.5em;
+                                        font-size: .5em;
                                     }
                                 }
                             }
@@ -636,7 +638,7 @@ PAGE STRUCTURE
                 display: flex;
                 flex-direction: row-reverse;
                 align-items: center;
-                gap: 0.25em;
+                gap: .25em;
                 width: auto;
                 height: auto;
                 padding: var(--button-padding);
@@ -695,11 +697,11 @@ PAGE STRUCTURE
                 width: 1em;
                 height: 1em;
                 margin-left: -1rem;
-                padding: 0.75em;
+                padding: .75em;
                 border-radius: 50%;
                 position: relative;
                 top: 0;
-                right: 0.5rem;
+                right: .5rem;
                 transform: translate(-100%, 0);
                 background-color: var(--button-fg);
                 color: var(--black);
@@ -732,7 +734,7 @@ PAGE STRUCTURE
                     width: 1em !important;
                     height: 1em !important;
                     opacity: 1;
-                    transition: opacity 0.2s;
+                    transition: opacity .2s;
                     cursor: pointer;
 
                     &:before {
@@ -740,12 +742,12 @@ PAGE STRUCTURE
                     }
 
                     &:hover {
-                        opacity: 0.5;
+                        opacity: .5;
                     }
                 }
 
                 .event-remove-cat {
-                    margin-right: 0.5em;
+                    margin-right: .5em;
                     padding: 0 !important;
                     border-radius: 0 !important;
                     box-shadow: none;
@@ -757,7 +759,7 @@ PAGE STRUCTURE
                 }
 
                 .event-remove {
-                    margin-top: 0.25em;
+                    margin-top: .25em;
 
                     &:after {
                         content: '\f05e';
@@ -771,13 +773,13 @@ PAGE STRUCTURE
 
             .sidebar-event {
                 display: flex;
-                gap: 0.5em;
+                gap: .5em;
                 font-size: inherit !important;
                 line-height: normal;
 
                 &:nth-child(n + 2) {
-                    margin-top: 0.75em;
-                    padding-top: 0.75em;
+                    margin-top: .75em;
+                    padding-top: .75em;
                     border-top: 1px solid var(--primary);
                 }
 
@@ -847,7 +849,7 @@ PAGE STRUCTURE
                     right: 0;
                     background-image: none;
                     color: var(--button-fg);
-                    transition: opacity 0.2s;
+                    transition: opacity .2s;
                     pointer-events: all;
 
                     &:after {
@@ -855,7 +857,7 @@ PAGE STRUCTURE
                     }
 
                     &:hover {
-                        opacity: 0.5;
+                        opacity: .5;
                     }
                 }
 
@@ -873,7 +875,7 @@ PAGE STRUCTURE
 
                 &.x-js-currency {
                     h5.ui.header {
-                        margin-bottom: 0.5em;
+                        margin-bottom: .5em;
                         padding-bottom: 0;
                         border-bottom: 0;
                         font-size: var(--font-size-medium) !important;
@@ -883,7 +885,7 @@ PAGE STRUCTURE
 
                 &.x-js-nav {
                     h3 {
-                        margin-bottom: 0.5em;
+                        margin-bottom: .5em;
                         font-size: var(--font-size-base);
 
                         &:nth-of-type(n + 2) {
@@ -911,7 +913,7 @@ PAGE STRUCTURE
                 &.x-js-widget-shopsearch {
                     form {
                         display: flex;
-                        gap: 0.5em;
+                        gap: .5em;
                         margin: 0;
 
                         input {
@@ -933,7 +935,7 @@ PAGE STRUCTURE
 
     #content {
         @media (min-device-width: 769px) {
-            transition: padding-left 0.8s;
+            transition: padding-left .8s;
 
             &,
             &[style*='margin-left: 176px;'] {
@@ -959,7 +961,7 @@ PAGE STRUCTURE
                 }
 
                 > img:first-child {
-                    padding: 0.5rem;
+                    padding: .5rem;
                     border-radius: var(--border-radius);
                     background-color: var(--white);
                 }
@@ -973,10 +975,10 @@ PAGE STRUCTURE
     }
 }
 
-/*==================================================================================================
+/*======================================================================================================================
 OVERRIDES
-==================================================================================================*/
-/* Buttons ---------------------------------------------------------------------------------------*/
+======================================================================================================================*/
+/* Buttons -----------------------------------------------------------------------------------------------------------*/
 .awesome.blue.large,
 .btn,
 .button,
@@ -1063,16 +1065,16 @@ input[type='submit'][value='Search Foods Eaten'] {
     }
 }
 
-/* Icons- ----------------------------------------------------------------------------------------*/
+/* Icons- ------------------------------------------------------------------------------------------------------------*/
 .achievement .completed .icon.check,
 .achievement .doesnothave a[href^='/user_shops.php/search/shops/'],
+.btn.buy_button,
 .btn#check_all_remove,
 .btn#uncheck_all_remove,
-.btn.buy_button,
 .button.buy-button,
 .event-remove-cat,
 .event-remove,
-.fa[style='font-size: 0.6em; top: -.1em;'],
+.fa[style='font-size: .6em; top: -.1em;'],
 form[action^='/quests.php'] .col-md-3 .btn,
 .forum-collapse-button,
 .forum-threads-list .fa.fa-comments-o,
@@ -1102,7 +1104,7 @@ form[action^='/quests.php'] .col-md-3 .btn,
     }
 }
 
-/* Images ----------------------------------------------------------------------------------------*/
+/* Images ------------------------------------------------------------------------------------------------------------*/
 img[src^='//img.subeta.net/icons/lock'] {
     --lock-size: 1.5rem;
     width: var(--lock-size);
@@ -1129,7 +1131,7 @@ img[src^='//img.subeta.net/icons/lock'] {
     }
 }
 
-/* System > Bootstrap ----------------------------------------------------------------------------*/
+/* System > Bootstrap ------------------------------------------------------------------------------------------------*/
 .bg-light {
     background-color: var(--primary-light) !important;
 }
@@ -1173,7 +1175,7 @@ img[src^='//img.subeta.net/icons/lock'] {
 
         @media (max-device-width: 768px) {
             margin-bottom: .5rem;
-            font-size: 0.75em;
+            font-size: .75em;
         }
     }
 
@@ -1254,7 +1256,8 @@ img[src^='//img.subeta.net/icons/lock'] {
             background-color: transparent !important;
         }
 
-        img, br {
+        img,
+        br {
             display: none;
         }
     }
@@ -1272,7 +1275,7 @@ img[src^='//img.subeta.net/icons/lock'] {
 .pagination {
     flex-wrap: wrap;
     align-items: center;
-    gap: 0.25em;
+    gap: .25em;
     padding: var(--navbar-padding);
     background-color: var(--primary-dark);
     font-size: var(--navbar-font-size);
@@ -1292,7 +1295,7 @@ img[src^='//img.subeta.net/icons/lock'] {
     .page-item {
         display: flex;
         align-items: center;
-        gap: 0.25em;
+        gap: .25em;
         color: var(--white);
 
         &:nth-child(n + 2):before {
@@ -1332,14 +1335,16 @@ img[src^='//img.subeta.net/icons/lock'] {
     margin: 0;
 }
 
-/* System > Bootstrap AND Semantic UI ------------------------------------------------------------*/
+/* System > Bootstrap AND Semantic UI --------------------------------------------------------------------------------*/
 .alert,
 .ui.message {
     padding: var(--alert-padding);
     border: 0;
     border-radius: var(--alert-radius);
 
-    h2, h3, h4 {
+    h2,
+    h3,
+    h4 {
         font-size: var(--font-size-base);
         font-weight: bold;
     }
@@ -1387,7 +1392,7 @@ img[src^='//img.subeta.net/icons/lock'] {
     color: var(--primary);
 }
 
-/* System > Semantic UI --------------------------------------------------------------------------*/
+/* System > Semantic UI ----------------------------------------------------------------------------------------------*/
 .ui {
     &.breadcrumb {
         display: flex;
@@ -1496,7 +1501,7 @@ img[src^='//img.subeta.net/icons/lock'] {
                     transform: translate(0, -2px);
 
                     ~ .item:before {
-                        margin-right: 0.25em;
+                        margin-right: .25em;
                     }
                 }
             }
@@ -1522,7 +1527,7 @@ img[src^='//img.subeta.net/icons/lock'] {
             a.item {
                 display: flex;
                 align-items: center;
-                gap: 0.25em;
+                gap: .25em;
                 padding: 0;
                 border: 0;
                 color: var(--primary);
@@ -1592,7 +1597,7 @@ img[src^='//img.subeta.net/icons/lock'] {
             }
 
             p {
-                margin-top: 0.25em;
+                margin-top: .25em;
             }
         }
     }
@@ -1603,7 +1608,7 @@ img[src^='//img.subeta.net/icons/lock'] {
 
         &.attached,
         &.attached .bar {
-            height: 0.5rem;
+            height: .5rem;
             border-radius: var(--border-radius);
         }
 
@@ -1621,11 +1626,11 @@ img[src^='//img.subeta.net/icons/lock'] {
     }
 }
 
-/* System > Subeta -------------------------------------------------------------------------------*/
+/* System > Subeta ---------------------------------------------------------------------------------------------------*/
 a[href^='/ad_click.php'],
 .create_ad,
 img[src^='//img.subeta.net/ads/'],
-img[src^='//img.subeta.net/ads/'] + .holiday{
+img[src^='//img.subeta.net/ads/'] + .holiday {
     display: none;
 }
 
@@ -1746,7 +1751,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday{
     backdrop-filter: var(--backdrop-blur);
 
     + #MB_window {
-        width: calc(var(--sidebar-width) - 2rem)!important;
+        width: calc(var(--sidebar-width) - 2rem) !important;
         height: auto !important;
         overflow: hidden !important;
         border-radius: var(--alert-radius);
@@ -1787,14 +1792,14 @@ img[src^='//img.subeta.net/ads/'] + .holiday{
                 right: auto;
                 font-size: inherit;
                 color: var(--white);
-                transition: opacity 0.2s;
+                transition: opacity .2s;
 
                 &:after {
                     content: '\f00d';
                 }
 
                 &:hover {
-                    opacity: 0.5;
+                    opacity: .5;
                 }
 
                 span {
@@ -1817,8 +1822,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday{
 
             input[type='text'] {
                 width: 100%;
-                margin: 0.25em 0 0;
-                padding: 0.25em 0.5em;
+                margin: .25em 0 0;
+                padding: .25em .5em;
                 border-radius: var(--button-radius);
                 border: 1px solid var(--black);
                 outline: 0;
@@ -1890,7 +1895,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday{
             @media (max-device-width: 768px) {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 0.5em;
+                gap: .5em;
             }
 
             tr:nth-child(1) {
@@ -1935,7 +1940,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday{
                     }
 
                     a {
-                        margin: 0 0.25em;
+                        margin: 0 .25em;
                     }
                 }
             }
@@ -1961,15 +1966,14 @@ img[src^='//img.subeta.net/ads/'] + .holiday{
     border-radius: var(--item-radius);
     position: relative;
     background-color: var(--grey);
-    transition: border-color 0.2s;
-
+    transition: border-color .2s;
 
     .hover-item {
         max-width: none;
         width: inherit;
         height: inherit;
         font-size: 0;
-        transition: opacity 0.2s;
+        transition: opacity .2s;
     }
 
     &:hover .wl_plus {
@@ -2031,7 +2035,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday{
         background-color: var(--primary);
 
         img {
-            opacity: 0.75;
+            opacity: .75;
         }
     }
 
@@ -2051,7 +2055,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday{
     }
 }
 
-/* System > Tooltips -----------------------------------------------------------------------------*/
+/* System > Tooltips -------------------------------------------------------------------------------------------------*/
 .tpd-tooltip {
     &.tpd-skin-dark {
         .tpd-content-spacer {
@@ -2090,7 +2094,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday{
         line-height: normal;
 
         .ui.dividing.header {
-            margin-bottom: 0.5em !important;
+            margin-bottom: .5em !important;
             border: 0;
             font-size: var(--font-size-base);
         }
@@ -2113,11 +2117,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday{
     }
 }
 
-/*==================================================================================================
+/*======================================================================================================================
 PAGE-SPECIFIC STUFF
-==================================================================================================*/
+======================================================================================================================*/
 #content > .container-fluid style {
-    /* Commerce > Main Shops > Buy item ----------------------------------------------------------*/
+    /* Commerce > Main Shops > Buy item ------------------------------------------------------------------------------*/
     ~ div[style='width: 70%; margin-left: auto; margin-right: auto'] {
         width: 100% !important;
 
@@ -2131,7 +2135,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Commerce > Main Shops > Buy Item > Error --------------------------------------------------*/
+    /* Commerce > Main Shops > Buy Item > Error ----------------------------------------------------------------------*/
     + .container .row.w-100 {
         .col-4.col-md-3,
         .col-8.col-md-9 {
@@ -2175,7 +2179,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Commerce > Search Shops -------------------------------------------------------------------*/
+    /* Commerce > Search Shops ---------------------------------------------------------------------------------------*/
     + style + .ui.message.blue[style='width: 60%; margin: auto;'] {
         width: 100% !important;
         padding: 0;
@@ -2193,7 +2197,7 @@ PAGE-SPECIFIC STUFF
                 gap: 1rem;
 
                 @media (max-device-width: 768px) {
-                    gap: 0.5rem;
+                    gap: .5rem;
                 }
 
                 &:after,
@@ -2353,6 +2357,7 @@ PAGE-SPECIFIC STUFF
             }
 
             /* Year display for special shops */
+            /* Original code by spacemage @ https://subeta.net/forums.php/read/929035 */
             [data-itemid] ~ .alert [href*='newyears']:after {
                 content: ' (Pre2010)';
             }
@@ -2506,7 +2511,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Commerce > Special Shops ------------------------------------------------------------------*/
+    /* Commerce > Special Shops --------------------------------------------------------------------------------------*/
     + style + .row.w-100 {
         width: 100%;
 
@@ -2595,7 +2600,7 @@ PAGE-SPECIFIC STUFF
                         .buy_buttons {
                             flex-shrink: 0;
                             order: 3;
-                            margin-top: 0.5rem;
+                            margin-top: .5rem;
                             margin-bottom: 0 !important;
 
                             @media (max-device-width: 768px) {
@@ -2626,14 +2631,13 @@ PAGE-SPECIFIC STUFF
                                 }
                             }
                         }
-
                     }
                 }
             }
         }
     }
 
-    /* Commerce > Your Shops ---------------------------------------------------------------------*/
+    /* Commerce > Your Shops -----------------------------------------------------------------------------------------*/
     + script[src^='/js/autopricer.js'] + .container {
         padding: 0;
 
@@ -2647,7 +2651,7 @@ PAGE-SPECIFIC STUFF
 
             .nav.justify-content-center {
                 justify-content: flex-start !important;
-                gap: 0.25em;
+                gap: .25em;
             }
 
             .nav-link {
@@ -2886,7 +2890,7 @@ PAGE-SPECIFIC STUFF
 
                                     &:nth-child(5) {
                                         flex-shrink: 1;
-                                        gap: 0.5em;
+                                        gap: .5em;
 
                                         @media (max-device-width: 768px) {
                                             align-items: flex-start;
@@ -2914,7 +2918,7 @@ PAGE-SPECIFIC STUFF
                                     &:nth-child(6) {
                                         display: flex;
                                         justify-content: flex-end;
-                                        gap: 0.5rem;
+                                        gap: .5rem;
                                         padding-right: 1.125rem;
 
                                         @media (max-device-width: 768px) {
@@ -3036,7 +3040,7 @@ PAGE-SPECIFIC STUFF
                         &:nth-child(2) .column:nth-child(odd),
                         &:nth-child(3) .column:nth-child(even) {
                             @media (min-device-width: 769px) {
-                                background-color: color-mix(in srgb,var(--primary-light) 25%,transparent);
+                                background-color: color-mix(in srgb, var(--primary-light) 25%, transparent);
                             }
                         }
                     }
@@ -3050,7 +3054,7 @@ PAGE-SPECIFIC STUFF
                 .qs-button {
                     width: 2rem;
                     height: 2rem;
-                    padding: 0.5rem;
+                    padding: .5rem;
                     border-radius: var(--border-radius);
                     background-color: var(--button-bg);
                     color: var(--white);
@@ -3241,8 +3245,8 @@ PAGE-SPECIFIC STUFF
                     }
 
                     &:nth-child(n + 2) {
-                        margin-top: 0.5rem;
-                        padding-top: 0.5rem;
+                        margin-top: .5rem;
+                        padding-top: .5rem;
                         border-top: 1px solid var(--grey);
                     }
 
@@ -3255,7 +3259,7 @@ PAGE-SPECIFIC STUFF
 
                             @media (max-device-width: 768px) {
                                 width: 100%;
-                                padding-bottom: 0.5em;
+                                padding-bottom: .5em;
                             }
                         }
 
@@ -3285,7 +3289,7 @@ PAGE-SPECIFIC STUFF
                         span[style='color: green;'],
                         span[style='color: red;'] {
                             margin-left: 1em;
-                            padding: 0.25em 0.5em;
+                            padding: .25em .5em;
                             border-radius: var(--border-radius);
                             color: var(--white) !important;
                         }
@@ -3405,7 +3409,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Events ------------------------------------------------------------------------------------*/
+    /* Events --------------------------------------------------------------------------------------------------------*/
     + #event_listing .container {
         &,
         .row,
@@ -3518,7 +3522,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Interact > Forums -------------------------------------------------------------------------*/
+    /* Interact > Forums ---------------------------------------------------------------------------------------------*/
     + .ui.secondary.pointing.menu + .alert.alert-secondary {
         display: none;
 
@@ -3584,17 +3588,17 @@ PAGE-SPECIFIC STUFF
 
                             h3 {
                                 order: -1;
-                                margin-bottom: 0.5rem;
-                                padding-bottom: 0.5rem;
+                                margin-bottom: .5rem;
+                                padding-bottom: .5rem;
                                 border-bottom: 1px solid var(--grey);
                                 font-size: var(--font-size-base);
                             }
 
                             .forum-index-sub.mb-1 {
                                 order: 1;
-                                margin-top: 0.5rem;
+                                margin-top: .5rem;
                                 margin-bottom: 0 !important;
-                                padding-top: 0.5rem;
+                                padding-top: .5rem;
                                 border-top: 1px solid var(--grey);
                                 font-size: var(--font-size-small);
 
@@ -3608,13 +3612,13 @@ PAGE-SPECIFIC STUFF
 
                                 + a {
                                     width: 100%;
-                                    margin-bottom: 0.25em;
+                                    margin-bottom: .25em;
                                     color: var(--black);
                                     font-size: var(--font-size-base);
                                     line-height: normal;
 
                                     + a {
-                                        margin-left: 0.25em;
+                                        margin-left: .25em;
                                         color: var(--black);
                                     }
                                 }
@@ -3638,7 +3642,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Interact > Forums > Board -----------------------------------------------------------------*/
+    /* Interact > Forums > Board -------------------------------------------------------------------------------------*/
     + #forum-top {
         + .row {
             gap: 1rem;
@@ -3674,7 +3678,7 @@ PAGE-SPECIFIC STUFF
                 ~ .ui.message {
                     display: flex;
                     align-items: center;
-                    gap: 0.25em;
+                    gap: .25em;
                     margin: 1rem 0;
                     background-color: var(--primary);
                     color: var(--white);
@@ -3690,7 +3694,7 @@ PAGE-SPECIFIC STUFF
 
                     a:nth-child(n + 2):before {
                         content: '|';
-                        margin-right: 0.25em;
+                        margin-right: .25em;
                         color: var(--inherit);
                         pointer-events: none;
                     }
@@ -3748,7 +3752,7 @@ PAGE-SPECIFIC STUFF
                         @media (max-device-width: 768px) {
                             display: flex;
                             flex-wrap: wrap;
-                            gap: 0.5rem;
+                            gap: .5rem;
                             padding: .5rem 0;
                         }
 
@@ -3826,7 +3830,7 @@ PAGE-SPECIFIC STUFF
                             @media (max-device-width: 768px) {
                                 &:before {
                                     content: '| Created by ';
-                                    margin-left: -0.45em;
+                                    margin-left: -.45em;
                                 }
                             }
                         }
@@ -3856,7 +3860,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Interact > Forums > Board > Thread --------------------------------------------------------*/
+    /* Interact > Forums > Board > Thread ----------------------------------------------------------------------------*/
     + script + meta ~ #forum-top + #result_top + .row.p-3 {
         padding: 0 !important;
         border-radius: var(--border-radius);
@@ -3906,7 +3910,7 @@ PAGE-SPECIFIC STUFF
             .post-container {
                 padding: 0;
 
-                &[style='background-color: rgba(249, 238, 127, 0.1);'] {
+                &[style='background-color: rgba(249, 238, 127, .1);'] {
                     .posted,
                     .posted + .post {
                         --post-color: var(--primary) !important;
@@ -3953,7 +3957,7 @@ PAGE-SPECIFIC STUFF
                         align-items: center;
 
                         &:nth-child(1) {
-                            gap: 0.25em;
+                            gap: .25em;
                             left: 0;
 
                             strong {
@@ -3962,7 +3966,7 @@ PAGE-SPECIFIC STUFF
                         }
 
                         &:nth-child(2) {
-                            gap: 0.5em;
+                            gap: .5em;
                         }
                     }
 
@@ -4017,7 +4021,7 @@ PAGE-SPECIFIC STUFF
                     background-color: transparent !important;
 
                     @media (max-device-width: 768px) {
-                        padding: 0.5rem !important;
+                        padding: .5rem !important;
                     }
 
                     .ui.grid {
@@ -4031,7 +4035,7 @@ PAGE-SPECIFIC STUFF
 
                             &.three.wide.column {
                                 @media (max-device-width: 768px) {
-                                    margin-bottom: 0.5rem;
+                                    margin-bottom: .5rem;
                                 }
                             }
                         }
@@ -4041,7 +4045,7 @@ PAGE-SPECIFIC STUFF
                         display: flex;
                         align-items: center;
                         flex-wrap: wrap;
-                        gap: 0.25em;
+                        gap: .25em;
                         padding: 0 !important;
                         border-radius: 0;
                         font-size: var(--font-size-base);
@@ -4104,7 +4108,7 @@ PAGE-SPECIFIC STUFF
                             gap: .25em;
                             margin: 0;
                             padding: .25em .5em;
-                            color: #82636B;
+                            color: #82636b;
 
                             img {
                                 display: none;
@@ -4233,7 +4237,7 @@ PAGE-SPECIFIC STUFF
 
                     blockquote,
                     .scode-code {
-                        margin-top: -0.5em;
+                        margin-top: -.5em;
                         border: 0 !important;
                         border-radius: var(--border-radius);
                         background-color: var(--white) !important;
@@ -4250,11 +4254,7 @@ PAGE-SPECIFIC STUFF
 
                     div[style='border-top:1px solid #999999; padding: 3px; background-color:#DEDEDE; color:#111111;'] {
                         border: 0 !important;
-                        background-color: color-mix(
-                            in srgb,
-                            var(--post-color) 15%,
-                            transparent
-                        ) !important;
+                        background-color: color-mix(in srgb, var(--post-color) 15%, transparent) !important;
                     }
 
                     a {
@@ -4400,7 +4400,8 @@ PAGE-SPECIFIC STUFF
                         }
 
                         /* Locked */
-                        .icon.lock.massive, p {
+                        .icon.lock.massive,
+                        p {
                             font-size: var(--font-size-base);
                         }
 
@@ -4417,7 +4418,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Account Search -----------------------------------------------------------------*/
+    /* Personal > Account Search -------------------------------------------------------------------------------------*/
     + .container {
         padding: 0;
 
@@ -4490,11 +4491,11 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Achievements -------------------------------------------------------------------*/
+    /* Personal > Achievements ---------------------------------------------------------------------------------------*/
     + #achievement-debug + center {
         display: none;
 
-         + p + .row {
+        + p + .row {
             .col-md-3.col-lg-2,
             .col-md-9.col-lg-10 {
                 flex-basis: auto;
@@ -4884,7 +4885,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Comments -----------------------------------------------------------------------*/
+    /* Personal > Comments -------------------------------------------------------------------------------------------*/
     + center + .comments {
         display: flex;
         flex-direction: column;
@@ -4994,7 +4995,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Inventory ----------------------------------------------------------------------*/
+    /* Personal > Inventory ------------------------------------------------------------------------------------------*/
     + center + br + .ui.message.small {
         margin-top: 0;
         background-color: var(--primary-light);
@@ -5012,13 +5013,13 @@ PAGE-SPECIFIC STUFF
         .ellipsis.vertical.icon {
             width: auto;
             height: 100%;
-            margin: 0 0.25em;
+            margin: 0 .25em;
 
             &:before {
                 content: '';
                 display: block;
-                width: 0.5em;
-                height: 0.5em;
+                width: .5em;
+                height: .5em;
                 border-radius: 50%;
                 background-color: var(--black);
             }
@@ -5101,7 +5102,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Inventory > Item ---------------------------------------------------------------*/
+    /* Personal > Inventory > Item -----------------------------------------------------------------------------------*/
     + center b + br + a[href='/inventory.php'] + br + br + .container {
         max-width: none;
         padding: 0;
@@ -5207,7 +5208,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Pets ---------------------------------------------------------------------------*/
+    /* Personal > Pets -----------------------------------------------------------------------------------------------*/
     + .container > .row:first-child {
         > .col-12 {
             padding: 0;
@@ -5305,7 +5306,9 @@ PAGE-SPECIFIC STUFF
                                     width: auto;
                                     padding: 0;
 
-                                    &:hover, &:focus, &:active {
+                                    &:hover,
+                                    &:focus,
+                                    &:active {
                                         background-color: transparent;
                                     }
 
@@ -5354,8 +5357,8 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Pets > Books Read / Food Eaten -------------------------------------------------*/
-    + .row.w-100.mx-auto + div[style='overflow:auto'] {
+    /* Personal > Pets > Books Read / Food Eaten ---------------------------------------------------------------------*/
+    + .row.w-10.mx-auto + div[style='overflow:auto'] {
         display: flex;
         flex-direction: column;
         gap: var(--spacing-y);
@@ -5378,7 +5381,7 @@ PAGE-SPECIFIC STUFF
         h1,
         hr,
         + hr,
-        div:empty{
+        div:empty {
             display: none;
         }
 
@@ -5417,7 +5420,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Preferences --------------------------------------------------------------------*/
+    /* Personal > Preferences ----------------------------------------------------------------------------------------*/
     + #pref_wrapper {
         #pref_menu {
             margin-bottom: 1rem;
@@ -5462,11 +5465,9 @@ PAGE-SPECIFIC STUFF
                 }
 
                 form[method='post'] center {
-                    textarea,
-                    input[type='submit'] {
-                        &[style*='width:80%'] {
-                            width: 100% !important;
-                        }
+                    textarea[style*='width:80%'],
+                    input[type='submit'][style*='width:80%'] {
+                        width: 100% !important;
                     }
 
                     textarea {
@@ -5601,7 +5602,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Vault --------------------------------------------------------------------------*/
+    /* Personal > Vault ----------------------------------------------------------------------------------------------*/
     + .ui.secondary.pointing.menu + center {
         /* > Currency */
         + form[method='get'] {
@@ -5833,7 +5834,7 @@ PAGE-SPECIFIC STUFF
                         > div {
                             display: flex;
                             flex-wrap: wrap;
-                            gap: 0.25em;
+                            gap: .25em;
                             width: 100% !important;
                             margin-bottom: -1.25rem;
 
@@ -5902,7 +5903,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Wishlist -----------------------------------------------------------------------*/
+    /* Personal > Wishlist -------------------------------------------------------------------------------------------*/
     + .ui.menu + .ui.header {
         + .card {
             padding: 0;
@@ -5974,7 +5975,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Personal > Wishlist > Category ------------------------------------------------------------*/
+    /* Personal > Wishlist > Category --------------------------------------------------------------------------------*/
     + .ui.menu + .ui.header + .border.rounded.p-3.mb-3 {
         padding: var(--spacing) !important;
         border: 0 !important;
@@ -6108,7 +6109,7 @@ PAGE-SPECIFIC STUFF
                             width: 100%;
                             margin-top: .25em;
                             padding: .25em;
-                            border-radius: var(--border-radius)
+                            border-radius: var(--border-radius);
                         }
 
                         .icon {
@@ -6147,7 +6148,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Quests ------------------------------------------------------------------------------------*/
+    /* Quests --------------------------------------------------------------------------------------------------------*/
     + .row.mb-3 {
         margin-bottom: 0 !important;
 
@@ -6357,7 +6358,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Quests > Major Drills ---------------------------------------------------------------------*/
+    /* Quests > Major Drills -----------------------------------------------------------------------------------------*/
     + .text-center a[href='/explore/major_drills.php'] {
         img,
         ~ br {
@@ -6401,7 +6402,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Quests > Shinwa ---------------------------------------------------------------------------*/
+    /* Quests > Shinwa -----------------------------------------------------------------------------------------------*/
     + .row.w-100 {
         .col-md-4.col-lg-3.text_center,
         .col-md-8.col-lg-9 {
@@ -6440,7 +6441,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Explore > Arctic Frost > Polar Ice Fields ----------------------------------------*/
+    /* Subeta > Explore > Arctic Frost > Polar Ice Fields ------------------------------------------------------------*/
     + center {
         h1,
         img[src*='map_tundra'] {
@@ -6456,7 +6457,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Explore > Darkside > Ultimate Pet Zapper -----------------------------------------*/
+    /* Subeta > Explore > Darkside > Ultimate Pet Zapper -------------------------------------------------------------*/
     + .container .row {
         .col-4,
         .col-8 {
@@ -6529,7 +6530,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Explore > Delphi > Carnival > Ruffie Raffle --------------------------------------*/
+    /* Subeta > Explore > Delphi > Carnival > Ruffie Raffle ----------------------------------------------------------*/
     + link[href*='fonts.googleapis.com/css?family=Indie+Flower'] + style + .container .row.w-100 {
         > .col-12 {
             padding: 0;
@@ -6556,8 +6557,8 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Explore > Galaxan Wastes > The Rift ----------------------------------------------*/
-    + .mx-auto.col-md-10.col-lg-6.text-center {
+    /* Subeta > Explore > Galaxan Wastes > The Rift ------------------------------------------------------------------*/
+    + .mx-auto.col-md-1.col-lg-6.text-center {
         flex-basis: auto;
         max-width: 100%;
         width: 100%;
@@ -6617,8 +6618,8 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Explore > Shadowglen > Crypts ----------------------------------------------------*/
-    + .row.w-100.mx-auto + center[style='width: 600px; margin: auto;'] {
+    /* Subeta > Explore > Shadowglen > Crypts ------------------------------------------------------------------------*/
+    + .row.w-10.mx-auto + center[style='width: 600px; margin: auto;'] {
         width: 100% !important;
         font-size: var(--font-size-medium);
 
@@ -6643,7 +6644,7 @@ PAGE-SPECIFIC STUFF
             max-width: none;
         }
 
-        .mx-auto.col-12.col-md-6.border.p-0.m-3 {
+        .mx-auto.col-12.col-md-6.border.p-.m-3 {
             flex-basis: auto;
             max-width: 100%;
             width: 100%;
@@ -6667,7 +6668,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Explore > Shengui Guo ------------------------------------------------------------*/
+    /* Subeta > Explore > Shengui Guo --------------------------------------------------------------------------------*/
     + div[style='width: 750px; margin: auto; text-align: center;'] {
         width: 100% !important;
 
@@ -6692,7 +6693,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Explore > Shengui Guo > Fine Fabrics ---------------------------------------------*/
+    /* Subeta > Explore > Shengui Guo > Fine Fabrics -----------------------------------------------------------------*/
     + script + style + #color-choice + #layer-choice + .ui.segment.basic.center.aligned {
         width: 100% !important;
         padding: 0;
@@ -6843,7 +6844,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Games ----------------------------------------------------------------------------*/
+    /* Subeta > Games ------------------------------------------------------------------------------------------------*/
     + center + br + center {
         a[href='/games/index.php'],
         a[href='/games/index.php'] + a[href^='/alert.php'] {
@@ -6910,7 +6911,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Games > Battle -------------------------------------------------------------------*/
+    /* Subeta > Games > Battle ---------------------------------------------------------------------------------------*/
     + .battle-menu {
         padding: var(--navbar-padding) !important;
         border-radius: var(--navbar-radius) !important;
@@ -6953,7 +6954,7 @@ PAGE-SPECIFIC STUFF
                     padding: var(--spacing);
                     background-color: var(--white);
                     color: var(--black);
-                    font-size: 0.75em;
+                    font-size: .75em;
 
                     + .alert.alert-danger {
                         font-size: var(--font-size-small);
@@ -7001,51 +7002,51 @@ PAGE-SPECIFIC STUFF
                     }
 
                     > .p-1 {
-                        font-size: 0.75em;
+                        font-size: .75em;
                         white-space: nowrap;
                         text-align: center;
+                    }
 
-                        &[style^='background-color:#'] {
-                            margin-top: 1rem;
+                    > .p-1 [style^='background-color:#'] {
+                        margin-top: 1rem;
+                        padding: var(--button-padding) !important;
+                        border-radius: 1em;
+                        background-color: var(--primary) !important;
+                        color: var(--white);
+
+                        &:last-child {
+                            padding: 0 !important;
+                            background-color: transparent !important;
+                            color: var(--black);
+                            white-space: normal;
+                        }
+
+                        input[type='submit'] {
+                            margin: 1rem 0 0 !important;
                             padding: var(--button-padding) !important;
-                            border-radius: 1em;
-                            background-color: var(--primary) !important;
-                            color: var(--white);
+                            border-radius: var(--button-radius);
+                            border: 0;
+                            outline: 0;
+                            background-color: var(--button-bg);
+                            color: var(--button-fg);
+                            font-size: 1rem !important;
+                            font-weight: bold;
+                            text-decoration: none;
+                            transition: var(--button-transition);
+                            cursor: pointer;
 
-                            &:last-child {
-                                padding:0 !important;
-                                background-color: transparent !important;
-                                color: var(--black);
-                                white-space: normal;
+                            &:hover {
+                                background-color: var(--button-bg-hover);
+                                color: var(--button-fg-hover);
                             }
 
-                            input[type='submit'] {
-                                margin: 1rem 0 0 !important;
-                                padding: var(--button-padding) !important;
-                                border-radius: var(--button-radius);
-                                border: 0;
-                                outline: 0;
-                                background-color: var(--button-bg);
-                                color: var(--button-fg);
-                                font-size: 1rem !important;
-                                font-weight: bold;
-                                text-decoration: none;
-                                transition: var(--button-transition);
-                                cursor: pointer;
+                            &[value^='Cancel'] {
+                                background-color: var(--button-danger-bg);
+                                color: var(--button-danger-fg);
 
                                 &:hover {
-                                    background-color: var(--button-bg-hover);
-                                    color: var(--button-fg-hover);
-                                }
-
-                                &[value^='Cancel'] {
-                                    background-color: var(--button-danger-bg);
-                                    color: var(--button-danger-fg);
-
-                                    &:hover {
-                                        background-color: var(--button-danger-bg-hover);
-                                        color: var(--button-danger-fg-hover);
-                                    }
+                                    background-color: var(--button-danger-bg-hover);
+                                    color: var(--button-danger-fg-hover);
                                 }
                             }
                         }
@@ -7079,7 +7080,7 @@ PAGE-SPECIFIC STUFF
                     border: 2px solid var(--primary-light) !important;
                     border-radius: var(--border-radius);
                     background-color: var(--white);
-                    font-size: 0.75em;
+                    font-size: .75em;
 
                     p,
                     b {
@@ -7127,9 +7128,9 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Games > Chance - Decanter of Indestructibility -----------------------------------*/
+    /* Subeta > Games > Chance - Decanter of Indestructibility -------------------------------------------------------*/
     + .container.text-center {
-        .row.w-100.mx-auto + .col-12.col-sm-10.col-md-8.col-lg-6.mx-auto.p-3 {
+        .row.w-10.mx-auto + .col-12.col-sm-1.col-md-8.col-lg-6.mx-auto.p-3 {
             flex-basis: auto;
             max-width: 100%;
             width: 100%;
@@ -7199,8 +7200,9 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Games > Chance - Fishing ---------------------------------------------------------*/
-    + .row.w-100.mx-auto + center {
+    /* Subeta > Games > Chance - Fishing -----------------------------------------------------------------------------*/
+    + .row.w-10.mx-auto + center {
+
         img[src*='temictzin'],
         img[src*='temictzin'] + br {
             @media (max-device-width: 768px) {
@@ -7209,8 +7211,8 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Games > Chance > Scratchcards ----------------------------------------------------*/
-    + .row.w-100.mx-auto + .row {
+    /* Subeta > Games > Chance > Scratchcards ------------------------------------------------------------------------*/
+    + .row.w-10.mx-auto + .row {
         .col-sm-6 {
             &.col-md-4.col-lg-3 {
                 @media (max-device-width: 768px) {
@@ -7233,7 +7235,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Games > Chance > Vending ----------------------------------------------------------*/
+    /* Subeta > Games > Chance > Vending ------------------------------------------------------------------------------*/
     + script:not([src^='/js/autopricer.js']) + .container {
         padding: 0;
 
@@ -7265,18 +7267,17 @@ PAGE-SPECIFIC STUFF
                         font-weight: bold;
                         text-decoration: none;
                         text-shadow: 1px 1px #ed0101;
-                        box-shadow: -1px -1px 1px #fe7070, 0 0 4px 4px var(--box-shadow-color),
-                            1px 1px 1px #ed0101, inset 0 0 0 #cc0000,
-                            inset 0.5em 0.5em 0.5em #fe7070;
+                        box-shadow: -1px -1px 1px #fe7070, 0 0 4px 4px var(--box-shadow-color), 1px 1px 1px #ed0101,
+                            inset 0 0 0 #cc0000, inset .5em .5em .5em #fe7070;
 
                         &:before {
                             content: 'PUSH';
                         }
 
                         &:active {
-                            box-shadow: inset 1px 1px 1px #fe7070,
-                                0 0 4px 4px var(--box-shadow-color), inset -1px -1px 1px #ed0101,
-                                inset 0.5em 0.5em 0.75em #cc0000, inset 0.5em 0.5em 0.5em #fe7070;
+                            box-shadow: inset 1px 1px 1px #fe7070, 0 0 4px 4px var(--box-shadow-color),
+                                inset -1px -1px 1px #ed0101, inset .5em .5em .75em #cc0000,
+                                inset .5em .5em .5em #fe7070;
                         }
                     }
 
@@ -7309,7 +7310,7 @@ PAGE-SPECIFIC STUFF
 
                     i {
                         display: block;
-                        margin-top: 0.5rem;
+                        margin-top: .5rem;
                     }
                 }
 
@@ -7347,7 +7348,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Games > Collection ---------------------------------------------------------------*/
+    /* Subeta > Games > Collection -----------------------------------------------------------------------------------*/
     + .nav.justify-content-center.mb-3 {
         margin: 0 !important;
 
@@ -7416,7 +7417,6 @@ PAGE-SPECIFIC STUFF
                     border: 0;
                     font-size: 0;
 
-
                     &:after {
                         content: '\f07a';
                         padding: .5em;
@@ -7430,7 +7430,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Games > Collection > Minion Zoo --------------------------------------------------*/
+    /* Subeta > Games > Collection > Minion Zoo ----------------------------------------------------------------------*/
     + #minion_fights > .ui.basic.segment.center.aligned {
         padding: 0;
 
@@ -7545,8 +7545,8 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Games > Mind > Blackout ----------------------------------------------------------*/
-    + .row.w-100.mx-auto + center #blackout_board {
+    /* Subeta > Games > Mind > Blackout ------------------------------------------------------------------------------*/
+    + .row.w-10.mx-auto + center #blackout_board {
         table {
             @media (max-device-width: 768px) {
                 zoom: 75%;
@@ -7568,8 +7568,8 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Games > Misc - Item Hunt ---------------------------------------------------------*/
-    + .row.w-100.mx-auto + .row {
+    /* Subeta > Games > Misc - Item Hunt -----------------------------------------------------------------------------*/
+    + .row.w-10.mx-auto + .row {
         .col-sm-6 {
             padding: 0;
 
@@ -7620,7 +7620,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > News -----------------------------------------------------------------------------*/
+    /* Subeta > News -------------------------------------------------------------------------------------------------*/
     + .jumbotron.pt-3.pb-3 {
         display: flex;
         align-items: center;
@@ -7647,7 +7647,7 @@ PAGE-SPECIFIC STUFF
             }
         }
 
-        + .row.w-100.mx-auto {
+        + .row.w-10.mx-auto {
             display: flex;
 
             @media (max-width: 1300px) {
@@ -7738,7 +7738,7 @@ PAGE-SPECIFIC STUFF
                         border: 0;
                         background-color: transparent;
                         color: var(--black) !important;
-                        font-size: 0.75em;
+                        font-size: .75em;
 
                         @media (max-device-width: 768px) {
                             flex-wrap: wrap;
@@ -7847,7 +7847,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > News > Dailies -------------------------------------------------------------------*/
+    /* Subeta > News > Dailies ---------------------------------------------------------------------------------------*/
     + h1 ~ .card.mt-3.mb-3 {
         margin-bottom: 2rem !important;
         padding: 0;
@@ -7902,7 +7902,7 @@ PAGE-SPECIFIC STUFF
         }
     }
 
-    /* Subeta > Subetapedia ----------------------------------------------------------------------*/
+    /* Subeta > Subetapedia ------------------------------------------------------------------------------------------*/
     + .text_center + .ui.message {
         .sbp-nav {
             margin: -1rem;
@@ -7925,7 +7925,9 @@ PAGE-SPECIFIC STUFF
                     }
 
                     .oswald {
-                        h1, a {
+
+                        h1,
+                        a {
                             font-size: var(--font-size-base) !important;
                         }
 
