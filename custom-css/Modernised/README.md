@@ -29,6 +29,7 @@ These are the CSS Variables you can use in the theme:
 ### Colours
 These options are to customise the colours used in the theme.
 | Code                      | Option                                                               |
+|---------------------------|----------------------------------------------------------------------|
 | `--color-primary`         | Main color of the theme, default is `#9BA84F`.                       |
 | `--color-blue`            | Blue color, used for alerts etc, default is #0DCAF0.                 |
 | `--color-green`           | Green color, used for alerts etc, default is #20C997.                |
@@ -38,4 +39,6 @@ These options are to customise the colours used in the theme.
 ### Display options
 These options are to hide certain parts of the website. Default values are usually either `block` or `flex`.
 To hide these options on the website, simply use the value `none` (see example above).
-| `--display-floating-item` | Display-property for floating items (e.g. survival flowers). Default value is `block`. |
+| Code                      | Option                                                                    |
+|---------------------------|---------------------------------------------------------------------------|
+| `--display-floating-item` | Display floating items (e.g. survival flowers). Default value is `block`. |
