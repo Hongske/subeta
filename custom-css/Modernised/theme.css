@@ -35,7 +35,9 @@
     --font-size-small: .75rem;
 
     /* Buttons -------------------------------------------------------------------------------------------------------*/
-    --button-padding: .5em .75em;
+    --button-padding: var(--button-padding-y) var(--button-padding-x);
+    --button-padding-y: .5em;
+    --button-padding-x: .75em;
     --button-radius: var(--border-radius);
     --button-transition: border-color .2s, background-color .2s, color .2s;
     --button-bg: var(--primary);
@@ -53,6 +55,8 @@
     --spacing: var(--spacing-y) var(--spacing-x);
     --spacing-y: 1rem;
     --spacing-x: 1rem;
+    --spacing-small: .5rem;
+    --spacing-smaller: .25rem;
     --backdrop-blur: blur(.5rem);
     --box-shadow-blur: .75em;
     --box-shadow-color: color-mix(in srgb, var(--black) 33%, transparent);
@@ -120,7 +124,7 @@
 html {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
-    line-height: normal;
+    line-height: 1.25;
 }
 
 body {
@@ -312,7 +316,7 @@ input {
             display: flex;
             flex-direction: row-reverse;
             align-items: center;
-            gap: 1rem;
+            gap: var(--spacing-x);
             padding: 0;
             background-color: var(--white);
 
@@ -324,6 +328,7 @@ input {
             }
 
             .menu-btn {
+                display: flex;
                 height: auto;
                 margin: 0;
                 background-image: none;
@@ -358,11 +363,11 @@ input {
                 }
 
                 .menu-tab {
+                    flex-grow: 1;
                     display: flex;
                     flex-direction: row-reverse;
                     align-items: center;
-                    justify-content: center;
-                    gap: .5em;
+                    gap: var(--spacing-small);
                     margin: 0;
                     padding: var(--button-padding);
                     border: 2px solid var(--button-bg);
@@ -371,22 +376,26 @@ input {
                     line-height: normal;
                     background-color: var(--button-bg);
                     font-weight: bold;
+                    text-align: center; /**/
                     text-transform: capitalize;
                     transition: var(--button-transition);
 
-                    @media (max-device-width: 768px) {
-                        flex-grow: 1;
-                        height: 2rem;
-                        font-size: 0;
-                        pointer-events: none;
-                    }
-
                     &:after {
-                        display: inline-flex;
-                        justify-content: center;
                         width: 1rem;
                         height: 1rem;
                         font-size: 1rem;
+                        text-align: center;
+                    }
+
+                    @media (max-device-width: 768px) {
+                        display: block;
+                        height: 2rem;
+                        font-size: 0;
+                        pointer-events: none;
+
+                        &:after {
+                            line-height: calc(2rem - 4px);
+                        }
                     }
 
                     &:hover {
@@ -447,7 +456,7 @@ input {
                         > a {
                             display: flex;
                             align-items: center;
-                            gap: .5em;
+                            gap: var(--spacing-small);
                             padding: .5rem 1rem !important;
 
                             @media (max-device-width: 768px) {
@@ -549,7 +558,7 @@ input {
     #bookmarks {
         display: flex;
         align-items: center;
-        gap: 1rem;
+        gap: var(--spacing-x);
         max-width: calc(var(--content-width-max) - var(--sidebar-width));
         width: calc(100% - var(--sidebar-width));
         height: var(--menu-height);
@@ -611,7 +620,7 @@ input {
         width: var(--sidebar-width);
         height: var(--sidebar-height);
         overflow-y: auto;
-        padding: 1rem;
+        padding: var(--spacing-x);
         position: fixed;
         background-color: var(--primary-dark);
         background-image: none;
@@ -625,13 +634,9 @@ input {
         #sidebar-top {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: var(--spacing-x);
             height: auto;
-            margin-bottom: 1rem;
-
-            @media (max-device-width: 768px) {
-                display: none;
-            }
+            margin-bottom: var(--spacing-y);
 
             #sidebar-btn-dash,
             #sidebar-btn-events {
@@ -672,7 +677,9 @@ input {
             }
 
             #sidebar-btn-events {
-                padding-right: 2.5rem;
+                padding-right: .5rem;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
 
                 &:before {
                     content: 'Events';
@@ -684,8 +691,13 @@ input {
 
                 &:hover + #events-counter-wrapper,
                 &.sidebar-btn-active + #events-counter-wrapper {
-                    background-color: var(--button-bg);
-                    color: var(--button-fg);
+                    background-color: var(--button-fg);
+                    color: var(--button-bg);
+
+                    #events-counter {
+                        background-color: var(--button-bg);
+                        color: var(--button-fg);
+                    }
                 }
             }
 
@@ -693,31 +705,37 @@ input {
                 flex-shrink: 0;
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                width: 1em;
-                height: 1em;
                 margin-left: -1rem;
-                padding: .75em;
-                border-radius: 50%;
+                height: calc((var(--font-size-small) * 1.25) + (var(--button-padding-y) * 2));
+                padding: 0;
+                padding-right: .5em;
+                border-radius: 0 var(--border-radius) var(--border-radius) 0;
                 position: relative;
                 top: 0;
-                right: .5rem;
-                transform: translate(-100%, 0);
-                background-color: var(--button-fg);
-                color: var(--black);
+                right: 0;
                 font-size: var(--font-size-small);
-                text-align: center;
+                background-color: var(--button-bg);
                 transition: var(--button-transition);
 
                 #events-counter {
-                    color: inherit;
-                    font-size: inherit;
+                    flex-shrink: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    min-width: 1em;
+                    height: 1em;
+                    padding: .75em .45em;
+                    border-radius: 1em;
+                    background-color: var(--button-fg);
+                    color: var(--button-bg);
+                    font-size: var(--font-size-small);
+                    line-height: normal;
+                    transition: var(--button-transition);
                 }
             }
         }
 
         #sidebar-inner {
-            flex-direction: column;
             width: 100%;
             padding: 0;
             background-image: none;
@@ -817,7 +835,7 @@ input {
             .sidebar-inner-active {
                 display: flex !important;
                 flex-direction: column;
-                gap: 1rem;
+                gap: var(--spacing-y);
             }
 
             .sidebar-widget {
@@ -844,6 +862,8 @@ input {
                     align-items: center;
                     justify-content: flex-end;
                     margin-left: auto;
+                    width: 1em;
+                    height: 1em;
                     position: relative;
                     top: 0;
                     right: 0;
@@ -944,12 +964,13 @@ input {
                 padding-left: var(--sidebar-width);
             }
 
-            &[style*='margin-left: 0'] {
+            &[style*='margin-left: 0'],
+            &[style*='margin-left:0'] {
                 padding-left: 0;
             }
 
             > .container-fluid {
-                padding: 1rem;
+                padding: var(--spacing-x);
             }
         }
 
@@ -1443,6 +1464,7 @@ img[src^='//img.subeta.net/icons/lock'] {
 
     &.menu {
         display: flex;
+        flex-wrap: wrap;
         gap: var(--navbar-gap);
         margin-top: 0;
         padding: var(--navbar-padding);
@@ -1453,7 +1475,9 @@ img[src^='//img.subeta.net/icons/lock'] {
         box-shadow: none;
 
         .item {
-            display: block;
+            display: flex;
+            align-items: center;
+            gap: var(--navbar-gap);
             padding: 0;
             border: 0;
             color: var(--navbar-link);
@@ -1462,6 +1486,13 @@ img[src^='//img.subeta.net/icons/lock'] {
 
             &:hover {
                 text-decoration: underline;
+            }
+
+            &.active {
+                background-color: transparent;
+                color: var(--navbar-link);
+                font-weight: bold;
+                box-shadow: none;
             }
 
             &:nth-child(n + 2):before {
@@ -1644,7 +1675,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
 .floating_item {
     display: var(--display-floating-item, block);
-    width: auto;
+    width: var(--item-size-medium);
     margin: 0 !important;
     position: fixed !important;
     top: 50% !important;
@@ -1673,7 +1704,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 .hustler {
     display: var(--display-hustler, block);
     width: calc(var(--sidebar-width) - 2rem);
-    padding: 1rem;
+    padding: var(--spacing);
     border: 0;
     border-radius: var(--alert-radius);
     position: fixed;
@@ -1779,7 +1810,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         #MB_header {
             display: flex;
             align-items: center;
-            padding: var(--button-padding);
+            padding: var(--spacing);
             background-color: var(--primary);
             color: var(--white);
             border: 0;
@@ -1819,7 +1850,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
         #MB_content {
             height: 100%;
-            padding: 1em;
+            padding: var(--spacing);
             border: 0;
 
             #bookmark-modal {
@@ -1867,8 +1898,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
 .new-news-announcement-banner {
     width: calc(100% - 2rem) !important;
-    margin: 1rem !important;
-    padding: 1rem !important;
+    margin: var(--spacing) !important;
+    padding: var(--spacing) !important;
     border-radius: var(--alert-radius);
     border: 0 !important;
     background-color: var(--red) !important;
@@ -1899,12 +1930,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         tbody {
             display: flex;
             align-items: center;
-            gap: 1em;
+            gap: var(--spacing-y);
 
             @media (max-device-width: 768px) {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: .5em;
             }
 
             tr:nth-child(1) {
@@ -2209,7 +2239,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
         .ui.segment {
             margin: 0;
-            padding: 1rem;
+            padding: var(--spacing);
             border-radius: var(--border-radius);
             background-color: var(--primary-light);
             box-shadow: none;
@@ -2217,11 +2247,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             .ui.form .fields {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 1rem;
-
-                @media (max-device-width: 768px) {
-                    gap: .5rem;
-                }
+                gap: var(--spacing-y);
 
                 &:after,
                 &:before {
@@ -2294,7 +2320,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             @media (max-device-width: 768px) {
                 display: flex;
                 flex-wrap: wrap;
-                gap: 1rem;
+                gap: var(--spacing-x);
 
                 > .wl_item {
                     pointer-events: none;
@@ -2535,6 +2561,48 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     }
 
     /* Commerce > Special Shops --------------------------------------------------------------------------------------*/
+    + .ui.menu + h1 ~ .card {
+        margin-bottom: 2rem !important;
+        padding: 0;
+
+        .card-header {
+            color: var(--black);
+
+            p {
+                font-weight: normal;
+            }
+        }
+
+        .card-body {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-y);
+
+            .d-inline-block.align-top.text-center.m-2.p-1[style='width:100px;'] {
+                display: flex !important;
+                align-items: center;
+                gap: var(--spacing-x);
+                width: var(--col-3) !important;
+                margin: 0 !important;
+                padding: var(--spacing) !important;
+                border: var(--border);
+                border-radius: var(--border-radius);
+                font-size: var(--font-size-small);
+
+                img {
+                    width: var(--item-size);
+                    height: var(--item-size);
+                    padding: 0 !important;
+                }
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /* Commerce > Special Shops > Shop -------------------------------------------------------------------------------*/
     + style + .row.w-100 {
         width: 100%;
 
@@ -2557,7 +2625,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                 + p ~ .ui.bottom.attached.segment.item-list {
                     margin: 0;
-                    padding: 1rem 0;
+                    padding: var(--spacing-y) 0;
                     box-shadow: none;
 
                     .items.d-flex.align-content-start.flex-wrap {
@@ -2575,7 +2643,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                         .d-flex.flex-column {
                             align-items: center;
-                            gap: 1rem;
+                            gap: var(--spacing-x);
                             flex-direction: row !important;
 
                             .p-2 {
@@ -2700,7 +2768,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 margin-bottom: 1rem;
 
                 .card {
-                    gap: 1rem;
+                    gap: var(--spacing-x);
                     margin: 0 !important;
                     padding: 0;
                     background-color: transparent !important;
@@ -2711,7 +2779,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                     .card-body {
                         .row {
-                            gap: 1rem;
+                            gap: var(--spacing-x);
 
                             .col {
                                 flex-basis: auto;
@@ -2913,7 +2981,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                                     &:nth-child(5) {
                                         flex-shrink: 1;
-                                        gap: .5em;
+                                        gap: var(--spacing-small);
 
                                         @media (max-device-width: 768px) {
                                             align-items: flex-start;
@@ -2941,7 +3009,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                                     &:nth-child(6) {
                                         display: flex;
                                         justify-content: flex-end;
-                                        gap: .5rem;
+                                        gap: var(--spacing-small);
                                         padding-right: 1.125rem;
 
                                         @media (max-device-width: 768px) {
@@ -3229,7 +3297,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 1rem;
+                gap: var(--spacing-x);
                 padding: 0;
 
                 .button + .message {
@@ -3334,7 +3402,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
             /* > Profits */
             > .row {
-                gap: 1rem;
+                gap: var(--spacing-x);
 
                 .col-md-6.text-center {
                     flex-basis: auto;
@@ -3578,7 +3646,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             }
 
             .card-body.forum-collapse-body {
-                gap: 1rem;
+                gap: var(--spacing-x);
                 margin: 0;
 
                 .col-12.col-sm-6.p-3 {
@@ -3668,7 +3736,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     /* Interact > Forums > Board -------------------------------------------------------------------------------------*/
     + #forum-top {
         + .row {
-            gap: 1rem;
+            gap: var(--spacing-x);
 
             .col-12.col-sm-6.col-md-4.col-lg-3.p-3 {
                 flex-basis: auto;
@@ -3775,7 +3843,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         @media (max-device-width: 768px) {
                             display: flex;
                             flex-wrap: wrap;
-                            gap: .5rem;
+                            gap: var(--spacing-small);
                             padding: .5rem 0;
                         }
 
@@ -3940,7 +4008,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         ~ #posts {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: var(--spacing-x);
             background-color: transparent;
 
             .post-container {
@@ -4002,7 +4070,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         }
 
                         &:nth-child(2) {
-                            gap: .5em;
+                            gap: var(--spacing-small);
                         }
                     }
 
@@ -4536,7 +4604,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     flex-wrap: wrap;
                     gap: var(--spacing-y);
                     margin-bottom: 1rem;
-                    padding: 1rem;
+                    padding: var(--spacing);
                     background-color: var(--grey);
 
                     > .item:first-child {
@@ -4667,7 +4735,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                 #achievement-options .options {
                     flex-wrap: wrap;
-                    gap: 1rem;
+                    gap: var(--spacing-x);
                     margin: 0;
                     padding: 0;
 
@@ -4740,14 +4808,14 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                                 flex-direction: row-reverse;
                                 align-items: center;
                                 justify-content: flex-end;
-                                gap: .5rem;
+                                gap: var(--spacing-small);
                             }
 
                             .ui.small.labels {
                                 order: 10;
                                 display: flex;
                                 flex-wrap: wrap;
-                                gap: .5rem;
+                                gap: var(--spacing-small);
 
                                 .ui.label {
                                     margin: 0 !important;
@@ -4789,7 +4857,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                                     .column.text_center {
                                         display: flex;
                                         align-items: center;
-                                        gap: 1rem;
+                                        gap: var(--spacing-x);
                                         width: var(--col-2);
                                         min-height: 0 !important;
                                         padding: var(--spacing);
@@ -4911,7 +4979,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     + center + .comments {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: var(--spacing-x);
 
         .card.m-3 {
             margin: 0 !important;
@@ -5054,7 +5122,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             box-shadow: none;
 
             + .ui.segment.attached {
-                padding: 1rem 0 0;
+                padding: var(--spacing-y) 0 0;
                 border-radius: 0 0 var(--border-radius) var(--border-radius);
                 box-shadow: none;
 
@@ -5078,7 +5146,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     .two.wide.column {
                         display: flex;
                         align-items: center;
-                        gap: 1rem;
+                        gap: var(--spacing-x);
                         width: var(--col-3);
                         min-height: 0 !important;
                         margin: 0;
@@ -5133,7 +5201,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         > .col-6 {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: var(--spacing-x);
             width: 100%;
             max-width: 100%;
             padding: 0;
@@ -5429,7 +5497,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 .border.rounded.p-2.pb-3.pt-3 {
                     display: flex;
                     align-items: center;
-                    gap: .5rem;
+                    gap: var(--spacing-small);
                     padding: .5rem !important;
                     border: var(--border) !important;
                     font-size: var(--font-size-small);
@@ -5521,7 +5589,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     .ui.grid {
                         display: flex;
                         flex-wrap: wrap;
-                        gap: 1rem;
+                        gap: var(--spacing-x);
                     }
 
                     .column {
@@ -5551,7 +5619,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                                 .event {
                                     display: flex;
-                                    gap: 1rem;
+                                    gap: var(--spacing-x);
                                     margin: 0;
                                     padding: 0;
                                 }
@@ -5863,7 +5931,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             label {
                                 display: flex;
                                 align-items: center;
-                                gap: 1rem;
+                                gap: var(--spacing-x);
                                 width: 100%;
                                 margin-bottom: 0;
                             }
@@ -5897,7 +5965,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     display: flex;
                     flex-wrap: wrap;
                     align-items: center;
-                    gap: 1rem;
+                    gap: var(--spacing-x);
                     border: 0 !important;
 
                     .btn {
@@ -6243,13 +6311,13 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     + .ui.message.green + p,
                     + p {
                         + p + p + .row {
-                            gap: 1rem;
+                            gap: var(--spacing-x);
 
                             .col-md-3 {
                                 flex-basis: auto;
                                 display: flex;
                                 align-items: center;
-                                gap: 1rem;
+                                gap: var(--spacing-x);
                                 max-width: 100%;
                                 width: var(--col-2);
                                 padding: var(--spacing);
@@ -6510,7 +6578,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         .col-8 {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
+            gap: var(--spacing-x);
 
             .alert.alert-warning.m-4,
             .card.bg-light.m-3 {
@@ -6528,12 +6596,12 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             form[action='/explore/zapper.php/zap'] {
                 display: flex;
                 flex-direction: column;
-                gap: 1rem;
+                gap: var(--spacing-x);
 
                 + .card.bg-light.m-3 .text_center {
                     display: flex;
                     justify-content: center;
-                    gap: 1rem;
+                    gap: var(--spacing-x);
 
                     @media (max-device-width: 768px) {
                         flex-direction: column;
@@ -6582,6 +6650,10 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     .card-body > p {
                         display: none;
                     }
+
+                    .btn + .btn {
+                        /* TODO - Add spacing (also check mobile!) */
+                    }
                 }
             }
         }
@@ -6615,7 +6687,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             .d-inline-block.align-top.text-center.p-1.m-1.border.rounded {
                 display: flex !important;
                 align-items: center;
-                gap: 1rem;
+                gap: var(--spacing-x);
                 width: var(--col-3) !important;
                 margin: 0 !important;
                 padding: var(--spacing) !important;
@@ -6627,7 +6699,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     flex-grow: 1;
                     display: flex;
                     align-items: center;
-                    gap: 1rem;
+                    gap: var(--spacing-x);
                     width: calc(100% - 2rem);
                     margin: 0;
                 }
@@ -6808,7 +6880,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     ~ .layer-button {
                         display: inline-flex;
                         align-items: center;
-                        gap: 1rem;
+                        gap: var(--spacing-x);
                         padding: 0;
 
                         @media (max-device-width: 768px) {
@@ -6838,7 +6910,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         .four.wide.column.center.aligned {
                             display: flex;
                             align-items: center;
-                            gap: 1rem;
+                            gap: var(--spacing-x);
                             width: var(--col-3);
                             margin: 0;
                             padding: var(--spacing);
@@ -6917,7 +6989,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             a {
                 display: flex;
                 align-items: center;
-                gap: 1rem;
+                gap: var(--spacing-x);
 
                 img {
                     width: var(--item-size);
@@ -7003,7 +7075,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             }
 
             + .row.w-100 {
-                gap: 1rem;
+                gap: var(--spacing-x);
 
                 /* > Training Center */
                 .training-center-pet {
@@ -7211,7 +7283,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     a {
                         display: flex;
                         align-items: center;
-                        gap: 1rem;
+                        gap: var(--spacing-x);
                         color: var(--black);
                         font-size: var(--font-size-small);
                         text-align: left;
@@ -7353,7 +7425,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     .text_center.animated {
                         display: flex;
                         align-items: center;
-                        gap: 1rem;
+                        gap: var(--spacing-x);
                         max-width: 100% !important;
                         width: var(--col-2) !important;
                         min-height: 0 !important;
@@ -7392,7 +7464,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: .5rem;
+                gap: var(--spacing-small);
                 margin-top: 1rem;
                 padding: 0 !important;
             }
@@ -7408,7 +7480,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 .item-list-display {
                     display: flex;
                     align-items: center;
-                    gap: 1rem;
+                    gap: var(--spacing-x);
                     width: var(--col-3) !important;
                     margin: 0;
                     padding: var(--spacing);
@@ -7422,7 +7494,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 .item-display-item {
                     display: flex;
                     align-items: center;
-                    gap: 1rem;
+                    gap: var(--spacing-x);
                     width: calc(100% - 3rem);
                     height: auto;
 
@@ -7473,7 +7545,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
             + .ui.grid {
                 display: flex;
-                gap: 1rem;
+                gap: var(--spacing-x);
                 white-space: nowrap;
 
                 .column {
@@ -7490,7 +7562,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     display: flex;
                     align-items: center;
                     gap: .25em;
-                    padding: 1rem 0;
+                    padding: var(--spacing-y) 0;
 
                     &:after {
                         display: none;
@@ -7521,7 +7593,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
             + .row {
                 align-items: center;
-                gap: 1rem;
+                gap: var(--spacing-x);
                 margin: 1rem 0;
 
                 .col-md-1.p-2 {
@@ -7836,7 +7908,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     .card-body {
                         display: flex;
                         flex-direction: column;
-                        gap: .5em;
+                        gap: var(--spacing-small);
                         font-size: var(--font-size-small);
                     }
 
