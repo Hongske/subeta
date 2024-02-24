@@ -983,12 +983,13 @@ input {
 .btn,
 .button,
 .card-header a[href='/wishlists.php/new_category'],
+.container-fluid > center > a[href^='?move='],
 .container-fluid > center > a[href^='/alert.php'],
 .container-fluid > center > a[href^='/games/index.php'],
-.container-fluid > center > a[href^='?move='],
 .container-fluid > center > a[href='?act=start'],
 .container-fluid > center > a[href='artic.php'],
 .form .formatting .button,
+.row.pt-3 a[href='/explore/goddess.php'],
 .ui.button,
 .ui.button.blue,
 .ui.button.small,
@@ -1075,24 +1076,24 @@ input[type='submit'][value='Search Foods Eaten'] {
 .event-remove-cat,
 .event-remove,
 .fa[style='font-size: .6em; top: -.1em;'],
-form[action^='/quests.php'] .col-md-3 .btn,
 .forum-collapse-button,
 .forum-threads-list .fa.fa-comments-o,
 .item-list-display .item-display-extra .item-list-search,
-#MB_close,
-#menu-ul .menu-btn .menu-tab,
-#menu-ul ul a[aria-haspopup='true'],
-#minion_fights .icon,
 .posted .icon,
 .qs-button,
-#sidebar-btn-dash,
-#sidebar-btn-events,
-#sidebar-toggle-button,
 .sidebar-widget-arrow,
 .topic.lock .icon.lock,
 .topic.sub .icon.checkmark,
 .wishlist-item .icon,
-.wl_item .wl_plus {
+.wl_item .wl_plus,
+#MB_close,
+#menu-ul .menu-btn .menu-tab,
+#menu-ul ul a[aria-haspopup='true'],
+#minion_fights .icon,
+#sidebar-btn-dash,
+#sidebar-btn-events,
+#sidebar-toggle-button,
+form[action^='/quests.php'] .col-md-3 .btn {
     &:after {
         content: 'x';
         display: inline-block;
@@ -6369,6 +6370,14 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             background-color: var(--green-dark) !important;
                             color: var(--white) !important;
                         }
+                    }
+                }
+
+                a[href='/explore/goddess.php'] {
+                    background-color: var(--green);
+
+                    &:hover {
+                        background-color: var(--green-dark);
                     }
                 }
 
