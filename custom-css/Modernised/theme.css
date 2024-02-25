@@ -6932,9 +6932,31 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     .card-body > p {
                         display: none;
                     }
+                }
+            }
+        }
 
-                    .btn + .btn {
-                        /* TODO - Add spacing (also check mobile!) */
+        #choices {
+            align-items: center;
+
+            .col-6 {
+                @media (max-device-width: 768px) {
+                    flex-basis: auto;
+                    max-width: 100%;
+                    padding: 0;
+                }
+
+                &:nth-child(2) {
+                    @media (max-device-width: 768px) {
+                        order: -1;
+                    }
+
+                    .btn {
+                        margin-bottom: var(--spacing-y);
+
+                        + .btn {
+                            margin-left: var(--spacing-x);
+                        }
                     }
                 }
             }
