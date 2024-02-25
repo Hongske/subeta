@@ -1669,8 +1669,8 @@ img[src^='//img.subeta.net/icons/lock'] {
 }
 
 .alert-danger,
-.ui.error,
-.ui.red {
+.ui.message.error,
+.ui.message.red {
     background-color: var(--red-light);
     color: var(--red-dark);
 }
@@ -1681,18 +1681,18 @@ img[src^='//img.subeta.net/icons/lock'] {
 }
 
 .alert-success,
-.ui.green {
+.ui.message.green {
     background-color: var(--green-light);
     color: var(--green-dark);
 }
 
 .alert-warning,
-.ui.yellow {
+.ui.message.yellow {
     background-color: var(--yellow-light);
     color: var(--yellow-dark);
 }
 
-.ui.info {
+.ui.message.info {
     background-color: var(--primary-light);
     color: var(--primary);
 }
@@ -7641,7 +7641,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         }
     }
 
-    /* Subeta > Games > Chance > Vending ------------------------------------------------------------------------------*/
+    /* Subeta > Games > Chance > Vending -----------------------------------------------------------------------------*/
     + script:not([src^='/js/autopricer.js']) + .container {
         padding: 0;
 

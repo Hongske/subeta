@@ -79,6 +79,8 @@ Then, add your overrides between the curly brackets. An example would be:
 ## Changelog (most recent first)
 ### 2024/02/25
 - Added extra styling (and options) for sidebar-widgets, inspired by [the Widget Overhaul](https://karlpiper.com/subeta/customcss/#Overhaul-All-Widgets) that [Sorcerer](https://subeta.net/users/Sorcerer) made.
+- Added minor layout tweaks for Ruffie Raffle, after you get a doll (mostly mobile).
+- Fixed spacing for the Ruffie Raffle buttons, after you get a doll.
 
 ### 2024/02/24
 - Added styling for [the special shops page](https://subeta.net/ss.php).
