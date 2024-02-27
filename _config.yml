@@ -8,3 +8,4 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
 header_pages:
+  README.md
