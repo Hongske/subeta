@@ -1,6 +1,10 @@
 markdown: GFM
-theme: minima
-title: Subeta Styling by Hong
-description: Subeta Styling by Hong
+#theme: minima
+remote_theme: jekyll/minima
 minima:
   skin: dark
+plugins:
+  - jekyll-feed
+  - jekyll-remote-theme
+title: Subeta Styling by Hong
+description: Subeta Styling by Hong
