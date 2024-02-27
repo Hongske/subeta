@@ -305,6 +305,7 @@ There are currently 3 types of variables:
 - Added styling for [the spend exp page](https://subeta.net/games/battle/exp.php)
 - Added styling for [the rift](https://subeta.net/explore/rift/)
 - Added `--display-forum-post-report` option to hide report-button on posts
+- Added styling for shop-related random events (Morty or discount card)
 - Updated styling for comments (mainly reordered things a bit in the individual comments)
 
 ### 2024/02/26

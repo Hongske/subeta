@@ -1794,6 +1794,39 @@ img[src^='//img.subeta.net/icons/lock'] {
     color: var(--green-dark);
 }
 
+.ui.message.green {
+    .ui.segment {
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+
+        .ui.grid {
+            @media (max-device-width: 768px) {
+                flex-direction: column;
+            }
+
+            .four.wide.column {
+                flex-shrink: 0;
+
+                @media (max-device-width: 768px) {
+                    display: none;
+                }
+            }
+
+            .four.wide.column + .twelve.wide.column {
+                flex-grow: 1;
+                padding: var(--spacing);
+                border-radius: var(--border-radius);
+                background-color: var(--white);
+            }
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
 .alert-warning,
 .ui.message.yellow,
 .ui.message.warning {
