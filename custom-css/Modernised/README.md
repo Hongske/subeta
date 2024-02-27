@@ -1,6 +1,8 @@
-# Modernised Theme
+<!-- > <br/> [Home](https://hongske.github.io/subeta/) » [Custom CSS](https://hongske.github.io/subeta/custom-css/) » **Modernised Theme** <br/><br/> -->
 
-## ⭐ Features
+
+
+# ⭐ Features
 Below features are mostly for both desktop *and* mobile views, but features preceded by 👁‍🗨 are mobile-only!
 
 <details>
@@ -16,6 +18,7 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Fixed the main menu-bar to the top of the page, so that it's always in view (even if you scroll down)
   - Reversed the order of menu-items
   - Added icons to the menu-items
+  - Added options `--number-of-menu-pets`, `--number-of-menu-friends` and `--number-of-menu-shops` so you can chose how many subitems you want to see for these dropdowns at once
   - 👁‍🗨 Modified menu dropdowns so that they're shown in 2 columns
   - 👁‍🗨 Removed text in the menu-items, so that only icons are shown
   - 👁‍🗨 Removed nested dropdowns (e.g. Freinds, Pets, ...)
@@ -33,9 +36,12 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Modified the item orientation so that item-images and -text are shown next to each other (instead of below each other)
   - Modified styling for wishlist-items so that they're more obvious
   - Removed styling for wishlist-items in forum-images and signatures
+  - Modified item-hovers so that the text in it will always be shown below the image (if there's one)
+  - 👁‍🗨 Moved the item-hovers so that they're always centered on the page
   - 👁‍🗨 Resized item-images so they take up less space
+  - 👁‍🗨 Removed options to add and remove from wishlist (as it's hard to get right on mobile)
 - Added other general options
-  - [ ] Added option `--display-all-text` to hide **all** intro- and flavor-texts
+  <!-- TODO - Added option `--display-all-text` to hide **all** intro- and flavor-texts -->
   - Added option `--display-floating-item` to hide floating items (like flowers during Survival)
   - Added option `--display-hustler` to hide Hustler-banner
   - Added options to modify theme colours ([see overview of all available options](#overview-of-all-available-options))
@@ -47,12 +53,13 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Modified the items so that they're easier to read
   - 👁‍🗨 Changed the image of the vending machine to a big red button
 - **Quests**
+  - 👁‍🗨 Removed NPC-images
   - Restyled **[main quests](https://subeta.net/quests.php/wizard)**
-    - [ ] Added option to hide intro-text
+    <!-- TODO - Added option to hide intro-text -->
     - Removed the item-description on hover (less distraction)
+  - Restyled **[wizard exchange](https://subeta.net/explore/wizard_exchange.php)**
   - Restyled **[Major Drills' quests](https://subeta.net/explore/major_drills.php)**
   - Restyled **[Shinwa's quests](https://subeta.net/explore/goddess.php)**
-  - 👁‍🗨 Removed NPC-images
 - Restyled **[Your Events](https://subeta.net/events.php)**
 </details>
 <details>
@@ -64,13 +71,13 @@ Below features are mostly for both desktop *and* mobile views, but features prec
     - Restyled the items
     - Removed the sidebar with NPC-image, NPC name and buttons
 - **[Your Shops](https://subeta.net/user_shops.php/mine)**
-  - [ ] Restyled overview of shops and galleries
+  <!-- TODO - Restyled overview of shops and galleries -->
   - Restyled **Edit Items**
     - Added option `--display-yourshop-item-category` to hide categories (from the filters *and* items-list)
     - Removed Item ID from the items-list
   - Restyled **Quick Stock**
     - Replaced locations' text with icons
-    - [ ] Added option to hide "delete"-option completely
+    <!-- TODO - Added option to hide "delete"-option completely -->
     - 👁‍🗨 Removed the "delete"-option
   - Restyled **Autopricer**
     - Removed info-text about new prices (lowest, average and no change)
@@ -97,10 +104,14 @@ Below features are mostly for both desktop *and* mobile views, but features prec
       - Topics you haven't replied on have their text in your theme's accent colour
     - Restyled **Topics**
       - Removed user avatars, leashed pets and options to like avatar/post
+      - Removed the ping- and report-buttons on own posts
+      - Added option `--display-forum-post-report` to hide the report-button on posts
       - Added option `--display-forum-post-image` to hide post images
       - Added option `--display-forum-post-signature` to hide signatures
       - 👁‍🗨 Removed forum images and signatures
       - Fixed reply-form to the bottom of the page, so that it's always visible
+      - Fixed the locked-message for locked topics to the bottom of the page, so that it's always visible
+      - Fixed the lock-icon on the locked-message for locked topics, so it's less ginormous
       - Removed the ping-options from the reply form
       - 👁‍🗨 Removed the formatting-options from the reply form
 </details>
@@ -116,16 +127,17 @@ Below features are mostly for both desktop *and* mobile views, but features prec
 - Restyled **[Inventory](https://subeta.net/inventory.php)**
   - Replaced the lock-images with colour-coded icons
   - Restyled the item detail page
-    - [ ] Added option to hide toggle-buttons and show the contents instead, for books, food, toys and treasure
-    - [ ] Added option to hide pets from the toggle-dropdowns
+    <!-- TODO - Added option to hide toggle-buttons and show the contents instead, for books, food, toys and treasure -->
+    <!-- TODO - Added option to hide pets from the toggle-dropdowns -->
 - Restyled **[Pets](https://subeta.net/pets.php)**
-  - [ ] Added option to always show the pet dropdown-menu
-  - [ ] Added option to put specific links in bold, in the pet dropdown-menu
-  - [ ] Added option to have a set number of pets per row
-  - [ ] Added option to have an automatic number of pets per row (calculated based on number of pets)
+  <!-- TODO - Added option to always show the pet dropdown-menu -->
+  <!-- TODO - Added option to put specific links in bold, in the pet dropdown-menu -->
+  <!-- TODO - Added option to have a set number of pets per row -->
+  <!-- TODO - Added option to have an automatic number of pets per row (calculated based on number of pets) -->
   - Added icons for hunger and happiness
   - Modified icon for likes
 - **Vault**
+  - Removed "Your Vaults"-text from the menu
   - Restyled **[Currency Storage](https://subeta.net/explore/vaults.php?vault=currency)**
   - Restyled **[Item Storage](https://subeta.net/explore/vaults.php?vault=item)**
     - Removed flavor-image and -text
@@ -139,24 +151,31 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Added option `--display-pet-zapper-warning` to hide warning-text
   - Added option `--display-pet-zapper-intro` to hide intro-text
   - Added option `--display-pet-zapper-adoption` to hide adoption-text
+- **[Explore » Delphi » Carnival » Ruffie Raffle](https://subeta.net/explore/carnival/ruffie_raffle.php)**
+  - 👁‍🗨 Removed NPC-image
+- **[Explore » Galaxan Wastes » The Rift](https://subeta.net/explore/rift/)**
+  - 👁‍🗨 Removed image
 - **[Explore » Shadowglen » Crypts](https://subeta.net/explore/crypts.php)**
   - Made the crypts-map-images scrollable on mobile
   - 👁‍🗨 Removed NPC-image
 - **[Explore » Shengui Guo » Floating Market](https://subeta.net/explore/shengui_guo/river.php)**
   - Restyled **[Dara's Darlings](https://subeta.net/explore/shengui_guo/dara.php)**, **[Fine Fabrics](https://subeta.net/explore/shengui_guo/clothing.php)** and **[Fresh and Flavorful](https://subeta.net/explore/shengui_guo/ujin.php)**
-    - [ ] Added option to hide intro-text
+    <!-- TODO - Added option to hide intro-text -->
     - 👁‍🗨 Removed intro-text
     - 👁‍🗨 Removed NPC-image
+- **Games**
+  - Restyled the games overview-page
 - **Games » Battle**
   - Removed images in the menu-bar
+  - Restyled **[Spend Exp](https://subeta.net/games/battle/exp.php)**
   - Restyled **[Training Center](https://subeta.net/explore/train.php)**
     - Removed NPC-image
     - Added option `--display-battle-training-intro` to hide intro-text
     - Added option `--display-battle-training-warning` to hide warning about level cap and autotraining
     - Added option `--display-battle-training-auto` to hide autotraining buttons
-    - [ ] Added option to have a set number of pets per row
-    - [ ] Added option to have an automatic number of pets per row (calculated based on number of pets)
-    - [ ] Added option to hide specific pets
+    <!-- TODO - Added option to have a set number of pets per row -->
+    <!-- TODO - Added option to have an automatic number of pets per row (calculated based on number of pets) -->
+    <!-- TODO - Added option to hide specific pets -->
 - **[Games » Chance » Fishing](https://subeta.net/games/fishing.php)**
   - 👁‍🗨 Removed NPC-image
 - **[Games » Chance » Scratchcards](https://subeta.net/games/scratchcards.php)**
@@ -167,22 +186,22 @@ Below features are mostly for both desktop *and* mobile views, but features prec
     - Removed all gaming options so that it's just a collection
 - **[News](https://subeta.net/news.php)**
   - Moved Check Out, Upcoming and Daily to be above the posts (instead of next to them)
-  - [ ] Added option to hide Check Out
-  - [ ] Added option to hide Upcoming
-  - [ ] Added option to hide Daily
-  - [ ] Added option to hide Daily » Dailies
-  - [ ] Added option to hide Daily » Recycle Beast
-  - [ ] Added option to hide Daily » Potion Lottery Winner
+  <!-- TODO - Added option to hide Check Out -->
+  <!-- TODO - Added option to hide Upcoming -->
+  <!-- TODO - Added option to hide Daily -->
+  <!-- TODO - Added option to hide Daily » Dailies -->
+  <!-- TODO - Added option to hide Daily » Recycle Beast -->
+  <!-- TODO - Added option to hide Daily » Potion Lottery Winner -->
   - Removed daily support goal (but only because it doesn't seem to work anymore)
   - Restyled **[Dailies](https://subeta.net/dailies.php)**
 - **[Subetapedia](https://subeta.net/subetapedia/)**
-  - [ ] Restyle overview (so links all have same style and non-links are removed)
-  - [ ] Restyle pages
+  <!-- TODO - Restyle overview (so links all have same style and non-links are removed) -->
+  <!-- TODO - Restyle pages -->
 </details>
 
 <br/>
 
-## ⭐ Installing the theme
+# ⭐ Installing the theme
 To get started, paste the following code into the box on your [CustomCSS page](https://subeta.net/preferences.php?act=customcss):
 ```css
 @import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css')
@@ -190,7 +209,7 @@ To get started, paste the following code into the box on your [CustomCSS page](h
 
 <br/>
 
-## ⭐ Customising the theme
+# ⭐ Customising the theme
 To customise this theme, you'll need to override certain CSS Variables. To do so, you'll need to add the following snippet **after** your `@import` code:
 ```css
 :root {
@@ -210,24 +229,30 @@ Then, add your overrides between the curly brackets. An example would be:
 }
 ```
 
-- [ ] Write a script to auto-generate needed import & :root-code, based on checkboxes
+<!-- TODO - Write a script to auto-generate needed import & :root-code, based on checkboxes -->
 <br/>
 
-### There are 2 categories of CSS Variables that can be used in the theme (so far):
+## CSS Variables:
+There are currently 3 types of variables:
 - Colours:
   - Variables begin with `--colour` and need a valid CSS colour value
   - Examples of valid values are `crimson`, `#DC143C` and `rgb(220, 20, 60)`
   - [You can find more info about valid CSS colour values here](https://www.w3schools.com/cssref/css_colors_legal.php)
-  - These are used to customise the colours on the website
+  - These are used to customise the **colours** on the website
 - Display:
   - Variables begin with `--display` and need a valid CSS display value
   - Examples of valid values are `none`, `block` and `flex`
   - [You can find more info about valid CSS display values here](https://www.w3schools.com/cssref/pr_class_display.php)
-  - These are most often used to _hide_ certain parts of the website, **which can be done by changing the value to `none`**
+  - These are used to **hide** certain parts of the website, **which can be done by changing the value to `none`**
+- Numbers:
+  - Variables begin with `--number-of` and need a valid number
+  - Examples of valid values are `1`, `10`, `0.1` and `.1`
+  - Examples of **non**-valid values are `0,1`, `,1` and anything containing letters of the alphabet
+  - These are used to customise the **number of items** that are shown
 
 <br/>
 
-### Overview of all available options:
+## Overview of all available options:
 
 | Colour options                        | Info                                                                      | Default value |
 |---------------------------------------|---------------------------------------------------------------------------|---------------|
@@ -247,6 +272,7 @@ Then, add your overrides between the curly brackets. An example would be:
 | `--display-yourshop-item-category`    | Commerce » Your Shops » Edit Items » Hide categories-options              | `block`       |
 | `--display-yourshop-sales-info`       | Commerce » Your Shops » Sales History » Hide info-text                    | `block`       |
 | `--display-forum-pulse`               | Interact » Forums » Home » Hide forum pulse                               | `block`       |
+| `--display-forum-post-report`         | Interact » Forums » Hide the report-button on posts                       | `block`       |
 | `--display-forum-post-image`          | Interact » Forums » Hide post images                                      | `block`       |
 | `--display-forum-post-signature`      | Interact » Forums » Hide signatures                                       | `block`       |
 | `--display-pet-zapper-warning`        | Explore » Darkside » Ultimate Pet Zapper » Hide warning-text              | `block`       |
@@ -258,7 +284,15 @@ Then, add your overrides between the curly brackets. An example would be:
 
 <br/>
 
-## ⭐ Credits
+| Number options                        | Info                                                                      | Default value |
+|---------------------------------------|---------------------------------------------------------------------------|---------------|
+| `--number-of-menu-pets`               | General » Menu » How many pets should be shown at once?                   | `10`          |
+| `--number-of-menu-friends`            | General » Menu » How many friends should be shown at once?                | `10`          |
+| `--number-of-menu-shops`              | General » Menu » How many shops should be shown at once?                  | `10`          |
+
+<br/>
+
+# ⭐ Credits
 - [spacemage](https://subeta.net/users/spacemage), for their [year indicators for yearly event shops](https://subeta.net/forums.php/gotopost/66366953)
 - [Sorcerer](https://subeta.net/users/Sorcerer), for their [very helpful collection of Custom CSS](https://karlpiper.com/subeta/customcss/)
 - Icons by [FontAwesome](https://fontawesome.com/)
@@ -266,8 +300,16 @@ Then, add your overrides between the curly brackets. An example would be:
 
 <br/>
 
-## ⭐ Changelog (most recent first)
-### 2024/02/26
+# ⭐ Changelog (most recent first)
+## 2024/02/27
+- Moved menu-item's dropdown in the main menu-bar to the side of the menu-items
+- Added `--number-of-menu-pets`, `--number-of-menu-friends` and `--number-of-menu-shops` options so you can pick how many items you want to see in the menu's
+- Added styling for [the spend exp page](https://subeta.net/games/battle/exp.php)
+- Added styling for [the rift](https://subeta.net/explore/rift/)
+- Added `--display-forum-post-report` option to hide report-button on posts
+- Updated styling for comments (mainly reordered things a bit in the individual comments)
+
+## 2024/02/26
 - Rewrote the page-specific section, for easier expansion considering the design patterns on the current Subeta website
 - Added `--display-battle-training-intro` option to hide Jim's intro-text in the Training Center
 - Added `--display-battle-training-warning` option to hide Jim's warning about level cap and autotraining at the Training Center
@@ -281,18 +323,18 @@ Then, add your overrides between the curly brackets. An example would be:
 - Added `--display-yourshop-item-category` option to hide category-search (in both the filter- and item-list) for Your Shop » Edit Items
 - Added `--display-yourshop-sales-info` option to hide info-text for Your Shop » Sales History
 
-### 2024/02/25
+## 2024/02/25
 - Added extra styling for sidebar-widgets, inspired by [the Widget Overhaul](https://karlpiper.com/subeta/customcss/#Overhaul-All-Widgets) that [Sorcerer](https://subeta.net/users/Sorcerer) made
 - Added `--display-sidebar-battlepet-buttons` option to hide battlepet buttons in the sidebar, again inspired by Sorcerer's Widget Overhaul (see link above)
 - Added minor layout tweaks for Ruffie Raffle, after you get a doll (mostly mobile)
 - Fixed spacing for the Ruffie Raffle buttons, after you get a doll
 
-### 2024/02/24
+## 2024/02/24
 - Added styling for [the special shops page](https://subeta.net/ss.php)
 - Added button-styles for the link back to Shinwa on quest-pages (after finishing the quest)
 - Fixed sidebar toggling so that content correctly displays over the whole page when you hide sidebar
 - Fixed events counter in the sidebar, so that it overflows correctly
 - Fixed click-area for floating items so that it's limited to the item itself
 
-### 2024/02/23
+## 2024/02/23
 - Initial commit (rewrite of the original theme)
