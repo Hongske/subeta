@@ -1,4 +1,4 @@
-> <br/> [Home](https://hongske.github.io/subeta/) » [Custom CSS](https://hongske.github.io/subeta/custom-css/) » **Modernised Theme** <br/><br/>
+> <br/> [Home](https://hongske.github.io/subeta/) » **Modernised Theme** <br/><br/>
 
 ## ⭐ Features
 Below features are mostly for both desktop *and* mobile views, but features preceded by 👁‍🗨 are mobile-only!
