@@ -1,4 +1,6 @@
+markdown: GFM
 theme: minima
 title: Subeta Styling by Hong
 description: Subeta Styling by Hong
-markdown: GFM
+minima:
+  skin: dark
