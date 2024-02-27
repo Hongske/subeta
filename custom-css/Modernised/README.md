@@ -1,8 +1,6 @@
-<!-- > <br/> [Home](https://hongske.github.io/subeta/) » [Custom CSS](https://hongske.github.io/subeta/custom-css/) » **Modernised Theme** <br/><br/> -->
+> <br/> [Home](https://hongske.github.io/subeta/) » [Custom CSS](https://hongske.github.io/subeta/custom-css/) » **Modernised Theme** <br/><br/>
 
-
-
-# ⭐ Features
+## ⭐ Features
 Below features are mostly for both desktop *and* mobile views, but features preceded by 👁‍🗨 are mobile-only!
 
 <details>
@@ -201,7 +199,7 @@ Below features are mostly for both desktop *and* mobile views, but features prec
 
 <br/>
 
-# ⭐ Installing the theme
+## ⭐ Installing the theme
 To get started, paste the following code into the box on your [CustomCSS page](https://subeta.net/preferences.php?act=customcss):
 ```css
 @import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css')
@@ -209,7 +207,7 @@ To get started, paste the following code into the box on your [CustomCSS page](h
 
 <br/>
 
-# ⭐ Customising the theme
+## ⭐ Customising the theme
 To customise this theme, you'll need to override certain CSS Variables. To do so, you'll need to add the following snippet **after** your `@import` code:
 ```css
 :root {
@@ -232,7 +230,7 @@ Then, add your overrides between the curly brackets. An example would be:
 <!-- TODO - Write a script to auto-generate needed import & :root-code, based on checkboxes -->
 <br/>
 
-## CSS Variables:
+### CSS Variables:
 There are currently 3 types of variables:
 - Colours:
   - Variables begin with `--colour` and need a valid CSS colour value
@@ -252,7 +250,7 @@ There are currently 3 types of variables:
 
 <br/>
 
-## Overview of all available options:
+### Overview of all available options:
 
 | Colour options                        | Info                                                                      | Default value |
 |---------------------------------------|---------------------------------------------------------------------------|---------------|
@@ -292,7 +290,7 @@ There are currently 3 types of variables:
 
 <br/>
 
-# ⭐ Credits
+## ⭐ Credits
 - [spacemage](https://subeta.net/users/spacemage), for their [year indicators for yearly event shops](https://subeta.net/forums.php/gotopost/66366953)
 - [Sorcerer](https://subeta.net/users/Sorcerer), for their [very helpful collection of Custom CSS](https://karlpiper.com/subeta/customcss/)
 - Icons by [FontAwesome](https://fontawesome.com/)
@@ -300,8 +298,8 @@ There are currently 3 types of variables:
 
 <br/>
 
-# ⭐ Changelog (most recent first)
-## 2024/02/27
+## ⭐ Changelog (most recent first)
+### 2024/02/27
 - Moved menu-item's dropdown in the main menu-bar to the side of the menu-items
 - Added `--number-of-menu-pets`, `--number-of-menu-friends` and `--number-of-menu-shops` options so you can pick how many items you want to see in the menu's
 - Added styling for [the spend exp page](https://subeta.net/games/battle/exp.php)
@@ -309,7 +307,7 @@ There are currently 3 types of variables:
 - Added `--display-forum-post-report` option to hide report-button on posts
 - Updated styling for comments (mainly reordered things a bit in the individual comments)
 
-## 2024/02/26
+### 2024/02/26
 - Rewrote the page-specific section, for easier expansion considering the design patterns on the current Subeta website
 - Added `--display-battle-training-intro` option to hide Jim's intro-text in the Training Center
 - Added `--display-battle-training-warning` option to hide Jim's warning about level cap and autotraining at the Training Center
@@ -323,18 +321,18 @@ There are currently 3 types of variables:
 - Added `--display-yourshop-item-category` option to hide category-search (in both the filter- and item-list) for Your Shop » Edit Items
 - Added `--display-yourshop-sales-info` option to hide info-text for Your Shop » Sales History
 
-## 2024/02/25
+### 2024/02/25
 - Added extra styling for sidebar-widgets, inspired by [the Widget Overhaul](https://karlpiper.com/subeta/customcss/#Overhaul-All-Widgets) that [Sorcerer](https://subeta.net/users/Sorcerer) made
 - Added `--display-sidebar-battlepet-buttons` option to hide battlepet buttons in the sidebar, again inspired by Sorcerer's Widget Overhaul (see link above)
 - Added minor layout tweaks for Ruffie Raffle, after you get a doll (mostly mobile)
 - Fixed spacing for the Ruffie Raffle buttons, after you get a doll
 
-## 2024/02/24
+### 2024/02/24
 - Added styling for [the special shops page](https://subeta.net/ss.php)
 - Added button-styles for the link back to Shinwa on quest-pages (after finishing the quest)
 - Fixed sidebar toggling so that content correctly displays over the whole page when you hide sidebar
 - Fixed events counter in the sidebar, so that it overflows correctly
 - Fixed click-area for floating items so that it's limited to the item itself
 
-## 2024/02/23
+### 2024/02/23
 - Initial commit (rewrite of the original theme)
