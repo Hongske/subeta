@@ -1,4 +1,4 @@
-#title: Subeta Styling by Hong
+title: Subeta Styling by Hong
 markdown: GFM
 #theme: minima
 remote_theme: jekyll/minima
@@ -8,4 +8,3 @@ plugins:
   - jekyll-feed
   - jekyll-remote-theme
 header_pages:
-  README.md
