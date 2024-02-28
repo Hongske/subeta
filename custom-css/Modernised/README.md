@@ -39,7 +39,6 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - 👁‍🗨 Resized item-images so they take up less space
   - 👁‍🗨 Removed options to add and remove from wishlist (as it's hard to get right on mobile)
 - Added other general options
-  <!-- TODO - Added option `--display-all-text` to hide **all** intro- and flavor-texts -->
   - Added option `--display-floating-item` to hide floating items (like flowers during Survival)
   - Added option `--display-hustler` to hide Hustler-banner
   - Added options to modify theme colours ([see overview of all available options](#overview-of-all-available-options))
@@ -53,7 +52,8 @@ Below features are mostly for both desktop *and* mobile views, but features prec
 - **Quests**
   - 👁‍🗨 Removed NPC-images
   - Restyled **[main quests](https://subeta.net/quests.php/wizard)**
-    <!-- TODO - Added option to hide intro-text -->
+    - Added option `--display-quest-intro` to hide intro-text
+    - Moved the "Quit Quest" button to be further away from "Finish Quest", so you don't click it accidentally (only for desktop!)
     - Removed the item-description on hover (less distraction)
   - Restyled **[wizard exchange](https://subeta.net/explore/wizard_exchange.php)**
   - Restyled **[Major Drills' quests](https://subeta.net/explore/major_drills.php)**
@@ -69,14 +69,13 @@ Below features are mostly for both desktop *and* mobile views, but features prec
     - Restyled the items
     - Removed the sidebar with NPC-image, NPC name and buttons
 - **[Your Shops](https://subeta.net/user_shops.php/mine)**
-  <!-- TODO - Restyled overview of shops and galleries -->
   - Restyled **Edit Items**
     - Added option `--display-yourshop-item-category` to hide categories (from the filters *and* items-list)
     - Removed Item ID from the items-list
   - Restyled **Quick Stock**
     - Replaced locations' text with icons
-    <!-- TODO - Added option to hide "delete"-option completely -->
-    - 👁‍🗨 Removed the "delete"-option
+    - Added option `--display-yourshop-quickstock-delete` to hide delete-option completely
+    - 👁‍🗨 Removed the delete-option
   - Restyled **Autopricer**
     - Removed info-text about new prices (lowest, average and no change)
     - Removed old price and average price columns from results table, so only lowest price is visible
@@ -92,7 +91,7 @@ Below features are mostly for both desktop *and* mobile views, but features prec
 - **[Forums](https://subeta.net/forums.php)**
   - Restyled **[Forum Home](https://subeta.net/forums.php)**
     - Added option `--display-forum-pulse` to completely hide forum-pulse
-    - Replaced "collapse"-text with an icon (same icon as for sidebar-widgets)
+    - Replaced collapse-text with an icon (same icon as for sidebar-widgets)
     - Removed images for forum boards
     - Modified order of forum-details so that the list of subforums is last
     - Restyled **Subforums**
@@ -158,9 +157,11 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - 👁‍🗨 Removed NPC-image
 - **[Explore » Shengui Guo » Floating Market](https://subeta.net/explore/shengui_guo/river.php)**
   - Restyled **[Dara's Darlings](https://subeta.net/explore/shengui_guo/dara.php)**, **[Fine Fabrics](https://subeta.net/explore/shengui_guo/clothing.php)** and **[Fresh and Flavorful](https://subeta.net/explore/shengui_guo/ujin.php)**
-    <!-- TODO - Added option to hide intro-text -->
-    - 👁‍🗨 Removed intro-text
-    - 👁‍🗨 Removed NPC-image
+    - Added option `--display-shenguiguo-floatingmarket-intro` to collectively hide Dara's, Jogoh's and Ujin's intro-texts
+    - Added option `--display-shenguiguo-dara-intro` to individually hide Dara's intro-text
+    - Added option `--display-shenguiguo-jogoh-intro` to individually hide Jogoh's intro-text
+    - Added option `--display-shenguiguo-ujin-intro` to individually hide Ujin's intro-text
+    - 👁‍🗨 Removed NPC-image + intro-text
 - **Games**
   - Restyled the games overview-page
 - **Games » Battle**
@@ -180,16 +181,20 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - 👁‍🗨 Removed NPC-image
 - **Games » Collections**
   - Restyled **Plushie**, **Trading Card**, **Beanbag**, **Pumpkin**, **Pastry** and **Tile** collections
+  <!-- TODO - Restyled **Sticker** collection -->
   - Restyled **[Minion Zoo](https://subeta.net/games/minions/index.php)**
     - Removed all gaming options so that it's just a collection
+- **[Games » Miscellaneous » Item Hunter](https://subeta.net/games/hunt.php)**
+  - Restyled content
+  - 👁‍🗨 Removed NPC-image, NPC-name and intro-text
 - **[News](https://subeta.net/news.php)**
   - Moved Check Out, Upcoming and Daily to be above the posts (instead of next to them)
-  <!-- TODO - Added option to hide Check Out -->
-  <!-- TODO - Added option to hide Upcoming -->
-  <!-- TODO - Added option to hide Daily -->
-  <!-- TODO - Added option to hide Daily » Dailies -->
-  <!-- TODO - Added option to hide Daily » Recycle Beast -->
-  <!-- TODO - Added option to hide Daily » Potion Lottery Winner -->
+  - Added option `--display-news-checkout` to hide Check Out
+  - Added option `--display-news-upcoming` to hide Upcoming
+  - Added option `--display-news-daily` to hide Daily
+  - Added option `--display-news-daily-dailies` to hide Daily » Dailies
+  - Added option `--display-news-daily-recycle` to hide Daily » Recycle Beast
+  - Added option `--display-news-daily-lottery` to hide Daily » Potion Lottery Winner
   - Removed daily support goal (but only because it doesn't seem to work anymore)
   - Restyled **[Dailies](https://subeta.net/dailies.php)**
 - **[Subetapedia](https://subeta.net/subetapedia/)**
@@ -252,41 +257,52 @@ There are currently 3 types of variables:
 
 ### Overview of all available options:
 
-| Colour options                        | Info                                                                      | Default value |
-|---------------------------------------|---------------------------------------------------------------------------|---------------|
-| `--color-primary`                     | Main theme colour                                                         | `#9BA84F`     |
-| `--color-blue`                        | Blue colour, used for alerts                                              | `#0DCAF0`     |
-| `--color-green`                       | Green colour, used for alerts, buttons, etc                               | `#20C997`     |
-| `--color-red`                         | Red colour, used for alerts, buttons, etc                                 | `#DC3545`     |
-| `--color-yellow`                      | Yellow colour, used for alerts                                            | `#FFC107`     |
+| Colour options    | Info                                        | Default value |
+|-------------------|---------------------------------------------|---------------|
+| `--color-primary` | Main theme colour                           | `#9BA84F`     |
+| `--color-blue`    | Blue colour, used for alerts                | `#0DCAF0`     |
+| `--color-green`   | Green colour, used for alerts, buttons, etc | `#20C997`     |
+| `--color-red`     | Red colour, used for alerts, buttons, etc   | `#DC3545`     |
+| `--color-yellow`  | Yellow colour, used for alerts              | `#FFC107`     |
 
 <br/>
 
-| Display options                       | Info                                                                      | Default value |
-|---------------------------------------|---------------------------------------------------------------------------|---------------|
-| `--display-sidebar-battlepet-buttons` | General » Sidebar » Hide buttons for the battlepet widget                 | `block`       |
-| `--display-floating-item`             | General » Hide floating items (like flowers during survival)              | `block`       |
-| `--display-hustler`                   | General » Hide Hustler-banner                                             | `block`       |
-| `--display-yourshop-item-category`    | Commerce » Your Shops » Edit Items » Hide categories-options              | `block`       |
-| `--display-yourshop-sales-info`       | Commerce » Your Shops » Sales History » Hide info-text                    | `block`       |
-| `--display-forum-pulse`               | Interact » Forums » Home » Hide forum pulse                               | `block`       |
-| `--display-forum-post-report`         | Interact » Forums » Hide the report-button on posts                       | `block`       |
-| `--display-forum-post-image`          | Interact » Forums » Hide post images                                      | `block`       |
-| `--display-forum-post-signature`      | Interact » Forums » Hide signatures                                       | `block`       |
-| `--display-pet-zapper-warning`        | Explore » Darkside » Ultimate Pet Zapper » Hide warning-text              | `block`       |
-| `--display-pet-zapper-intro`          | Explore » Darkside » Ultimate Pet Zapper » Hide intro-text                | `block`       |
-| `--display-pet-zapper-adoption`       | Explore » Darkside » Ultimate Pet Zapper » Hide adoption-text             | `block`       |
-| `--display-battle-training-intro`     | Subeta » Games » Battle » Training Center » Hide intro-text               | `block`       |
-| `--display-battle-training-warning`   | Subeta » Games » Battle » Training Center » Hide warning-text             | `block`       |
-| `--display-battle-training-auto`      | Subeta » Games » Battle » Training Center » Hide autotraining buttons     | `block`       |
-
+| Display options                             | Info ❗❗ Use `none` as a value to hide these things ❗❗                              |
+|---------------------------------------------|------------------------------------------------------------------------------------|
+| `--display-floating-item`                   | General » Hide floating items (like flowers during survival)                       |
+| `--display-hustler`                         | General » Hide Hustler-banner                                                      |
+| `--display-sidebar-battlepet-buttons`       | General » Sidebar » Hide buttons for the battlepet widget                          |
+| `--display-yourshop-item-category`          | Commerce » Your Shops » Edit Items » Hide categories-options                       |
+| `--display-yourshop-quickstock-delete`      | Commerce » Your Shops » Quick Stock » Hide delete-option                           |
+| `--display-yourshop-sales-info`             | Commerce » Your Shops » Sales History » Hide info-text                             |
+| `--display-forum-post-image`                | Interact » Forums » Hide post images                                               |
+| `--display-forum-post-signature`            | Interact » Forums » Hide signatures                                                |
+| `--display-forum-post-report`               | Interact » Forums » Hide the report-button on posts                                |
+| `--display-forum-pulse`                     | Interact » Forums » Home » Hide forum pulse                                        |
+| `--display-quest-intro`                     | Quests » Hide intro-text                                                           |
+| `--display-pet-zapper-adoption`             | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide adoption-text             |
+| `--display-pet-zapper-intro`                | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide intro-text                |
+| `--display-pet-zapper-warning`              | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide warning-text              |
+| `--display-shenguiguo-floatingmarket-intro` | Subeta » Explore » Shengui Guo » Floating Market » Hide intro-text for all 3 shops |
+| `--display-shenguiguo-dara-intro`           | Subeta » Explore » Shengui Guo » Floating Market » Hide Dara's intro-text          |
+| `--display-shenguiguo-jogoh-intro`          | Subeta » Explore » Shengui Guo » Floating Market » Hide Jogoh's intro-text         |
+| `--display-shenguiguo-ujin-intro`           | Subeta » Explore » Shengui Guo » Floating Market » Hide Ujin's intro-text          |
+| `--display-battle-training-auto`            | Subeta » Games » Battle » Training Center » Hide autotraining buttons              |
+| `--display-battle-training-intro`           | Subeta » Games » Battle » Training Center » Hide intro-text                        |
+| `--display-battle-training-warning`         | Subeta » Games » Battle » Training Center » Hide warning-text                      |
+| `--display-news-checkout`                   | Subeta » News » Hide Check Out                                                     |
+| `--display-news-upcoming`                   | Subeta » News » Hide Upcoming                                                      |
+| `--display-news-daily`                      | Subeta » News » Hide Daily                                                         |
+| `--display-news-daily-dailies`              | Subeta » News » Hide Daily » Dailies                                               |
+| `--display-news-daily-recycle`              | Subeta » News » Hide Daily » Recycle Beast                                         |
+| `--display-news-daily-lottery`              | Subeta » News » Hide Daily » Potion Lottery Winner                                 |
 <br/>
 
-| Number options                        | Info                                                                      | Default value |
-|---------------------------------------|---------------------------------------------------------------------------|---------------|
-| `--number-of-menu-pets`               | General » Menu » How many pets should be shown at once?                   | `10`          |
-| `--number-of-menu-friends`            | General » Menu » How many friends should be shown at once?                | `10`          |
-| `--number-of-menu-shops`              | General » Menu » How many shops should be shown at once?                  | `10`          |
+| Number options             | Info                                                       | Default value |
+|----------------------------|------------------------------------------------------------|---------------|
+| `--number-of-menu-friends` | General » Menu » How many friends should be shown at once? | `10`          |
+| `--number-of-menu-pets`    | General » Menu » How many pets should be shown at once?    | `10`          |
+| `--number-of-menu-shops`   | General » Menu » How many shops should be shown at once?   | `10`          |
 
 <br/>
 
@@ -299,32 +315,53 @@ There are currently 3 types of variables:
 <br/>
 
 ## ⭐ Changelog (most recent first)
+### 2024/02/28
+- Added option `--display-quest-intro` to hide intro-text of main quests
+- Added option `--display-yourshop-quickstock-delete` to hide delete-option completely in quick stock
+- Added options to hide the intro-texts for the 3 interactive shops on the [Floating Market](https://subeta.net/explore/shengui_guo/river.php):
+    - Added option `--display-shenguiguo-floatingmarket-intro` to collectively hide Dara's, Jogoh's and Ujin's intro-texts
+    - Added option `--display-shenguiguo-dara-intro` to individually hide Dara's intro-text
+    - Added option `--display-shenguiguo-jogoh-intro` to individually hide Jogoh's intro-text
+    - Added option `--display-shenguiguo-ujin-intro` to individually hide Ujin's intro-text
+- Added options to hide the boxes on the [News](https://subeta.net/news.php):
+  - Added option `--display-news-checkout` to hide Check Out
+  - Added option `--display-news-upcoming` to hide Upcoming
+  - Added option `--display-news-daily` to hide Daily
+  - Added option `--display-news-daily-dailies` to hide Daily » Dailies
+  - Added option `--display-news-daily-recycle` to hide Daily » Recycle Beast
+  - Added option `--display-news-daily-lottery` to hide Daily » Potion Lottery Winner
+- Added styling for [buffs](https://subeta.net/preferences.php?act=buffs)
+- Added styling for Hidden Opponent alerts (based on the one from Item Hunt)
+- Fixed link colours in forum signatures, so that they're the same as the rest of the signature text
+- Removed Chase's image and name on mobile in [Item Hunter](https://subeta.net/games/hunt.php)
+- Updated year indicators for yearly event shops
+
 ### 2024/02/27
 - Moved menu-item's dropdown in the main menu-bar to the side of the menu-items
-- Added `--number-of-menu-pets`, `--number-of-menu-friends` and `--number-of-menu-shops` options so you can pick how many items you want to see in the menu's
+- Added options `--number-of-menu-pets`, `--number-of-menu-friends` and `--number-of-menu-shops` so you can pick how many items you want to see in the menu's
 - Added styling for [the spend exp page](https://subeta.net/games/battle/exp.php)
 - Added styling for [the rift](https://subeta.net/explore/rift/)
-- Added `--display-forum-post-report` option to hide report-button on posts
+- Added option `--display-forum-post-report` to hide report-button on posts
 - Added styling for shop-related random events (Morty or discount card)
 - Updated styling for comments (mainly reordered things a bit in the individual comments)
 
 ### 2024/02/26
 - Rewrote the page-specific section, for easier expansion considering the design patterns on the current Subeta website
-- Added `--display-battle-training-intro` option to hide Jim's intro-text in the Training Center
-- Added `--display-battle-training-warning` option to hide Jim's warning about level cap and autotraining at the Training Center
-- Added `--display-battle-training-auto` option to hide autotraining options at the Training Center
-- Added `--display-forum-pulse` option to completely hide forum-pulse at the Forums
-- Added `--display-forum-post-image` option to hide forum images in posts at the Forums
-- Added `--display-forum-post-signature` option to hide signatures in posts at the Forums
-- Added `--display-pet-zapper-warning` option to hide warning about the pet zapper at the Ultimate Pet Zapper
-- Added `--display-pet-zapper-intro` option to hide Euclid's intro-text at the Ultimate Pet Zapper
-- Added `--display-pet-zapper-adoption` option to hide message about adopting a Qrykee or Yaherra at the Ultimate Pet Zapper
-- Added `--display-yourshop-item-category` option to hide category-search (in both the filter- and item-list) for Your Shop » Edit Items
-- Added `--display-yourshop-sales-info` option to hide info-text for Your Shop » Sales History
+- Added option `--display-battle-training-intro` to hide Jim's intro-text in the Training Center
+- Added option `--display-battle-training-warning` to hide Jim's warning about level cap and autotraining at the Training Center
+- Added option `--display-battle-training-auto` to hide autotraining options at the Training Center
+- Added option `--display-forum-pulse` to completely hide forum-pulse at the Forums
+- Added option `--display-forum-post-image` to hide forum images in posts at the Forums
+- Added option `--display-forum-post-signature` to hide signatures in posts at the Forums
+- Added option `--display-pet-zapper-warning` to hide warning about the pet zapper at the Ultimate Pet Zapper
+- Added option `--display-pet-zapper-intro` to hide Euclid's intro-text at the Ultimate Pet Zapper
+- Added option `--display-pet-zapper-adoption` to hide message about adopting a Qrykee or Yaherra at the Ultimate Pet Zapper
+- Added option `--display-yourshop-item-category` to hide category-search (in both the filter- and item-list) for Your Shop » Edit Items
+- Added option `--display-yourshop-sales-info` to hide info-text for Your Shop » Sales History
 
 ### 2024/02/25
 - Added extra styling for sidebar-widgets, inspired by [the Widget Overhaul](https://karlpiper.com/subeta/customcss/#Overhaul-All-Widgets) that [Sorcerer](https://subeta.net/users/Sorcerer) made
-- Added `--display-sidebar-battlepet-buttons` option to hide battlepet buttons in the sidebar, again inspired by Sorcerer's Widget Overhaul (see link above)
+- Added option `--display-sidebar-battlepet-buttons` to hide battlepet buttons in the sidebar, again inspired by Sorcerer's Widget Overhaul (see link above)
 - Added minor layout tweaks for Ruffie Raffle, after you get a doll (mostly mobile)
 - Fixed spacing for the Ruffie Raffle buttons, after you get a doll
 

@@ -146,6 +146,7 @@ body {
 /* TYPOGRAPHY                                                                                                         */
 /*====================================================================================================================*/
 h1 {
+    margin-bottom: var(--font-size-base);
     font-size: var(--font-size-title) !important;
 }
 
@@ -179,7 +180,8 @@ p {
         margin-bottom: 0;
     }
 
-    &:empty {
+    &:empty,
+    &:empty + br {
         display: none;
     }
 }
@@ -937,6 +939,10 @@ input {
                     .sidebar-widget-header {
                         display: none;
                     }
+
+                    a[href='/preferences.php?act=buffs'] img {
+                        border-radius: 50%;
+                    }
                 }
 
                 &.x-js-nav {
@@ -1524,6 +1530,22 @@ img[src^='//img.subeta.net/icons/lock'] {
         margin-top: 0 !important;
     }
 
+    &.bg-danger.text-white {
+        .card-header {
+            color: var(--white);
+        }
+
+        .card-body.bg-light.text-dark {
+            padding: var(--spacing);
+            border-radius: var(--border-radius);
+            background-color: var(--white) !important;
+
+            .list {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .card-header {
         margin-bottom: 1rem;
         padding: 0;
@@ -1720,6 +1742,12 @@ img[src^='//img.subeta.net/icons/lock'] {
             img[src^='//img.subeta.net/npc_'],
             img[src^='//img.subeta.net/npc_'] + p,
             img[src^='//img.subeta.net/scratchcards_meli'],
+            img[src*='chase'],
+            img[src*='chase'] + br,
+            img[src*='chase'] + br + br,
+            img[src*='chase'] + br + br + h3,
+            img[src*='chase'] + br + br + h3 + br,
+            img[src*='chase'] + br + br + h3 + br + .text-center.p-3,
             .npc-image,
             .npc-image + p,
             .npc-image + p + p,
@@ -2083,18 +2111,48 @@ img[src^='//img.subeta.net/icons/lock'] {
             margin-top: 1rem;
 
             .bar {
-                background-color: var(--primary);
+                background-color: var(--green);
             }
-        }
-
-        &.green .bar {
-            background-color: var(--green) !important;
         }
     }
 
     &.textarea,
     &.form textarea {
         max-height: none;
+    }
+}
+
+/* Hidden Opponent alert */
+table.ui[width='50%'] {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 0 2px var(--green);
+
+    td {
+        &.sp-sub[colspan='2'] {
+            padding: var(--button-padding);
+            border: 0;
+            background-color: var(--green);
+            color: var(--white);
+        }
+
+        &:not(:only-child).ui {
+            &:first-child {
+                img {
+                    object-fit: contain;
+                }
+            }
+
+            &:last-child {
+                vertical-align: middle;
+            }
+        }
+    }
+
+    a {
+        color: var(--green);
+        font-weight: bold;
     }
 }
 
@@ -2458,6 +2516,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     position: relative;
     background-color: var(--grey);
     transition: border-color .2s;
+    box-sizing: content-box;
 
     .hover-item {
         max-width: none;
@@ -4177,6 +4236,10 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         border-color: transparent;
                         background-color: transparent;
                     }
+
+                    a {
+                        color: inherit;
+                    }
                 }
 
                 + .row.p-3 {
@@ -4986,6 +5049,57 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         display: block !important;
                     }
                 }
+
+                /* Personal » Preferences » Content » Buffs */
+                > .ui.items {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: var(--spacing-y);
+
+                    .item {
+                        width: var(--col-2) !important;
+                        min-height: 0 !important;
+                        margin: 0;
+                        padding: var(--spacing);
+                        border: var(--border) !important;
+                        border-radius: var(--border-radius);
+                        box-shadow: none;
+                        cursor: default;
+
+                        .text_center {
+                            display: flex;
+                            align-items: center;
+                            gap: var(--spacing-x);
+                            color: var(--primary);
+                            font-weight: bold;
+                            text-align: left !important;
+
+                            br {
+                                display: none;
+                            }
+                        }
+
+                        p {
+                            cursor: text;
+                        }
+
+                        small {
+                            font-size: var(--font-size-medium);
+                        }
+
+                        b {
+                            color: var(--red);
+                        }
+
+                        img {
+                            cursor: default;
+                        }
+                    }
+
+                    .ui.message.red {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
@@ -5138,7 +5252,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 }
             }
 
-            /* Subeta » Explore » Darkside » Ultimate Pet Zapper */
             > .col-8 {
                 display: flex;
                 flex-direction: column;
@@ -5146,6 +5259,18 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 width: 100%;
                 margin-top: -1rem;
 
+                .alert.alert-danger[role='alert'] {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: var(--spacing-y);
+
+                    hr {
+                        display: none;
+                    }
+                }
+
+                /* Subeta » Explore » Darkside » Ultimate Pet Zapper */
                 .alert.alert-warning.m-4,
                 .card.bg-light.m-3 {
                     margin: 0 !important;
@@ -5154,7 +5279,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         font-size: var(--font-size-small);
                     }
                 }
-
                 .alert.alert-warning.m-4 {
                     display: var(--display-pet-zapper-warning, block);
 
@@ -5166,11 +5290,9 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         display: var(--display-pet-zapper-adoption, block);
                     }
                 }
-
                 .card.bg-light.m-3 {
                     background-color: var(--grey) !important;
                 }
-
                 form[action='/explore/zapper.php/zap'] {
                     display: flex;
                     flex-direction: column;
@@ -5188,7 +5310,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         }
                     }
                 }
-
                 img[src^='//img.subeta.net/pets/'] {
                     display: block;
                     margin: 0 auto;
@@ -5283,7 +5404,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             font-size: var(--font-size-title);
             white-space: nowrap;
         }
-
         .lead {
             margin: 0;
 
@@ -5435,7 +5555,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 }
 
                 .card {
-                    width: var(--col-3);
+                    flex: 1;
                     margin: 0 !important;
                     border: var(--border);
 
@@ -5443,12 +5563,33 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         display: none;
                     }
 
-                    &:nth-child(4) {
-                        order: -1;
+                    &:nth-child(2) {
+                        display: var(--display-news-checkout, block);
+                    }
 
-                        .text-center ~ div,
-                        hr {
-                            display: none;
+                    &:nth-child(3) {
+                        display: var(--display-news-upcoming, block);
+                    }
+
+                    &:nth-child(4) {
+                        display: var(--display-news-daily, block);
+
+                        .text-center:nth-of-type(1) {
+                            display: var(--display-news-daily-dailies, block);
+                        }
+
+                        .text-center:nth-of-type(2) {
+                            display: var(--display-news-daily-recycle, block);
+                        }
+
+                        .text-center:nth-of-type(3) {
+                            display: var(--display-news-daily-lottery, flex);
+                            align-items: center;
+                            gap: 1em;
+
+                            a {
+                                display: inline;
+                            }
                         }
                     }
 
@@ -5608,6 +5749,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         }
 
                         &:not(.green) {
+                            display: var(--display-quest-intro, block);
                             padding: 0;
                             background-color: transparent;
                             color: var(--black);
@@ -5683,8 +5825,12 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                             + br[clear='all'] + .ui.segment.text_center {
                                 display: flex;
-                                flex-wrap: wrap;
+                                justify-content: space-between;
                                 gap: 1em;
+
+                                @media (max-device-width: 768px) {
+                                    flex-direction: column;
+                                }
 
                                 &:after {
                                     display: none;
@@ -5694,9 +5840,9 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                                     display: none;
                                 }
 
-                                .btn {
-                                    @media (max-device-width: 768px) {
-                                        width: 100%;
+                                .xbtn.btn-md.btn-danger[href$='quit'] {
+                                    @media (min-device-width: 769px) {
+                                        margin-left: auto;
                                     }
                                 }
                             }
@@ -7173,6 +7319,16 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 }
             }
         }
+
+        /* Subeta » Explore » Shengui Guo » Hide Ujin's intro-text */
+        img[src='//img.subeta.net/npc_ujin.png'] + br + br + div[style='text-align: left;'] {
+            display: var(--display-shenguiguo-ujin-intro, var(----display-shenguiguo-floatingmarket-intro, none));
+        }
+
+        /* Subeta » Explore » Shengui Guo » Hide Dara's intro-text */
+        img[src='//img.subeta.net/npc_dara.png'] + br + br + div[style='text-align: left;'] {
+            display: var(--display-shenguiguo-dara-intro, var(----display-shenguiguo-floatingmarket-intro, none));
+        }
     }
 
     /* Subeta » News » Dailies */
@@ -7708,6 +7864,10 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                                 background-color: color-mix(in srgb, var(--primary-light) 25%, transparent);
                             }
                         }
+
+                        &:nth-child(3) .column:last-child {
+                            display: var(--display-yourshop-quickstock-delete, inline-block);
+                        }
                     }
                 }
 
@@ -8223,6 +8383,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 }
             }
 
+            /* Subeta » Explore » Shengui Guo » Hide Jogoh's intro-text */
+            > img[src='//img.subeta.net/npc_jogoh.png'] + .ui.segment.basic.left.aligned {
+                display: var(--display-shenguiguo-jogoh-intro, var(----display-shenguiguo-floatingmarket-intro, none));
+            }
+
             > .ui.segment.basic.left.aligned {
                 padding: 0;
                 font-size: var(--font-size-medium);
@@ -8659,18 +8824,20 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     margin-bottom: 0;
                 }
 
-                /* Year display for special shops */
+                /* Year indicators for yearly event shops */
                 /* Original code by spacemage @ https://subeta.net/forums.php/read/929035 */
                 [data-itemid] ~ .alert [href*='newyears']:after {
                     content: ' (Pre2010)';
                 }
                 [data-itemid] ~ .alert [href*='den.php']:after,
-                [data-itemid^='132408'] ~ .alert [href*='louis']:after,
                 [data-itemid] ~ .alert [href*='esther']:after,
-                [data-itemid^='132'] ~ .alert [href*='masquerade']:after {
+                [data-itemid^='132'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='132408'] ~ .alert [href*='louis']:after,
+                [data-itemid="132408"] ~ .alert [href*="louis"]:after,
+                [data-itemid="2962"] ~ .alert [href*="louis"]:after,
+                [data-itemid="6478"] ~ .alert [href*="louis"]:after {
                     content: ' (2009)';
                 }
-                [data-itemid^='137'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='132336'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='132338'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='132340'] ~ .alert [href*='den.php']:after,
@@ -8679,59 +8846,60 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 [data-itemid^='132372'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='132379'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='132390'] ~ .alert [href*='den.php']:after,
-                [data-itemid^='136728'] ~ .alert [href*='den.php']:after,
-                [data-itemid^='1381'] ~ .alert [href*='den.php']:after,
-                [data-itemid^='1382'] ~ .alert [href*='den.php']:after,
-                [data-itemid^='1383'] ~ .alert [href*='den.php']:after,
-                [data-itemid^='1384'] ~ .alert [href*='den.php']:after,
-                [data-itemid^='13587'] ~ .alert [href*='esther']:after,
-                [data-itemid^='133321'] ~ .alert [href*='esther']:after,
-                [data-itemid^='139'] ~ .alert [href*='esther']:after,
-                [data-itemid^='13264']:not([data-itemid='132643']) ~ .alert [href*='/masquerade']:after,
                 [data-itemid^='132632'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132638'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132639'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='13264'] ~ .alert [href*='/masquerade']:after,
                 [data-itemid^='132650'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132651'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132652'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132798'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132799'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='133321'] ~ .alert [href*='esther']:after,
+                [data-itemid^='13587'] ~ .alert [href*='esther']:after,
+                [data-itemid^='136728'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='137'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='138'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='1381'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='1382'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='1383'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='1384'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='139'] ~ .alert [href*='esther']:after,
                 [data-itemid^='139'] ~ .alert [href*='masquerade']:after {
                     content: ' (2010)';
                 }
-                [data-itemid^='144'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='144'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='144'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='145'] ~ .alert [href*='esther']:after,
-                [data-itemid^='146'] ~ .alert [href*='esther']:after,
-                [data-itemid^='145'] ~ .alert [href*='masquerade']:after {
+                [data-itemid^='145'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='146'] ~ .alert [href*='esther']:after {
                     content: ' (2011)';
                 }
                 [data-itemid^='149'] ~ .alert [href*='newyears']:after,
-                [data-itemid^='150'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='150'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='150'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='151'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='152'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='152025'] ~ .alert [href*='louis']:after,
-                [data-itemid^='153'] ~ .alert [href*='esther']:after,
-                [data-itemid^='152'] ~ .alert [href*='masquerade']:after {
+                [data-itemid^='153'] ~ .alert [href*='esther']:after {
                     content: ' (2012)';
                 }
                 [data-itemid^='158'] ~ .alert [href*='newyears']:after,
-                [data-itemid^='159'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='159'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='159'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='160'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='160'] ~ .alert [href*='louis']:after,
-                [data-itemid^='161'] ~ .alert [href*='esther']:after,
-                [data-itemid^='162'] ~ .alert [href*='esther']:after,
                 [data-itemid^='160'] ~ .alert [href*='masquerade']:after,
-                [data-itemid^='161'] ~ .alert [href*='masquerade']:after {
+                [data-itemid^='161'] ~ .alert [href*='esther']:after,
+                [data-itemid^='161'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='162'] ~ .alert [href*='esther']:after {
                     content: ' (2013)';
                 }
                 [data-itemid^='168'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='169'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='169'] ~ .alert [href*='louis']:after,
-                [data-itemid^='171'] ~ .alert [href*='esther']:after,
                 [data-itemid^='170'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='171'] ~ .alert [href*='esther']:after,
                 [data-itemid^='171'] ~ .alert [href*='masquerade']:after {
                     content: ' (2014)';
                 }
@@ -8739,57 +8907,57 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 [data-itemid^='178'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='178'] ~ .alert [href*='louis']:after,
                 [data-itemid^='179'] ~ .alert [href*='esther']:after,
-                [data-itemid^='180'] ~ .alert [href*='esther']:after,
-                [data-itemid^='179'] ~ .alert [href*='masquerade']:after {
+                [data-itemid^='179'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='180'] ~ .alert [href*='esther']:after {
                     content: ' (2015)';
                 }
                 [data-itemid^='186'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='187'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='187'] ~ .alert [href*='louis']:after,
                 [data-itemid^='188'] ~ .alert [href*='esther']:after,
-                [data-itemid^='189'] ~ .alert [href*='esther']:after,
-                [data-itemid^='188'] ~ .alert [href*='masquerade']:after {
+                [data-itemid^='188'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='189'] ~ .alert [href*='esther']:after {
                     content: ' (2016)';
                 }
                 [data-itemid^='193'] ~ .alert [href*='newyears']:after,
-                [data-itemid^='194'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='194'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='194'] ~ .alert [href*='louis']:after,
-                [data-itemid^='197'] ~ .alert [href*='esther']:after,
+                [data-itemid^='194'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='195'] ~ .alert [href*='masquerade']:after,
-                [data-itemid^='196'] ~ .alert [href*='masquerade']:after {
+                [data-itemid^='196'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='197'] ~ .alert [href*='esther']:after {
                     content: ' (2017)';
                 }
                 [data-itemid^='203'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='204'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='204'] ~ .alert [href*='louis']:after,
-                [data-itemid^='206'] ~ .alert [href*='esther']:after,
-                [data-itemid^='205'] ~ .alert [href*='masquerade']:after {
+                [data-itemid^='205'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='206'] ~ .alert [href*='esther']:after {
                     content: ' (2018)';
                 }
+                [data-itemid^='146167'] ~ .alert [href*='esther']:after,
                 [data-itemid^='2116'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='212'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='212'] ~ .alert [href*='louis']:after,
+                [data-itemid^='213'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='214'] ~ .alert [href*='esther']:after,
-                [data-itemid^='215'] ~ .alert [href*='esther']:after,
-                [data-itemid^='146167'] ~ .alert [href*='esther']:after,
-                [data-itemid^='213'] ~ .alert [href*='masquerade']:after {
+                [data-itemid^='215'] ~ .alert [href*='esther']:after {
                     content: ' (2019)';
                 }
                 [data-itemid^='2198'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='220'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='220'] ~ .alert [href*='louis']:after,
-                [data-itemid^='222'] ~ .alert [href*='esther']:after,
                 [data-itemid^='221'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='222'] ~ .alert [href*='esther']:after,
                 [data-itemid^='222'] ~ .alert [href*='masquerade']:after {
                     content: ' (2020)';
                 }
                 [data-itemid^='2266'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='228'] ~ .alert [href*='den.php']:after,
-                [data-itemid^='229'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='228'] ~ .alert [href*='louis']:after,
-                [data-itemid^='231'] ~ .alert [href*='esther']:after,
-                [data-itemid^='230'] ~ .alert [href*='masquerade']:after {
+                [data-itemid^='229'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='230'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='231'] ~ .alert [href*='esther']:after {
                     content: ' (2021)';
                 }
                 [data-itemid^='2401'] ~ .alert [href*='newyears']:after,
@@ -8807,8 +8975,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     content: ' (2023)';
                 }
                 [data-itemid^='258'] ~ .alert [href*='newyears']:after,
-                [data-itemid^='259'] ~ .alert [href*='louis']:after,
-                [data-itemid^='259'] ~ .alert [href*='den.php']:after {
+                [data-itemid^='259'] ~ .alert [href*='den.php']:after,
+                [data-itemid^='259'] ~ .alert [href*='louis']:after {
                     content: ' (2024)';
                 }
             }
