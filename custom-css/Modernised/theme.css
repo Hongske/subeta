@@ -4077,7 +4077,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         margin-right: .25em;
                         opacity: .5;
 
-                        .holiday-bite {
+                        img[src*='optout'] + .holiday-bite,
+                        img[src*='infected'] + .holiday-bite {
                             pointer-events: none;
                         }
                     }

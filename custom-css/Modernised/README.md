@@ -427,6 +427,7 @@ These are all the different types of options/variables that have been used in th
 - Added options to hide individual links in the pet-dropdown ([see the overview » display options for pets](#overview-of-all-available-options))
 - Added options to change the font-weight of individual links in the pet-dropdown ([see the overview » font-weight options for pets](#overview-of-all-available-options))
 - Added special options to change the number of pets shown on the [Pets-page](https://subeta.net/pets.php) and in the [Training Center](https://subeta.net/explore/train.php)
+- Fixed biting in forums (now you can only click the link if it says "Bite!")
 - Updated styling for categories on [Wishlist](https://subeta.net/wishlists.php)
 - Updated styling on item detail-page in [Inventory](https://subeta.net/inventory.php)
 - Updated year indicators for yearly event shops
