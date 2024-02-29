@@ -1,20 +1,3 @@
-<style>
-    @media screen and (min-width: 800px) {
-        .wrapper {
-            max-width: calc(1300px - (30px * 2));
-        }
-
-        li code,
-        td code {
-            white-space: nowrap;
-        }
-
-        td {
-            vertical-align: top;
-        }
-    }
-</style>
-
 > <br/> [Home](https://hongske.github.io/subeta/) » **Modernised Theme** <br/><br/>
 
 ## ⭐ Features
