@@ -15,3 +15,27 @@ td code {
 td {
     vertical-align: top;
 }
+
+details {
+    border: 1px solid #404040;
+    border-radius: 3px;
+    background: #212121;
+
+    summary {
+        padding: .5em;
+        border-bottom: 1px solid #404040;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        padding: 1em .5em;
+    }
+
+    + details {
+        margin-top: .5em;
+    }
+}
