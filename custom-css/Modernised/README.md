@@ -1,4 +1,4 @@
-> <br/> [Home](https://hongske.github.io/subeta/) » **Modernised Theme** <br/><br/>
+> <br> [Home](https://hongske.github.io/subeta/) » **Modernised Theme** <br><br>
 
 ## ⭐ Features
 Below features are mostly for both desktop *and* mobile views, but features preceded by 👁‍🗨 are mobile-only!
@@ -41,8 +41,9 @@ Below features are mostly for both desktop *and* mobile views, but features prec
 - Added other general options
   - Added option `--display-floating-item` to hide floating items (like flowers during Survival)
   - Added option `--display-hustler` to hide Hustler-banner
-  - Added options to modify theme colours ([see overview of all available options](#overview-of-all-available-options))
+  - Added options to modify theme colours ([see ⭐ Customising the theme](#⭐-customising-the-theme))
 </details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📌 List of page changes</summary>
 
@@ -60,6 +61,7 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Restyled **[Shinwa's quests](https://subeta.net/explore/goddess.php)**
 - Restyled **[Your Events](https://subeta.net/events.php)**
 </details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📌 List of page changes [Commerce]</summary>
 
@@ -85,6 +87,7 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Restyled **Sales History**
     - Added option `--display-yourshop-sales-info` to hide info-text
 </details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📌 List of page changes [Interact]</summary>
 
@@ -112,6 +115,7 @@ Below features are mostly for both desktop *and* mobile views, but features prec
       - Removed the ping-options from the reply form
       - 👁‍🗨 Removed the formatting-options from the reply form
 </details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📌 List of page changes [Personal]</summary>
 
@@ -127,8 +131,8 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Restyled the item detail page
 - Restyled **[Pets](https://subeta.net/pets.php)**
   - Modified the pet-dropdown with options so that it's always shown
-  - Added options to hide individual links in the pet-dropdown ([see the overview » display options for pets](#overview-of-all-available-options))
-  - Added options to change the font-weight of individual links in the pet-dropdown ([see the overview » font-weight options for pets](#overview-of-all-available-options))
+  - Added options to hide individual links in the pet-dropdown ([see the display options for pets](#⭐-customising-the-theme))
+  - Added options to change the font-weight of individual links in the pet-dropdown ([see the font-weight options for pets](#⭐-customising-the-theme))
   - Added option `--number-of-pets` to change the number of pet per row
   - Added icons for hunger and happiness
   - Modified icon for likes
@@ -139,6 +143,7 @@ Below features are mostly for both desktop *and* mobile views, but features prec
     - Removed flavor-image and -text
 - Restyled **[Wishlist](https://subeta.net/wishlists.php)**
 </details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📌 List of page changes [Subeta]</summary>
 
@@ -200,7 +205,9 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   <!-- TODO - Restyle pages -->
 </details>
 
-<br/>
+<!--------------------------------------------------------------------------------------------------------------------->
+<br>
+<!--------------------------------------------------------------------------------------------------------------------->
 
 ## ⭐ Installing the theme
 To get started, paste the following code into the box on your [CustomCSS page](https://subeta.net/preferences.php?act=customcss):
@@ -208,7 +215,9 @@ To get started, paste the following code into the box on your [CustomCSS page](h
 @import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css')
 ```
 
-<br/>
+<!--------------------------------------------------------------------------------------------------------------------->
+<br>
+<!--------------------------------------------------------------------------------------------------------------------->
 
 ## ⭐ Customising the theme
 To customise this theme, you'll need to override certain CSS Variables. To do so, you'll need to add the following snippet **after** your `@import` code:
@@ -230,50 +239,35 @@ Then, add your overrides between the curly brackets. An example would be:
 }
 ```
 
-<!-- TODO - Write a script to auto-generate needed import & :root-code, based on checkboxes -->
-<br/>
+You can find the available options in the following parts:
 
-### CSS Variables:
-These are all the different types of options/variables that have been used in this theme:
-- Colours:
-  - Variables begin with `--colour` and need a valid CSS colour value
-  - Examples of valid values are `crimson`, `#DC143C` and `rgb(220, 20, 60)`
-  - [You can find more info about valid CSS colour values here](https://www.w3schools.com/cssref/css_colors_legal.php)
-  - These are used to customise the **colours** on the website
-- Display:
-  - Variables begin with `--display` and need a valid CSS display value
-  - Examples of valid values are `none`, `block` and `flex`
-  - [You can find more info about valid CSS display values here](https://www.w3schools.com/cssref/pr_class_display.php)
-  - These are used to **hide** certain parts of the website, **which can be done by changing the value to `none`**
-- Numbers:
-  - Variables begin with `--number-of` and need a valid number
-  - Examples of valid values are `1`, `10`, `0.1` and `.1`
-  - Examples of **non**-valid values are `0,1`, `,1` and anything containing letters of the alphabet
-  - These are used to customise the **number of items** that are shown
-- Font-weight:
-  - Variables begin with `--fontweight` and need a valid CSS font-weight value
-  - Examples of valid values are `normal`, `bold`, `400` and `700`
-  - [You can find more info about valid CSS font-weight values here](https://www.w3schools.com/cssref/pr_font_weight.php)
-  - These are used to customise the **font weight** of certain things, e.g. if certain things should be in bold
-- Special:
-  - These variables have been isolated into their own bit at the end of this section
-  - Each variable uses another CSS variable as value, e.g. `--number-of-pets: var(--col-3)`
-  - These are used for more advanced bits
+<details>
+<summary>🍄 Colour options</summary>
 
-<br/>
+- Variables begin with `--colour` and need a valid CSS colour value
+- Examples of valid values are `crimson`, `#DC143C` and `rgb(220, 20, 60)`
+- [You can find more info about valid CSS colour values here](https://www.w3schools.com/cssref/css_colors_legal.php)
+- These are used to customise the **colours** on the website
 
-### Overview of all available options:
-
-| Colour options    | Info                                        | Default value |
+| Option            | Info                                        | Default value |
 |-------------------|---------------------------------------------|---------------|
 | `--color-primary` | Main theme colour                           | `#9BA84F`     |
 | `--color-blue`    | Blue colour, used for alerts                | `#0DCAF0`     |
 | `--color-green`   | Green colour, used for alerts, buttons, etc | `#20C997`     |
 | `--color-red`     | Red colour, used for alerts, buttons, etc   | `#DC3545`     |
 | `--color-yellow`  | Yellow colour, used for alerts              | `#FFC107`     |
-<br/>
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
+<details>
 
-| Display options                               | Info ❗❗ Use `none` as a value to hide these things ❗❗                                 |
+<summary>🍄 Display options</summary>
+
+- Variables begin with `--display` and need a valid CSS display value
+- Examples of valid values are `none`, `block` and `flex`
+- [You can find more info about valid CSS display values here](https://www.w3schools.com/cssref/pr_class_display.php)
+- These are used to **hide** certain parts of the website, **which can be done by changing the value to `none`**
+
+| Options                                       | Info ❗❗ Use `none` as a value to hide these things ❗❗                                 |
 |-----------------------------------------------|---------------------------------------------------------------------------------------|
 | `--display-floating-item`                     | General » Hide floating items (like flowers during survival)                          |
 | `--display-hustler`                           | General » Hide Hustler-banner                                                         |
@@ -319,16 +313,32 @@ These are all the different types of options/variables that have been used in th
 | `--display-news-daily-dailies`                | Subeta » News » Hide Daily » Dailies                                                  |
 | `--display-news-daily-recycle`                | Subeta » News » Hide Daily » Recycle Beast                                            |
 | `--display-news-daily-lottery`                | Subeta » News » Hide Daily » Potion Lottery Winner                                    |
-<br/>
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
+<details>
+<summary>🍄 Number options</summary>
 
-| Number options                            | Info                                                       | Default value |
+- Variables begin with `--number-of` and need a valid number
+- Examples of valid values are `1`, `10`, `0.1` and `.1`
+- Examples of **non**-valid values are `0,1`, `,1` and anything containing letters of the alphabet
+- These are used to customise the **number of items** that are shown
+
+| Options                                   | Info                                                       | Default value |
 |-------------------------------------------|------------------------------------------------------------|---------------|
 | <nobr>`--number-of-menu-friends`</nobr>   | General » Menu » How many friends should be shown at once? | `10`          |
 | <nobr>`--number-of-menu-pets`</nobr>      | General » Menu » How many pets should be shown at once?    | `10`          |
 | <nobr>`--number-of-menu-shops`</nobr>     | General » Menu » How many shops should be shown at once?   | `10`          |
-<br />
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
+<details>
+<summary>🍄 Font-weight options</summary>
 
-| Font-weight options                   | Info                                                                      |
+- Variables begin with `--fontweight` and need a valid CSS font-weight value
+- Examples of valid values are `normal`, `bold`, `400` and `700`
+- [You can find more info about valid CSS font-weight values here](https://www.w3schools.com/cssref/pr_font_weight.php)
+- These are used to customise the **font weight** of certain things, e.g. if certain things should be in bold
+
+| Options                               | Info                                                                      |
 |---------------------------------------|---------------------------------------------------------------------------|
 | `--fontweight-pet-option-description` | Personal » Pets » Dropdown » Font weight for option "Edit Description"    |
 | `--fontweight-pet-option-headshot`    | Personal » Pets » Dropdown » Font weight for option "Edit Headshot"       |
@@ -345,7 +355,15 @@ These are all the different types of options/variables that have been used in th
 | `--fontweight-pet-option-tcmass`      | Personal » Pets » Dropdown » Font weight for option "TC Mass Add"         |
 | `--fontweight-pet-option-abandon`     | Personal » Pets » Dropdown » Font weight for option "Abandon"             |
 | `--fontweight-pet-option-give`        | Personal » Pets » Dropdown » Font weight for option "Give to Friend"      |
-<br/>
+<br>
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
+<details>
+<summary>🍄 Special options</summary>
+
+- These variables have been isolated into their own bit at the end of this section
+- Each variable uses another CSS variable as value, e.g. `--number-of-pets: var(--col-3)`
+- These are used for more advanced bits
 
 <table>
 <thead>
@@ -393,7 +411,14 @@ These are all the different types of options/variables that have been used in th
     </tr>
 </tbody>
 </table>
-<br/>
+
+</details>
+
+<!-- TODO - Write a script to auto-generate needed import & :root-code, based on checkboxes -->
+
+<!--------------------------------------------------------------------------------------------------------------------->
+<br>
+<!--------------------------------------------------------------------------------------------------------------------->
 
 ## ⭐ Credits
 - [spacemage](https://subeta.net/users/spacemage), for their [year indicators for yearly event shops](https://subeta.net/forums.php/gotopost/66366953)
@@ -401,22 +426,23 @@ These are all the different types of options/variables that have been used in th
 - Icons by [FontAwesome](https://fontawesome.com/)
 - Roboto font by [Google Fonts](https://fonts.google.com/specimen/Roboto)
 
-<br/>
+<!--------------------------------------------------------------------------------------------------------------------->
+<br>
+<!--------------------------------------------------------------------------------------------------------------------->
 
 ## ⭐ Changelog (most recent first)
 <strong>📅 2024/02/29</strong>
-
 - Added option `--display-inventory-locked` to hide the info-text about locked items in [Inventory](https://subeta.net/inventory.php)
 - Added option `--display-stickers-unstack` to hide the "unstack" link under stickers in the [Sticker Album](https://subeta.net/games/stickers.php)
-- Added options to hide individual links in the pet-dropdown ([see the overview » display options for pets](#overview-of-all-available-options))
-- Added options to change the font-weight of individual links in the pet-dropdown ([see the overview » font-weight options for pets](#overview-of-all-available-options))
+- Added options to hide individual links in the pet-dropdown ([see the display options for pets](#⭐-customising-the-theme))
+- Added options to change the font-weight of individual links in the pet-dropdown ([see the font-weight options for pets](#⭐-customising-the-theme))
 - Added special options to change the number of pets shown on the [Pets-page](https://subeta.net/pets.php) and in the [Training Center](https://subeta.net/explore/train.php)
 - Fixed biting in forums (now you can only click the link if it says "Bite!")
 - Fixed the "new announcement" banner so the links are bold and removed the "close" link
 - Updated styling for categories on [Wishlist](https://subeta.net/wishlists.php)
 - Updated styling on item detail-page in [Inventory](https://subeta.net/inventory.php)
 - Updated year indicators for yearly event shops
-
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/02/28</summary>
 
@@ -440,6 +466,7 @@ These are all the different types of options/variables that have been used in th
 - Removed Chase's image and name on mobile in [Item Hunter](https://subeta.net/games/hunt.php)
 - Updated year indicators for yearly event shops
 </details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/02/27</summary>
 
@@ -451,6 +478,7 @@ These are all the different types of options/variables that have been used in th
 - Added styling for shop-related random events (Morty or discount card)
 - Updated styling for comments (mainly reordered things a bit in the individual comments)
 </details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/02/26</summary>
 
@@ -467,6 +495,7 @@ These are all the different types of options/variables that have been used in th
 - Added option `--display-yourshop-item-category` to hide category-search (in both the filter- and item-list) for Your Shop » Edit Items
 - Added option `--display-yourshop-sales-info` to hide info-text for Your Shop » Sales History
 </details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/02/25</summary>
 
@@ -475,6 +504,7 @@ These are all the different types of options/variables that have been used in th
 - Added minor layout tweaks for Ruffie Raffle, after you get a doll (mostly mobile)
 - Fixed spacing for the Ruffie Raffle buttons, after you get a doll
 </details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/02/24</summary>
 
@@ -484,6 +514,7 @@ These are all the different types of options/variables that have been used in th
 - Fixed events counter in the sidebar, so that it overflows correctly
 - Fixed click-area for floating items so that it's limited to the item itself
 </details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/02/23</summary>
 
