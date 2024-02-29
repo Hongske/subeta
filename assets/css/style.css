@@ -21,6 +21,10 @@ details {
     border-radius: 3px;
     background: #212121;
 
+    + details {
+        margin-top: .5em;
+    }
+
     summary {
         padding: .5em;
         border-bottom: 1px solid #404040;
@@ -35,7 +39,8 @@ details {
         padding: 1em .5em;
     }
 
-    + details {
-        margin-top: .5em;
+    table {
+        width: calc(100% - 2rem);
+        margin: 1rem;
     }
 }
