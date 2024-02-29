@@ -404,7 +404,8 @@ These are all the different types of options/variables that have been used in th
 <br/>
 
 ## ⭐ Changelog (most recent first)
-### 2024/02/29
+<strong>📅 2024/02/29</strong>
+
 - Added option `--display-inventory-locked` to hide the info-text about locked items in [Inventory](https://subeta.net/inventory.php)
 - Added option `--display-stickers-unstack` to hide the "unstack" link under stickers in the [Sticker Album](https://subeta.net/games/stickers.php)
 - Added options to hide individual links in the pet-dropdown ([see the overview » display options for pets](#overview-of-all-available-options))
@@ -415,7 +416,9 @@ These are all the different types of options/variables that have been used in th
 - Updated styling on item detail-page in [Inventory](https://subeta.net/inventory.php)
 - Updated year indicators for yearly event shops
 
-### 2024/02/28
+<details>
+<summary>📅 2024/02/28</summary>
+
 - Added option `--display-quest-intro` to hide intro-text of main quests
 - Added option `--display-yourshop-quickstock-delete` to hide delete-option completely in quick stock
 - Added options to hide the intro-texts for the 3 interactive shops on the [Floating Market](https://subeta.net/explore/shengui_guo/river.php):
@@ -435,8 +438,10 @@ These are all the different types of options/variables that have been used in th
 - Fixed link colours in forum signatures, so that they're the same as the rest of the signature text
 - Removed Chase's image and name on mobile in [Item Hunter](https://subeta.net/games/hunt.php)
 - Updated year indicators for yearly event shops
+</details>
+<details>
+<summary>📅 2024/02/27</summary>
 
-### 2024/02/27
 - Moved menu-item's dropdown in the main menu-bar to the side of the menu-items
 - Added options `--number-of-menu-pets`, `--number-of-menu-friends` and `--number-of-menu-shops` so you can pick how many items you want to see in the menu's
 - Added styling for [the spend exp page](https://subeta.net/games/battle/exp.php)
@@ -444,8 +449,10 @@ These are all the different types of options/variables that have been used in th
 - Added option `--display-forum-post-report` to hide report-button on posts
 - Added styling for shop-related random events (Morty or discount card)
 - Updated styling for comments (mainly reordered things a bit in the individual comments)
+</details>
+<details>
+<summary>📅 2024/02/26</summary>
 
-### 2024/02/26
 - Rewrote the page-specific section, for easier expansion considering the design patterns on the current Subeta website
 - Added option `--display-battle-training-intro` to hide Jim's intro-text in the Training Center
 - Added option `--display-battle-training-warning` to hide Jim's warning about level cap and autotraining at the Training Center
@@ -458,19 +465,26 @@ These are all the different types of options/variables that have been used in th
 - Added option `--display-pet-zapper-adoption` to hide message about adopting a Qrykee or Yaherra at the Ultimate Pet Zapper
 - Added option `--display-yourshop-item-category` to hide category-search (in both the filter- and item-list) for Your Shop » Edit Items
 - Added option `--display-yourshop-sales-info` to hide info-text for Your Shop » Sales History
+</details>
+<details>
+<summary>📅 2024/02/25</summary>
 
-### 2024/02/25
 - Added extra styling for sidebar-widgets, inspired by [the Widget Overhaul](https://karlpiper.com/subeta/customcss/#Overhaul-All-Widgets) that [Sorcerer](https://subeta.net/users/Sorcerer) made
 - Added option `--display-sidebar-battlepet-buttons` to hide battlepet buttons in the sidebar, again inspired by Sorcerer's Widget Overhaul (see link above)
 - Added minor layout tweaks for Ruffie Raffle, after you get a doll (mostly mobile)
 - Fixed spacing for the Ruffie Raffle buttons, after you get a doll
+</details>
+<details>
+<summary>📅 2024/02/24</summary>
 
-### 2024/02/24
 - Added styling for [the special shops page](https://subeta.net/ss.php)
 - Added button-styles for the link back to Shinwa on quest-pages (after finishing the quest)
 - Fixed sidebar toggling so that content correctly displays over the whole page when you hide sidebar
 - Fixed events counter in the sidebar, so that it overflows correctly
 - Fixed click-area for floating items so that it's limited to the item itself
+</details>
+<details>
+<summary>📅 2024/02/23</summary>
 
-### 2024/02/23
 - Initial commit (rewrite of the original theme)
+</details>
