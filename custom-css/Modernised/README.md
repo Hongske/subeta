@@ -323,11 +323,11 @@ You can find the available options in the following parts:
 - Examples of **non**-valid values are `0,1`, `,1` and anything containing letters of the alphabet
 - These are used to customise the **number of items** that are shown
 
-| Options                                   | Info                                                       | Default value |
-|-------------------------------------------|------------------------------------------------------------|---------------|
-| <nobr>`--number-of-menu-friends`</nobr>   | General » Menu » How many friends should be shown at once? | `10`          |
-| <nobr>`--number-of-menu-pets`</nobr>      | General » Menu » How many pets should be shown at once?    | `10`          |
-| <nobr>`--number-of-menu-shops`</nobr>     | General » Menu » How many shops should be shown at once?   | `10`          |
+| Options                      | Info                                                       | Default value |
+|------------------------------|------------------------------------------------------------|---------------|
+| `--number-of-menu-friends`   | General » Menu » How many friends should be shown at once? | `10`          |
+| `--number-of-menu-pets`      | General » Menu » How many pets should be shown at once?    | `10`          |
+| `--number-of-menu-shops`     | General » Menu » How many shops should be shown at once?   | `10`          |
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
@@ -355,7 +355,6 @@ You can find the available options in the following parts:
 | `--fontweight-pet-option-tcmass`      | Personal » Pets » Dropdown » Font weight for option "TC Mass Add"         |
 | `--fontweight-pet-option-abandon`     | Personal » Pets » Dropdown » Font weight for option "Abandon"             |
 | `--fontweight-pet-option-give`        | Personal » Pets » Dropdown » Font weight for option "Give to Friend"      |
-<br>
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
