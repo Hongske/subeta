@@ -1,3 +1,20 @@
+<style>
+    @media screen and (min-width: 800px) {
+        .wrapper {
+            max-width: calc(1300px - (30px * 2));
+        }
+
+        li code,
+        td code {
+            white-space: nowrap;
+        }
+
+        td {
+            vertical-align: top;
+        }
+    }
+</style>
+
 > <br/> [Home](https://hongske.github.io/subeta/) » **Modernised Theme** <br/><br/>
 
 ## ⭐ Features
@@ -122,15 +139,14 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - 👁‍🗨 Removed subcategories
 - Restyled **Comments**
 - Restyled **[Inventory](https://subeta.net/inventory.php)**
+  - Added option `--display-inventory-locked` to hide the info-text about locked items
   - Replaced the lock-images with colour-coded icons
   - Restyled the item detail page
-    <!-- TODO - Added option to hide toggle-buttons and show the contents instead, for books, food, toys and treasure -->
-    <!-- TODO - Added option to hide pets from the toggle-dropdowns -->
 - Restyled **[Pets](https://subeta.net/pets.php)**
-  <!-- TODO - Added option to always show the pet dropdown-menu -->
-  <!-- TODO - Added option to put specific links in bold, in the pet dropdown-menu -->
-  <!-- TODO - Added option to have a set number of pets per row -->
-  <!-- TODO - Added option to have an automatic number of pets per row (calculated based on number of pets) -->
+  - Modified the pet-dropdown with options so that it's always shown
+  - Added options to hide individual links in the pet-dropdown ([see the overview » display options for pets](#overview-of-all-available-options))
+  - Added options to change the font-weight of individual links in the pet-dropdown ([see the overview » font-weight options for pets](#overview-of-all-available-options))
+  - Added option `--number-of-pets` to change the number of pet per row
   - Added icons for hunger and happiness
   - Modified icon for likes
 - **Vault**
@@ -172,16 +188,15 @@ Below features are mostly for both desktop *and* mobile views, but features prec
     - Added option `--display-battle-training-intro` to hide intro-text
     - Added option `--display-battle-training-warning` to hide warning about level cap and autotraining
     - Added option `--display-battle-training-auto` to hide autotraining buttons
-    <!-- TODO - Added option to have a set number of pets per row -->
-    <!-- TODO - Added option to have an automatic number of pets per row (calculated based on number of pets) -->
-    <!-- TODO - Added option to hide specific pets -->
+    - Added option `--number-of-pets-training` to change the number of pet per row
 - **[Games » Chance » Fishing](https://subeta.net/games/fishing.php)**
   - 👁‍🗨 Removed NPC-image
 - **[Games » Chance » Scratchcards](https://subeta.net/games/scratchcards.php)**
   - 👁‍🗨 Removed NPC-image
 - **Games » Collections**
   - Restyled **Plushie**, **Trading Card**, **Beanbag**, **Pumpkin**, **Pastry** and **Tile** collections
-  <!-- TODO - Restyled **Sticker** collection -->
+  - Restyled **Sticker Album** collection
+    - Added option `--display-stickers-unstack` to hide the "unstack" link under stickers
   - Restyled **[Minion Zoo](https://subeta.net/games/minions/index.php)**
     - Removed all gaming options so that it's just a collection
 - **[Games » Miscellaneous » Item Hunter](https://subeta.net/games/hunt.php)**
@@ -236,7 +251,7 @@ Then, add your overrides between the curly brackets. An example would be:
 <br/>
 
 ### CSS Variables:
-There are currently 3 types of variables:
+These are all the different types of options/variables that have been used in this theme:
 - Colours:
   - Variables begin with `--colour` and need a valid CSS colour value
   - Examples of valid values are `crimson`, `#DC143C` and `rgb(220, 20, 60)`
@@ -252,6 +267,15 @@ There are currently 3 types of variables:
   - Examples of valid values are `1`, `10`, `0.1` and `.1`
   - Examples of **non**-valid values are `0,1`, `,1` and anything containing letters of the alphabet
   - These are used to customise the **number of items** that are shown
+- Font-weight:
+  - Variables begin with `--fontweight` and need a valid CSS font-weight value
+  - Examples of valid values are `normal`, `bold`, `400` and `700`
+  - [You can find more info about valid CSS font-weight values here](https://www.w3schools.com/cssref/pr_font_weight.php)
+  - These are used to customise the **font weight** of certain things, e.g. if certain things should be in bold
+- Special:
+  - These variables have been isolated into their own bit at the end of this section
+  - Each variable uses another CSS variable as value, e.g. `--number-of-pets: var(--col-3)`
+  - These are used for more advanced bits
 
 <br/>
 
@@ -264,46 +288,128 @@ There are currently 3 types of variables:
 | `--color-green`   | Green colour, used for alerts, buttons, etc | `#20C997`     |
 | `--color-red`     | Red colour, used for alerts, buttons, etc   | `#DC3545`     |
 | `--color-yellow`  | Yellow colour, used for alerts              | `#FFC107`     |
-
 <br/>
 
-| Display options                             | Info ❗❗ Use `none` as a value to hide these things ❗❗                              |
-|---------------------------------------------|------------------------------------------------------------------------------------|
-| `--display-floating-item`                   | General » Hide floating items (like flowers during survival)                       |
-| `--display-hustler`                         | General » Hide Hustler-banner                                                      |
-| `--display-sidebar-battlepet-buttons`       | General » Sidebar » Hide buttons for the battlepet widget                          |
-| `--display-yourshop-item-category`          | Commerce » Your Shops » Edit Items » Hide categories-options                       |
-| `--display-yourshop-quickstock-delete`      | Commerce » Your Shops » Quick Stock » Hide delete-option                           |
-| `--display-yourshop-sales-info`             | Commerce » Your Shops » Sales History » Hide info-text                             |
-| `--display-forum-post-image`                | Interact » Forums » Hide post images                                               |
-| `--display-forum-post-signature`            | Interact » Forums » Hide signatures                                                |
-| `--display-forum-post-report`               | Interact » Forums » Hide the report-button on posts                                |
-| `--display-forum-pulse`                     | Interact » Forums » Home » Hide forum pulse                                        |
-| `--display-quest-intro`                     | Quests » Hide intro-text                                                           |
-| `--display-pet-zapper-adoption`             | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide adoption-text             |
-| `--display-pet-zapper-intro`                | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide intro-text                |
-| `--display-pet-zapper-warning`              | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide warning-text              |
-| `--display-shenguiguo-floatingmarket-intro` | Subeta » Explore » Shengui Guo » Floating Market » Hide intro-text for all 3 shops |
-| `--display-shenguiguo-dara-intro`           | Subeta » Explore » Shengui Guo » Floating Market » Hide Dara's intro-text          |
-| `--display-shenguiguo-jogoh-intro`          | Subeta » Explore » Shengui Guo » Floating Market » Hide Jogoh's intro-text         |
-| `--display-shenguiguo-ujin-intro`           | Subeta » Explore » Shengui Guo » Floating Market » Hide Ujin's intro-text          |
-| `--display-battle-training-auto`            | Subeta » Games » Battle » Training Center » Hide autotraining buttons              |
-| `--display-battle-training-intro`           | Subeta » Games » Battle » Training Center » Hide intro-text                        |
-| `--display-battle-training-warning`         | Subeta » Games » Battle » Training Center » Hide warning-text                      |
-| `--display-news-checkout`                   | Subeta » News » Hide Check Out                                                     |
-| `--display-news-upcoming`                   | Subeta » News » Hide Upcoming                                                      |
-| `--display-news-daily`                      | Subeta » News » Hide Daily                                                         |
-| `--display-news-daily-dailies`              | Subeta » News » Hide Daily » Dailies                                               |
-| `--display-news-daily-recycle`              | Subeta » News » Hide Daily » Recycle Beast                                         |
-| `--display-news-daily-lottery`              | Subeta » News » Hide Daily » Potion Lottery Winner                                 |
+| Display options                               | Info ❗❗ Use `none` as a value to hide these things ❗❗                                 |
+|-----------------------------------------------|---------------------------------------------------------------------------------------|
+| `--display-floating-item`                     | General » Hide floating items (like flowers during survival)                          |
+| `--display-hustler`                           | General » Hide Hustler-banner                                                         |
+| `--display-sidebar-battlepet-buttons`         | General » Sidebar » Hide buttons for the battlepet widget                             |
+| `--display-yourshop-item-category`            | Commerce » Your Shops » Edit Items » Hide categories-options                          |
+| `--display-yourshop-quickstock-delete`        | Commerce » Your Shops » Quick Stock » Hide delete-option                              |
+| `--display-yourshop-sales-info`               | Commerce » Your Shops » Sales History » Hide info-text                                |
+| `--display-forum-post-image`                  | Interact » Forums » Hide post images                                                  |
+| `--display-forum-post-signature`              | Interact » Forums » Hide signatures                                                   |
+| `--display-forum-post-report`                 | Interact » Forums » Hide the report-button on posts                                   |
+| `--display-forum-pulse`                       | Interact » Forums » Home » Hide forum pulse                                           |
+| `--display-inventory-locked`                  | Personal » Inventory » Hide info-text about locked items                              |
+| `--display-pet-option-description`            | Personal » Pets » Dropdown » Hide option "Edit Description"                           |
+| `--display-pet-option-headshot`               | Personal » Pets » Dropdown » Hide option "Edit Headshot"                              |
+| `--display-pet-option-name`                   | Personal » Pets » Dropdown » Hide option "Change Name"                                |
+| `--display-pet-option-case`                   | Personal » Pets » Dropdown » Hide option "Change Case"                                |
+| `--display-pet-option-friends`                | Personal » Pets » Dropdown » Hide option "Friends"                                    |
+| `--display-pet-option-profile`                | Personal » Pets » Dropdown » Hide option "View Profile"                               |
+| `--display-pet-option-books`                  | Personal » Pets » Dropdown » Hide option "Books Read"                                 |
+| `--display-pet-option-food`                   | Personal » Pets » Dropdown » Hide option "Food Eaten"                                 |
+| `--display-pet-option-train`                  | Personal » Pets » Dropdown » Hide option "Train"                                      |
+| `--display-pet-option-heal`                   | Personal » Pets » Dropdown » Hide option "Heal"                                       |
+| `--display-pet-option-scrolls`                | Personal » Pets » Dropdown » Hide option "Scrolls"                                    |
+| `--display-pet-option-treasure`               | Personal » Pets » Dropdown » Hide option "Treasure (x / xx)"                          |
+| `--display-pet-option-tcmass`                 | Personal » Pets » Dropdown » Hide option "TC Mass Add"                                |
+| `--display-pet-option-abandon`                | Personal » Pets » Dropdown » Hide option "Abandon"                                    |
+| `--display-pet-option-give`                   | Personal » Pets » Dropdown » Hide option "Give to Friend"                             |
+| `--display-quest-intro`                       | Quests » Hide intro-text                                                              |
+| `--display-pet-zapper-adoption`               | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide adoption-text                |
+| `--display-pet-zapper-intro`                  | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide intro-text                   |
+| `--display-pet-zapper-warning`                | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide warning-text                 |
+| `--display-shenguiguo-floatingmarket-intro`   | Subeta » Explore » Shengui Guo » Floating Market » Hide intro-text for all 3 shops    |
+| `--display-shenguiguo-dara-intro`             | Subeta » Explore » Shengui Guo » Floating Market » Hide Dara's intro-text             |
+| `--display-shenguiguo-jogoh-intro`            | Subeta » Explore » Shengui Guo » Floating Market » Hide Jogoh's intro-text            |
+| `--display-shenguiguo-ujin-intro`             | Subeta » Explore » Shengui Guo » Floating Market » Hide Ujin's intro-text             |
+| `--display-battle-training-auto`              | Subeta » Games » Battle » Training Center » Hide autotraining buttons                 |
+| `--display-battle-training-intro`             | Subeta » Games » Battle » Training Center » Hide intro-text                           |
+| `--display-battle-training-warning`           | Subeta » Games » Battle » Training Center » Hide warning-text                         |
+| `--display-stickers-unstack`                  | Subeta » Games » Collections » Sticker Album » Hide "unstack" link under stickers     |
+| `--display-news-checkout`                     | Subeta » News » Hide Check Out                                                        |
+| `--display-news-upcoming`                     | Subeta » News » Hide Upcoming                                                         |
+| `--display-news-daily`                        | Subeta » News » Hide Daily                                                            |
+| `--display-news-daily-dailies`                | Subeta » News » Hide Daily » Dailies                                                  |
+| `--display-news-daily-recycle`                | Subeta » News » Hide Daily » Recycle Beast                                            |
+| `--display-news-daily-lottery`                | Subeta » News » Hide Daily » Potion Lottery Winner                                    |
 <br/>
 
-| Number options             | Info                                                       | Default value |
-|----------------------------|------------------------------------------------------------|---------------|
-| `--number-of-menu-friends` | General » Menu » How many friends should be shown at once? | `10`          |
-| `--number-of-menu-pets`    | General » Menu » How many pets should be shown at once?    | `10`          |
-| `--number-of-menu-shops`   | General » Menu » How many shops should be shown at once?   | `10`          |
+| Number options                            | Info                                                       | Default value |
+|-------------------------------------------|------------------------------------------------------------|---------------|
+| <nobr>`--number-of-menu-friends`</nobr>   | General » Menu » How many friends should be shown at once? | `10`          |
+| <nobr>`--number-of-menu-pets`</nobr>      | General » Menu » How many pets should be shown at once?    | `10`          |
+| <nobr>`--number-of-menu-shops`</nobr>     | General » Menu » How many shops should be shown at once?   | `10`          |
+<br />
 
+| Font-weight options                   | Info                                                                      |
+|---------------------------------------|---------------------------------------------------------------------------|
+| `--fontweight-pet-option-description` | Personal » Pets » Dropdown » Font weight for option "Edit Description"    |
+| `--fontweight-pet-option-headshot`    | Personal » Pets » Dropdown » Font weight for option "Edit Headshot"       |
+| `--fontweight-pet-option-name`        | Personal » Pets » Dropdown » Font weight for option "Change Name"         |
+| `--fontweight-pet-option-case`        | Personal » Pets » Dropdown » Font weight for option "Change Case"         |
+| `--fontweight-pet-option-friends`     | Personal » Pets » Dropdown » Font weight for option "Friends"             |
+| `--fontweight-pet-option-profile`     | Personal » Pets » Dropdown » Font weight for option "View Profile"        |
+| `--fontweight-pet-option-books`       | Personal » Pets » Dropdown » Font weight for option "Books Read"          |
+| `--fontweight-pet-option-food`        | Personal » Pets » Dropdown » Font weight for option "Food Eaten"          |
+| `--fontweight-pet-option-train`       | Personal » Pets » Dropdown » Font weight for option "Train"               |
+| `--fontweight-pet-option-heal`        | Personal » Pets » Dropdown » Font weight for option "Heal"                |
+| `--fontweight-pet-option-scolls`      | Personal » Pets » Dropdown » Font weight for option "Scrolls"             |
+| `--fontweight-pet-option-treasure`    | Personal » Pets » Dropdown » Font weight for option "Treasure (x / xx)"   |
+| `--fontweight-pet-option-tcmass`      | Personal » Pets » Dropdown » Font weight for option "TC Mass Add"         |
+| `--fontweight-pet-option-abandon`     | Personal » Pets » Dropdown » Font weight for option "Abandon"             |
+| `--fontweight-pet-option-give`        | Personal » Pets » Dropdown » Font weight for option "Give to Friend"      |
+<br/>
+
+<table>
+<thead>
+    <tr>
+        <th>Special options</th>
+        <th>❗❗ These options use other CSS variables as value ❗❗</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td><code>--number-of-pets</code></td>
+        <td>
+            <ul>
+                <li>
+                    <b>Personal » Pets</b>
+                    » Number of pets per row, with each pet being 1 column
+                </li>
+                <li>
+                    <b>Valid values</b> are
+                    <code>var(--col-1)</code>, <code>var(--col-2)</code>, <code>var(--col-3)</code>, <code>var(--col-4)</code> and <code>var(--col-5)</code>
+                </li>
+                <li>
+                    <b>Default value</b> is <code>var(--col-3)</code>, which means 3 columns or 3 pets per row
+                </li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td><code>--number-of-pets-training</code></td>
+        <td>
+            <ul>
+                <li>
+                    <b>Subeta » Games » Battle » Training Center</b>
+                    » Number of pets per row, with each pet being 1 column
+                </li>
+                <li>
+                    <b>Valid values</b> are
+                    <code>var(--col-1)</code>, <code>var(--col-2)</code>, <code>var(--col-3)</code>, <code>var(--col-4)</code> and <code>var(--col-5)</code>
+                </li>
+                <li>
+                    <b>Default value</b> is <code>var(--number-of-pets)</code>, which means the default is the same as whatever has been set for the number of pets on the Pets-page
+                </li>
+            </ul>
+        </td>
+    </tr>
+</tbody>
+</table>
 <br/>
 
 ## ⭐ Credits
@@ -315,6 +421,16 @@ There are currently 3 types of variables:
 <br/>
 
 ## ⭐ Changelog (most recent first)
+### 2024/02/29
+- Added option `--display-inventory-locked` to hide the info-text about locked items in [Inventory](https://subeta.net/inventory.php)
+- Added option `--display-stickers-unstack` to hide the "unstack" link under stickers in the [Sticker Album](https://subeta.net/games/stickers.php)
+- Added options to hide individual links in the pet-dropdown ([see the overview » display options for pets](#overview-of-all-available-options))
+- Added options to change the font-weight of individual links in the pet-dropdown ([see the overview » font-weight options for pets](#overview-of-all-available-options))
+- Added special options to change the number of pets shown on the [Pets-page](https://subeta.net/pets.php) and in the [Training Center](https://subeta.net/explore/train.php)
+- Updated styling for categories on [Wishlist](https://subeta.net/wishlists.php)
+- Updated styling on item detail-page in [Inventory](https://subeta.net/inventory.php)
+- Updated year indicators for yearly event shops
+
 ### 2024/02/28
 - Added option `--display-quest-intro` to hide intro-text of main quests
 - Added option `--display-yourshop-quickstock-delete` to hide delete-option completely in quick stock

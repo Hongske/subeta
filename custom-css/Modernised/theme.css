@@ -1,5 +1,3 @@
-/* Last edit by Hong @ 2024/02/27 - 13:59 */
-
 /*====================================================================================================================*/
 /* VARIABLES                                                                                                          */
 /* ===================================================================================================================*/
@@ -58,7 +56,7 @@
     --spacing-y: 1rem;
     --spacing-x: 1rem;
     --backdrop-blur: blur(.5rem);
-    --box-shadow-blur: .75em;
+    --box-shadow-blur: .75rem;
     --box-shadow-color: color-mix(in srgb, var(--black) 33%, transparent);
     --box-shadow--all: 0 0 var(--box-shadow-blur) var(--box-shadow-color);
     --box-shadow--down: 0 .375em var(--box-shadow-blur) var(--box-shadow-color);
@@ -74,6 +72,7 @@
     --alert-padding: var(--spacing);
 
     /* Defaults » Columns --------------------------------------------------------------------------------------------*/
+    --col-1: 100%;
     --col-2: calc((100% - 1rem) / 2);
     --col-3: calc((100% - 2rem) / 3);
     --col-4: calc((100% - 3rem) / 4);
@@ -114,6 +113,9 @@
         --spacing-y: .5rem;
     }
 
+    /* Icons (for elements that can't have :after) -------------------------------------------------------------------*/
+    --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/%3E%3C/svg%3E");
+    --icon-uncheck: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z'/%3E%3C/svg%3E");
     --icon-lock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z'/%3E%3C/svg%3E");
     --icon-unlock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M144 144c0-44.2 35.8-80 80-80c31.9 0 59.4 18.6 72.3 45.7c7.6 16 26.7 22.8 42.6 15.2s22.8-26.7 15.2-42.6C331 33.7 281.5 0 224 0C144.5 0 80 64.5 80 144v48H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H144V144z'/%3E%3C/svg%3E");
 }
@@ -148,6 +150,10 @@ body {
 h1 {
     margin-bottom: var(--font-size-base);
     font-size: var(--font-size-title) !important;
+
+    + br {
+        display: none;
+    }
 }
 
 h2,
@@ -1429,11 +1435,13 @@ input[type='submit'][value^='Exchange your tokens'] {
 .button.buy-button,
 .card .icon.lock.massive,
 .card .fa.fa-lock.fa-4x,
+.category .media-body div a,
 .event-remove-cat,
 .event-remove,
 .fa[style='font-size: .6em; top: -.1em;'],
 .forum-collapse-button,
 .forum-threads-list .fa.fa-comments-o,
+.hover-toggle,
 .item-list-display .item-display-extra .item-list-search,
 .pet_information .text-left b,
 .pet_information .text-left strong,
@@ -3192,7 +3200,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: var(--col-2);
+                width: var(--number-of-pets-training, var(--number-of-pets));
                 padding: var(--spacing) !important;
                 border: var(--border);
                 border-radius: var(--border-radius);
@@ -3380,6 +3388,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     outline: 0;
                     font-size: var(--font-size-base);
                     cursor: pointer;
+                    text-align: center;
                 }
 
                 .btn {
@@ -3394,6 +3403,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                     &[name='train_normal'],
                     &[name='train_auto'] {
+                        text-align: center;
+
                         &:hover {
                             background-color: var(--button-bg-hover);
                             color: var(--button-fg-hover);
@@ -3520,6 +3531,10 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 &:nth-child(3) {
                     order: 2;
                     white-space: nowrap;
+                }
+
+                a {
+                    font-weight: bold;
                 }
             }
         }
@@ -3804,6 +3819,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                gap: .5em;
                 padding: var(--spacing) !important;
                 border: 0 !important;
 
@@ -4424,6 +4440,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             font-size: var(--font-size-base);
 
             h1 {
+                margin: 0;
                 font-size: inherit !important;
             }
         }
@@ -4623,7 +4640,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             display: flex;
             flex-direction: column;
             gap: var(--spacing-y);
-            width: var(--col-2);
+            width: var(--number-of-pets, var(--col-3));
             padding: var(--spacing) !important;
             border: var(--border);
             border-radius: var(--border-radius);
@@ -4706,6 +4723,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 &:focus,
                 &:active {
                     background-color: transparent;
+                    color: var(--navbar-link);
+                    text-decoration: underline;
                 }
 
                 &:nth-child(n + 2):before {
@@ -4714,9 +4733,79 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     pointer-events: none;
                 }
 
-                &[href*='books.php'],
-                &[href*='foods.php'] {
-                    font-weight: bold;
+                &[href*='desc'] {
+                    display: var(--display-pet-option-description, block);
+                    font-weight: var(--fontweight-pet-option-description, normal);
+                }
+
+                &[href*='headshot'] {
+                    display: var(--display-pet-option-headshot, block);
+                    font-weight: var(--fontweight-pet-option-headshot, normal);
+                }
+
+                &[href*='changename'] {
+                    display: var(--display-pet-option-name, block);
+                    font-weight: var(--fontweight-pet-option-name, normal);
+                }
+
+                &[href*='case'] {
+                    display: var(--display-pet-option-case, block);
+                    font-weight: var(--fontweight-pet-option-case, normal);
+                }
+
+                &[href*='friends'] {
+                    display: var(--display-pet-option-friends, block);
+                    font-weight: var(--fontweight-pet-option-friends, normal);
+                }
+
+                &[href*='petinfo'] {
+                    display: var(--display-pet-option-profile, block);
+                    font-weight: var(--fontweight-pet-option-profile, normal);
+                }
+
+                &[href*='books'] {
+                    display: var(--display-pet-option-books, block);
+                    font-weight: var(--fontweight-pet-option-books, normal);
+                }
+
+                &[href*='food'] {
+                    display: var(--display-pet-option-food, block);
+                    font-weight: var(--fontweight-pet-option-food, normal);
+                }
+
+                &[href*='train'] {
+                    display: var(--display-pet-option-train, block);
+                    font-weight: var(--fontweight-pet-option-train, normal);
+                }
+
+                &[href*='healer'] {
+                    display: var(--display-pet-option-heal, block);
+                    font-weight: var(--fontweight-pet-option-heal, normal);
+                }
+
+                &[href*='scrolls'] {
+                    display: var(--display-pet-option-scrolls, block);
+                    font-weight: var(--fontweight-pet-option-scolls, normal);
+                }
+
+                &[href*='treasure.php'] {
+                    display: var(--display-pet-option-treasure, block);
+                    font-weight: var(--fontweight-pet-option-treasure, normal);
+                }
+
+                &[href*='treasure_qs'] {
+                    display: var(--display-pet-option-tcmass, block);
+                    font-weight: var(--fontweight-pet-option-tcmass, normal);
+                }
+
+                &[href*='abandon'] {
+                    display: var(--display-pet-option-abandon, block);
+                    font-weight: var(--fontweight-pet-option-abandon, normal);
+                }
+
+                &[href*='give'] {
+                    display: var(--display-pet-option-give, block);
+                    font-weight: var(--fontweight-pet-option-give, normal);
                 }
             }
 
@@ -5995,6 +6084,86 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 }
             }
 
+            /* Subeta » Games » Collections » Sticker Album */
+            + div[style='width: 80%; margin-right: auto; margin-left: auto;'] {
+                width: 100% !important;
+
+                center {
+                    text-align: left;
+                }
+
+                > div:nth-child(4) {
+                    display: flex;
+                    align-items: center;
+                    gap: var(--spacing-y);
+
+                    @media (max-device-width: 768px) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    form {
+                        margin: 0;
+                    }
+
+                    .hover-toggle {
+                        display: flex;
+                        flex-direction: row-reverse;
+                        align-items: center;
+                        gap: .25em;
+                        color: var(--primary);
+                        font-weight: bold;
+
+                        &:after {
+                            content: '\f070';
+                        }
+
+                        &.hovers-on:after {
+                            content: '\f06e';
+                        }
+                    }
+                }
+
+                #stickerlist {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: .5em
+                }
+
+                .stickerlist_sticker {
+                    display: flex;
+                    flex-direction: column;
+                    gap: .25em;
+                    width: calc((100% - 4.5rem) / 10);
+                    height: auto;
+                    max-height: none;
+                    padding: .5em;
+                    border: 0;
+                    background-color: transparent;
+                    font-size: var(--font-size-small);
+                    box-sizing: border-box;
+                    cursor: move;
+                    cursor: grab;
+
+                    @media (max-device-width: 768px) {
+                        width: calc((100% - 2rem) / 5);
+                    }
+
+                    &:active {
+                        cursor: grabbing;
+                    }
+
+                    a {
+                        display: var(--display-stickers-unstack, block);
+                    }
+
+                    br,
+                    .wl_plus {
+                        display: none;
+                    }
+                }
+            }
+
             /* Personal » Pets » Books Read / Food Eaten » Intro */
             + div[style='overflow:auto'] {
                 display: flex;
@@ -6432,30 +6601,57 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             display: flex;
                             align-items: center;
                             gap: var(--spacing-x);
+                            width: calc(100% - var(--sidebar-width) - 2rem);
                             border: 0 !important;
+                            border-radius: var(--border-radius) var(--border-radius) 0 0;
+                            position: fixed;
+                            bottom: 0;
+                            right: 1rem;
                             font-size: var(--font-size-medium);
+                            box-shadow: var(--box-shadow--all);
+                            z-index: 20;
 
                             @media (max-device-width: 768px) {
                                 flex-wrap: wrap;
+                                width: calc(100% - 2rem);
+                                font-size: 0;
                             }
 
                             b {
                                 display: none;
                             }
 
-                            .btn {
+                            select {
+                                @media (max-device-width: 768px) {
+                                    font-size: var(--font-size-medium) !important;
+                                }
+                            }
+
+                            input {
                                 margin: 0;
                                 line-height: 22px;
 
-                                &.btn-info {
-                                    @media (max-device-width: 768px) {
-                                        width: calc((100% - 1rem) / 2);
-                                    }
-                                }
+                                @media (max-device-width: 768px) {
+                                    background-position: center;
+                                    background-repeat: no-repeat;
+                                    background-size: .75rem;
 
-                                &.btn-success {
-                                    @media (max-device-width: 768px) {
+                                    &.btn-info {
+                                        width: 2rem;
+                                        height: 2rem;
+                                    }
+
+                                    &.btn-info[onclick^='check'] {
+                                        background-image: var(--icon-check);
+                                    }
+
+                                    &.btn-info[onclick^='uncheck'] {
+                                        background-image: var(--icon-uncheck);
+                                    }
+
+                                    &.btn-success {
                                         width: 100%;
+                                        font-size: var(--font-size-medium) !important;
                                     }
                                 }
                             }
@@ -6465,14 +6661,21 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                                 padding: var(--button-padding);
                                 border-radius: var(--button-radius);
 
-                                @media (max-device-width: 768px) {
-                                    flex-grow: 1;
-                                    min-width: 30%;
-                                    width: auto !important;
+                                &[name='qv_opt'] {
+                                    @media (max-device-width: 768px) {
+                                        width: 25% !important;
+                                        margin: 0 -1rem;
+                                    }
                                 }
 
                                 &[name='destination'] {
-                                    width: 15% !important;
+                                    @media (max-device-width: 768px) {
+                                        width: calc(75% - 2rem - 5rem) !important;
+                                    }
+
+                                    @media (min-device-width: 769px) {
+                                        width: 15% !important;
+                                    }
                                 }
                             }
                         }
@@ -6675,31 +6878,182 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     #category-list {
                         gap: var(--spacing-y);
                         padding-top: 1rem;
+                    }
 
-                        .category {
-                            width: var(--col-3);
-                            padding: 0 !important;
-                            border: var(--border);
-                            border-radius: var(--border-radius);
+                    .category {
+                        width: var(--col-3);
+                        padding: 0 !important;
+                        border: var(--border);
+                        border-radius: var(--border-radius);
 
-                            .card,
-                            .card-body {
-                                background-color: transparent;
+                        &.wl-private {
+                            background-color: var(--primary-light);
+                        }
+
+                        .card,
+                        .card-body {
+                            background-color: transparent;
+                        }
+
+                        .card-header {
+                            display: flex;
+                            align-items: center;
+                            height: 1rem;
+                            gap: .5em;
+                            position: relative;
+
+                            .fa.fa-arrows.mr-1 {
+                                order: 3;
+                                margin-left: auto;
+                                margin-right: 0 !important;
                             }
 
-                            .media-body {
-                                @media (max-device-width: 768px) {
-                                    font-size: var(--font-size-small);
-                                }
+                            a {
+                                order: 1;
+                                display: block;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
                             }
 
-                            &.wl-private {
-                                background-color: var(--primary-light);
+                            .badge-secondary {
+                                order: 2;
+                                background-color: var(--primary);
                             }
                         }
 
-                        .badge-secondary {
-                            background-color: var(--primary);
+                        .card-body {
+                            align-items: center;
+                        }
+
+                        .text-center {
+                            display: flex;
+                            align-items: center;
+
+                            .wl_item {
+                                display: none;
+                            }
+
+                            small {
+                                color: var(--black);
+                                font-size: inherit;
+                            }
+                        }
+
+                        .media-body {
+                            display: flex;
+                            justify-content: flex-end;
+                            gap: .5rem;
+                            font-size: 0;
+
+                            div > .fa.fa-star,
+                            a {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: var(--item-size-small);
+                                height: var(--item-size-small);
+                                border: 2px solid transparent;
+                                box-sizing: content-box;
+                            }
+
+                            div > .fa.fa-star,
+                            a:after {
+                                font-size: var(--font-size-base);
+                            }
+
+                            div > .fa.fa-star {
+                                border-radius: var(--border-radius);
+                                background-color: var(--yellow);
+                                color: var(--white);
+                            }
+
+                            div:nth-child(1) {
+                                order: 1;
+                            }
+
+                            div:nth-child(2) {
+                                order: 3;
+                            }
+
+                            div:nth-child(3) {
+                                order: 2;
+                            }
+
+                            div:nth-child(4) {
+                                order: 4;
+                            }
+
+                            a {
+                                padding: var(--button-padding);
+                                border: 2px solid transparent;
+                                border-radius: var(--button-radius);
+                                text-decoration: none;
+                                transition: var(--button-transition);
+                            }
+
+                            a[href^='/wishlists.php/toggle_privacy/'],
+                            a[href^='/wishlists.php/category_rename/'] {
+                                --accent: var(--primary);
+                                background-color: var(--accent);
+                                color: var(--white);
+
+                                &:hover {
+                                    background-color: color-mix(in srgb, var(--accent), var(--black));
+                                }
+                            }
+
+                            a[href^='/wishlists.php/category_default/'],
+                            a[href^='/wishlists.php/category_delete/'] {
+                                border-color: var(--accent);
+                                color: var(--accent);
+
+                                &:hover {
+                                    background-color: var(--accent);
+                                    color: var(--white);
+                                }
+                            }
+
+                            .fa.fa-eye + a {
+                                &:after {
+                                    content: '\f06e';
+                                }
+
+                                &:hover:after {
+                                    content: '\f070';
+                                }
+                            }
+                            .fa.fa-eye-slash + a {
+                                &:after {
+                                    content: '\f070';
+                                }
+
+                                &:hover:after {
+                                    content: '\f06e';
+                                }
+                            }
+
+                            a[href^='/wishlists.php/category_rename/'] {
+                                &:after {
+                                    content: '\f044';
+                                }
+                            }
+
+                            a[href^='/wishlists.php/category_default/'] {
+                                --accent: var(--yellow);
+
+                                &:after {
+                                    content: '\f005';
+                                }
+                            }
+
+                            a[href^='/wishlists.php/category_delete/'] {
+                                --accent: var(--red);
+
+                                &:after {
+                                    content: '\f2ed';
+                                }
+                            }
                         }
                     }
                 }
@@ -6938,18 +7292,24 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         background-color: transparent !important;
                     }
 
-                    + .card {
-                        width: calc(50% - 1rem) !important;
-
-                        @media (max-device-width: 768px) {
-                            width: 100% !important;
-                        }
-                    }
-
                     ~ .card {
                         width: calc(25% - 1rem);
                         border: var(--border);
                         background-color: transparent !important;
+
+                        .card-body {
+                            display: flex;
+                            flex-direction: column;
+                            gap: .25em;
+
+                            > br {
+                                display: none;
+                            }
+                        }
+
+                        .card-title {
+                            font-weight: normal;
+                        }
 
                         .card-title + i,
                         .card-title + i ~ br {
@@ -6958,6 +7318,31 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                         .card-title + i ~ br + a {
                             display: block;
+                        }
+                    }
+
+                    + .card {
+                        width: calc(50% - 1rem);
+
+                        @media (max-device-width: 768px) {
+                            width: 100%;
+                        }
+
+                        .card-body {
+                            display: block;
+
+                            a {
+                                display: block;
+                                margin-top: .25em;
+
+                                + br {
+                                    display: none;
+                                }
+                            }
+
+                            br {
+                                display: block;
+                            }
                         }
                     }
                 }
@@ -6974,11 +7359,21 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     .card-title {
                         margin: 0;
                         font-size: var(--font-size-small) !important;
-                        font-weight: bold;
 
                         a {
                             font-size: var(--font-size-base);
-                            font-weight: normal;
+                            font-weight: bold;
+
+                            &[href^='?act=send']:before {
+                                content: 'Send Item';
+                                display: block;
+                                margin-bottom: .25em;
+                                color: var(--black);
+                                font-size: var(--font-size-small);
+                                font-weight: normal;
+                                text-decoration: none;
+                                pointer-events: none;
+                            }
                         }
 
                         .btn[data-toggle='collapse'] {
@@ -6988,6 +7383,10 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         ~ .collapse {
                             display: block;
                         }
+                    }
+
+                    .card-title ~ a {
+                        font-weight: bold;
                     }
 
                     center {
@@ -7275,6 +7674,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
             /* Personal » Inventory » Locked Info */
             ~ .locked_info {
+                display: var(--display-inventory-locked, block);
                 padding: var(--navbar-padding);
                 border-radius: var(--navbar-radius);
                 background-color: var(--grey);
@@ -7414,7 +7814,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     }
                 }
 
-                .col-12.text-center {
+                .col-12.text-center:not(.alert) {
                     padding: 0;
                     text-align: left !important;
                 }
@@ -8065,9 +8465,10 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     display: none;
                 }
 
-                #autoprice_list .row {
+                .autoprice-item {
                     display: flex;
                     align-items: center;
+                    gap: 0;
                     box-shadow: none !important;
 
                     @media (max-device-width: 768px) {
@@ -8853,10 +9254,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 [data-itemid^='132632'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132638'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132639'] ~ .alert [href*='masquerade']:after,
-                [data-itemid^='13264'] ~ .alert [href*='/masquerade']:after,
+                [data-itemid^="13264"] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132650'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132651'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132652'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^="132660"] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132798'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='132799'] ~ .alert [href*='masquerade']:after,
                 [data-itemid^='133321'] ~ .alert [href*='esther']:after,
