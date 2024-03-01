@@ -300,7 +300,8 @@ You can find the available options in the following parts:
 |-----------------------------------------------|---------------------------------------------------------------------------------------|
 | `--display-floating-item`                     | General » Hide floating items (like flowers during survival)                          |
 | `--display-hustler`                           | General » Hide Hustler-banner                                                         |
-| `--display-sidebar-battlepet-buttons`         | General » Sidebar » Hide buttons for the battlepet widget                             |
+| `--display-sidebar-battlepet-buttons`         | General » Sidebar » Hide buttons for battlepet widget                                 |
+| `--display-sidebar-currency-headers`          | General » Sidebar » Hide the headers (Active, Seasonal, Events) for currencies-widget |
 | `--display-yourshop-item-category`            | Commerce » Your Shops » Edit Items » Hide categories-options                          |
 | `--display-yourshop-quickstock-delete`        | Commerce » Your Shops » Quick Stock » Hide delete-option                              |
 | `--display-yourshop-sales-info`               | Commerce » Your Shops » Sales History » Hide info-text                                |
