@@ -6,6 +6,8 @@
 <br>
 <!--------------------------------------------------------------------------------------------------------------------->
 
+![Example colours](subeta/custom-css/Modernised/screenshots/themes/themes.gif)
+
 ## ⭐ Features
 Below features are mostly for both desktop *and* mobile views, but features preceded by 👁‍🗨 are mobile-only!
 
