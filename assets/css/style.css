@@ -45,6 +45,10 @@ details {
     }
 }
 
+.page-content {
+    padding-top: 0;
+}
+
 .site-footer.h-card {
     display: none;
 }

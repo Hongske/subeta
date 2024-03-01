@@ -6,7 +6,7 @@
 <br>
 <!--------------------------------------------------------------------------------------------------------------------->
 
-![Example colours](screenshots/themes/themes.gif)
+![Example colours](screenshots/themes/themes_subeta.gif)
 
 ## ⭐ Features
 Below features are mostly for both desktop *and* mobile views, but features preceded by 👁‍🗨 are mobile-only!
@@ -280,26 +280,26 @@ You can find the available options in the following parts:
 - [You can find more info about valid CSS colour values here](https://www.w3schools.com/cssref/css_colors_legal.php)
 - These are used to customise the **colours** on the website
 
-| Option            | Info                                        | Default value |
-|-------------------|---------------------------------------------|---------------|
-| `--color-primary` | Main theme colour                           | `#9BA84F`     |
-| `--color-blue`    | Blue colour, used for alerts                | `#0DCAF0`     |
-| `--color-green`   | Green colour, used for alerts, buttons, etc | `#20C997`     |
-| `--color-red`     | Red colour, used for alerts, buttons, etc   | `#DC3545`     |
-| `--color-yellow`  | Yellow colour, used for alerts              | `#FFC107`     |
+| Option            | Info                                        | Default value                                                           |
+|-------------------|---------------------------------------------|-------------------------------------------------------------------------|
+| `--color-primary` | Main theme colour                           | `#9BA84F`<span style="margin-left:.5em;color:#9BA84F;">&#9632;</span>   |
+| `--color-blue`    | Blue colour, used for alerts                | `#0DCAF0`<span style="margin-left:.5em;color:#0DCAF0;">&#9632;</span>   |
+| `--color-green`   | Green colour, used for alerts, buttons, etc | `#20C997`<span style="margin-left:.5em;color:#20C997;">&#9632;</span>   |
+| `--color-red`     | Red colour, used for alerts, buttons, etc   | `#DC3545`<span style="margin-left:.5em;color:#DC3545;">&#9632;</span>   |
+| `--color-yellow`  | Yellow colour, used for alerts              | `#FFC107`<span style="margin-left:.5em;color:#FFC107;">&#9632;</span>   |
 
 Below are some examples of accent colours that you can use, which have been extracted from the default Subeta templates.
 These are also the colours that are displayed in the opening GIF at the top of this page!
-| HEX-code                                              | Theme             |
-|-------------------------------------------------------|-------------------|
-| `#6FA8BF`<span style="color:#6FA8BF;">&#9632;</span> | Arctic Frost      |
-| `#642039`<span style="color:#642039;">&#9632;</span> | Darkside          |
-| `#642039`<span style="color:#642039;">&#9632;</span> | Delphi Beach      |
-| `#3F8C7E`<span style="color:#3F8C7E;">&#9632;</span> | Masquerade        |
-| `#D9A84E`<span style="color:#D9A84E;">&#9632;</span> | Masquerade        |
-| `#687E8C`<span style="color:#687E8C;">&#9632;</span> | Riverside Valley  |
-| `#33402D`<span style="color:#33402D;">&#9632;</span> | Shadowglen        |
-| `#63494F`<span style="color:#63494F;">&#9632;</span> | Shadowglen        |
+| HEX-code                                                              | Theme             |
+|-----------------------------------------------------------------------|-------------------|
+| `#6FA8BF`<span style="margin-left:.5em;color:#6FA8BF;">&#9632;</span> | Arctic Frost      |
+| `#642039`<span style="margin-left:.5em;color:#642039;">&#9632;</span> | Darkside          |
+| `#37A6A6`<span style="margin-left:.5em;color:#37A6A6;">&#9632;</span> | Delphi Beach      |
+| `#3F8C7E`<span style="margin-left:.5em;color:#3F8C7E;">&#9632;</span> | Masquerade        |
+| `#D9A84E`<span style="margin-left:.5em;color:#D9A84E;">&#9632;</span> | Masquerade        |
+| `#687E8C`<span style="margin-left:.5em;color:#687E8C;">&#9632;</span> | Riverside Valley  |
+| `#33402D`<span style="margin-left:.5em;color:#33402D;">&#9632;</span> | Shadowglen        |
+| `#63494F`<span style="margin-left:.5em;color:#63494F;">&#9632;</span> | Shadowglen        |
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
