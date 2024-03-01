@@ -1,4 +1,10 @@
-> <br> [Home](https://hongske.github.io/subeta/) » **Modernised Theme** <br><br>
+<div style="padding: 1em 1em 0; border: 1px solid #404040; border-radius: 3px; background: #404040; font-style: normal;">
+
+[Home](https://hongske.github.io/subeta/) » **Modernised Theme** • A CustomCSS-theme for desktop and mobile
+</div>
+<!--------------------------------------------------------------------------------------------------------------------->
+<br>
+<!--------------------------------------------------------------------------------------------------------------------->
 
 ## ⭐ Features
 Below features are mostly for both desktop *and* mobile views, but features preceded by 👁‍🗨 are mobile-only!
@@ -27,9 +33,26 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Made sidebar wider
   - Moved the time-display to the left and made it bigger
   - Modified the sidebar-toggle so that it's an icon instead of text
-  - Modified sidebar-widgets so they can only be dragged via their icon (instead of the whole widget)
-  - Added custom styling to various sidebar-widgets
-  - Added option `--display-sidebar-battlepet-buttons` to hide buttons for the battlepet-widget
+  - Restyled sidebar-widgets:
+    - Modified sidebar-widgets so they can only be dragged via their icon (instead of by the whole header or widget)
+    - Restyled "Active Pet"
+    - Restyled "Battle Pet"
+      - Added option `--display-sidebar-battlepet-buttons` to hide buttons
+      - Emphasised the training center status
+    - Restyled "Friend Feed"
+    <!-- TODO - Restyled "Melody's Cottage" -->
+    - Restyled "Navigation"
+    - Restyled "Special Currencies"
+      - Added option `--display-sidebar-currency-headers` to hide the headers (Active, Seasonal and Events)
+    - Restyled "Shop Search" and "Search Subeta"
+    - Restyled "Subscriptions"
+    - Restyled "Your Avatar" and "Your Account"
+      - Removed headers
+      - Snapped the widgets together if you put "Your Avatar" **above** "Your Account"
+    - Restyled "The Oracle" and "Coda Caves"
+      - Removed headers
+      - Snapped the widgets together if you put "The Oracle" **above** "Coda Caves"
+      - Snapped the widgets together if you put "Coda Caves" **above** "The Oracle"
 - Modified item-views
   - Modified the item orientation so that item-images and -text are shown next to each other (instead of below each other)
   - Modified styling for wishlist-items so that they're more obvious
@@ -55,7 +78,6 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Restyled **[main quests](https://subeta.net/quests.php/wizard)**
     - Added option `--display-quest-intro` to hide intro-text
     - Moved the "Quit Quest" button to be further away from "Finish Quest", so you don't click it accidentally (only for desktop!)
-    - Removed the item-description on hover (less distraction)
   - Restyled **[wizard exchange](https://subeta.net/explore/wizard_exchange.php)**
   - Restyled **[Major Drills' quests](https://subeta.net/explore/major_drills.php)**
   - Restyled **[Shinwa's quests](https://subeta.net/explore/goddess.php)**
@@ -114,6 +136,13 @@ Below features are mostly for both desktop *and* mobile views, but features prec
       - Fixed the lock-icon on the locked-message for locked topics, so it's less ginormous
       - Removed the ping-options from the reply form
       - 👁‍🗨 Removed the formatting-options from the reply form
+  <!-- TODO - Restyled **[Subscribed Threads](https://subeta.net/forums.php/subscriptions)** -->
+  <!-- TODO - Restyled **[Recent Topics](https://subeta.net/forums.php/recent/topics)** -->
+  <!-- TODO - Restyled **[Recent Posts](https://subeta.net/forums.php/recent/posts)** -->
+  <!-- TODO - Restyled **[Groups](https://subeta.net/forums.php/groups/)** -->
+  <!-- TODO - Restyled **[Admin Posts](https://subeta.net/forums.php/admin_posts)** -->
+  <!-- TODO - Restyled **[Options](https://subeta.net/preferences.php?act=forum)** -->
+  <!-- TODO - Restyled **[sCode](https://subeta.net/forums/include/codes.php)** -->
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
@@ -430,8 +459,26 @@ You can find the available options in the following parts:
 <br>
 <!--------------------------------------------------------------------------------------------------------------------->
 
-## ⭐ Changelog (most recent first)
-<strong>📅 2024/02/29</strong>
+## ⭐ Changelog
+<strong>📅 2024/03/01</strong>
+
+- Added styling for minions to the [Pets-page](https://subeta.net/pets.php)
+- Fixed bookmark styling on the "Search Subeta" page (default styling had them all in italics)
+- Fixed margin on the "Achievement Unlocked" message, when it appears in the main portion of the page
+- Updated styling on item detail-page in [Inventory](https://subeta.net/inventory.php)
+- Updated styling for sidebar-widgets
+  - Restyled "Coda Caves" and "The Oracle" widgets
+    - Removed headers
+    - Snapped the widgets together if you put "The Oracle" **above** "Coda Caves"
+    - Snapped the widgets together if you put "Coda Caves" **above** "The Oracle"
+  - Updated "Special Currencies" widget
+    - Added option `--display-sidebar-currency-headers` to hide the headers (Active, Seasonal and Events) for "Active Currencies"
+- Updated styling on the "+ wishlist" and "- wishlist" hovers to add and remove items from your wishlist
+
+<br>
+<details>
+<summary>📅 2024/02/29</summary>
+
 - Added option `--display-inventory-locked` to hide the info-text about locked items in [Inventory](https://subeta.net/inventory.php)
 - Added option `--display-stickers-unstack` to hide the "unstack" link under stickers in the [Sticker Album](https://subeta.net/games/stickers.php)
 - Added options to hide individual links in the pet-dropdown ([see the display options for pets](#⭐-customising-the-theme))
@@ -442,6 +489,7 @@ You can find the available options in the following parts:
 - Updated styling for categories on [Wishlist](https://subeta.net/wishlists.php)
 - Updated styling on item detail-page in [Inventory](https://subeta.net/inventory.php)
 - Updated year indicators for yearly event shops
+</details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/02/28</summary>
