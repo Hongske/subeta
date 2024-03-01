@@ -6,7 +6,7 @@
 <br>
 <!--------------------------------------------------------------------------------------------------------------------->
 
-![Example colours](subeta/custom-css/Modernised/screenshots/themes/themes.gif)
+![Example colours](screenshots/themes/themes.gif)
 
 ## ⭐ Features
 Below features are mostly for both desktop *and* mobile views, but features preceded by 👁‍🗨 are mobile-only!
@@ -287,6 +287,19 @@ You can find the available options in the following parts:
 | `--color-green`   | Green colour, used for alerts, buttons, etc | `#20C997`     |
 | `--color-red`     | Red colour, used for alerts, buttons, etc   | `#DC3545`     |
 | `--color-yellow`  | Yellow colour, used for alerts              | `#FFC107`     |
+
+Below are some examples of accent colours that you can use, which have been extracted from the default Subeta templates.
+These are also the colours that are displayed in the opening GIF at the top of this page!
+| HEX-code                                              | Theme             |
+|-------------------------------------------------------|-------------------|
+| `#6FA8BF`<span style="color:#6FA8BF;">&#9632;</span> | Arctic Frost      |
+| `#642039`<span style="color:#642039;">&#9632;</span> | Darkside          |
+| `#642039`<span style="color:#642039;">&#9632;</span> | Delphi Beach      |
+| `#3F8C7E`<span style="color:#3F8C7E;">&#9632;</span> | Masquerade        |
+| `#D9A84E`<span style="color:#D9A84E;">&#9632;</span> | Masquerade        |
+| `#687E8C`<span style="color:#687E8C;">&#9632;</span> | Riverside Valley  |
+| `#33402D`<span style="color:#33402D;">&#9632;</span> | Shadowglen        |
+| `#63494F`<span style="color:#63494F;">&#9632;</span> | Shadowglen        |
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
