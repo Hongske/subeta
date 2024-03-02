@@ -7,8 +7,7 @@
     }
 }
 
-li code,
-td code {
+li code, td code {
     white-space: nowrap;
 }
 
@@ -17,6 +16,7 @@ td {
 }
 
 details {
+    padding: 1rem;
     border: 1px solid #404040;
     border-radius: 3px;
     background: #212121;
@@ -25,23 +25,20 @@ details {
         margin-top: .5em;
     }
 
+    &[open] {
+        summary {
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+            border-bottom: 1px solid #404040;
+        }
+    }
+
     summary {
-        padding: .5em;
-        border-bottom: 1px solid #404040;
         cursor: pointer;
 
         &:hover {
             text-decoration: underline;
         }
-    }
-
-    ul {
-        padding: 1em .5em;
-    }
-
-    table {
-        width: calc(100% - 2rem);
-        margin: 1rem;
     }
 }
 
