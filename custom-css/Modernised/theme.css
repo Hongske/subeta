@@ -211,7 +211,10 @@ span {
 }
 
 .form-control,
-input {
+input,
+label,
+select,
+textarea {
     margin: 0;
     font-size: inherit !important;
 }
@@ -1308,10 +1311,6 @@ input {
                     gap: .5em;
                     margin: 0;
                     position: relative;
-                }
-
-                input {
-                    margin: 0;
                 }
 
                 input[type='text'] {
@@ -3963,7 +3962,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             input,
                             button {
                                 padding: var(--button-padding);
-                                margin: 0;
                                 border: 0;
                                 border-radius: var(--border-radius);
                                 outline: none;
@@ -3971,6 +3969,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             }
 
                             button {
+                                margin: 0;
                                 color: var(--white);
                                 transition: var(--button-transition);
                                 font-weight: bold;
@@ -4313,7 +4312,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         margin-bottom: 1rem;
                         padding: 1em;
                         border: 0;
-                        font-size: var(--font-size-small);
+                        font-size: var(--font-size-small) !important;
                         line-height: normal;
 
                         @media (max-device-width: 768px) {
@@ -5183,7 +5182,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                         input,
                         select {
-                            margin: 0;
                             padding: var(--button-padding);
                             border: var(--border);
                             border-radius: var(--button-radius);
@@ -5197,7 +5195,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     /* Personal » Preferences » Content » Forms (CustomCSS, Profile) */
                     center {
                         textarea {
-                            margin: 0;
                             padding: .5em;
                             border: var(--border);
                             border-radius: var(--border-radius);
@@ -5437,7 +5434,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                 input[type='radio'] {
                     flex-shrink: 0;
-                    margin: 0;
                 }
             }
 
@@ -5554,6 +5550,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     flex-direction: column;
                     align-items: center;
                     gap: var(--spacing-y);
+                    text-align: center;
+
+                    .alert-heading {
+                        margin-bottom: 0;
+                    }
 
                     hr {
                         display: none;
@@ -6824,7 +6825,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             }
 
                             input {
-                                margin: 0;
                                 line-height: 22px;
 
                                 @media (max-device-width: 768px) {
@@ -6853,7 +6853,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             }
 
                             select {
-                                margin: 0;
                                 padding: var(--button-padding);
                                 border-radius: var(--button-radius);
 
@@ -7065,10 +7064,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 .card-body {
                     .form-inline[action='/wishlists.php/searchcats/'] {
                         gap: var(--spacing-y);
-
-                        .btn-info {
-                            margin: 0;
-                        }
                     }
 
                     #category-list {
@@ -7281,7 +7276,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     margin-bottom: 0;
 
                     label {
-                        margin: 0;
                         white-space: nowrap;
                     }
                 }
@@ -7321,10 +7315,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                                 .nav-link {
                                     padding: 0;
-
-                                    label {
-                                        margin: 0;
-                                    }
                                 }
                             }
                         }
@@ -7355,7 +7345,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             flex-wrap: wrap;
                             align-items: center;
                             gap: var(--spacing-y);
-                            margin: 0;
                         }
 
                         p {
@@ -7510,8 +7499,14 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             flex-direction: column;
                             gap: .25em;
 
-                            > br {
+                            a + br,
+                            b + br,
+                            > br + br {
                                 display: none;
+                            }
+
+                            a + br + br {
+                                display: block;
                             }
                         }
 
@@ -7544,14 +7539,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                                 display: block;
                                 margin-top: .25em;
                                 font-weight: bold;
-
-                                + br {
-                                    display: none;
-                                }
-                            }
-
-                            br {
-                                display: block;
                             }
                         }
                     }
@@ -8144,10 +8131,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 .form-text {
                     display: none;
                 }
-
-                .btn {
-                    margin: 0;
-                }
             }
 
             /* Commerce » Your Shops » Content » Edit Items » Pagination */
@@ -8382,7 +8365,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                             input,
                             select {
-                                margin: 0;
                                 border: 1px solid var(--black);
                                 border-radius: var(--border-radius);
                             }
@@ -8415,7 +8397,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         margin: 0;
 
                         label {
-                            margin: 0;
                             white-space: nowrap;
                         }
                     }
@@ -8579,7 +8560,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                     input {
                         display: block;
-                        margin: 0;
                     }
                 }
 
@@ -9463,7 +9443,6 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     }
 
                     .btn-primary {
-                        margin: 0;
                         font-size: 1rem !important;
                     }
                 }

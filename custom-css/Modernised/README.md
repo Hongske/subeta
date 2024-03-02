@@ -89,7 +89,7 @@
   - Restyled **[wizard exchange](https://subeta.net/explore/wizard_exchange.php)**
   - Restyled **[Major Drills' quests](https://subeta.net/explore/major_drills.php)**
   - Restyled **[Shinwa's quests](https://subeta.net/explore/goddess.php)**
-- Restyled **[Your Events](https://subeta.net/events.php)** • ![📷 screenshot desktop](screenshots/pages/events--desktop.png) • [📷 screenshot mobile](screenshots/pages/events--mobile.png)
+- Restyled **[Your Events](https://subeta.net/events.php)** • ![📷 screenshot desktop](screenshots/pages/events--desktop.png) • ![📷 screenshot mobile](screenshots/pages/events--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
@@ -193,9 +193,9 @@
   - Added option `--display-pet-zapper-warning` to hide warning-text
   - Added option `--display-pet-zapper-intro` to hide intro-text
   - Added option `--display-pet-zapper-adoption` to hide adoption-text
-- **[Explore » Delphi » Carnival » Ruffie Raffle](https://subeta.net/explore/carnival/ruffie_raffle.php)** • ![📷 screenshot desktop](screenshots/pages/subeta__explore__delphi__ruffie_raffle--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__delphi__ruffie_raffle--mobile.png)
+- **[Explore » Delphi » Carnival » Ruffie Raffle](https://subeta.net/explore/carnival/ruffie_raffle.php)** • ![📷 screenshot desktop](screenshots/pages/subeta__explore__delphi__ruffie_raffle--desktop.png) • ![📷 screenshot mobile](screenshots/pages/subeta__explore__delphi__ruffie_raffle--mobile.png)
   - 👁‍🗨 Removed NPC-image
-- **[Explore » Galaxan Wastes » The Rift](https://subeta.net/explore/rift/)** • ![📷 screenshot desktop](screenshots/pages/subeta__explore__galaxan_wastes__rift--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__galaxan_wastes__rift--mobile.png)
+- **[Explore » Galaxan Wastes » The Rift](https://subeta.net/explore/rift/)** • ![📷 screenshot desktop](screenshots/pages/subeta__explore__galaxan_wastes__rift--desktop.png) • ![📷 screenshot mobile](screenshots/pages/subeta__explore__galaxan_wastes__rift--mobile.png)
   - 👁‍🗨 Removed image
 - **[Explore » Shadowglen » Crypts](https://subeta.net/explore/crypts.php)**
   - Made the crypts-map-images scrollable on mobile
@@ -230,7 +230,7 @@
     - Added option `--display-stickers-unstack` to hide the "unstack" link under stickers
   - Restyled **[Minion Zoo](https://subeta.net/games/minions/index.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__collections__minions--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__collections__minions--mobile.png)
     - Removed all gaming options so that it's just a collection
-- **[Games » Miscellaneous » Item Hunter](https://subeta.net/games/hunt.php)** • ![📷 screenshot desktop](screenshots/pages/subeta__games__misc__item_hunter--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__misc__item_hunter--mobile.png)
+- **[Games » Miscellaneous » Item Hunter](https://subeta.net/games/hunt.php)** • ![📷 screenshot desktop](screenshots/pages/subeta__games__misc__item_hunter--desktop.png) • ![📷 screenshot mobile](screenshots/pages/subeta__games__misc__item_hunter--mobile.png)
   - Restyled content
   - 👁‍🗨 Removed NPC-image, NPC-name and intro-text
 - **[News](https://subeta.net/news.php)** • [📷 screenshot desktop](screenshots/pages/subeta__news--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__news--mobile.png)
