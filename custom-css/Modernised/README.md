@@ -63,7 +63,7 @@
       - Snapped the widgets together if you put "Coda Caves" **above** "The Oracle"
 - Modified item-views
   - Modified the item orientation so that item-images and -text are shown next to each other (instead of below each other)
-  - Modified styling for wishlist-items so that they're more obvious • [📷 screenshot 1](screenshots/widget-1.png) • [📷 screenshot 2](screenshots/widget-2.png) • [📷 screenshot 3](screenshots/widget-3.png)
+  - Modified styling for wishlist-items so that they're more obvious • [📷 screenshot](screenshots/wishlist.gif)
   - Removed styling for wishlist-items in forum-images and signatures
   - Modified item-hovers so that the text in it will always be shown below the image (if there's one)
   - 👁‍🗨 Moved the item-hovers so that they're always centered on the page
