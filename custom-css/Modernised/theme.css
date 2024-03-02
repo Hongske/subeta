@@ -63,6 +63,7 @@
 
     /* Defaults ------------------------------------------------------------------------------------------------------*/
     --content-width-max: 1300px;
+    --content-width-fixed: calc(1300px - var(--sidebar-width) - 2rem);
     --content-col-4: calc((100% - var(--spacing-y)) / 12 * 4);
     --content-col-8: calc((100% - var(--spacing-y)) / 12 * 8);
     --menu-height: 4rem;
@@ -105,12 +106,17 @@
         --col-5: 100%;
         --content-col-4: 100%;
         --content-col-8: 100%;
+        --content-width-fixed: calc((100vw / var(--mobile-zoom)) - 2rem);
         --item-size: var(--item-size-small);
         --font-size-title: 1.25rem;
         --menu-height: 6rem;
         --sidebar-width: 100%;
         --sidebar-height: calc((100vh / var(--mobile-zoom)) - var(--menu-height));
         --spacing-y: .5rem;
+    }
+
+    @media (min-device-width: 769px) and (max-width: 1300px) {
+        --content-width-fixed: calc(100% - var(--sidebar-width) - 2rem);
     }
 
     /* Icons (for elements that can't have :after) -------------------------------------------------------------------*/
@@ -206,6 +212,7 @@ span {
 
 .form-control,
 input {
+    margin: 0;
     font-size: inherit !important;
 }
 
@@ -1264,6 +1271,23 @@ input {
                 .text-center {
                     text-align: left !important;
                 }
+
+                b {
+                    display: flex;
+                    align-items: center;
+                    gap: .5em;
+
+                    .wl_item {
+                        width: var(--item-size-small);
+                        height: var(--item-size-small);
+                        border-color: var(--white);
+                    }
+
+                    .wl_item .wl,
+                    br {
+                        display: none;
+                    }
+                }
             }
 
             .x-js-widget-codacave {
@@ -1445,6 +1469,22 @@ input[type='submit'][value^='Search Foods'] {
         &:hover {
             background-color: var(--button-bg-hover) !important;
             color: var(--button-fg-hover) !important;
+        }
+    }
+
+    &.positive {
+        background-color: var(--green) !important;
+
+        &:hover {
+            background-color: var(--green-dark) !important;
+        }
+    }
+
+    &.negative {
+        background-color: var(--red) !important;
+
+        &:hover {
+            background-color: var(--red-dark) !important;
         }
     }
 
@@ -1681,6 +1721,7 @@ img[src^='//img.subeta.net/icons/lock'] {
 
         &:nth-child(n + 2):before {
             content: '|';
+            color: var(--navbar-fg);
         }
 
         &.bg-light {
@@ -2593,7 +2634,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         position: absolute;
         top: 50%;
         left: auto;
-        right: 0;
+        right: -1px;
         transform: translate(0, -50%);
         color: var(--white);
         opacity: 0;
@@ -2610,19 +2651,19 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
     &:hover .wl_plus {
         transform: translate(50%, -50%);
-        opacity: .75;
+        opacity: 1;
 
         &:hover {
-            transform: translate(50%, -50%) scale(1.25);
-            opacity: 1;
+            transform: translate(50%, -50%) scale(1.5);
+            border: 2px solid white !important;
         }
     }
 
-
-
     &.non_wishlist {
-        &:hover {
-            border-color: var(--green);
+        @media (min-device-width: 769px) {
+            &:hover {
+                border-color: var(--green);
+            }
         }
 
         .wl_plus {
@@ -2638,8 +2679,10 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         border-color: var(--primary);
         background-color: var(--primary);
 
-        &:hover {
-            border-color: var(--red);
+        @media (min-device-width: 769px) {
+            &:hover {
+                border-color: var(--red);
+            }
         }
 
         img {
@@ -3891,39 +3934,108 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 #subject {
                     margin: 0;
                     font-size: var(--font-size-base);
-                }
 
-                .topic.lock .icon.lock,
-                .topic.sub .icon.checkmark {
-                    font-size: 1rem;
-                    opacity: 1;
-                    cursor: pointer;
+                    &.editable-click {
+                        border-bottom-color: var(--primary-light);
 
-                    &:before {
-                        display: none;
+                        + .editable-container.editable-inline .editableform .control-group > div {
+                            display: flex;
+                            align-items: center;
+                            gap: .5rem;
+                            width: 100%;
+
+                            @media (max-device-width: 768px) {
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+
+                            .editable-buttons {
+                                display: flex;
+                                align-items: center;
+                                gap: .5rem;
+                                margin: 0;
+                            }
+
+                            input {
+                                min-width: var(--sidebar-width);
+                            }
+
+                            input,
+                            button {
+                                padding: var(--button-padding);
+                                margin: 0;
+                                border: 0;
+                                border-radius: var(--border-radius);
+                                outline: none;
+                                font-size: var(--font-size-base);
+                            }
+
+                            button {
+                                color: var(--white);
+                                transition: var(--button-transition);
+                                font-weight: bold;
+
+                                &.editable-submit {
+                                    background-color: var(--green);
+                                    text-transform: uppercase;
+
+                                    &:hover {
+                                        background-color: var(--green-dark);
+                                    }
+                                }
+
+                                &.editable-cancel {
+                                    background-color: var(--red);
+                                    text-transform: capitalize;
+
+                                    &:hover {
+                                        background-color: var(--red-dark);
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
 
-                .topic.lock .icon.lock {
-                    &:after {
-                        content: '\f09c';
-                    }
+                .menu {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-end;
+                    gap: .25em;
+                    text-align: right;
 
-                    &:hover:after {
-                        content: '\f023';
-                    }
-                }
+                    .icon {
+                        margin: 0;
+                        font-size: 1rem;
+                        opacity: 1;
+                        cursor: pointer;
 
-                .topic.sub .icon.checkmark {
-                    &:hover:after,
-                    &.green:after {
-                        content: '\f0f3';
-                    }
+                        &:before {
+                            display: none;
+                        }
 
-                    &:after,
-                    &.green:hover:after {
-                        content: '\f1f6';
-                        color: var(--white);
+                        &.lock {
+                            &:after {
+                                content: '\f09c';
+                            }
+
+                            &:hover:after {
+                                content: '\f023';
+                            }
+                        }
+
+                        &.checkmark {
+                            &:hover:after,
+                            &.green:after {
+                                content: '\f0f3';
+                            }
+
+                            &:after,
+                            &.green:hover:after {
+                                content: '\f1f6';
+                                color: var(--white);
+                            }
+                        }
                     }
                 }
             }
@@ -4343,8 +4455,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 }
 
                 ~ .card.bg-light.m-3 {
-                    max-width: calc(var(--content-width-max) - var(--sidebar-width) - 2rem);
-                    width: calc(100% - var(--sidebar-width) - 2rem);
+                    width: var(--content-width-fixed);
                     margin: 0 !important;
                     padding: var(--spacing);
                     border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -4390,6 +4501,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                                 }
 
                                 #post_reply_body {
+                                    height: 8em;
+                                    min-height: 4em;
                                     padding: 1em;
                                     border: 0;
                                     font-size: var(--font-size-small) !important;
@@ -5291,7 +5404,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         form[action='/explore/rift/index.php'] {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-start;
             gap: var(--spacing-y);
 
             > p {
@@ -5330,13 +5443,19 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
             .btn-info {
                 width: 20%;
-                margin: 0 30%;
+                margin: 0 40%;
 
                 @media (max-device-width: 768px) {
                     width: 100%;
                     margin: 0;
                 }
             }
+        }
+
+        form[action='/explore/rift/index.php'] ~ .m-3.p-3 {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding: 0 !important;
         }
     }
 
@@ -5562,11 +5681,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
     /* Subeta » News */
     style + .jumbotron.pt-3.pb-3 {
-        /* Subeta » News » Title */
-        display: flex;
+        /* Subeta » News » Intro */
+        display: var(--display-news-intro, flex);
         align-items: center;
         gap: 2rem;
-        margin-bottom: 0;
+        margin-bottom: calc(var(--spacing-y) * 2);
         padding: var(--spacing) !important;
         background-color: var(--primary);
         color: var(--white);
@@ -5583,7 +5702,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             }
 
             a {
-                color: var(--primary-light);
+                color: inherit;
+                font-weight: bold;
             }
         }
 
@@ -5595,11 +5715,12 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             > .col-9,
             > .col-3 {
                 width: 100%;
-                margin-top: calc(var(--spacing-y) * 2);
                 padding: 0;
             }
 
             > .col-9 {
+                margin-top: calc(var(--spacing-y) * 2);
+
                 > .ui.header {
                     margin-bottom: var(--spacing-y);
                     padding: var(--spacing);
@@ -6612,6 +6733,10 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                     /* Personal » Vault » Item Storage » Content */
                     #vaults {
+                        @media (max-device-width: 768px) {
+                            padding-bottom: 3rem;
+                        }
+
                         /* Personal » Vault » Item Storage » Content » Items */
                         .row.mx-auto.text-center {
                             gap: var(--spacing-y);
@@ -6673,12 +6798,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             display: flex;
                             align-items: center;
                             gap: var(--spacing-x);
-                            width: calc(100% - var(--sidebar-width) - 2rem);
+                            width: var(--content-width-fixed);
                             border: 0 !important;
                             border-radius: var(--border-radius) var(--border-radius) 0 0;
                             position: fixed;
                             bottom: 0;
-                            right: 1rem;
                             font-size: var(--font-size-medium);
                             box-shadow: var(--box-shadow--all);
                             z-index: 20;
@@ -7419,6 +7543,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             a {
                                 display: block;
                                 margin-top: .25em;
+                                font-weight: bold;
 
                                 + br {
                                     display: none;
@@ -8041,6 +8166,10 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 }
 
                 .card-body {
+                    @media (max-device-width: 768px) {
+                        padding-bottom: 2rem;
+                    }
+
                     table {
                         overflow: hidden;
                         margin-bottom: 1rem;
@@ -8266,9 +8395,36 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 }
 
                 .card-footer {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: var(--spacing-y);
+                    width: var(--content-width-fixed);
                     border-radius: var(--border-radius);
                     border: 0;
+                    position: fixed;
+                    bottom: 0;
                     background-color: var(--primary-light);
+                    z-index: 2;
+                    box-shadow: var(--box-shadow--all);
+
+                    .form-group {
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-x);
+                        margin: 0;
+
+                        label {
+                            margin: 0;
+                            white-space: nowrap;
+                        }
+                    }
+
+                    .m4 {
+                        @media (max-device-width: 768px) {
+                            flex-grow: 1;
+                        }
+                    }
                 }
             }
 

@@ -2,14 +2,20 @@
 
 [Home](https://hongske.github.io/subeta/) » **Modernised Theme** • A CustomCSS-theme for desktop and mobile
 </div>
-<!--------------------------------------------------------------------------------------------------------------------->
+
+<!-- TODO - Write JS to generate override-variables based on checkboxed  -->
+<!-- TODO - Minify CSS -->
+
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 <br>
-<!--------------------------------------------------------------------------------------------------------------------->
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
-![Example colours](screenshots/themes/themes_subeta.gif)
+![Example colours](screenshots/themes_subeta.gif)
 
-## ⭐ Features
-Below features are mostly for both desktop *and* mobile views, but features preceded by 👁‍🗨 are mobile-only!
+## ⭐ Features & screenshots
+- Features without an icon are for both desktop and mobile screens
+- 👁‍🗨 means this feature is only for mobile
+- 📷 means this is a link to a screenshot
 
 <details>
 <summary>📌 List of general layout changes</summary>
@@ -20,7 +26,7 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Upated icons (using FontAwesome 6.5.1)
   - Gave the total layout a max-width, so that it doesn't look so stretched on bigger screens
   - Added mobile version for smartphone users
-- Modified main menu-bar
+- Modified main menu-bar • [📷 screenshot desktop](screenshots/menu--desktop.png) • [📷 screenshot mobile](screenshots/menu--mobile.png)
   - Fixed the main menu-bar to the top of the page, so that it's always in view (even if you scroll down)
   - Reversed the order of menu-items
   - Added icons to the menu-items
@@ -37,27 +43,27 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Modified the sidebar-toggle so that it's an icon instead of text
   - Restyled sidebar-widgets:
     - Modified sidebar-widgets so they can only be dragged via their icon (instead of by the whole header or widget)
-    - Restyled "Active Pet"
+    - Restyled "Active Pet" • [📷 screenshot](screenshots/sidebar/widget__activepet.png)
     - Restyled "Battle Pet"
-      - Added option `--display-sidebar-battlepet-buttons` to hide buttons
-      - Emphasised the training center status
-    - Restyled "Friend Feed"
+      - Added option `--display-sidebar-battlepet-buttons` to hide buttons • [📷 screenshot](screenshots/sidebar/widget__battlepet-2.png)
+      - Emphasised the training center status • [📷 screenshot](screenshots/sidebar/widget__battlepet-1.gif)
+    - Restyled "Friend Feed" • [📷 screenshot](screenshots/sidebar/widget__friendfeed.png)
     <!-- TODO - Restyled "Melody's Cottage" -->
-    - Restyled "Navigation"
-    - Restyled "Special Currencies"
+    - Restyled "Navigation" • [📷 screenshot](screenshots/sidebar/widget__navigation.png)
+    - Restyled "Special Currencies" • [📷 screenshot](screenshots/sidebar/widget__currencies.png)
       - Added option `--display-sidebar-currency-headers` to hide the headers (Active, Seasonal and Events)
-    - Restyled "Shop Search" and "Search Subeta"
-    - Restyled "Subscriptions"
+    - Restyled "Shop Search" and "Search Subeta" • [📷 screenshot](screenshots/sidebar/widget__search.png)
+    - Restyled "Subscriptions" • [📷 screenshot](screenshots/sidebar/widget__subscriptions.png)
     - Restyled "Your Avatar" and "Your Account"
-      - Removed headers
-      - Snapped the widgets together if you put "Your Avatar" **above** "Your Account"
+      - Removed headers • [📷 screenshot avatar](screenshots/sidebar/widget__avatar.png) • [📷 screenshot account](screenshots/sidebar/widget__account.png)
+      - Snapped the widgets together if you put "Your Avatar" **above** "Your Account" • [📷 screenshot](screenshots/sidebar/widget__combo_avatar_account.png)
     - Restyled "The Oracle" and "Coda Caves"
       - Removed headers
-      - Snapped the widgets together if you put "The Oracle" **above** "Coda Caves"
+      - Snapped the widgets together if you put "The Oracle" **above** "Coda Caves" • [📷 screenshot](screenshots/sidebar/widget__limited.png)
       - Snapped the widgets together if you put "Coda Caves" **above** "The Oracle"
 - Modified item-views
   - Modified the item orientation so that item-images and -text are shown next to each other (instead of below each other)
-  - Modified styling for wishlist-items so that they're more obvious
+  - Modified styling for wishlist-items so that they're more obvious • [📷 screenshot 1](screenshots/widget-1.png) • [📷 screenshot 2](screenshots/widget-2.png) • [📷 screenshot 3](screenshots/widget-3.png)
   - Removed styling for wishlist-items in forum-images and signatures
   - Modified item-hovers so that the text in it will always be shown below the image (if there's one)
   - 👁‍🗨 Moved the item-hovers so that they're always centered on the page
@@ -72,10 +78,10 @@ Below features are mostly for both desktop *and* mobile views, but features prec
 <details>
 <summary>📌 List of page changes</summary>
 
-- **Vending**
+- **Vending** • [📷 screenshot desktop](screenshots/pages/vending--desktop.png) • [📷 screenshot mobile](screenshots/pages/vending--mobile.png)
   - Modified the items so that they're easier to read
   - 👁‍🗨 Changed the image of the vending machine to a big red button
-- **Quests**
+- **Quests** • [📷 screenshot desktop](screenshots/pages/quests--desktop.png) • [📷 screenshot mobile](screenshots/pages/quests--mobile.png)
   - 👁‍🗨 Removed NPC-images
   - Restyled **[main quests](https://subeta.net/quests.php/wizard)**
     - Added option `--display-quest-intro` to hide intro-text
@@ -83,32 +89,35 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Restyled **[wizard exchange](https://subeta.net/explore/wizard_exchange.php)**
   - Restyled **[Major Drills' quests](https://subeta.net/explore/major_drills.php)**
   - Restyled **[Shinwa's quests](https://subeta.net/explore/goddess.php)**
-- Restyled **[Your Events](https://subeta.net/events.php)**
+- Restyled **[Your Events](https://subeta.net/events.php)** • ![📷 screenshot desktop](screenshots/pages/events--desktop.png) • [📷 screenshot mobile](screenshots/pages/events--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📌 List of page changes [Commerce]</summary>
 
+- Restyled **[Search Shops](https://subeta.net/user_shops.php/search)** • [📷 screenshot desktop](screenshots/pages/commerce__search_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__search_shops--mobile.png)
+  - Restyled input for searching shops
+  - Restyled search results
 - **[Special Shops](https://subeta.net/ss.php)**
-  - Restyled overview of shops to match the styling of [Subeta » News » Dailies](https://subeta.net/dailies.php)
-  - Restyled [Esther's Shop](https://subeta.net/ss.php/esther#/shop/), [L'Amour Parlor](https://subeta.net/ss.php/louis#/shop/), [Libertine Lounge](https://subeta.net/ss.php/lounge#/shop/), [New Years Shop](https://subeta.net/ss.php/newyears#/shop/), [Steamworks Menagerie](https://subeta.net/ss.php/menagerie#/shop/) and [Zombie Den](https://subeta.net/ss.php/skitters#/shop/)
+  - Restyled overview of shops • [📷 screenshot desktop](screenshots/pages/commerce__special_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shops--mobile.png)
+  - Restyled the yearly event shops • [📷 screenshot desktop](screenshots/pages/commerce__special_shop--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop--mobile.png)
     - Restyled the items
     - Removed the sidebar with NPC-image, NPC name and buttons
 - **[Your Shops](https://subeta.net/user_shops.php/mine)**
-  - Restyled **Edit Items**
+  - Restyled **Edit Items** • [📷 screenshot desktop](screenshots/pages/commerce__your_shops__edit_items--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__your_shops__edit_items--mobile.png)
     - Added option `--display-yourshop-item-category` to hide categories (from the filters *and* items-list)
     - Removed Item ID from the items-list
-  - Restyled **Quick Stock**
+  - Restyled **Quick Stock** • [📷 screenshot desktop](screenshots/pages/commerce__your_shops__quick_stock--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__your_shops__quick_stock--mobile.png)
     - Replaced locations' text with icons
     - Added option `--display-yourshop-quickstock-delete` to hide delete-option completely
     - 👁‍🗨 Removed the delete-option
-  - Restyled **Autopricer**
+  - Restyled **Autopricer** • [📷 screenshot desktop](screenshots/pages/commerce__your_shops__autopricer--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__your_shops__autopricer--mobile.png)
     - Removed info-text about new prices (lowest, average and no change)
     - Removed old price and average price columns from results table, so only lowest price is visible
     - Restyled pricing to emphasise whether a price has gone up or down
-  - Restyled **Profits**
+  - Restyled **Profits** • [📷 screenshot desktop](screenshots/pages/commerce__your_shops__profits--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__your_shops__profits--mobile.png)
     - 👁‍🗨 Removed piggybank-images
-  - Restyled **Sales History**
+  - Restyled **Sales History** • [📷 screenshot desktop](screenshots/pages/commerce__your_shops__sales_history--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__your_shops__sales_history--mobile.png)
     - Added option `--display-yourshop-sales-info` to hide info-text
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
@@ -116,17 +125,17 @@ Below features are mostly for both desktop *and* mobile views, but features prec
 <summary>📌 List of page changes [Interact]</summary>
 
 - **[Forums](https://subeta.net/forums.php)**
-  - Restyled **[Forum Home](https://subeta.net/forums.php)**
+  - Restyled **[Forum Home](https://subeta.net/forums.php)** • [📷 screenshot desktop](screenshots/pages/interact__forums__home--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__home--mobile.png)
     - Added option `--display-forum-pulse` to completely hide forum-pulse
     - Replaced collapse-text with an icon (same icon as for sidebar-widgets)
     - Removed images for forum boards
     - Modified order of forum-details so that the list of subforums is last
-    - Restyled **Subforums**
+    - Restyled **Subforums** • [📷 screenshot desktop](screenshots/pages/interact__forums__home__subforum--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__home__subforum--mobile.png)
       - Topics with unread posts have their text in bold
       - Topics with unread posts also have a bullhorn icon, which you can click to go the most recent unread post
       - Topics you have replied on have their text in black
       - Topics you haven't replied on have their text in your theme's accent colour
-    - Restyled **Topics**
+    - Restyled **Topics** • [📷 screenshot desktop](screenshots/pages/interact__forums__home__topic--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__home__topic--mobile.png)
       - Removed user avatars, leashed pets and options to like avatar/post
       - Removed the ping- and report-buttons on own posts
       - Added option `--display-forum-post-report` to hide the report-button on posts
@@ -150,59 +159,62 @@ Below features are mostly for both desktop *and* mobile views, but features prec
 <details>
 <summary>📌 List of page changes [Personal]</summary>
 
-- Restyled **[Account Search](https://subeta.net/isearch.php)**
-- Restyled **[Achievements](https://subeta.net/achievements.php)**
+- Restyled **[Account Search](https://subeta.net/isearch.php)** • [📷 screenshot desktop](screenshots/pages/personal__account_search--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__account_search--mobile.png)
+- Restyled **[Achievements](https://subeta.net/achievements.php)** • [📷 screenshot desktop](screenshots/pages/personal__achievements--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__achievements--mobile.png)
   - Removed achievement-counter at the top of the page
   - Resized the sidebar
   - 👁‍🗨 Removed subcategories
-- Restyled **Comments**
-- Restyled **[Inventory](https://subeta.net/inventory.php)**
+- Restyled **Comments** • [📷 screenshot desktop](screenshots/pages/personal__comments--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__comments--mobile.png)
+- Restyled **[Inventory](https://subeta.net/inventory.php)** • [📷 screenshot desktop](screenshots/pages/personal__inventory--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__inventory--mobile.png)
   - Added option `--display-inventory-locked` to hide the info-text about locked items
   - Replaced the lock-images with colour-coded icons
-  - Restyled the item detail page
-- Restyled **[Pets](https://subeta.net/pets.php)**
+  - Restyled the item detail page • [📷 screenshot desktop](screenshots/pages/personal__inventory__detail--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__inventory__detail--mobile.png)
+- Restyled **[Pets](https://subeta.net/pets.php)** • [📷 screenshot desktop](screenshots/pages/personal__pets--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets--mobile.png)
   - Modified the pet-dropdown with options so that it's always shown
   - Added options to hide individual links in the pet-dropdown ([see the display options for pets](#⭐-customising-the-theme))
   - Added options to change the font-weight of individual links in the pet-dropdown ([see the font-weight options for pets](#⭐-customising-the-theme))
   - Added option `--number-of-pets` to change the number of pet per row
   - Added icons for hunger and happiness
   - Modified icon for likes
-- **Vault**
+- Restyled **Vault**
   - Removed "Your Vaults"-text from the menu
-  - Restyled **[Currency Storage](https://subeta.net/explore/vaults.php?vault=currency)**
-  - Restyled **[Item Storage](https://subeta.net/explore/vaults.php?vault=item)**
+  - Restyled **[Currency Storage](https://subeta.net/explore/vaults.php?vault=currency)** • [📷 screenshot desktop](screenshots/pages/personal__vaults__currency--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__vaults__currency--mobile.png)
+  - Restyled **[Item Storage](https://subeta.net/explore/vaults.php?vault=item)** • [📷 screenshot desktop](screenshots/pages/personal__vaults__items--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__vaults__items--mobile.png)
     - Removed flavor-image and -text
-- Restyled **[Wishlist](https://subeta.net/wishlists.php)**
+- Restyled **[Wishlist](https://subeta.net/wishlists.php)** • [📷 screenshot desktop](screenshots/pages/personal__wishlist--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__wishlist--mobile.png)
+  - Restyled the wishlist detail page • [📷 screenshot desktop](screenshots/pages/personal__wishlist__detail--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__wishlist__detail--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📌 List of page changes [Subeta]</summary>
 
-- **[Explore » Darkside » Ultimate Pet Zapper](https://subeta.net/explore/zapper.php)**
+- **[Explore » Darkside » Ultimate Pet Zapper](https://subeta.net/explore/zapper.php)** • [📷 screenshot desktop](screenshots/pages/subeta__explore__darkside__pet_zapper--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__darkside__pet_zapper--mobile.png)
   - Removed NPC-image
   - Added option `--display-pet-zapper-warning` to hide warning-text
   - Added option `--display-pet-zapper-intro` to hide intro-text
   - Added option `--display-pet-zapper-adoption` to hide adoption-text
-- **[Explore » Delphi » Carnival » Ruffie Raffle](https://subeta.net/explore/carnival/ruffie_raffle.php)**
+- **[Explore » Delphi » Carnival » Ruffie Raffle](https://subeta.net/explore/carnival/ruffie_raffle.php)** • ![📷 screenshot desktop](screenshots/pages/subeta__explore__delphi__ruffie_raffle--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__delphi__ruffie_raffle--mobile.png)
   - 👁‍🗨 Removed NPC-image
-- **[Explore » Galaxan Wastes » The Rift](https://subeta.net/explore/rift/)**
+- **[Explore » Galaxan Wastes » The Rift](https://subeta.net/explore/rift/)** • ![📷 screenshot desktop](screenshots/pages/subeta__explore__galaxan_wastes__rift--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__galaxan_wastes__rift--mobile.png)
   - 👁‍🗨 Removed image
 - **[Explore » Shadowglen » Crypts](https://subeta.net/explore/crypts.php)**
   - Made the crypts-map-images scrollable on mobile
   - 👁‍🗨 Removed NPC-image
 - **[Explore » Shengui Guo » Floating Market](https://subeta.net/explore/shengui_guo/river.php)**
-  - Restyled **[Dara's Darlings](https://subeta.net/explore/shengui_guo/dara.php)**, **[Fine Fabrics](https://subeta.net/explore/shengui_guo/clothing.php)** and **[Fresh and Flavorful](https://subeta.net/explore/shengui_guo/ujin.php)**
-    - Added option `--display-shenguiguo-floatingmarket-intro` to collectively hide Dara's, Jogoh's and Ujin's intro-texts
+  - Added option `--display-shenguiguo-floatingmarket-intro` to collectively hide Dara's, Jogoh's and Ujin's intro-texts
+  - 👁‍🗨 Removed NPC-image + intro-text
+  - Restyled **[Dara's Darlings](https://subeta.net/explore/shengui_guo/dara.php)**  [📷 screenshot desktop](screenshots/pages/subeta__explore__shengui_guo__dara--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__shengui_guo__dara--mobile.png)
     - Added option `--display-shenguiguo-dara-intro` to individually hide Dara's intro-text
+  - Restyled **[Fine Fabrics](https://subeta.net/explore/shengui_guo/clothing.php)** • [📷 screenshot desktop](screenshots/pages/subeta__explore__shengui_guo__jogoh--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__shengui_guo__jogoh--mobile.png)
     - Added option `--display-shenguiguo-jogoh-intro` to individually hide Jogoh's intro-text
+  - Restyled **[Fresh and Flavorful](https://subeta.net/explore/shengui_guo/ujin.php)** • [📷 screenshot desktop](screenshots/pages/subeta__explore__shengui_guo__ujin--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__shengui_guo__ujin--mobile.png)
     - Added option `--display-shenguiguo-ujin-intro` to individually hide Ujin's intro-text
-    - 👁‍🗨 Removed NPC-image + intro-text
-- **Games**
+- **Games** • [📷 screenshot desktop](screenshots/pages/subeta__games--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games--mobile.png)
   - Restyled the games overview-page
 - **Games » Battle**
   - Removed images in the menu-bar
   - Restyled **[Spend Exp](https://subeta.net/games/battle/exp.php)**
-  - Restyled **[Training Center](https://subeta.net/explore/train.php)**
+  - Restyled **[Training Center](https://subeta.net/explore/train.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__training--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__training--mobile.gif)
     - Removed NPC-image
     - Added option `--display-battle-training-intro` to hide intro-text
     - Added option `--display-battle-training-warning` to hide warning about level cap and autotraining
@@ -213,15 +225,16 @@ Below features are mostly for both desktop *and* mobile views, but features prec
 - **[Games » Chance » Scratchcards](https://subeta.net/games/scratchcards.php)**
   - 👁‍🗨 Removed NPC-image
 - **Games » Collections**
-  - Restyled **Plushie**, **Trading Card**, **Beanbag**, **Pumpkin**, **Pastry** and **Tile** collections
-  - Restyled **Sticker Album** collection
+  - Restyled **Plushie**, **Trading Card**, **Beanbag**, **Pumpkin**, **Pastry** and **Tile** collections • [📷 screenshot desktop](screenshots/pages/subeta__games__collections--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__collections--mobile.png)
+  - Restyled **Sticker Album** collection • [📷 screenshot desktop](screenshots/pages/subeta__games__collections__stickers--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__collections__stickers--mobile.png)
     - Added option `--display-stickers-unstack` to hide the "unstack" link under stickers
-  - Restyled **[Minion Zoo](https://subeta.net/games/minions/index.php)**
+  - Restyled **[Minion Zoo](https://subeta.net/games/minions/index.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__collections__minions--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__collections__minions--mobile.png)
     - Removed all gaming options so that it's just a collection
-- **[Games » Miscellaneous » Item Hunter](https://subeta.net/games/hunt.php)**
+- **[Games » Miscellaneous » Item Hunter](https://subeta.net/games/hunt.php)** • ![📷 screenshot desktop](screenshots/pages/subeta__games__misc__item_hunter--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__misc__item_hunter--mobile.png)
   - Restyled content
   - 👁‍🗨 Removed NPC-image, NPC-name and intro-text
-- **[News](https://subeta.net/news.php)**
+- **[News](https://subeta.net/news.php)** • [📷 screenshot desktop](screenshots/pages/subeta__news--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__news--mobile.png)
+  - Added option `--display-news-intro` to hide the intro-banner
   - Moved Check Out, Upcoming and Daily to be above the posts (instead of next to them)
   - Added option `--display-news-checkout` to hide Check Out
   - Added option `--display-news-upcoming` to hide Upcoming
@@ -230,15 +243,19 @@ Below features are mostly for both desktop *and* mobile views, but features prec
   - Added option `--display-news-daily-recycle` to hide Daily » Recycle Beast
   - Added option `--display-news-daily-lottery` to hide Daily » Potion Lottery Winner
   - Removed daily support goal (but only because it doesn't seem to work anymore)
-  - Restyled **[Dailies](https://subeta.net/dailies.php)**
+  - Restyled **[Dailies](https://subeta.net/dailies.php)** • [📷 screenshot desktop](screenshots/pages/subeta__news__dailies--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__news__dailies--mobile.png)
 - **[Subetapedia](https://subeta.net/subetapedia/)**
   <!-- TODO - Restyle overview (so links all have same style and non-links are removed) -->
   <!-- TODO - Restyle pages -->
 </details>
 
-<!--------------------------------------------------------------------------------------------------------------------->
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 <br>
-<!--------------------------------------------------------------------------------------------------------------------->
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
+
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
+<br>
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
 ## ⭐ Installing the theme
 To get started, paste the following code into the box on your [CustomCSS page](https://subeta.net/preferences.php?act=customcss):
@@ -246,9 +263,9 @@ To get started, paste the following code into the box on your [CustomCSS page](h
 @import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css')
 ```
 
-<!--------------------------------------------------------------------------------------------------------------------->
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 <br>
-<!--------------------------------------------------------------------------------------------------------------------->
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
 ## ⭐ Customising the theme
 To customise this theme, you'll need to override certain CSS Variables. To do so, you'll need to add the following snippet **after** your `@import` code:
@@ -288,8 +305,9 @@ You can find the available options in the following parts:
 | `--color-red`     | Red colour, used for alerts, buttons, etc   | `#DC3545`<span style="margin-left:.5em;color:#DC3545;">&#9632;</span>   |
 | `--color-yellow`  | Yellow colour, used for alerts              | `#FFC107`<span style="margin-left:.5em;color:#FFC107;">&#9632;</span>   |
 
-Below are some examples of accent colours that you can use, which have been extracted from the default Subeta templates.
+Below are some examples of accent-colours that you can use, which have been extracted from the default Subeta templates.
 These are also the colours that are displayed in the opening GIF at the top of this page!
+
 | HEX-code                                                              | Theme             |
 |-----------------------------------------------------------------------|-------------------|
 | `#6FA8BF`<span style="margin-left:.5em;color:#6FA8BF;">&#9632;</span> | Arctic Frost      |
@@ -300,6 +318,8 @@ These are also the colours that are displayed in the opening GIF at the top of t
 | `#687E8C`<span style="margin-left:.5em;color:#687E8C;">&#9632;</span> | Riverside Valley  |
 | `#33402D`<span style="margin-left:.5em;color:#33402D;">&#9632;</span> | Shadowglen        |
 | `#63494F`<span style="margin-left:.5em;color:#63494F;">&#9632;</span> | Shadowglen        |
+
+If you need more inspiration for an accent-colour for your theme, you can also try [these Bootstrap colour palettes](https://getbootstrap.com/docs/5.3/customize/color/#all-colors), [these Material colour palettes](https://materialui.co/colors/) or even [this random colour generator](https://randomcolour.com/).
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
@@ -352,6 +372,7 @@ These are also the colours that are displayed in the opening GIF at the top of t
 | `--display-battle-training-intro`             | Subeta » Games » Battle » Training Center » Hide intro-text                           |
 | `--display-battle-training-warning`           | Subeta » Games » Battle » Training Center » Hide warning-text                         |
 | `--display-stickers-unstack`                  | Subeta » Games » Collections » Sticker Album » Hide "unstack" link under stickers     |
+| `--display-news-intro`                        | Subeta » News » Hide intro-banner                                                     |
 | `--display-news-checkout`                     | Subeta » News » Hide Check Out                                                        |
 | `--display-news-upcoming`                     | Subeta » News » Hide Upcoming                                                         |
 | `--display-news-daily`                        | Subeta » News » Hide Daily                                                            |
@@ -458,11 +479,9 @@ These are also the colours that are displayed in the opening GIF at the top of t
 
 </details>
 
-<!-- TODO - Write a script to auto-generate needed import & :root-code, based on checkboxes -->
-
-<!--------------------------------------------------------------------------------------------------------------------->
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 <br>
-<!--------------------------------------------------------------------------------------------------------------------->
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
 ## ⭐ Credits
 - [spacemage](https://subeta.net/users/spacemage), for their [year indicators for yearly event shops](https://subeta.net/forums.php/gotopost/66366953)
@@ -470,17 +489,33 @@ These are also the colours that are displayed in the opening GIF at the top of t
 - Icons by [FontAwesome](https://fontawesome.com/)
 - Roboto font by [Google Fonts](https://fonts.google.com/specimen/Roboto)
 
-<!--------------------------------------------------------------------------------------------------------------------->
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 <br>
-<!--------------------------------------------------------------------------------------------------------------------->
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
 ## ⭐ Changelog
-<strong>📅 2024/03/01</strong>
+<strong>📅 2024/03/02</strong>
+
+- Added styling for editing a topic-name in the forums
+- Added styling for the buttons on the Oracle quest-page
+- Added option `--display-news-intro` to hide the intro-banner on the news-page
+- Fixed width for floating form to post a reply in the forums
+- Fixed width for floating form in the vault's item storage
+- Fixed width for floating form to move items in your shop's edit items page
+- Fixed spacing for item-vault on mobile (considering fixed bottom menu)
+- Updated styling for links in the news jumbotron so that they match other links better
+- Updated styling for sidebar-widget "The Oracle"
+- Updated styling for the Rift items so that they're left-aligned instead of centered
+- Updated styling for the "+ wishlist" and "- wishlist" hovers to add and remove items from your wishlist
+
+<br>
+<details>
+<summary>📅 2024/03/01</summary>
 
 - Added styling for minions to the [Pets-page](https://subeta.net/pets.php)
-- Fixed bookmark styling on the "Search Subeta" page (default styling had them all in italics)
-- Fixed margin on the "Achievement Unlocked" message, when it appears in the main portion of the page
-- Updated styling on item detail-page in [Inventory](https://subeta.net/inventory.php)
+- Fixed bookmark styling for the "Search Subeta" page (default styling had them all in italics)
+- Fixed margin for the "Achievement Unlocked" message, when it appears in the main portion of the page
+- Updated styling for item detail-page in [Inventory](https://subeta.net/inventory.php)
 - Updated styling for sidebar-widgets
   - Restyled "Coda Caves" and "The Oracle" widgets
     - Removed headers
@@ -488,9 +523,9 @@ These are also the colours that are displayed in the opening GIF at the top of t
     - Snapped the widgets together if you put "Coda Caves" **above** "The Oracle"
   - Updated "Special Currencies" widget
     - Added option `--display-sidebar-currency-headers` to hide the headers (Active, Seasonal and Events) for "Active Currencies"
-- Updated styling on the "+ wishlist" and "- wishlist" hovers to add and remove items from your wishlist
-
-<br>
+- Updated styling for the "+ wishlist" and "- wishlist" hovers to add and remove items from your wishlist
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/02/29</summary>
 
