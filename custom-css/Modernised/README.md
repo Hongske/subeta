@@ -154,7 +154,13 @@
   <!-- TODO - Restyled **[Admin Posts](https://subeta.net/forums.php/admin_posts)** -->
   <!-- TODO - Restyled **[Options](https://subeta.net/preferences.php?act=forum)** -->
   <!-- TODO - Restyled **[sCode](https://subeta.net/forums/include/codes.php)** -->
-<!-- TODO - Restyled **[sMail](https://subeta.net/mail.php)** -->
+- Restyled **[sMail](https://subeta.net/mail.php)**
+  - Restyled **[Inbox](https://subeta.net/mail.php?folderid=1)** • [📷 screenshot desktop](screenshots/pages/interact__smail__inbox--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__inbox--mobile.png)
+  - Restyled **[Outbox](https://subeta.net/mail.php?folderid=20)** • [📷 screenshot desktop](screenshots/pages/interact__smail__outbox--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__outbox--mobile.png)
+  - Restyled **[New Message](https://subeta.net/mail.php?act=new)** • [📷 screenshot desktop](screenshots/pages/interact__smail__new_message--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__new_message--mobile.png)
+  - Restyled **Reply** • [📷 screenshot desktop](screenshots/pages/interact__smail__reply--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__reply--mobile.png)
+  - Restyled **[Preferences](https://subeta.net/mail.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/interact__smail__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__preferences--mobile.png)
+  - Restyled **[Edit Folders](https://subeta.net/mail.php?act=editfolders)** • [📷 screenshot desktop](screenshots/pages/interact__smail__edit_folders--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__edit_folders--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
@@ -497,7 +503,20 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
 ## ⭐ Changelog
-<strong>📅 2024/03/02</strong>
+<strong>📅 2024/03/03</strong>
+
+- Added screenshots to this page
+- Restyled **[sMail](https://subeta.net/mail.php)**
+  - Restyled **[Inbox](https://subeta.net/mail.php?folderid=1)** • [📷 screenshot desktop](screenshots/pages/interact__smail__inbox--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__inbox--mobile.png)
+  - Restyled **[Outbox](https://subeta.net/mail.php?folderid=20)** • [📷 screenshot desktop](screenshots/pages/interact__smail__outbox--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__outbox--mobile.png)
+  - Restyled **[New Message](https://subeta.net/mail.php?act=new)** • [📷 screenshot desktop](screenshots/pages/interact__smail__new_message--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__new_message--mobile.png)
+  - Restyled **Reply** • [📷 screenshot desktop](screenshots/pages/interact__smail__reply--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__reply--mobile.png)
+  - Restyled **[Preferences](https://subeta.net/mail.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/interact__smail__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__preferences--mobile.png)
+  - Restyled **[Edit Folders](https://subeta.net/mail.php?act=editfolders)** • [📷 screenshot desktop](screenshots/pages/interact__smail__edit_folders--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__edit_folders--mobile.png)
+
+<br>
+<details>
+<summary>📅 2024/03/02</summary>
 
 - Added styling for editing a topic-name in the forums
 - Added styling for the buttons on the Oracle quest-page
@@ -510,8 +529,8 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 - Updated styling for sidebar-widget "The Oracle"
 - Updated styling for the Rift items so that they're left-aligned instead of centered
 - Updated styling for the "+ wishlist" and "- wishlist" hovers to add and remove items from your wishlist
-
-<br>
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/03/01</summary>
 
