@@ -4,7 +4,6 @@
 </div>
 
 <!-- TODO - Write JS to generate override-variables based on checkboxed  -->
-<!-- TODO - Minify CSS -->
 
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 <br>
@@ -285,6 +284,14 @@ To customise this theme, you'll need to override certain CSS Variables. To do so
 }
 ```
 
+```
+❗❗ NOTE ❗❗
+
+- "theme.css" is the minified version. It is smaller and thus quicker, but it is not very readable.
+- If you want the original version, which is longer and slower but more easily readable,
+  then you need to change "theme.css" to "theme_original.css".
+```
+
 Then, add your overrides between the curly brackets. An example would be:
 ```css
 @import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css');
@@ -515,6 +522,7 @@ If you need more inspiration for an accent-colour for your theme, you can also t
   - Restyled **[Preferences](https://subeta.net/mail.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/interact__smail__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__preferences--mobile.png)
   - Restyled **[Edit Folders](https://subeta.net/mail.php?act=editfolders)** • [📷 screenshot desktop](screenshots/pages/interact__smail__edit_folders--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__edit_folders--mobile.png)
 - Restyled the popup you get when you hover over users • [📷 screenshot](screenshots/hover_user.png)
+- Replaced theme.css with minified version and uploaded a non-minified version (theme_original.css)
 
 <br>
 <details>
