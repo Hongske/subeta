@@ -1536,6 +1536,7 @@ input[type='submit'][value^='Exchange your tokens'] {
 .posted .icon,
 .qs-button,
 .sidebar-widget-arrow,
+.tpd-content .icon,
 .topic.lock .icon.lock,
 .topic.sub .icon.checkmark,
 .wishlist-item .icon,
@@ -2832,6 +2833,111 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 &:hover {
                     color: var(--primary);
                 }
+            }
+        }
+
+        > .ui.grid {
+            display: flex;
+            gap: .5rem;
+            width: 100%;
+
+            .column {
+                width: auto;
+                margin: 0;
+                padding: 0;
+
+                &:first-child {
+                    flex-shrink: 0;
+
+                    img {
+                        max-width: none;
+                    }
+                }
+
+                &:last-child {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: .25rem;
+                    font-size: var(--font-size-medium) !important;
+
+                    h3 {
+                        margin-bottom: 0;
+                        line-height: 1;
+
+                        img[src^='//img.subeta.net/icons/'] {
+                            display: none;
+                        }
+                    }
+
+                    .user-options {
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        width: 100%;
+
+                        a {
+                            width: var(--item-size-small);
+                            height: var(--item-size-small);
+                        }
+
+                        img {
+                            max-width: 100%;
+                            padding: 0;
+                            transition: transform .2s, opacity .2s;
+
+                            &:hover {
+                                transform: scale(1.25);
+                            }
+                        }
+                    }
+
+                    i:not(.icon) {
+                        width: 100%;
+                        margin-bottom: .25rem;
+                        font-size: var(--font-size-small);
+                        font-style: normal;
+                    }
+
+                    i.icon {
+                        margin: 0;
+                        color: var(--black);
+                        opacity: 1;
+
+                        &:before {
+                            display: none;
+                        }
+
+                        &.comment:after {
+                            content: '\f086' !important;
+                        }
+
+                        &.trophy:after {
+                            content: '\f091' !important;
+                        }
+                    }
+
+                    i + br {
+                        display: none;
+                    }
+
+                    .hover_user_pet {
+                        display: flex;
+                        align-items: center;
+                        gap: .5rem;
+                        margin: .5rem 0;
+
+                        .ui.image {
+                            margin: -.9rem;
+                            transform: scale(.5);
+                            box-shadow: var(--box-shadow--all);
+                        }
+                    }
+                }
+            }
+
+            &:after {
+                display: none;
             }
         }
     }
@@ -7790,6 +7896,15 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
                     > td:last-child center {
                         text-align: right;
+
+                        span {
+                            cursor: pointer;
+
+                            &:hover {
+                                color: inherit !important;
+                                text-decoration: underline;
+                            }
+                        }
                     }
                 }
             }

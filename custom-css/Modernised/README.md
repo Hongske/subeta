@@ -65,10 +65,11 @@
   - Modified the item orientation so that item-images and -text are shown next to each other (instead of below each other)
   - Modified styling for wishlist-items so that they're more obvious • [📷 screenshot](screenshots/wishlist.gif)
   - Removed styling for wishlist-items in forum-images and signatures
-  - Modified item-hovers so that the text in it will always be shown below the image (if there's one)
+  - Restyled the popup you get when you hover over items • [📷 screenshot](screenshots/hover_item.png)
   - 👁‍🗨 Moved the item-hovers so that they're always centered on the page
   - 👁‍🗨 Resized item-images so they take up less space
   - 👁‍🗨 Removed options to add and remove from wishlist (as it's hard to get right on mobile)
+- Restyled the popup you get when you hover over users • [📷 screenshot](screenshots/hover_user.png)
 - Added other general options
   - Added option `--display-floating-item` to hide floating items (like flowers during Survival)
   - Added option `--display-hustler` to hide Hustler-banner
@@ -513,6 +514,7 @@ If you need more inspiration for an accent-colour for your theme, you can also t
   - Restyled **Reply** • [📷 screenshot desktop](screenshots/pages/interact__smail__reply--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__reply--mobile.png)
   - Restyled **[Preferences](https://subeta.net/mail.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/interact__smail__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__preferences--mobile.png)
   - Restyled **[Edit Folders](https://subeta.net/mail.php?act=editfolders)** • [📷 screenshot desktop](screenshots/pages/interact__smail__edit_folders--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__edit_folders--mobile.png)
+- Restyled the popup you get when you hover over users • [📷 screenshot](screenshots/hover_user.png)
 
 <br>
 <details>
