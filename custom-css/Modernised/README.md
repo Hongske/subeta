@@ -158,7 +158,7 @@
   - Restyled **[Inbox](https://subeta.net/mail.php?folderid=1)** • [📷 screenshot desktop](screenshots/pages/interact__smail__inbox--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__inbox--mobile.png)
   - Restyled **[Outbox](https://subeta.net/mail.php?folderid=20)** • [📷 screenshot desktop](screenshots/pages/interact__smail__outbox--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__outbox--mobile.png)
   - Restyled **[New Message](https://subeta.net/mail.php?act=new)** • [📷 screenshot desktop](screenshots/pages/interact__smail__new_message--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__new_message--mobile.png)
-  - Restyled **Reply** • [📷 screenshot desktop](screenshots/pages/interact__smail__reply--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__reply--mobile.png)
+  - Restyled **Reply** • [📷 screenshot desktop](screenshots/pages/interact__smail__reply--desktop.gif) • [📷 screenshot mobile](screenshots/pages/interact__smail__reply--mobile.gif)
   - Restyled **[Preferences](https://subeta.net/mail.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/interact__smail__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__preferences--mobile.png)
   - Restyled **[Edit Folders](https://subeta.net/mail.php?act=editfolders)** • [📷 screenshot desktop](screenshots/pages/interact__smail__edit_folders--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__edit_folders--mobile.png)
 </details>
