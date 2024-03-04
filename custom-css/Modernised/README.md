@@ -147,9 +147,9 @@
       - Fixed the lock-icon on the locked-message for locked topics, so it's less ginormous
       - Removed the ping-options from the reply form
       - 👁‍🗨 Removed the formatting-options from the reply form
-  <!-- TODO - Restyled **[Subscribed Threads](https://subeta.net/forums.php/subscriptions)** -->
-  <!-- TODO - Restyled **[Recent Topics](https://subeta.net/forums.php/recent/topics)** -->
-  <!-- TODO - Restyled **[Recent Posts](https://subeta.net/forums.php/recent/posts)** -->
+  - Restyled **[Subscribed Threads](https://subeta.net/forums.php/subscriptions)** • [📷 screenshot desktop](screenshots/pages/interact__forums__subscribed_threads--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__subscribed_threads--mobile.png)
+  - Restyled **[Recent Topics](https://subeta.net/forums.php/recent/topics)** • [📷 screenshot desktop](screenshots/pages/interact__forums__recent_topics--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__recent_topics--mobile.png)
+  - Restyled **[Recent Posts](https://subeta.net/forums.php/recent/posts)** • [📷 screenshot desktop](screenshots/pages/interact__forums__recent_posts--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__recent_posts--mobile.png)
   <!-- TODO - Restyled **[Groups](https://subeta.net/forums.php/groups/)** -->
   <!-- TODO - Restyled **[Admin Posts](https://subeta.net/forums.php/admin_posts)** -->
   <!-- TODO - Restyled **[Options](https://subeta.net/preferences.php?act=forum)** -->
@@ -190,6 +190,13 @@
     - Removed flavor-image and -text
 - Restyled **[Wishlist](https://subeta.net/wishlists.php)** • [📷 screenshot desktop](screenshots/pages/personal__wishlist--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__wishlist--mobile.png)
   - Restyled the wishlist detail page • [📷 screenshot desktop](screenshots/pages/personal__wishlist__detail--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__wishlist__detail--mobile.png)
+- Restyled **[Dashboard](https://subeta.net/preferences.php)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard--mobile.png)
+  - Restyled **[CustomCSS](https://subeta.net/preferences.php?act=customcss)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__customcss--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__customcss--mobile.png)
+  - Restyled **[Profile](https://subeta.net/preferences.php?act=profile)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__profile--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__profile--mobile.png)
+  - Restyled **[Widgets](https://subeta.net/preferences.php?act=sidebar)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__widgets--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__widgets--mobile.png)
+  - Restyled **[Bookmarks](https://subeta.net/preferences.php?act=bookmarks)** • [📷 screenshot](screenshots/pages/personal__dashboard__bookmarks--desktop.png)
+  - Restyled **[Preferences](https://subeta.net/preferences.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__preferences--mobile.png)
+  TODO - Restyled **[Buffs](https://subeta.net/preferences.php?act=buffs)**
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
@@ -503,7 +510,22 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
 ## ⭐ Changelog
-<strong>📅 2024/03/03</strong>
+<strong>📅 2024/03/04</strong>
+
+- Restyled Forum pages:
+  - Restyled **[Subscribed Threads](https://subeta.net/forums.php/subscriptions)** • [📷 screenshot desktop](screenshots/pages/interact__forums__subscribed_threads--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__subscribed_threads--mobile.png)
+  - Restyled **[Recent Topics](https://subeta.net/forums.php/recent/topics)** • [📷 screenshot desktop](screenshots/pages/interact__forums__recent_topics--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__recent_topics--mobile.png)
+  - Restyled **[Recent Posts](https://subeta.net/forums.php/recent/posts)** • [📷 screenshot desktop](screenshots/pages/interact__forums__recent_posts--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__recent_posts--mobile.png)
+- Restyled Preference pages:
+  - Restyled **[CustomCSS](https://subeta.net/preferences.php?act=customcss)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__customcss--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__customcss--mobile.png)
+  - Restyled **[Profile](https://subeta.net/preferences.php?act=profile)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__profile--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__profile--mobile.png)
+  - Restyled **[Widgets](https://subeta.net/preferences.php?act=sidebar)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__widgets--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__widgets--mobile.png)
+  - Restyled **[Bookmarks](https://subeta.net/preferences.php?act=bookmarks)** • [📷 screenshot](screenshots/pages/personal__dashboard__bookmarks--desktop.png)
+  - Restyled **[Preferences](https://subeta.net/preferences.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__preferences--mobile.png)
+
+<br>
+<details>
+<summary>📅 2024/03/03</summary>
 
 - Added screenshots to this page
 - Restyled **[sMail](https://subeta.net/mail.php)**
@@ -514,8 +536,8 @@ If you need more inspiration for an accent-colour for your theme, you can also t
   - Restyled **[Preferences](https://subeta.net/mail.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/interact__smail__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__preferences--mobile.png)
   - Restyled **[Edit Folders](https://subeta.net/mail.php?act=editfolders)** • [📷 screenshot desktop](screenshots/pages/interact__smail__edit_folders--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__edit_folders--mobile.png)
 - Restyled the popup you get when you hover over users • [📷 screenshot](screenshots/hover_user.png)
-
-<br>
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/03/02</summary>
 
