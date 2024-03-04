@@ -196,7 +196,7 @@
   - Restyled **[Widgets](https://subeta.net/preferences.php?act=sidebar)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__widgets--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__widgets--mobile.png)
   - Restyled **[Bookmarks](https://subeta.net/preferences.php?act=bookmarks)** • [📷 screenshot](screenshots/pages/personal__dashboard__bookmarks--desktop.png)
   - Restyled **[Preferences](https://subeta.net/preferences.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__preferences--mobile.png)
-  TODO - Restyled **[Buffs](https://subeta.net/preferences.php?act=buffs)**
+  - Restyled **[Buffs](https://subeta.net/preferences.php?act=buffs)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__buffs--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__buffs--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
