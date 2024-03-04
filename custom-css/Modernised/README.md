@@ -148,12 +148,16 @@
       - Removed the ping-options from the reply form
       - 👁‍🗨 Removed the formatting-options from the reply form
   - Restyled **[Subscribed Threads](https://subeta.net/forums.php/subscriptions)** • [📷 screenshot desktop](screenshots/pages/interact__forums__subscribed_threads--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__subscribed_threads--mobile.png)
+    - Added option `--display-forum-subscribed-intro` to hide the intro-text
   - Restyled **[Recent Topics](https://subeta.net/forums.php/recent/topics)** • [📷 screenshot desktop](screenshots/pages/interact__forums__recent_topics--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__recent_topics--mobile.png)
   - Restyled **[Recent Posts](https://subeta.net/forums.php/recent/posts)** • [📷 screenshot desktop](screenshots/pages/interact__forums__recent_posts--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__recent_posts--mobile.png)
-  <!-- TODO - Restyled **[Groups](https://subeta.net/forums.php/groups/)** -->
-  <!-- TODO - Restyled **[Admin Posts](https://subeta.net/forums.php/admin_posts)** -->
-  <!-- TODO - Restyled **[Options](https://subeta.net/preferences.php?act=forum)** -->
-  <!-- TODO - Restyled **[sCode](https://subeta.net/forums/include/codes.php)** -->
+  - Restyled **[Groups](https://subeta.net/forums.php/groups/)** • [📷 screenshot desktop](screenshots/pages/interact__forums__groups--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__groups--mobile.png)
+    - Added option `--display-forum-group-intro` to hide the intro-text
+    - Restyled **Group Detail** • [📷 screenshot desktop](screenshots/pages/interact__forums__groups__detail--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__groups__detail--mobile.png)
+    - Restyled **Group Members** • [📷 screenshot desktop](screenshots/pages/interact__forums__groups__members--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__groups__members--mobile.png)
+  - Restyled **[Admin Posts](https://subeta.net/forums.php/admin_posts)** • [📷 screenshot desktop](screenshots/pages/interact__forums__admin_posts--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__admin_posts--mobile.png)
+  <!-- TODO - Restyled **[Options](https://subeta.net/preferences.php?act=forum)** • [📷 screenshot desktop](screenshots/pages/interact__forums__--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__--mobile.png) -->
+  <!-- TODO - Restyled **[sCode](https://subeta.net/forums/include/codes.php)** • [📷 screenshot desktop](screenshots/pages/interact__forums__--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__--mobile.png) -->
 - Restyled **[sMail](https://subeta.net/mail.php)**
   - Restyled **[Inbox](https://subeta.net/mail.php?folderid=1)** • [📷 screenshot desktop](screenshots/pages/interact__smail__inbox--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__inbox--mobile.png)
   - Restyled **[Outbox](https://subeta.net/mail.php?folderid=20)** • [📷 screenshot desktop](screenshots/pages/interact__smail__outbox--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__outbox--mobile.png)
@@ -360,6 +364,8 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 | `--display-forum-post-signature`              | Interact » Forums » Hide signatures                                                   |
 | `--display-forum-post-report`                 | Interact » Forums » Hide the report-button on posts                                   |
 | `--display-forum-pulse`                       | Interact » Forums » Home » Hide forum pulse                                           |
+| `--display-forum-subscribed-intro`            | Interact » Forums » Subscribed Threads » Hide intro-text                              |
+| `--display-forum-group-intro`                 | Interact » Forums » Forum Groups » Hide intro-text                                    |
 | `--display-inventory-locked`                  | Personal » Inventory » Hide info-text about locked items                              |
 | `--display-pet-option-description`            | Personal » Pets » Dropdown » Hide option "Edit Description"                           |
 | `--display-pet-option-headshot`               | Personal » Pets » Dropdown » Hide option "Edit Headshot"                              |
@@ -514,8 +520,14 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 
 - Restyled Forum pages:
   - Restyled **[Subscribed Threads](https://subeta.net/forums.php/subscriptions)** • [📷 screenshot desktop](screenshots/pages/interact__forums__subscribed_threads--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__subscribed_threads--mobile.png)
+    - Added option `--display-forum-subscribed-intro` to hide the intro-text
   - Restyled **[Recent Topics](https://subeta.net/forums.php/recent/topics)** • [📷 screenshot desktop](screenshots/pages/interact__forums__recent_topics--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__recent_topics--mobile.png)
   - Restyled **[Recent Posts](https://subeta.net/forums.php/recent/posts)** • [📷 screenshot desktop](screenshots/pages/interact__forums__recent_posts--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__recent_posts--mobile.png)
+  - Restyled **[Groups](https://subeta.net/forums.php/groups/)** • [📷 screenshot desktop](screenshots/pages/interact__forums__groups--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__groups--mobile.png)
+    - Added option `--display-forum-group-intro` to hide the intro-text
+    - Restyled **Group Detail** • [📷 screenshot desktop](screenshots/pages/interact__forums__groups__detail--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__groups__detail--mobile.png)
+    - Restyled **Group Members** • [📷 screenshot desktop](screenshots/pages/interact__forums__groups__members--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__groups__members--mobile.png)
+  - Restyled **[Admin Posts](https://subeta.net/forums.php/admin_posts)** • [📷 screenshot desktop](screenshots/pages/interact__forums__admin_posts--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__admin_posts--mobile.png)
 - Restyled Preference pages:
   - Restyled **[CustomCSS](https://subeta.net/preferences.php?act=customcss)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__customcss--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__customcss--mobile.png)
   - Restyled **[Profile](https://subeta.net/preferences.php?act=profile)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__profile--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__profile--mobile.png)

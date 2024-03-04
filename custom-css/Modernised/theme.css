@@ -1486,6 +1486,7 @@ input[type='submit'] {
         }
     }
 
+    &.red,
     &.negative {
         background-color: var(--red) !important;
 
@@ -1540,6 +1541,8 @@ input[type='submit'][value^='Exchange your tokens'] {
 .wl_item .wl_plus,
 .x-js-widget-activepet td a,
 .x-js-widget-battlepet td a,
+#group_container .icon.moon,
+#group_container .icon.sun,
 #MB_close,
 #menu-ul .menu-btn .menu-tab,
 #menu-ul ul a[aria-haspopup='true'],
@@ -1783,9 +1786,13 @@ img[src='//img.subeta.net/icons/email_open.png'] {
     }
 
     > .nav-link {
+        display: flex;
+        align-items: center;
+        gap: .25em;
+
         &:nth-child(n + 2):before {
-            content: '| ';
-            color: var(--black);
+            content: '|';
+            color: var(--navbar-fg);
             pointer-events: none;
         }
     }
@@ -2068,6 +2075,10 @@ img[src='//img.subeta.net/icons/email_open.png'] {
     &.grid {
         margin: 0;
 
+        &:after {
+            display: none;
+        }
+
         > div,
         .column {
             font-size: 1rem !important;
@@ -2107,6 +2118,10 @@ img[src='//img.subeta.net/icons/email_open.png'] {
         font-size: var(--navbar-font-size);
         box-shadow: none;
 
+        > .item > .icon {
+            display: none;
+        }
+
         .item {
             display: flex;
             align-items: center;
@@ -2117,7 +2132,9 @@ img[src='//img.subeta.net/icons/email_open.png'] {
             font-size: inherit !important;
             line-height: normal;
 
+            &:active,
             &:hover {
+                background-color: transparent !important;
                 text-decoration: underline;
             }
 
@@ -2130,11 +2147,44 @@ img[src='//img.subeta.net/icons/email_open.png'] {
 
             &:nth-child(n + 2):before {
                 content: '|';
+                display: block !important;
+                width: auto;
                 position: relative;
                 background-image: none;
                 color: var(--navbar-fg);
                 pointer-events: none;
             }
+
+            + .right.menu {
+                margin-left: auto;
+                padding: 0;
+
+                @media (max-device-width: 768px) {
+                    width: 100%;
+                    margin: var(--spacing-y) 0 0;
+                }
+
+                .icon.input.small {
+                    margin: -.5rem 0;
+                    padding: 0;
+
+                    @media (max-device-width: 768px) {
+                        margin: 0;
+                    }
+
+                    #group-search {
+                        height: 2rem;
+                        padding: var(--button-padding);
+                        border: 0;
+                        border-radius: var(--border-radius);
+                        color: var(--black);
+                    }
+                }
+            }
+        }
+
+        &:after {
+            display: none;
         }
 
         &.secondary.pointing {
@@ -2154,23 +2204,9 @@ img[src='//img.subeta.net/icons/email_open.png'] {
                 border: 0;
                 font-size: inherit;
 
-                &:nth-child(n + 2):before {
-                    display: inline !important;
-                    content: '|';
-                    margin-right: .25em;
-                    position: relative;
-                    background-image: none;
-                    color: var(--navbar-fg);
-                    pointer-events: none;
-                }
-
                 &.header {
                     font-size: inherit !important;
                     transform: translate(0, -2px);
-
-                    ~ .item:before {
-                        margin-right: .25em;
-                    }
                 }
             }
 
@@ -6930,6 +6966,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
             /* Interact » Forums » Subscribed Threads */
             + .ui.message {
+                display: var(--display-forum-subscribed-intro, block);
+                background-color: var(--grey);
                 font-size: var(--font-size-medium);
             }
 
@@ -7303,6 +7341,49 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     /* Personal » Vault » Currency Storage » Currencies */
                     ~ .ui.message.attached {
                         margin-top: calc(var(--spacing-y) * 2);
+                    }
+                }
+            }
+
+            /* Interact » Forums » Admin Posts */
+            + h1 {
+                img[src='//img.subeta.net/items/plushie_icon_staff.gif'] {
+                    display: none;
+                }
+
+                + .mb-3 + .nav ~ .media.border.rounded.p-3.mt-3 {
+                    display: flex;
+                    gap: var(--spacing-y);
+                    padding: var(--spacing) !important;
+                    border: var(--border) !important;
+                    border-radius: var(--border-radius);
+                    font-size: var(--font-size-medium);
+
+                    @media (max-device-width: 768px) {
+                        flex-direction: column;
+                    }
+
+                    .media-body.p-2 {
+                        padding: 0 !important;
+
+                        > blockquote {
+                            margin-bottom: 0;
+                        }
+
+                        .scode-code,
+                        .blockquote {
+                            border-radius: var(--border-radius);
+                            background-color: var(--grey) !important;
+                            font-size: inherit;
+                        }
+                    }
+
+                    .text-muted {
+                        color: var(--black) !important;
+                    }
+
+                    a {
+                        font-weight: bold;
                     }
                 }
             }
@@ -7681,6 +7762,278 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             &:hover {
                                 background-color: var(--button-bg-hover);
                             }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Interact » Forums » Groups » Intro */
+        + .intro.ui.message {
+            display: var(--display-forum-group-intro, block);
+            font-size: var(--font-size-medium);
+            background-color: var(--grey);
+
+            h2 {
+                font-size: inherit;
+            }
+        }
+
+        /* Interact » Forums » Groups » Items */
+        + .intro.ui.message + #group_container > .ui.grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-y);
+
+            .column {
+                width: var(--col-3);
+                margin: 0;
+                padding: var(--spacing);
+                border: var(--border);
+                border-radius: var(--border-radius);
+            }
+
+            .segment {
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: var(--spacing-x);
+                padding: 0;
+                box-shadow: none;
+
+                &:after {
+                    display: none;
+                }
+
+                .group-image {
+                    width: var(--item-size);
+                    height: var(--item-size);
+                    margin: 0;
+                    border-radius: var(--border-radius);
+                    background-color: var(--grey);
+                }
+
+                h5 {
+                    width: calc(100% - var(--item-size) - var(--spacing-x));
+                    margin: 0;
+                    font-size: var(--font-size-small);
+                }
+
+                p {
+                    width: 100%;
+                    margin: 0;
+                    padding-top: var(--spacing-x);
+                    border-top: 1px solid var(--grey);
+                    font-size: var(--font-size-medium);
+                }
+
+                p + p {
+                    font-size: var(--font-size-small);
+
+                    small {
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+
+        /* Interact » Forums » Groups » Group Detail */
+        + .intro.ui.message + #group_container #groupResponse + .ui.message {
+            padding: 0;
+            background-color: transparent;
+            color: var(--black);
+
+            /* » Group Info */
+            > .ui.grid {
+                @media (max-device-width: 768px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                .four.column.wide {
+                    flex-shrink: 0;
+                    min-width: 0 !important;
+
+                    .group-image {
+                        width: var(--item-size-large);
+                        height: var(--item-size-large);
+                        border-radius: var(--border-radius);
+                        background-color: var(--grey);
+
+                        @media (max-device-width: 768px) {
+                            --item-size-large: var(--item-size-medium);
+                        }
+                    }
+                }
+
+                .twelve.column.wide {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--spacing-y);
+
+                    p {
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-x);
+                        margin: 0;
+
+                        @media (max-device-width: 768px) {
+                            font-size: var(--font-size-medium);
+
+                            &:nth-last-child(2) {
+                                flex-direction: column;
+                                gap: var(--spacing-y);
+                                align-items: flex-start;
+                            }
+                        }
+                    }
+
+                    .stats.ui.grid {
+                        gap: var(--spacing-y);
+
+                        @media (max-device-width: 768px) {
+                            flex-direction: column;
+                        }
+
+                        .column.text_center {
+                            display: flex;
+                            align-items: center;
+                            gap: .25em;
+                            flex-direction: row-reverse;
+                            text-align: left !important;
+
+                            @media (max-device-width: 768px) {
+                                justify-content: flex-end;
+                            }
+                        }
+
+                        a,
+                        p,
+                        span,
+                        strong {
+                            white-space: nowrap;
+                            font-size: var(--font-size-base);
+                            font-weight: inherit;
+                        }
+
+                        p:last-child {
+                            gap: 0;
+                            font-weight: bold;
+
+                            &:after {
+                                content: ': '
+                            }
+                        }
+
+                        .icon.money {
+                            display: none;
+                        }
+                    }
+
+                    .ui.menu.secondary {
+                        margin: 0;
+                        border-radius: var(--navbar-radius);
+                        background-color: var(--navbar-bg);
+
+                        .item {
+                            margin: 0;
+                            padding: 0;
+
+                            .icon.moon,
+                            .icon.sun {
+                                display: block;
+                                opacity: 1;
+
+                                &:before {
+                                    display: none;
+                                }
+                            }
+
+                            .icon.moon:after {
+                                content: '\f1f6';
+                            }
+
+                            .icon.sun:after {
+                                content: '\f0f3';
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* » Group Forums */
+            > .ui.grid + .ui.segment {
+                margin-top: calc(var(--spacing-y) * 2);
+                padding: 0;
+                padding-top: calc(var(--spacing-y) * 2);
+                border-top: 1px solid var(--primary-light);
+                border-radius: 0;
+                box-shadow: none;
+
+                > .ui.grid {
+                    flex-wrap: wrap;
+
+                    .column {
+                        width: var(--col-3);
+                        padding: var(--spacing);
+                        border: var(--border);
+                        border-radius: var(--border-radius);
+                        box-shadow: none;
+
+                        .segment {
+                            padding: 0;
+                            box-shadow: none;
+
+                            p {
+                                margin-top: .5em;
+                                font-size: var(--font-size-medium);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /* Interact » Forums » Groups » Group Members */
+        + .intro.ui.message + #group_container > .ui.message {
+            padding: 0;
+            background-color: transparent;
+            color: var(--black);
+
+            .segment {
+                padding: 0;
+                box-shadow: none;
+
+                center {
+                    margin-bottom: var(--spacing-y);
+                    text-align: left;
+                }
+
+                .ui.grid {
+                    flex-wrap: wrap;
+                    gap: var(--spacing-y);
+
+                    .column.text_center {
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-x);
+                        width: var(--col-3);
+                        padding: var(--spacing);
+                        border: var(--border);
+                        border-radius: var(--border-radius);
+                        text-align: left !important;
+
+                        p {
+                            margin: 0;
+                        }
+
+                        a {
+                            font-size: var(--font-size-medium);
+                            word-break: break-all;
+                        }
+
+                        small {
+                            font-size: var(--font-size-small);
                         }
                     }
                 }
