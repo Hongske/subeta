@@ -78,10 +78,10 @@
 <details>
 <summary>📌 List of page changes</summary>
 
-- **Vending** • [📷 screenshot desktop](screenshots/pages/vending--desktop.png) • [📷 screenshot mobile](screenshots/pages/vending--mobile.png)
+- Restyled **Vending** • [📷 screenshot desktop](screenshots/pages/vending--desktop.png) • [📷 screenshot mobile](screenshots/pages/vending--mobile.png)
   - Modified the items so that they're easier to read
   - 👁‍🗨 Changed the image of the vending machine to a big red button
-- **Quests** • [📷 screenshot desktop](screenshots/pages/quests--desktop.png) • [📷 screenshot mobile](screenshots/pages/quests--mobile.png)
+- Restyled **Quests** • [📷 screenshot desktop](screenshots/pages/quests--desktop.png) • [📷 screenshot mobile](screenshots/pages/quests--mobile.png)
   - 👁‍🗨 Removed NPC-images
   - Restyled **[main quests](https://subeta.net/quests.php/wizard)**
     - Added option `--display-quest-intro` to hide intro-text
@@ -98,12 +98,12 @@
 - Restyled **[Search Shops](https://subeta.net/user_shops.php/search)** • [📷 screenshot desktop](screenshots/pages/commerce__search_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__search_shops--mobile.png)
   - Restyled input for searching shops
   - Restyled search results
-- **[Special Shops](https://subeta.net/ss.php)**
+- Restyled **[Special Shops](https://subeta.net/ss.php)**
   - Restyled overview of shops • [📷 screenshot desktop](screenshots/pages/commerce__special_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shops--mobile.png)
   - Restyled the yearly event shops • [📷 screenshot desktop](screenshots/pages/commerce__special_shop--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop--mobile.png)
     - Restyled the items
     - Removed the sidebar with NPC-image, NPC name and buttons
-- **[Your Shops](https://subeta.net/user_shops.php/mine)**
+- Restyled **[Your Shops](https://subeta.net/user_shops.php/mine)**
   - Restyled **Edit Items** • [📷 screenshot desktop](screenshots/pages/commerce__your_shops__edit_items--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__your_shops__edit_items--mobile.png)
     - Added option `--display-yourshop-item-category` to hide categories (from the filters *and* items-list)
     - Removed Item ID from the items-list
@@ -119,6 +119,7 @@
     - 👁‍🗨 Removed piggybank-images
   - Restyled **Sales History** • [📷 screenshot desktop](screenshots/pages/commerce__your_shops__sales_history--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__your_shops__sales_history--mobile.png)
     - Added option `--display-yourshop-sales-info` to hide info-text
+- Restyled **User Shops** • [📷 screenshot desktop](screenshots/pages/commerce__user_shop--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__user_shop--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
@@ -516,7 +517,18 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
 ## ⭐ Changelog
-<strong>📅 2024/03/04</strong>
+
+<strong>📅 2024/03/05</strong>
+
+- Fixed some bugs with styling for menu's in shops, achievements, etc
+- Fixed margins for shop-related random events (Morty or discount card)
+- Fixed the "Claim Titles" page in Achievements
+- Fixed the alignment of the shop-icon for required items in Achievements
+- Restyled **User Shops** • [📷 screenshot desktop](screenshots/pages/commerce__user_shop--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__user_shop--mobile.png)
+
+<br>
+<details>
+<summary>📅 2024/03/04</summary>
 
 - Restyled Forum pages:
   - Restyled **[Subscribed Threads](https://subeta.net/forums.php/subscriptions)** • [📷 screenshot desktop](screenshots/pages/interact__forums__subscribed_threads--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__subscribed_threads--mobile.png)
@@ -534,8 +546,8 @@ If you need more inspiration for an accent-colour for your theme, you can also t
   - Restyled **[Widgets](https://subeta.net/preferences.php?act=sidebar)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__widgets--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__widgets--mobile.png)
   - Restyled **[Bookmarks](https://subeta.net/preferences.php?act=bookmarks)** • [📷 screenshot](screenshots/pages/personal__dashboard__bookmarks--desktop.png)
   - Restyled **[Preferences](https://subeta.net/preferences.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__preferences--mobile.png)
-
-<br>
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/03/03</summary>
 
