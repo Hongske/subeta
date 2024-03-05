@@ -1882,7 +1882,7 @@ img[src='//img.subeta.net/icons/email_open.png'] {
             .npc-image,
             .npc-image + p,
             .npc-image + p + p,
-            .npc-image + p + p  + p {
+            .npc-image + p + p + p {
                 @media (max-device-width: 768px) {
                     display: none;
                 }
@@ -3264,7 +3264,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         min-height: 0 !important;
                         padding: var(--spacing);
                         border-radius: var(--border-radius);
-                        background-color: color-mix(in srgb, var(--accent) 25% , transparent) !important;
+                        background-color: color-mix(in srgb, var(--accent) 25%, transparent) !important;
                         text-align: left !important;
 
                         &.completed {
@@ -5494,16 +5494,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             cursor: grabbing;
                         }
 
-                        b, a {
+                        a,
+                        b {
                             padding: var(--button-padding);
                             font-size: var(--font-size-base);
                             white-space: nowrap;
-                        }
-
-                        b {
-                            width: calc(var(--sidebar-width) / 2);
-                            background-color: var(--primary-light);
-                            color: var(--primary-dark);
                         }
 
                         a {
@@ -5511,6 +5506,12 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             overflow: hidden;
                             text-overflow: ellipsis;
                             pointer-events: none;
+                        }
+
+                        b {
+                            width: calc(var(--sidebar-width) / 2);
+                            background-color: var(--primary-light);
+                            color: var(--primary-dark);
                         }
 
                         .delete {
@@ -8292,8 +8293,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             margin-bottom: var(--spacing-y);
             border-radius: var(--navbar-radius);
             background-color: var(--navbar-bg);
-                color: var(--navbar-fg);
-                font-size: var(--navbar-font-size);
+            color: var(--navbar-fg);
+            font-size: var(--navbar-font-size);
 
             > tbody {
                 display: flex;
@@ -8319,7 +8320,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     }
 
                     &:nth-child(2) {
-                        flex-grow :1;
+                        flex-grow: 1;
                         gap: var(--navbar-gap);
                         border: 0;
                         background-color: transparent;
@@ -8398,7 +8399,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             center {
                                 display: flex;
                                 align-items: center;
-                                gap: .5rem;;
+                                gap: .5rem;
                             }
                         }
                     }
