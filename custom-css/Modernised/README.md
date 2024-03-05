@@ -525,7 +525,7 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 - Fixed the "Claim Titles" page in Achievements
 - Fixed the alignment of the shop-icon for required items in Achievements
 - Restyled **User Shops** • [📷 screenshot desktop](screenshots/pages/commerce__user_shop--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__user_shop--mobile.png)
-- Split the styling up into multiple CSS-files
+- Split the styling up into multiple CSS-files, some of them minified
 
 <br>
 <details>
