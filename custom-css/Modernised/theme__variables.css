@@ -1,0 +1,124 @@
+:root {
+    /* Colours -------------------------------------------------------------------------------------------------------*/
+    --blue: var(--color-blue, #0DCAF0);
+    --blue-dark: color-mix(in srgb, var(--blue), var(--black));
+    --blue-light: color-mix(in srgb, var(--blue) 25%, var(--white));
+    --green: var(--color-green, #20C997);
+    --green-dark: color-mix(in srgb, var(--green), var(--black));
+    --green-light: color-mix(in srgb, var(--green) 25%, var(--white));
+    --red: var(--color-red, #DC3545);
+    --red-dark: color-mix(in srgb, var(--red), var(--black));
+    --red-light: color-mix(in srgb, var(--red) 25%, var(--white));
+    --yellow: var(--color-yellow, #FFC107);
+    --yellow-dark: color-mix(in srgb, var(--yellow), var(--black));
+    --yellow-light: color-mix(in srgb, var(--yellow) 25%, var(--white));
+
+    /* Colours » Theme -----------------------------------------------------------------------------------------------*/
+    --black: #000000;
+    --grey: #E9ECEF;
+    --white: #FFFFFF;
+    --primary: var(--color-primary, #9BA84F);
+    --primary-dark: color-mix(in srgb, var(--primary), var(--black));
+    --primary-light: color-mix(in srgb, var(--primary) 25%, var(--white));
+
+    /* Fonts ---------------------------------------------------------------------------------------------------------*/
+    --font-family: 'Roboto';
+    --font-size-base: 16px;
+    --font-size-title: 1.5rem;
+    --font-size-medium: .875rem;
+    --font-size-small: .75rem;
+
+    /* Buttons -------------------------------------------------------------------------------------------------------*/
+    --button-padding: var(--button-padding-y) var(--button-padding-x);
+    --button-padding-y: .5em;
+    --button-padding-x: .75em;
+    --button-radius: var(--border-radius);
+    --button-transition: border-color .2s, background-color .2s, color .2s;
+    --button-bg: var(--primary);
+    --button-bg-hover: var(--primary-dark);
+    --button-fg: var(--white);
+    --button-fg-hover: var(--white);
+    --button-danger-bg: color-mix(in srgb, var(--red) 25%, var(--white));
+    --button-danger-bg-hover: var(--red);
+    --button-danger-fg: var(--red);
+    --button-danger-fg-hover: var(--white);
+
+    /* Other ---------------------------------------------------------------------------------------------------------*/
+    --border: 2px solid var(--primary-light);
+    --border-radius: .25rem;
+    --spacing: var(--spacing-y) var(--spacing-x);
+    --spacing-y: 1rem;
+    --spacing-x: 1rem;
+    --backdrop-blur: blur(.5rem);
+    --box-shadow-blur: .75rem;
+    --box-shadow-color: color-mix(in srgb, var(--black) 33%, transparent);
+    --box-shadow--all: 0 0 var(--box-shadow-blur) var(--box-shadow-color);
+    --box-shadow--down: 0 .375em var(--box-shadow-blur) var(--box-shadow-color);
+
+    /* Defaults ------------------------------------------------------------------------------------------------------*/
+    --content-width-max: 1300px;
+    --content-width-fixed: calc(1300px - var(--sidebar-width) - 2rem);
+    --content-col-4: calc((100% - var(--spacing-y)) / 12 * 4);
+    --content-col-8: calc((100% - var(--spacing-y)) / 12 * 8);
+    --menu-height: 4rem;
+    --sidebar-width: 320px;
+    --sidebar-height: calc(100vh - var(--menu-height));
+    --alert-radius: var(--border-radius);
+    --alert-padding: var(--spacing);
+
+    /* Defaults » Columns --------------------------------------------------------------------------------------------*/
+    --col-1: 100%;
+    --col-2: calc((100% - 1rem) / 2);
+    --col-3: calc((100% - 2rem) / 3);
+    --col-4: calc((100% - 3rem) / 4);
+    --col-5: calc((100% - 4rem) / 5);
+
+    /* Defaults » Item -----------------------------------------------------------------------------------------------*/
+    --item-padding: var(--spacing);
+    --item-radius: var(--border-radius);
+    --item-size: var(--item-size-medium);
+    --item-size-small: 2rem;
+    --item-size-medium: 4rem;
+    --item-size-large: 8rem;
+
+    /* Defaults » Navbar ---------------------------------------------------------------------------------------------*/
+    --navbar-gap: .25em;
+    --navbar-padding: var(--spacing);
+    --navbar-radius: var(--border-radius);
+    --navbar-font-size: var(--font-size-medium);
+    --navbar-bg: var(--primary-light);
+    --navbar-fg: var(--black);
+    --navbar-link: var(--primary);
+
+    /* Mobile Variables ----------------------------------------------------------------------------------------------*/
+    --mobile-zoom: 3;
+
+    @media (max-device-width: 768px) {
+        --col-2: 100%;
+        --col-3: 100%;
+        --col-4: 100%;
+        --col-5: 100%;
+        --content-col-4: 100%;
+        --content-col-8: 100%;
+        --content-width-fixed: calc((100vw / var(--mobile-zoom)) - 2rem);
+        --item-size: var(--item-size-small);
+        --font-size-title: 1.25rem;
+        --menu-height: 6rem;
+        --sidebar-width: 100%;
+        --sidebar-height: calc((100vh / var(--mobile-zoom)) - var(--menu-height));
+        --spacing-y: .5rem;
+    }
+
+    @media (min-device-width: 769px) and (max-width: 1300px) {
+        --content-width-fixed: calc(100% - var(--sidebar-width) - 2rem);
+    }
+
+    /* Icons (for elements that can't have :after) -------------------------------------------------------------------*/
+    --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/%3E%3C/svg%3E");
+    --icon-check--uncheck: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96z'/%3E%3C/svg%3E");
+    --icon-lock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z'/%3E%3C/svg%3E");
+    --icon-lock--unlock: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='white' d='M144 144c0-44.2 35.8-80 80-80c31.9 0 59.4 18.6 72.3 45.7c7.6 16 26.7 22.8 42.6 15.2s22.8-26.7 15.2-42.6C331 33.7 281.5 0 224 0C144.5 0 80 64.5 80 144v48H64c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V256c0-35.3-28.7-64-64-64H144V144z'/%3E%3C/svg%3E");
+    --icon-email: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='white' d='M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z'/%3E%3C/svg%3E");
+    --icon-email--open: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='white' d='M215.4 96H144 107.8 96v8.8V144v40.4 89L.2 202.5c1.6-18.1 10.9-34.9 25.7-45.8L48 140.3V96c0-26.5 21.5-48 48-48h76.6l49.9-36.9C232.2 3.9 243.9 0 256 0s23.8 3.9 33.5 11L339.4 48H416c26.5 0 48 21.5 48 48v44.3l22.1 16.4c14.8 10.9 24.1 27.7 25.7 45.8L416 273.4v-89V144 104.8 96H404.2 368 296.6 215.4zM0 448V242.1L217.6 403.3c11.1 8.2 24.6 12.7 38.4 12.7s27.3-4.4 38.4-12.7L512 242.1V448v0c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64v0zM176 160H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H336c8.8 0 16 7.2 16 16s-7.2 16-16 16H176c-8.8 0-16-7.2-16-16s7.2-16 16-16z'/%3E%3C/svg%3E");
+    --icon-email--check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath fill='white' d='M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0l57.4-43c23.9-59.8 79.7-103.3 146.3-109.8l13.9-10.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176V384c0 35.3 28.7 64 64 64H360.2C335.1 417.6 320 378.5 320 336c0-5.6 .3-11.1 .8-16.6l-26.4 19.8zM640 336a144 144 0 1 0 -288 0 144 144 0 1 0 288 0zm-76.7-43.3c6.2 6.2 6.2 16.4 0 22.6l-72 72c-6.2 6.2-16.4 6.2-22.6 0l-40-40c-6.2-6.2-6.2-16.4 0-22.6s16.4-6.2 22.6 0L480 353.4l60.7-60.7c6.2-6.2 16.4-6.2 22.6 0z'/%3E%3C/svg%3E");
+}
