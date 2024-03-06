@@ -518,7 +518,13 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 
 ## ⭐ Changelog
 
-<strong>📅 2024/03/05</strong>
+<strong>📅 2024/03/06</strong>
+
+- Added styling for codecaves-widget in the sidebar
+
+<br>
+<details>
+<summary>📅 2024/03/05</summary>
 
 - Fixed some bugs with styling for menu's in shops, achievements, etc
 - Fixed margins for shop-related random events (Morty or discount card)
@@ -526,8 +532,8 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 - Fixed the alignment of the shop-icon for required items in Achievements
 - Restyled **User Shops** • [📷 screenshot desktop](screenshots/pages/commerce__user_shop--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__user_shop--mobile.png)
 - Split the styling up into multiple CSS-files, some of them minified
-
-<br>
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/03/04</summary>
 

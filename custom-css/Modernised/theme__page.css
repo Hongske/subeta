@@ -941,6 +941,30 @@
                 }
             }
 
+            .x-js-widget-codacave {
+                center {
+                    display: flex;
+                    align-items: center;
+                    gap: .5em;
+                    text-align: left;
+
+                    img {
+                        width: var(--item-size-small);
+                        height: var(--item-size-small);
+                        margin: 0 !important;
+                    }
+
+                    br {
+                        display: none;
+                    }
+                }
+
+                img[src$='gem_blackcrystal.gif'],
+                img[src$='gem_blackcrystal.gif'] + br {
+                    display: none;
+                }
+            }
+
             .x-js-widget-feed {
                 .ui.feed {
                     display: flex;
@@ -1066,17 +1090,6 @@
                     br {
                         display: none;
                     }
-                }
-            }
-
-            .x-js-widget-codacave {
-                center {
-                    text-align: left;
-                }
-
-                img[src$='gem_blackcrystal.gif'],
-                img[src$='gem_blackcrystal.gif'] + br {
-                    display: none;
                 }
             }
 
