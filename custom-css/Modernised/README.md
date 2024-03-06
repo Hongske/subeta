@@ -157,8 +157,6 @@
     - Restyled **Group Detail** • [📷 screenshot desktop](screenshots/pages/interact__forums__groups__detail--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__groups__detail--mobile.png)
     - Restyled **Group Members** • [📷 screenshot desktop](screenshots/pages/interact__forums__groups__members--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__groups__members--mobile.png)
   - Restyled **[Admin Posts](https://subeta.net/forums.php/admin_posts)** • [📷 screenshot desktop](screenshots/pages/interact__forums__admin_posts--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__admin_posts--mobile.png)
-  <!-- TODO - Restyled **[Options](https://subeta.net/preferences.php?act=forum)** • [📷 screenshot desktop](screenshots/pages/interact__forums__--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__--mobile.png) -->
-  <!-- TODO - Restyled **[sCode](https://subeta.net/forums/include/codes.php)** • [📷 screenshot desktop](screenshots/pages/interact__forums__--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__--mobile.png) -->
 - Restyled **[sMail](https://subeta.net/mail.php)**
   - Restyled **[Inbox](https://subeta.net/mail.php?folderid=1)** • [📷 screenshot desktop](screenshots/pages/interact__smail__inbox--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__inbox--mobile.png)
   - Restyled **[Outbox](https://subeta.net/mail.php?folderid=20)** • [📷 screenshot desktop](screenshots/pages/interact__smail__outbox--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__outbox--mobile.png)
@@ -207,6 +205,8 @@
 <details>
 <summary>📌 List of page changes [Subeta]</summary>
 
+- **[Explore » Coda Caves](https://subeta.net/explore/codacaves.php)**
+  - 👁‍🗨 Removed NPC-image
 - **[Explore » Darkside » Ultimate Pet Zapper](https://subeta.net/explore/zapper.php)** • [📷 screenshot desktop](screenshots/pages/subeta__explore__darkside__pet_zapper--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__darkside__pet_zapper--mobile.png)
   - Removed NPC-image
   - Added option `--display-pet-zapper-warning` to hide warning-text
@@ -241,6 +241,9 @@
     - Added option `--number-of-pets-training` to change the number of pet per row
 - **[Games » Chance » Fishing](https://subeta.net/games/fishing.php)**
   - 👁‍🗨 Removed NPC-image
+- **[Games » Chance » Mindreader](https://subeta.net/games/mind_reader.php)**
+  - 👁‍🗨 Removed NPC-image
+  - Restyled items and removed their descriptions
 - **[Games » Chance » Scratchcards](https://subeta.net/games/scratchcards.php)**
   - 👁‍🗨 Removed NPC-image
 - **Games » Collections**
@@ -520,7 +523,13 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 
 <strong>📅 2024/03/06</strong>
 
-- Added styling for codecaves-widget in the sidebar
+- Added styling for codacaves
+- Added styling for codacaves-widget in the sidebar
+- Added styling for mind-reader
+- Fixed alignment of the item-list for the basic collections
+- Fixed bookmarks on explore-pages
+- Fixed error with wishlist-styling
+- Fixed Hidden Opponent styling on explore-pages
 
 <br>
 <details>

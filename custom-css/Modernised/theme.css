@@ -1344,6 +1344,7 @@
             padding: 0 !important;
 
             .item-list {
+                justify-content: flex-start !important;
                 gap: var(--spacing-y);
             }
 
@@ -1671,6 +1672,43 @@
                         max-width: none;
                     }
                 }
+
+                /* Games » Chance » Mind Reader */
+                img[src='//img.subeta.net/keeper_graveyard.gif'] {
+                    @media (max-device-width: 768px) {
+                        display: none;
+                    }
+
+                    ~ table[width='750'] {
+                        width: 100%;
+
+                        tr:not(:empty) {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            gap: var(--spacing-y);
+
+                            td {
+                                display: flex;
+                                align-items: center;
+                                max-width: 100% !important;
+                                min-width: 0 !important;
+                                border: var(--border);
+                                border-radius: var(--border-radius);
+                                font-size: 0;
+
+                                img {
+                                    width: var(--item-size);
+                                    height: var(--item-size);
+                                }
+
+                                br {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
             }
 
             /* Subeta » Games » Collections » Sticker Album */
@@ -1792,10 +1830,15 @@
     }
 
     /* Subeta » Subetapedia */
+    + .text_center img[src='https://img.subeta.net/subpedia_header_alexander.png'] {
+        display: none;
+    }
     + .text_center + .ui.message {
         /* Subeta » Subetapedia » Menu */
+        margin-top: 0;
+
         .sbp-nav {
-            margin: -1rem;
+            margin: calc(0px - var(--spacing-y)) calc(0px - var(--spacing-x));
         }
 
         /* Subeta » Subetapedia » Content */
@@ -2490,7 +2533,7 @@
         /* Personal » Wishlist */
         + .ui.header {
             /* Personal » Wishlist » Overview */
-            + .ui.header + .card {
+            + .card {
                 padding: 0;
 
                 .card-header h2 {
@@ -2705,7 +2748,7 @@
             }
 
             /* Personal » Wishlist » List */
-            + .ui.header + .border.rounded.p-3.mb-3 {
+            + .border.rounded.p-3.mb-3 {
                 padding: var(--spacing) !important;
                 border: 0 !important;
                 border-radius: var(--border-radius);
@@ -4038,6 +4081,31 @@
             text-align: left !important;
         }
 
+        /* Subeta » Explore » Coda Caves */
+        > div[style='text-align:left;width:500px'] {
+            width: 100% !important;
+            font-size: var(--font-size-medium);
+
+            img[src^='//img.subeta.net/celesse'] {
+                &,
+                + br {
+                    @media (max-device-width: 768px) {
+                        display: none;
+                    }
+
+                    + br + b + br + .ui.message {
+                        .wl_item {
+                            display: block;
+                        }
+
+                        a {
+                            color: var(--primary);
+                        }
+                    }
+                }
+            }
+        }
+
         /* Subeta » Explore » Arctic Frost » Polar Ice Fields » Buttons */
         > img[src*='map_tundra'] {
             ~ a {
@@ -4330,6 +4398,25 @@
                     margin: 1rem 0;
                 }
             }
+        }
+    }
+
+    /* Subeta » Explore » Coda Caves */
+    + div[style='text-align: center; width:750px; margin: auto;'] {
+        width: 100% !important;
+        font-size: var(--font-size-medium);
+
+        @media (max-device-width: 768px) {
+            img[src^='//img.subeta.net/celesse'] {
+                &,
+                + br {
+                    display: none;
+                }
+            }
+        }
+
+        a {
+            font-weight: bold;
         }
     }
 
