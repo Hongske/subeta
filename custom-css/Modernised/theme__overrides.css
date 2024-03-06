@@ -106,7 +106,6 @@ input[type='submit'] {
         }
     }
 
-    &.red,
     &.negative {
         background-color: var(--red) !important;
 
