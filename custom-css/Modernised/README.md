@@ -521,7 +521,13 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 
 ## ⭐ Changelog
 
-<strong>📅 2024/03/06</strong>
+<strong>📅 2024/03/07</strong>
+
+- Fixed styling for bookmarks when you hover over them
+
+<br>
+<details>
+<summary>📅 2024/03/06</summary>
 
 - Added styling for codacaves
 - Added styling for codacaves-widget in the sidebar
@@ -530,8 +536,8 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 - Fixed bookmarks on explore-pages
 - Fixed error with wishlist-styling
 - Fixed Hidden Opponent styling on explore-pages
-
-<br>
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/03/05</summary>
 

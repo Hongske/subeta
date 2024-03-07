@@ -1140,13 +1140,14 @@
             background-color: var(--primary-light);
             color: var(--primary-dark);
             font-family: var(--font-family);
-            font-size: inherit;
+            font-size: inherit !important;
             font-weight: bold;
             transition: var(--button-transition);
 
             &:hover {
                 border-color: var(--primary-dark);
                 background-color: transparent;
+                color: var(--primary-dark);
             }
         }
 
