@@ -2436,7 +2436,6 @@
                                 display: flex;
                                 flex-wrap: wrap;
                                 gap: var(--spacing-y);
-                                margin-bottom: -1rem;
 
                                 .ui.input {
                                     width: 100%;
