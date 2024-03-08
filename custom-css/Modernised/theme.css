@@ -1608,13 +1608,6 @@
                 .card.p-3.text-center {
                     padding: 0 !important;
 
-                    .text-center.p-3,
-                    p:nth-child(2) {
-                        @media (max-device-width: 768px) {
-                            display: none;
-                        }
-                    }
-
                     p > a {
                         margin-top: 1rem;
                     }
@@ -1829,99 +1822,190 @@
         }
     }
 
-    /* Subeta » Subetapedia */
-    + .text_center img[src='https://img.subeta.net/subpedia_header_alexander.png'] {
-        display: none;
-    }
-    + .text_center + .ui.message {
-        /* Subeta » Subetapedia » Menu */
-        margin-top: 0;
-
-        .sbp-nav {
-            margin: calc(0px - var(--spacing-y)) calc(0px - var(--spacing-x));
+    + .text_center {
+        /* Subeta » Subetapedia */
+        img[src='https://img.subeta.net/subpedia_header_alexander.png'] {
+            display: none;
         }
+        + .ui.message {
+            /* Subeta » Subetapedia » Menu */
+            margin-top: 0;
 
-        /* Subeta » Subetapedia » Content */
-        + .ui.message .ui.grid,
-        + h1 + .ui.message .ui.grid {
-            flex-wrap: wrap;
+            .sbp-nav {
+                margin: calc(0px - var(--spacing-y)) calc(0px - var(--spacing-x));
+            }
 
-            .four.wide.column.text_center {
-                width: var(--col-4);
+            /* Subeta » Subetapedia » Content */
+            + .ui.message .ui.grid,
+            + h1 + .ui.message .ui.grid {
+                flex-wrap: wrap;
 
-                .ui.segment {
-                    height: 100%;
-                    padding: var(--spacing);
+                .four.wide.column.text_center {
+                    width: var(--col-4);
 
-                    p img[src^='//img.subeta.net/icon_'] {
-                        width: var(--item-size-large);
-                        margin: 0 auto;
-                    }
+                    .ui.segment {
+                        height: 100%;
+                        padding: var(--spacing);
 
-                    .oswald {
-                        h1,
-                        a {
-                            font-size: var(--font-size-base) !important;
+                        p img[src^='//img.subeta.net/icon_'] {
+                            width: var(--item-size-large);
+                            margin: 0 auto;
                         }
 
-                        + p .icon.divider {
-                            display: none;
+                        .oswald {
+                            h1,
+                            a {
+                                font-size: var(--font-size-base) !important;
+                            }
 
-                            + a[href^='/subetapedia/index.php?act=view_cat&id='] {
-                                font-size: var(--font-size-medium);
-                                font-weight: normal;
+                            + p .icon.divider {
+                                display: none;
+
+                                + a[href^='/subetapedia/index.php?act=view_cat&id='] {
+                                    font-size: var(--font-size-medium);
+                                    font-weight: normal;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            &:after {
-                display: none;
+                &:after {
+                    display: none;
+                }
             }
         }
     }
 
-    /* Quests » Major Drills */
-    + .text-center > a[href='/explore/major_drills.php'] {
-        img,
-        ~ br {
+    + .text-center {
+        /* Quests » Major Drills */
+        > a[href='/explore/major_drills.php'] {
+            img,
+            ~ br {
+                @media (max-device-width: 768px) {
+                    display: none;
+                }
+            }
+
+            ~ form[method='post'] {
+                .btn[value='SIR, YES SIR!'] {
+                    margin: 1rem 0;
+                }
+            }
+
+            ~ div .d-inline-block.align-middle[style='width:35%;min-width:200px'] {
+                width: var(--col-2) !important;
+                margin: 1rem 0 !important;
+
+                &.border.rounded.p-3 {
+                    padding: var(--spacing) !important;
+                    border: var(--border) !important;
+                }
+
+                + .d-inline-block.align-middle {
+                    width: 100% !important;
+                    padding: 0 !important;
+                }
+
+                a {
+                    font-weight: bold;
+                }
+            }
+
+            ~ .wl_item {
+                display: block;
+                margin: 1rem auto;
+
+                img {
+                    width: var(--item-size);
+                }
+            }
+        }
+
+        /* Personal » Pets » Job Agency */
+        > img[src$='jobagencyboss.gif'] {
             @media (max-device-width: 768px) {
-                display: none;
-            }
-        }
-
-        ~ form[method='post'] {
-            .btn[value='SIR, YES SIR!'] {
-                margin: 1rem 0;
-            }
-        }
-
-        ~ div .d-inline-block.align-middle[style='width:35%;min-width:200px'] {
-            width: var(--col-2) !important;
-            margin: 1rem 0 !important;
-
-            &.border.rounded.p-3 {
-                padding: var(--spacing) !important;
-                border: var(--border) !important;
+                &,
+                & + br,
+                & + br + br {
+                    display: none;
+                }
             }
 
-            + .d-inline-block.align-middle {
+            ~ .mx-auto {
+                display: var(--display-pets-job-intro);
                 width: 100% !important;
-                padding: 0 !important;
+                font-size: var(--font-size-medium);
             }
 
-            a {
-                font-weight: bold;
-            }
-        }
+            ~ .card.mb-3 {
+                margin-bottom: calc(var(--spacing-y) * 2) !important;
+                padding: 0;
 
-        ~ .wl_item {
-            display: block;
-            margin: 1rem auto;
+                h2 {
+                    margin: 0;
+                }
 
-            img {
-                width: var(--item-size);
+                .card-body {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: var(--spacing-y);
+
+                    .petjob-box {
+                        display: flex;
+                        flex-direction: column;
+                        width: var(--number-of-pets-job, var(--number-of-pets));
+                        margin: 0;
+                        padding: var(--spacing);
+                        border: var(--border);
+                        border-radius: var(--border-radius);
+                    }
+
+                    .job-petname,
+                    .jobdiv {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: .5rem;
+                        border: 0;
+
+                        a {
+                            font-size: var(--font-size-base) !important;
+                        }
+
+                        br {
+                            display: none;
+                        }
+                    }
+
+                    .job-petname {
+                        font-size: var(--font-size-title);
+                    }
+
+                    .jobdiv {
+                        padding: var(--spacing);
+                        border-radius: var(--border-radius);
+                        font-size: var(--font-size-medium);
+                        background-color: color-mix(in srgb, var(--primary-light), transparent);
+
+                        > img {
+                            border: 2px solid var(--white);
+                            border-radius: var(--border-radius);
+                            position: relative;
+                            top: 0; left: 0;
+                        }
+
+                        i {
+                            font-style: normal;
+                        }
+                    }
+
+                    img[src^='//img.subeta.net/pets/'] {
+                        width: var(--item-size-large);
+                        height: var(--item-size-large);
+                        margin: var(--spacing-y) auto;
+                    }
+                }
             }
         }
     }
@@ -3975,7 +4059,6 @@
                             gap: .25em;
 
                             a + br,
-                            b + br,
                             > br + br {
                                 display: none;
                             }
@@ -4068,6 +4151,223 @@
             }
         }
 
+        /* Personal » Pets » Job Agency » Pet */
+        > b + br + br + img[src^='//img.subeta.net/pets/1550_chibi.png'][border='0'] {
+            width: var(--item-size-large);
+
+            /* Personal » Pets » Job Agency » Pet » Table Styling*/
+            ~ table,
+            ~ center table {
+                width: 100%;
+                border: 0 !important;
+                border-radius: var(--border-radius);
+                box-shadow: 0 0 0 2px var(--primary-light);
+
+                tr:first-child {
+                    background-color: var(--primary-light) !important;
+                }
+
+                td {
+                    padding: var(--spacing);
+                    border: 0 !important;
+                }
+
+                h1, h3 {
+                    margin: 0;
+                }
+            }
+
+            /* Personal » Pets » Job Agency » Pet » Overview */
+            ~ table[width='550'][style='border:1px solid black;'][cellpadding='10'] {
+                tr:last-child td {
+                    font-size: var(--font-size-small);
+                    text-align: center !important;
+
+                    center {
+                        font-size: var(--font-size-base);
+                    }
+                }
+
+                h1 {
+                    font-size: var(--font-size-base) !important;
+                }
+
+                img {
+                    width: var(--item-size);
+                }
+
+                + br + br {
+                    display: none;
+                }
+
+                /* Personal » Pets » Job Agency » Pet » Overview » Buttons */
+                + br + br + table[width='625'][colspan='5'] {
+                    box-shadow: none;
+
+                    tr {
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-y);
+                        background-color: transparent !important;
+
+                        @media (max-device-width: 768px) {
+                            flex-direction: column;
+                        }
+                    }
+
+                    td {
+                        display: flex;
+                        width: auto;
+                        padding: 0;
+                        font-size: var(--font-size-base);
+                        font-weight: bold;
+                        text-align: left;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row-reverse;
+                            justify-content: flex-end;
+                            gap: var(--button-padding-x);
+                            width: 100%;
+                            padding: var(--button-padding);
+                            border-radius: var(--button-radius);
+                            background-color: var(--button-bg);
+                            color: var(--button-fg);
+                            text-decoration: none;
+                            transition: var(--button-transition);
+
+                            &:hover {
+                                background-color: var(--button-bg-hover);
+                                color: var(--button-fg-hover);
+                            }
+
+                            &:after {
+                                content: '';
+                                display: block;
+                                width: 1rem;
+                                height: 1rem;
+                                font: var(--fa-font-solid);
+                                font-size: var(--font-size-base);
+                                text-align: center;
+                                text-rendering: auto;
+                                -webkit-font-smoothing: antialiased;
+                            }
+
+                            &[href$='&view=listing']:after {
+                                content: '\f46d';
+                            }
+
+                            &[href$='&view=collect']:after {
+                                content: '\f4d3';
+                            }
+
+                            &[href$='&view=promotion']:after {
+                                content: '\f059';
+                            }
+
+                            &[href$='&view=job_history']:after {
+                                content: '\f1da';
+                            }
+
+                            &[href$='&view=quit'] {
+                                --button-bg: var(--red);
+                                --button-bg-hover: var(--red-dark);
+
+                                &:after {
+                                    content: '\f05e';
+                                }
+                            }
+                        }
+
+                        img {
+                            display: none;
+                        }
+
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            /* Personal » Pets » Job Agency » Pet » Job Listings */
+            ~ table[width='650'][style='border:1px solid black; border-bottom:0px;'][cellpadding='5'] {
+                tr {
+                    @media (max-device-width: 768px) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: var(--spacing-y);
+
+                        &:first-child {
+                            display: none;
+                        }
+                    }
+
+                    &:nth-child(n + 3) {
+                        border-top: 1px solid var(--primary-light);
+                    }
+                }
+
+                td {
+                    @media (max-device-width: 768px) {
+                        width: 100%;
+                        text-align: center;
+
+                        &:nth-child(n + 3) {
+                            padding-top: 0;
+                        }
+                    }
+
+                    @media (min-device-width: 769px) {
+                        text-align: left;
+
+                        &:last-child {
+                            text-align: right;
+                        }
+                    }
+
+                    &:first-child {
+                        display: none;
+                    }
+
+                    &:nth-child(2) {
+                        font-weight: bold;
+                    }
+                }
+
+                font[style='font-size:9px;'] {
+                    font-size: var(--font-size-small) !important;
+
+                    i {
+                        display: inline-flex;
+                        padding: .25em .5em;
+                        border-radius: var(--border-radius);
+                        background-color: var(--primary-light);
+                        font-style: normal;
+                        font-weight: bold;
+                    }
+                }
+
+                a {
+                    display: inline-flex;
+                    padding: var(--button-padding);
+                    border-radius: var(--button-radius);
+                    background-color: var(--button-bg);
+                    color: var(--button-fg);
+                    font-weight: bold;
+                    text-decoration: none;
+                    transition: var(--button-transition);
+
+                    &:hover {
+                        background-color: var(--button-bg-hover);
+                        color: var(--button-fg-hover);
+                    }
+                }
+            }
+        }
+
         /* Personal » Inventory » Items » Detail » Back to inventory after adding currency */
         > center > a[href='inventory.php'] {
             display: inline-flex;
@@ -4102,6 +4402,17 @@
                             color: var(--primary);
                         }
                     }
+                }
+            }
+        }
+
+        /* Subeta » Explore » Shadowglen » Underground » Underground Fishing  */
+        > img[src='//img.subeta.net/npc_zombie_benjamin.png'] {
+            @media (max-device-width: 768px) {
+                &,
+                & + br,
+                & + br + br {
+                    display: none;
                 }
             }
         }
@@ -7455,10 +7766,24 @@
                     /* » Pet Minion*/
                     .border.rounded.p-3:nth-child(3) {
                         padding: var(--spacing) !important;
-                        border: var(--border) !important;
+                        background-color: color-mix(in srgb, var(--primary-light), transparent);
+                        color: var(--primary);
 
-                        img {
-                            width: var(--item-size);
+                        @media (max-device-width: 768px) {
+                            font-size: var(--font-size-medium);
+                        }
+
+                        > a {
+                            display: inline-flex;
+                            overflow: hidden;
+                            margin-bottom: var(--spacing-y);
+                            padding: 2px;
+                            border-radius: var(--border-radius);
+                            background-color: var(--white);
+
+                            img {
+                                width: var(--item-size);
+                            }
                         }
                     }
                 }

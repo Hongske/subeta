@@ -186,6 +186,11 @@
   - Added option `--number-of-pets` to change the number of pet per row
   - Added icons for hunger and happiness
   - Modified icon for likes
+  - Restyled **[Job Agency](https://subeta.net/explore/job_agency.php)** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency--mobile.png)
+    - Added option `--display-pets-job-intro` to hide the intro-text
+    - Added option `--number-of-pets-job` to change the number of pet per row
+    - Restyled **Pet Overview** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency__pet--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency__pet--mobile.png)
+    - Restyled **Job Listings** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency__job_listings--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency__job_listings--mobile.png)
 - Restyled **Vault**
   - Removed "Your Vaults"-text from the menu
   - Restyled **[Currency Storage](https://subeta.net/explore/vaults.php?vault=currency)** • [📷 screenshot desktop](screenshots/pages/personal__vaults__currency--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__vaults__currency--mobile.png)
@@ -218,6 +223,8 @@
   - 👁‍🗨 Removed image
 - **[Explore » Shadowglen » Crypts](https://subeta.net/explore/crypts.php)**
   - Made the crypts-map-images scrollable on mobile
+  - 👁‍🗨 Removed NPC-image
+- **[Explore » Shadowglen » Underground » Underground Fishing](https://subeta.net/explore/underground/fishing.php)**
   - 👁‍🗨 Removed NPC-image
 - **[Explore » Shengui Guo » Floating Market](https://subeta.net/explore/shengui_guo/river.php)**
   - Added option `--display-shenguiguo-floatingmarket-intro` to collectively hide Dara's, Jogoh's and Ujin's intro-texts
@@ -269,8 +276,6 @@
   - Removed daily support goal (but only because it doesn't seem to work anymore)
   - Restyled **[Dailies](https://subeta.net/dailies.php)** • [📷 screenshot desktop](screenshots/pages/subeta__news__dailies--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__news__dailies--mobile.png)
 <!-- TODO - Restyled **[Subetapedia](https://subeta.net/subetapedia/)** -->
-  <!-- TODO - Restyle overview (so links all have same style and non-links are removed) -->
-  <!-- TODO - Restyle pages -->
 </details>
 
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
@@ -386,6 +391,7 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 | `--display-pet-option-tcmass`                 | Personal » Pets » Dropdown » Hide option "TC Mass Add"                                |
 | `--display-pet-option-abandon`                | Personal » Pets » Dropdown » Hide option "Abandon"                                    |
 | `--display-pet-option-give`                   | Personal » Pets » Dropdown » Hide option "Give to Friend"                             |
+| `--display-pets-job-intro`                    | Personal » Pets » Job Agency » Hide intro-text                                        |
 | `--display-quest-intro`                       | Quests » Hide intro-text                                                              |
 | `--display-pet-zapper-adoption`               | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide adoption-text                |
 | `--display-pet-zapper-intro`                  | Subeta » Explore » Darkside » Ultimate Pet Zapper » Hide intro-text                   |
@@ -500,6 +506,24 @@ If you need more inspiration for an accent-colour for your theme, you can also t
             </ul>
         </td>
     </tr>
+    <tr>
+        <td><code>--number-of-pets-job</code></td>
+        <td>
+            <ul>
+                <li>
+                    <b>Personal » Pets » Job Agency</b>
+                    » Number of pets per row, with each pet being 1 column
+                </li>
+                <li>
+                    <b>Valid values</b> are
+                    <code>var(--col-1)</code>, <code>var(--col-2)</code>, <code>var(--col-3)</code>, <code>var(--col-4)</code> and <code>var(--col-5)</code>
+                </li>
+                <li>
+                    <b>Default value</b> is <code>var(--number-of-pets)</code>, which means the default is the same as whatever has been set for the number of pets on the Pets-page
+                </li>
+            </ul>
+        </td>
+    </tr>
 </tbody>
 </table>
 
@@ -521,11 +545,24 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 
 ## ⭐ Changelog
 
-<strong>📅 2024/03/07</strong>
+<strong>📅 2024/03/08</strong>
 
-- Fixed styling for bookmarks when you hover over them
+- Fixed bug with rewards-text not showing correctly for Item Hunt
+- Restyled **[Job Agency](https://subeta.net/explore/job_agency.php)** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency--mobile.png)
+  - Added option `--display-pets-job-intro` to hide the intro-text
+  - Added option `--number-of-pets-job` to change the number of pet per row
+  - Restyled **Pet Overview** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency__pet--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency__pet--mobile.png)
+  - Restyled **Job Listings** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency__job_listings--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency__job_listings--mobile.png)
+- **[Explore » Shadowglen » Underground » Underground Fishing](https://subeta.net/explore/underground/fishing.php)**
+  - 👁‍🗨 Removed NPC-image
 
 <br>
+<details>
+<summary>📅 2024/03/07</summary>
+
+- Fixed styling for bookmarks when you hover over them
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/03/06</summary>
 
