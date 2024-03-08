@@ -548,6 +548,7 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 <strong>📅 2024/03/08</strong>
 
 - Fixed bug with rewards-text not showing correctly for Item Hunt
+- Fixed bug with the user-popup shrinking your pet's image if their name was too long
 - Restyled **[Job Agency](https://subeta.net/explore/job_agency.php)** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency--mobile.png)
   - Added option `--display-pets-job-intro` to hide the intro-text
   - Added option `--number-of-pets-job` to change the number of pet per row

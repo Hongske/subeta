@@ -1588,8 +1588,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                         align-items: center;
                         gap: .5rem;
                         margin: .5rem 0;
+                        text-align: left !important;
+                        line-height: 1;
 
                         .ui.image {
+                            flex-shrink: 0;
                             margin: -.9rem;
                             transform: scale(.5);
                             box-shadow: var(--box-shadow--all);
