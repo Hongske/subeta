@@ -1107,6 +1107,7 @@
                 padding: 0;
             }
 
+            /* Subeta » News » Content » Posts */
             > .col-9 {
                 margin-top: calc(var(--spacing-y) * 2);
 
@@ -1227,6 +1228,7 @@
                 }
             }
 
+            /* Subeta » News » Content » Sidebar */
             > .col-3 {
                 display: flex;
                 gap: var(--spacing);
@@ -1390,6 +1392,12 @@
                     border-radius: var(--border-radius);
                     background-color: var(--primary);
                     color: var(--white);
+                    transition: var(--button-transition);
+                }
+
+                &:hover:after {
+                    background-color: var(--button-bg-hover);
+                    color: var(--button-fg-hover);
                 }
             }
         }
@@ -1572,6 +1580,7 @@
                     }
                 }
 
+                /* Quests » Content » Questing » Button Back to Shinwa */
                 a[href='/explore/goddess.php'] {
                     background-color: var(--green);
 
@@ -1810,6 +1819,249 @@
                     border: 1px solid var(--grey);
                     border-radius: var(--button-radius);
                     outline: 0;
+                }
+            }
+        }
+
+        &.w-100:not(.mx-auto) {
+            /* Commerce » Special Shops » Shop » Subeautique */
+            > .col-md-4.col-lg-3.text-center + .col-md-8.col-lg-9 {
+                > .rounded.border.p-3 {
+                    padding: 0 !important;
+                    border: 0 !important;
+
+                    /* Commerce » Special Shops » Shop » Subeautique » Overview » Intro */
+                    &.bg-light.mb-3 {
+                        margin-bottom: calc(var(--spacing-y) * 2) !important;
+                        background-color: transparent !important;
+                        font-size: var(--font-size-medium);
+
+                        p:first-child {
+                            display: var(--display-subeautique-intro, block);
+                        }
+
+                        p i {
+                            font-style: normal;
+                        }
+
+                        a {
+                            font-weight: bold;
+                        }
+                    }
+
+                    /* Commerce » Special Shops » Shop » Subeautique » Overview » Select Shop */
+                    &.bg-light.mb-3 + .rounded.border.p-3 {
+                        h2 {
+                            margin-bottom: var(--spacing-y);
+                        }
+
+                        h2 + .row.w-100 > .text-center {
+                            width: var(--col-2) !important;
+                            padding: var(--spacing);
+                            border: var(--border);
+                            border-radius: var(--border-radius);
+                            text-align: left !important;
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                                gap: var(--spacing-x);
+                                font-size: var(--font-size-small);
+                            }
+
+                            p {
+                                margin: 0;
+                            }
+
+                            img {
+                                height: var(--item-size);
+                            }
+                        }
+                    }
+
+                    /* Commerce » Special Shops » Shop » Subeautique » Bought Item */
+                    > p + .wl_item {
+                        display: block;
+                        margin: 0 auto;
+
+                        + p + p {
+                            margin: var(--spacing-y) 0;
+                            text-align: center;
+                        }
+
+                        + p + p + style + br,
+                        + p + p + style + br + br {
+                            display: none;
+                        }
+
+                        ~ .panel-move-item {
+                            width: 100%;
+                            margin-right: 0;
+
+                            + #move-error {
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    /* Commerce » Special Shops » Shop » Subeautique » Makeup */
+                    > .row.w-100 .p-2.text-center {
+                        width: var(--col-2) !important;
+                        padding: var(--spacing) !important;
+                        border: var(--border);
+                        border-radius: var(--border-radius);
+                        font-size: var(--font-size-small);
+                        text-align: left !important;
+
+                        > .d-flex.flex-column {
+                            align-items: center;
+                            flex-direction: row !important;
+                            gap: var(--spacing-x);
+
+                            .p-2 {
+                                padding: 0 !important;
+                            }
+
+                            .p-2 + .p-2 {
+                                flex-grow: 1;
+                                display: grid;
+                                grid-template-areas:
+                                    "item_name    item_button"
+                                    "item_price   item_button";
+                                grid-column-gap: var(--spacing-x);
+                                grid-row-gap: .5em;
+                                align-items: center;
+                            }
+                        }
+
+                        .buy_buttons.mb-3 {
+                            justify-self: end;
+                            grid-area: item_button;
+                            margin-bottom: 0 !important;
+
+                            .buy_button {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 2rem;
+                                height: 2rem;
+                                font-size: 0;
+
+                                &:after {
+                                    content: '\f07a';
+                                    font-size: var(--font-size-base);
+                                }
+                            }
+                        }
+
+                        .buy_buttons + p {
+                            grid-area: item_name;
+                            margin: 0;
+                        }
+
+                        .buy_buttons + p + p {
+                            grid-area: item_price;
+                        }
+                    }
+                }
+
+                /* Commerce » Special Shops » Shop » Subeautique » Clothing */
+                > .alert.alert-info {
+                    /* Commerce » Special Shops » Shop » Subeautique » Clothing » Intro */
+                    display: var(--display-subeautique-intro, block);
+                    padding: 0;
+                    background-color: transparent;
+                    color: var(--black);
+                    font-size: var(--font-size-medium);
+
+                    p i {
+                        font-style: normal;
+                    }
+
+                    /* Commerce » Special Shops » Shop » Subeautique » Title */
+                    + h1 {
+                        display: none;
+                    }
+
+                    /* Commerce » Special Shops » Shop » Subeautique » Items */
+                    + h1 + .ui.grid {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: var(--spacing-y);
+
+                        .column.text_center {
+                            width: var(--col-2);
+                            min-height: 0 !important;
+                            margin: 0;
+                            padding: var(--spacing);
+                            border: var(--border);
+                            border-radius: var(--border-radius);
+                            text-align: left !important;
+                        }
+
+                        .ui.segment {
+                            display: grid;
+                            grid-template-areas:
+                                "item_image    item_name        item_button"
+                                "item_image    item_price       item_button"
+                                "item_image    item_quantity    item_button";
+                            grid-template-columns: calc(var(--item-size) + 4px) 1fr;
+                            grid-column-gap: var(--spacing-x);
+                            grid-row-gap: .5em;
+                            align-items: center;
+                            justify-items: start;
+                            padding: 0;
+                            box-shadow: none;
+                            font-size: var(--font-size-small);
+
+                            &:after,
+                            br {
+                                display: none;
+                            }
+
+                            .wl_item {
+                                grid-area: item_image;
+                            }
+
+                            .scode-item-name {
+                                grid-area: item_name;
+                            }
+
+                            .scode-item-name + p {
+                                grid-area: item_price;
+                                font-weight: bold;
+                            }
+
+                            .scode-item-name + p + p {
+                                grid-area: item_quantity;
+                                padding: .25em .5em;
+                                border-radius: var(--border-radius);
+                                background-color: var(--primary-light);
+                            }
+
+                            .scode-item-name + p + p + p {
+                                grid-area: item_button;
+                            }
+
+                            p {
+                                margin: 0;
+                            }
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 2rem;
+                                height: 2rem;
+                                font-size: 0;
+                            }
+
+                            a:after {
+                                content: '\f07a';
+                                font-size: var(--font-size-base);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -2089,6 +2341,15 @@
                 padding: 0;
                 background-color: transparent;
 
+                &[id^='%3Ca+href'] .card-header {
+                    background-color: var(--primary-light) !important;
+                    color: var(--primary);
+
+                    .card-title a:first-child:before {
+                        content: 'Forum Group: ';
+                    }
+                }
+
                 /* Interact » Forums » Home » Boards » Title */
                 .card-header {
                     padding: var(--spacing);
@@ -2100,8 +2361,13 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+                        gap: var(--spacing-x);
                         margin-bottom: 0;
                         font-size: var(--font-size-base);
+
+                        a {
+                            color: inherit;
+                        }
                     }
 
                     .forum-collapse-button {
@@ -2120,13 +2386,21 @@
                     margin: 0;
 
                     .col-12.col-sm-6.p-3 {
-                        width: var(--col-3);
+                        --image-size: 40px;
+
+                        width: var(--number-of-boards, var(--col-3));
                         padding: var(--spacing) !important;
                         border: var(--border);
                         border-radius: var(--border-radius);
 
+                        @media (max-device-width: 768px) {
+                            --image-size: var(--item-size-small);
+                        }
+
                         .media > img {
-                            display: none;
+                            width: var(--image-size) !important;
+                            margin: 0 !important;
+                            position: absolute;
                         }
 
                         .media-body {
@@ -2142,8 +2416,12 @@
 
                             h3 {
                                 order: -1;
+                                display: flex;
+                                align-items: center;
+                                height: calc(var(--image-size) + .5rem);
                                 margin-bottom: .5rem;
                                 padding-bottom: .5rem;
+                                padding-left: calc(var(--image-size) + var(--spacing-y));
                                 border-bottom: 1px solid var(--grey);
                                 font-size: var(--font-size-base);
                             }
@@ -2189,7 +2467,7 @@
                 font-size: var(--font-size-medium);
             }
 
-            /* Personal » Vault » Item Storage */
+            /* Personal » Vault */
             + center {
                 /* Personal » Vault » Item Storage */
                 + .container-fluid {
@@ -3062,7 +3340,7 @@
                     background-color: transparent;
                     color: var(--black);
 
-                    /* » Group Info */
+                    /* Interact » Forums » Groups » Group Info */
                     > .ui.grid {
                         @media (max-device-width: 768px) {
                             flex-direction: column;
@@ -3180,7 +3458,7 @@
                         }
                     }
 
-                    /* » Group Forums */
+                    /* Interact » Forums » Groups » Group Forums */
                     > .ui.grid + .ui.segment {
                         margin-top: calc(var(--spacing-y) * 2);
                         padding: 0;
@@ -3193,7 +3471,7 @@
                             flex-wrap: wrap;
 
                             .column {
-                                width: var(--col-3);
+                                width: var(--col-2);
                                 padding: var(--spacing);
                                 border: var(--border);
                                 border-radius: var(--border-radius);
@@ -6113,83 +6391,61 @@
 
                             .p-2.text-center {
                                 width: var(--col-3) !important;
-                                padding: var(--item-padding) !important;
+                                padding: var(--spacing) !important;
                                 border: var(--border);
                                 border-radius: var(--border-radius);
                                 font-size: var(--font-size-small);
                                 text-align: left !important;
-                            }
 
-                            .d-flex.flex-column {
-                                gap: var(--spacing-x);
-                                flex-direction: row !important;
+                                > .d-flex.flex-column {
+                                    align-items: center;
+                                    flex-direction: row !important;
+                                    gap: var(--spacing-x);
 
-                                .p-2 {
-                                    padding: 0 !important;
-                                    position: relative;
+                                    .p-2 {
+                                        padding: 0 !important;
+                                    }
 
-                                    &:nth-child(1) {
-                                        flex-shrink: 0;
+                                    .p-2 + .p-2 {
+                                        flex-grow: 1;
+                                        display: grid;
+                                        grid-template-areas:
+                                            "item_name    item_button"
+                                            "item_price   item_button";
+                                        grid-column-gap: var(--spacing-x);
+                                        grid-row-gap: .5em;
+                                        align-items: center;
                                     }
                                 }
 
-                                .p-2:nth-child(2) {
-                                    display: flex;
-                                    flex-direction: column;
-                                    justify-content: center;
-                                    width: calc(100% - var(--item-size));
-                                    overflow: hidden;
+                                .buy_buttons.mb-3 {
+                                    justify-self: end;
+                                    grid-area: item_button;
+                                    margin-bottom: 0 !important;
 
-                                    p {
-                                        width: 100%;
-                                        margin: 0;
-                                        margin-right: 1rem;
-                                        line-height: 1;
-                                        font-size: var(--font-size-small);
-
-                                        @media (max-device-width: 768px) {
-                                            width: calc(100% - 4rem);
-                                        }
-
-                                        &:nth-child(3) {
-                                            font-weight: bold;
-                                        }
-                                    }
-                                }
-                            }
-
-                            .buy_buttons {
-                                flex-shrink: 0;
-                                order: 3;
-                                margin-top: .5rem;
-                                margin-bottom: 0 !important;
-
-                                @media (max-device-width: 768px) {
-                                    margin-top: 0;
-                                    position: absolute;
-                                    top: 50%;
-                                    right: 0;
-                                    transform: translate(0, -50%);
-                                }
-
-                                .buy_button {
-                                    overflow: hidden;
-
-                                    @media (max-device-width: 768px) {
+                                    .buy_button {
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                        width: 2rem;
+                                        height: 2rem;
                                         font-size: 0;
 
                                         &:after {
                                             content: '\f07a';
-                                            padding: .5em;
-                                            font-size: 1rem;
+                                            font-size: var(--font-size-base);
                                         }
                                     }
+                                }
 
-                                    @media (min-device-width: 769px) {
-                                        &:after {
-                                            display: none;
-                                        }
-                                    }
+                                .buy_buttons + p {
+                                    grid-area: item_name;
+                                    margin: 0;
+                                }
+
+                                .buy_buttons + p + p {
+                                    grid-area: item_price;
+                                    font-weight: bold;
                                 }
                             }
                         }
@@ -7837,19 +8093,19 @@
                 }
 
                 &:nth-child(1) {
-                    /* » Pet Image*/
+                    /* Personal » Pets » Pet Image*/
                     .border.rounded.p-3:nth-child(1) {
                         p {
                             display: none;
                         }
                     }
 
-                    /* » Pet Birthday*/
+                    /* Personal » Pets » Pet Birthday*/
                     .border.rounded.p-3:nth-child(2) {
                         text-align: center !important;
                     }
 
-                    /* » Pet Minion*/
+                    /* Personal » Pets » Pet Minion*/
                     .border.rounded.p-3:nth-child(3) {
                         padding: var(--spacing) !important;
                         background-color: color-mix(in srgb, var(--primary-light), transparent);

@@ -1063,6 +1063,9 @@ select {
 #page #sidebar #sidebar-inner .x-js-widget-notepad #x-notepad-content + br {
   display: none;
 }
+#page #sidebar #sidebar-inner .x-js-widget-notepad ol, #page #sidebar #sidebar-inner .x-js-widget-notepad ul {
+  margin-bottom: 0;
+}
 #page #sidebar #sidebar-inner .x-js-widget-oracle .text-center {
   text-align: left !important;
 }
@@ -1354,34 +1357,10 @@ a[href^="?pet="][href$="&view=collect"]:focus,
 input[type=submit]:hover,
 input[type=submit]:focus {
   outline: 0;
-  box-shadow: none;
-}
-.awesome.blue.large:hover,
-.awesome.default.small:hover,
-.btn:hover,
-.button:hover,
-.card-header a[href="/wishlists.php/new_category"]:hover,
-.container-fluid > center > a[href^="?move="]:hover,
-.container-fluid > center > a[href^="/games/index.php"]:hover,
-.container-fluid > center > a[href="?act=start"]:hover,
-.container-fluid > center > a[href="artic.php"]:hover,
-.container-fluid > center > center > a[href="inventory.php"]:hover,
-.form .formatting .button:hover,
-.row.pt-3 a[href="/explore/goddess.php"]:hover,
-.ui.button:hover,
-.ui.button.basic:hover,
-.ui.button.blue:hover,
-.ui.button.small:hover,
-.ui.button.teal:hover,
-.ui.button.tiny:hover,
-.x-js-widget-activepet td a:hover,
-.x-js-widget-battlepet td a:hover,
-a[href^="/alert.php"]:hover,
-a[href^="?pet="][href$="&view=collect"]:hover,
-input[type=submit]:hover {
   background-color: var(--button-bg-hover);
   color: var(--button-fg-hover);
   text-decoration: none;
+  box-shadow: none;
 }
 
 .awesome.blue.large,
@@ -1399,6 +1378,20 @@ input[type=submit]:hover {
 
 .btn {
   font-size: var(--font-size-base);
+}
+.btn:not([disabled]):not(.disabled).active, .btn:not([disabled]):not(.disabled):active {
+  border: 0;
+  background-color: var(--button-bg);
+  color: var(--button-fg);
+  box-shadow: none;
+  text-decoration: none;
+}
+.btn:not([disabled]):not(.disabled).active:hover, .btn:not([disabled]):not(.disabled).active:focus, .btn:not([disabled]):not(.disabled):active:hover, .btn:not([disabled]):not(.disabled):active:focus {
+  outline: 0;
+  background-color: var(--button-bg-hover);
+  color: var(--button-fg-hover);
+  text-decoration: none;
+  box-shadow: none;
 }
 .btn.btn-danger {
   background-color: var(--red) !important;
@@ -1451,6 +1444,7 @@ input[type=submit][value^="Exchange your tokens"] {
 .btn#check_all_remove:after,
 .btn#uncheck_all_remove:after,
 .button.buy-button:after,
+.button[href^="/explore/subeautique.php/buy/"]:after,
 .card .icon.lock.massive:after,
 .card .fa.fa-lock.fa-4x:after,
 .category .media-body div a:after,
@@ -1629,6 +1623,12 @@ nav .breadcrumb {
   color: var(--black);
   box-shadow: none;
 }
+.form-control.btn {
+  color: var(--button-fg);
+}
+.form-control.btn:hover, .form-control.btn:focus {
+  color: var(--button-fg-hover);
+}
 
 .modal.show {
   z-index: 9999;
@@ -1775,7 +1775,6 @@ h1 + .pagination {
   .row > [class*=col-]:not(.col-auto):nth-last-child(2):first-child img[src^="//img.subeta.net/npc_"] + p,
   .row > [class*=col-]:not(.col-auto):nth-last-child(2):first-child img[src^="//img.subeta.net/scratchcards_meli"],
   .row > [class*=col-]:not(.col-auto):nth-last-child(2):first-child img[src^="//img.subeta.net/keeper_esmerelda"],
-  .row > [class*=col-]:not(.col-auto):nth-last-child(2):first-child img[src^="//img.subeta.net/keeper_esmerelda"] + p,
   .row > [class*=col-]:not(.col-auto):nth-last-child(2):first-child img[src*=chase],
   .row > [class*=col-]:not(.col-auto):nth-last-child(2):first-child img[src*=chase] + br,
   .row > [class*=col-]:not(.col-auto):nth-last-child(2):first-child img[src*=chase] + br + br,
@@ -2726,4 +2725,22 @@ img[src^="//img.subeta.net/ads/"] + .holiday {
 }
 .tpd-tooltip .tpd-content > .ui.grid:after {
   display: none;
+}
+.tpd-tooltip .holiday.survival {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  margin: 0.5em 0 0;
+  padding: 0 0.5em;
+}
+.tpd-tooltip .holiday.survival img {
+  display: none;
+}
+.tpd-tooltip .holiday.survival a {
+  padding: 0;
+}
+.tpd-tooltip .holiday.survival:after {
+  position: relative;
+  top: 0;
+  right: auto;
 }

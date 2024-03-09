@@ -100,9 +100,14 @@
   - Restyled search results
 - Restyled **[Special Shops](https://subeta.net/ss.php)**
   - Restyled overview of shops • [📷 screenshot desktop](screenshots/pages/commerce__special_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shops--mobile.png)
-  - Restyled the yearly event shops • [📷 screenshot desktop](screenshots/pages/commerce__special_shop--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop--mobile.png)
+  - Restyled detail of shop • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__yearly--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__yearly--mobile.png)
     - Restyled the items
     - Removed the sidebar with NPC-image, NPC name and buttons
+  - Restyled **[Subeautique](https://subeta.net/explore/subeautique.php)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__sbq--mobile.png)
+    - Added option `--display-subeautique-intro` to hide the intro-text
+    - 👁‍🗨 Removed NPC-image
+    - Restyled **[Subeautique Clothing](https://subeta.net/explore/subeautique.php/shop)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq__clothing--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__sbq__clothing--mobile.png)
+    - Restyled **[Subeautique Makeup](https://subeta.net/explore/subeautique.php/makeup)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq__makeup--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__subeautique__makeup--mobile.png)
 - Restyled **[Your Shops](https://subeta.net/user_shops.php/mine)**
   - Restyled **Edit Items** • [📷 screenshot desktop](screenshots/pages/commerce__your_shops__edit_items--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__your_shops__edit_items--mobile.png)
     - Added option `--display-yourshop-item-category` to hide categories (from the filters *and* items-list)
@@ -128,8 +133,8 @@
 - **[Forums](https://subeta.net/forums.php)**
   - Restyled **[Forum Home](https://subeta.net/forums.php)** • [📷 screenshot desktop](screenshots/pages/interact__forums__home--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__home--mobile.png)
     - Added option `--display-forum-pulse` to completely hide forum-pulse
+    - Added option `--number-of-boards` to change the number of boards per row
     - Replaced collapse-text with an icon (same icon as for sidebar-widgets)
-    - Removed images for forum boards
     - Modified order of forum-details so that the list of subforums is last
     - Restyled **Subforums** • [📷 screenshot desktop](screenshots/pages/interact__forums__home__subforum--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__home__subforum--mobile.png)
       - Topics with unread posts have their text in bold
@@ -366,6 +371,7 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 | `--display-hustler`                           | General » Hide Hustler-banner                                                         |
 | `--display-sidebar-battlepet-buttons`         | General » Sidebar » Hide buttons for battlepet widget                                 |
 | `--display-sidebar-currency-headers`          | General » Sidebar » Hide the headers (Active, Seasonal, Events) for currencies-widget |
+| `--display-subeautique-intro`                 | Commerce » Special Shops » Subeautique » Hide intro-text                              |
 | `--display-yourshop-item-category`            | Commerce » Your Shops » Edit Items » Hide categories-options                          |
 | `--display-yourshop-quickstock-delete`        | Commerce » Your Shops » Quick Stock » Hide delete-option                              |
 | `--display-yourshop-sales-info`               | Commerce » Your Shops » Sales History » Hide info-text                                |
@@ -524,6 +530,24 @@ If you need more inspiration for an accent-colour for your theme, you can also t
             </ul>
         </td>
     </tr>
+    <tr>
+        <td><code>--number-of-boards</code></td>
+        <td>
+            <ul>
+                <li>
+                    <b>Interact » Forums » Home</b>
+                    » Number of boards per row, with each board being 1 column
+                </li>
+                <li>
+                    <b>Valid values</b> are
+                    <code>var(--col-1)</code>, <code>var(--col-2)</code>, <code>var(--col-3)</code>, <code>var(--col-4)</code> and <code>var(--col-5)</code>
+                </li>
+                <li>
+                    <b>Default value</b> is <code>var(--col-3)</code>, which means 3 columns or 3 boards per row
+                </li>
+            </ul>
+        </td>
+    </tr>
 </tbody>
 </table>
 
@@ -547,7 +571,14 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 
 <strong>📅 2024/03/09</strong>
 
-- TODO
+- Added option `--number-of-boards` to change the number of boards per row
+- Added the images for forum boards back, to make it easier to find the board you want
+- Restyled **[Subeautique](https://subeta.net/explore/subeautique.php)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__sbq--mobile.png)
+  - Added option `--display-subeautique-intro` to hide the intro-text
+  - 👁‍🗨 Removed NPC-image
+  - Restyled **[Subeautique Clothing](https://subeta.net/explore/subeautique.php/shop)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq__clothing--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__sbq__clothing--mobile.png)
+  - Restyled **[Subeautique Makeup](https://subeta.net/explore/subeautique.php/makeup)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq__makeup--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__subeautique__makeup--mobile.png)
+- Updated styling for yearly event shops' items to match Subeautique- and quest-items
 
 <br>
 <details>

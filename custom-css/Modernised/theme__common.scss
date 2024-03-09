@@ -1235,8 +1235,12 @@ select {
             }
 
             .x-js-widget-notepad {
-                #x-notepad-content+br {
+                #x-notepad-content + br {
                     display: none;
+                }
+
+                ol, ul {
+                    margin-bottom: 0;
                 }
             }
 
@@ -1422,24 +1426,17 @@ input[type='submit'] {
     transition: var(--button-transition);
     cursor: pointer;
 
-    &,
-    &:link,
-    &:active,
-    &:visited {
+    &, &:link, &:active, &:visited {
         background-color: var(--button-bg);
         color: var(--button-fg);
     }
 
-    &:hover,
-    &:focus {
+    &:hover, &:focus {
         outline: 0;
-        box-shadow: none;
-    }
-
-    &:hover {
         background-color: var(--button-bg-hover);
         color: var(--button-fg-hover);
         text-decoration: none;
+        box-shadow: none;
     }
 }
 
@@ -1458,6 +1455,23 @@ input[type='submit'] {
 
 .btn {
     font-size: var(--font-size-base);
+
+    &:not([disabled]):not(.disabled).active,
+    &:not([disabled]):not(.disabled):active {
+        border: 0;
+        background-color: var(--button-bg);
+        color: var(--button-fg);
+        box-shadow: none;
+        text-decoration: none;
+
+        &:hover, &:focus {
+            outline: 0;
+            background-color: var(--button-bg-hover);
+            color: var(--button-fg-hover);
+            text-decoration: none;
+            box-shadow: none;
+        }
+    }
 
     &.btn-danger {
         background-color: var(--red) !important;
@@ -1526,6 +1540,7 @@ input[type='submit'][value^='Exchange your tokens'] {
 .btn#check_all_remove,
 .btn#uncheck_all_remove,
 .button.buy-button,
+.button[href^='/explore/subeautique.php/buy/'],
 .card .icon.lock.massive,
 .card .fa.fa-lock.fa-4x,
 .category .media-body div a,
@@ -1714,12 +1729,19 @@ img[src='//img.subeta.net/icons/email_open.png'] {
     }
 
     &,
-    &:hover,
-    &:focus {
+    &:hover, &:focus {
         border-color: var(--black);
         outline: 0;
         color: var(--black);
         box-shadow: none;
+    }
+
+    &.btn {
+        color: var(--button-fg);
+
+        &:hover, &:focus {
+            color: var(--button-fg-hover);
+        }
     }
 }
 
@@ -1889,7 +1911,6 @@ img[src='//img.subeta.net/icons/email_open.png'] {
             img[src^='//img.subeta.net/npc_'] + p,
             img[src^='//img.subeta.net/scratchcards_meli'],
             img[src^='//img.subeta.net/keeper_esmerelda'],
-            img[src^='//img.subeta.net/keeper_esmerelda'] + p,
             img[src*='chase'],
             img[src*='chase'] + br,
             img[src*='chase'] + br + br,
@@ -2999,6 +3020,28 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             &:after {
                 display: none;
             }
+        }
+    }
+
+    .holiday.survival {
+        display: inline-flex;
+        align-items: center;
+        gap: .25em;
+        margin: .5em 0 0;
+        padding: 0 .5em;
+
+        img {
+            display: none;
+        }
+
+        a {
+            padding: 0;
+        }
+
+        &:after {
+            position: relative;
+            top: 0;
+            right: auto;
         }
     }
 }
