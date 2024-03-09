@@ -545,7 +545,13 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 
 ## ⭐ Changelog
 
-<strong>📅 2024/03/08</strong>
+<strong>📅 2024/03/09</strong>
+
+- TODO
+
+<br>
+<details>
+<summary>📅 2024/03/08</summary>
 
 - Fixed bug with rewards-text not showing correctly for Item Hunt
 - Fixed bug with the user-popup shrinking your pet's image if their name was too long
@@ -557,8 +563,8 @@ If you need more inspiration for an accent-colour for your theme, you can also t
   - Restyled **Job Listings** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency__job_listings--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency__job_listings--mobile.png)
 - **[Explore » Shadowglen » Underground » Underground Fishing](https://subeta.net/explore/underground/fishing.php)**
   - 👁‍🗨 Removed NPC-image
-
-<br>
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/03/07</summary>
 
