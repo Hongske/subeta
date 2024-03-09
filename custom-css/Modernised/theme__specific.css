@@ -5611,6 +5611,16 @@
                     box-shadow: none;
                 }
 
+                .ui.button.green {
+                    background-color: var(--button-bg);
+                    color: var(--button-fg);
+
+                    &:hover, &:focus {
+                        background-color: var(--button-bg-hover);
+                        color: var(--button-fg-hover);
+                    }
+                }
+
                 .qs-button {
                     width: 2rem;
                     height: 2rem;

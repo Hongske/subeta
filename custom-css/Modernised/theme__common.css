@@ -1403,6 +1403,7 @@ input[type=submit]:focus {
 }
 
 .ui.button {
+  background-image: none;
   font-size: var(--font-size-base);
 }
 .ui.button.basic, .ui.button.basic:link, .ui.button.basic:active, .ui.button.basic:visited {

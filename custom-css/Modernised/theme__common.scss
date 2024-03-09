@@ -1485,13 +1485,11 @@ input[type='submit'] {
 }
 
 .ui.button {
+    background-image: none;
     font-size: var(--font-size-base);
 
     &.basic {
-        &,
-        &:link,
-        &:active,
-        &:visited {
+        &, &:link, &:active, &:visited {
             background-color: var(--button-bg) !important;
             color: var(--button-fg) !important;
         }
