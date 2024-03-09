@@ -2076,6 +2076,12 @@ img[src='//img.subeta.net/icons/email_open.png'] {
             margin-top: .25em;
         }
     }
+
+    /* Achievement unlocked » On Pets-page */
+    #pet_list > & {
+        width: 100%;
+        margin-bottom: 0;
+    }
 }
 
 .ui.message.info {

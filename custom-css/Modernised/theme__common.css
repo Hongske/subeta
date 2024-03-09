@@ -1895,6 +1895,7 @@ h1 + .pagination {
 .ui.message.yellow {
   /* Achievement unlocked » In content */
   /* Achievement unlocked » On page*/
+  /* Achievement unlocked » On Pets-page */
 }
 #content > .ui.message.yellow:first-child {
   margin: 1rem;
@@ -1929,6 +1930,10 @@ body > .ui.message.yellow .ui.grid .column {
 }
 body > .ui.message.yellow p {
   margin-top: 0.25em;
+}
+#pet_list > .ui.message.yellow {
+  width: 100%;
+  margin-bottom: 0;
 }
 
 .ui.message.info {
