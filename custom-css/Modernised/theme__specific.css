@@ -5625,10 +5625,15 @@
                     width: 2rem;
                     height: 2rem;
                     padding: .5rem;
-                    border-radius: var(--border-radius);
+                    border-radius: var(--button-radius);
                     background-color: var(--button-bg);
-                    color: var(--white);
+                    color: var(--button-fg);
                     font-size: 0;
+
+                    &:hover, &:focus {
+                        background-color: var(--button-bg-hover);
+                        color: var(--button-fg-hover);
+                    }
 
                     &:after {
                         font-size: var(--font-size-small);
