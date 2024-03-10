@@ -23,10 +23,12 @@
             </div>
             <br>
             <p>
-                You can find all possible customisation-options below.
-                Just set them through the different fields and then press "Generate".
-                You'll get a bunch of code at the bottom of the page, which you have to paste into the box on your
-                <a href="https://subeta.net/preferences.php?act=customcss">CustomCSS page</a>.
+                To install the theme:
+                <ol>
+                    <li>Pick your preferred options in the tables below.</li>
+                    <li>Click the "Generate ❤" button.</li>
+                    <li>Copy the code at the bottom of the page into the box on your <a href="https://subeta.net/preferences.php?act=customcss">CustomCSS page</a>.</li>
+                </ol>
             </p>
 
             <table class="form">
@@ -387,7 +389,7 @@
                             <hr>
                             <label>
                                 <input type="number" id="--number-of-pets-job" value="3" min="1" max="5" data-initial="3" data-type="col" />
-                                number of pets per row (uses the same value from Pets » Overview, by default)
+                                number of pets per row
                             </label>
                         </td>
                     </tr>
@@ -459,7 +461,7 @@
                             <hr>
                             <label>
                                 <input type="number" id="--number-of-pets-training" value="3" min="1" max="5" data-initial="3" data-type="col" />
-                                number of pets per row in the Training Center (uses the same value from Pets » Overview, by default)
+                                number of pets per row in the Training Center
                             </label>
                         </td>
                     </tr>
@@ -597,11 +599,22 @@
     </style>
 
     <script>
-        // TODO - Add on:change event for number-of-pets; to propagate to number-of-pets-training and number-of-pets-job
-
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('submit').addEventListener('click', (e) => {
                 generateCSS();
+            });
+
+            document.getElementById('--number-of-pets').addEventListener('change', (e) => {
+                var rows = [];
+                rows.push(document.getElementById('--number-of-pets-job'));
+                rows.push(document.getElementById('--number-of-pets-training'));
+
+                rows.forEach((row) => {
+                    if (row.dataset.initial && row.value == row.dataset.initial.toLowerCase()) {
+                        row.value = e.target.value;
+                        row.dataset.initial = e.target.value;
+                    }
+                });
             });
         }, false);
 
