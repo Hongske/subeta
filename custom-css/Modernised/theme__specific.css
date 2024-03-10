@@ -1674,6 +1674,11 @@
                         display: none;
                     }
 
+                    + br + br + img[src^='//img.subeta.net/items/'] {
+                        width: var(--item-size);
+                        height: var(--item-size);
+                    }
+
                     ~ table[width='750'] {
                         width: 100%;
 

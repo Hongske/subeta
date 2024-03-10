@@ -3,20 +3,41 @@
 [Home](https://hongske.github.io/subeta/) » **Modernised Theme** • A CustomCSS-theme for desktop and mobile
 </div>
 
-<!-- TODO - Write JS to generate override-variables based on checkboxed  -->
-
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 <br>
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
 ![Example colours](screenshots/themes_subeta.gif)
 
+## ⭐ Table of Contents
+- [Features & screenshots](#features-amp-screenshots)
+  - [General layout changes](#features_general)
+  - [Page changes](#features_page)
+  - [Page changes [Commerce]](#features_page_commerce)
+  - [Page changes [Interact]](#features_page_interact)
+  - [Page changes [Personal]](#features_page_personal)
+  - [Page changes [Subeta]](#features_page_subeta)
+- [Installing the theme](#installing-the-theme)
+- [Customising the theme](#customising-the-theme)
+  - [Colour options](#options_colour)
+  - [Display options](#options_display)
+  - [Number options](#options_number)
+  - [Font-weight options](#options_fontweight)
+  - [Special options](#options_special)
+<!-- - [Theme code generator](#theme-code-generator) ✨ -->
+- [Credits](#credits)
+- [Changelog](#changelog)
+
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
+<br>
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
+
 ## ⭐ Features & screenshots
 - Features without an icon are for both desktop and mobile screens
 - 👁‍🗨 means this feature is only for mobile
 - 📷 means this is a link to a screenshot
 
-<details>
+<details id="features_general">
 <summary>📌 List of general layout changes</summary>
 
 - Modernised the layout
@@ -75,7 +96,7 @@
   - Added options to modify theme colours ([see ⭐ Customising the theme](#⭐-customising-the-theme))
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details>
+<details id="features_page">
 <summary>📌 List of page changes</summary>
 
 - Restyled **Vending** • [📷 screenshot desktop](screenshots/pages/vending--desktop.png) • [📷 screenshot mobile](screenshots/pages/vending--mobile.png)
@@ -92,7 +113,7 @@
 - Restyled **[Your Events](https://subeta.net/events.php)** • [📷 screenshot desktop](screenshots/pages/events--desktop.png) • [📷 screenshot mobile](screenshots/pages/events--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details>
+<details id="features_page_commerce">
 <summary>📌 List of page changes [Commerce]</summary>
 
 - Restyled **[Search Shops](https://subeta.net/user_shops.php/search)** • [📷 screenshot desktop](screenshots/pages/commerce__search_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__search_shops--mobile.png)
@@ -127,7 +148,7 @@
 - Restyled **User Shops** • [📷 screenshot desktop](screenshots/pages/commerce__user_shop--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__user_shop--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details>
+<details id="features_page_interact">
 <summary>📌 List of page changes [Interact]</summary>
 
 - **[Forums](https://subeta.net/forums.php)**
@@ -171,7 +192,7 @@
   - Restyled **[Edit Folders](https://subeta.net/mail.php?act=editfolders)** • [📷 screenshot desktop](screenshots/pages/interact__smail__edit_folders--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__edit_folders--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details>
+<details id="features_page_personal">
 <summary>📌 List of page changes [Personal]</summary>
 
 - Restyled **[Account Search](https://subeta.net/isearch.php)** • [📷 screenshot desktop](screenshots/pages/personal__account_search--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__account_search--mobile.png)
@@ -212,7 +233,7 @@
   - Restyled **[Buffs](https://subeta.net/preferences.php?act=buffs)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__buffs--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__buffs--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details>
+<details id="features_page_subeta">
 <summary>📌 List of page changes [Subeta]</summary>
 
 - **[Explore » Coda Caves](https://subeta.net/explore/codacaves.php)**
@@ -323,7 +344,7 @@ Then, add your overrides between the curly brackets. An example would be:
 
 You can find the available options in the following parts:
 
-<details>
+<details id="options_colour">
 <summary>🍄 Colour options</summary>
 
 - Variables begin with `--colour` and need a valid CSS colour value
@@ -356,8 +377,7 @@ These are also the colours that are displayed in the opening GIF at the top of t
 If you need more inspiration for an accent-colour for your theme, you can also try [these Bootstrap colour palettes](https://getbootstrap.com/docs/5.3/customize/color/#all-colors), [these Material colour palettes](https://materialui.co/colors/) or even [this random colour generator](https://randomcolour.com/).
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details>
-
+<details id="options_display">
 <summary>🍄 Display options</summary>
 
 - Variables begin with `--display` and need a valid CSS display value
@@ -419,7 +439,7 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 | `--display-news-daily-lottery`                | Subeta » News » Hide Daily » Potion Lottery Winner                                    |
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details>
+<details id="options_number">
 <summary>🍄 Number options</summary>
 
 - Variables begin with `--number-of` and need a valid number
@@ -434,7 +454,7 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 | `--number-of-menu-shops`     | General » Menu » How many shops should be shown at once?   | `10`          |
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details>
+<details id="options_fontweight">
 <summary>🍄 Font-weight options</summary>
 
 - Variables begin with `--fontweight` and need a valid CSS font-weight value
@@ -461,7 +481,7 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 | `--fontweight-pet-option-give`        | Personal » Pets » Dropdown » Font weight for option "Give to Friend"      |
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details>
+<details id="options_special">
 <summary>🍄 Special options</summary>
 
 - These variables have been isolated into their own bit at the end of this section
@@ -557,6 +577,24 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 <br>
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
+## ⭐ Theme code generator
+Don't feel comfortable customising the theme through messing with code yourself? No problem! Just check your preferences through the generator below. After you press "Generate", you'll get the code you need to paste into your CustomCSS box.
+<form id="generator__form">
+<label><input type="checkbox" data-option="--display-floating-item" /> Hide floating items?</label>
+<br />
+<input type="submit" onclick="generateCSS()" id="generator__button" />
+</form>
+<pre id="generator__result"></pre>
+<script>
+function generateCSS() {
+    document.getElementById("generator__result").innerHTML = "test";
+}
+</script>
+
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
+<br>
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
+
 ## ⭐ Credits
 - [spacemage](https://subeta.net/users/spacemage), for their [year indicators for yearly event shops](https://subeta.net/forums.php/gotopost/66366953)
 - [Sorcerer](https://subeta.net/users/Sorcerer), for their [very helpful collection of Custom CSS](https://karlpiper.com/subeta/customcss/)
@@ -569,7 +607,14 @@ If you need more inspiration for an accent-colour for your theme, you can also t
 
 ## ⭐ Changelog
 
-<strong>📅 2024/03/09</strong>
+<strong>📅 2024/03/10</strong>
+
+- Added Table of Contents to this page
+- Started adding theme code generator to this page
+
+<br>
+<details>
+<summary>📅 2024/03/09</summary>
 
 - Added option `--number-of-boards` to change the number of boards per row
 - Added the images for forum boards back, to make it easier to find the board you want
@@ -579,8 +624,8 @@ If you need more inspiration for an accent-colour for your theme, you can also t
   - Restyled **[Subeautique Clothing](https://subeta.net/explore/subeautique.php/shop)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq__clothing--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__sbq__clothing--mobile.png)
   - Restyled **[Subeautique Makeup](https://subeta.net/explore/subeautique.php/makeup)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq__makeup--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__subeautique__makeup--mobile.png)
 - Updated styling for yearly event shops' items to match Subeautique- and quest-items
-
-<br>
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
 <details>
 <summary>📅 2024/03/08</summary>
 
