@@ -13,6 +13,13 @@
 <br>
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
+## ⭐ Installing the theme
+To install the theme, please use the **[✨theme code generator✨](theme_code_generator.html)** to pick your preferred options and to generate the code. If you prefer *not* to use the generator, then you can find all invidiual options in the [features list](#features-amp-screenshots).
+
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
+<br>
+<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
+
 ## ⭐ Features & screenshots
 - Features without an icon are for both desktop and mobile screens
 - 👁‍🗨 means this feature is only for mobile
@@ -284,17 +291,6 @@
   - Restyled **[Dailies](https://subeta.net/dailies.php)** • [📷 screenshot desktop](screenshots/pages/subeta__news__dailies--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__news__dailies--mobile.png)
 <!-- TODO - Restyled **[Subetapedia](https://subeta.net/subetapedia/)** -->
 </details>
-
-<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
-<br>
-<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
-
-<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
-<br>
-<!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
-
-## ⭐ Installing the theme
-To install the theme, please use the **[✨theme code generator✨](theme_code_generator.html)** to pick your preferred options and to generate the code. If you prefer *not* to use the generator, then you can find all invidiual options in the [features list](#features-amp-screenshots).
 
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 <br>
