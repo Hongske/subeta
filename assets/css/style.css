@@ -46,6 +46,10 @@ details {
     padding-top: 0;
 }
 
+.site-header {
+    border-top: 0;
+}
+
 .site-footer.h-card {
     display: none;
 }

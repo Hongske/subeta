@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Theme Code Generator | Modernised Theme | Subeta Styling by Hong</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+    <header class="site-header"><div class="wrapper">
+        <a class="site-title" rel="author" href="/subeta/">Subeta Styling by Hong</a>
+    </div></header>
+    <main class="page-content" aria-label="Content"><div class="wrapper"><article class="post">
+        <header class="post-header"><h1 class="post-title"></h1></header>
+        <div class="post-content">
+            <div style="padding: 1em 1em 0; border: 1px solid #404040; border-radius: 3px; background: #404040; font-style: normal;">
+                <p>
+                    <a href="https://hongske.github.io/subeta/">Home</a>
+                    » <a href="https://hongske.github.io/subeta/custom-css/Modernised/">Modernised Theme</a>
+                    » <strong>Theme Code Generator</strong>
+                </p>
+            </div>
+            <br>
+            <p>
+                You can find all possible customisation-options below.
+                Just set them through the different fields and then press "Generate".
+                You'll get a bunch of code at the bottom of the page, which you have to paste into the box on your
+                <a href="https://subeta.net/preferences.php?act=customcss">CustomCSS page</a>.
+            </p>
+
+            <table class="form">
+                <thead><tr><th colspan="2">General</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>Colours:</td>
+                        <td>
+                            <input type="color" id="--color-primary" value="#9BA84F" data-initial="#9BA84F" />
+                            <label for="--color-primary">Main theme colour</label>
+                            <hr>
+                            <input type="color" id="--color-blue" value="#0DCAF0" data-initial="#0DCAF0" />
+                            <label for="--color-blue">Blue colour (used for alerts)</label>
+                            <hr>
+                            <input type="color" id="--color-green" value="#20C997" data-initial="#20C997" />
+                            <label for="--color-green">Green colour (used for alerts, buttons, etc.)</label>
+                            <hr>
+                            <input type="color" id="--color-red" value="#DC3545" data-initial="#DC3545" />
+                            <label for="--color-red">Red colour (used for alerts, buttons, etc.)</label>
+                            <hr>
+                            <input type="color" id="--color-yellow" value="#FFC107" data-initial="#FFC107" />
+                            <label for="--color-yellow">Yellow colour (used for alerts)</label>
+                            <hr>
+                            <small>
+                                <strong>Need more colour-inspiration for your theme?</strong>
+                                <br>Here are some colours that have been extracted from the default Subeta themes:
+                                <div class="badges">
+                                    <code class="badge" style="--bg-color: #6FA8BF;">#6FA8BF</code>
+                                    <code class="badge" style="--bg-color: #642039;">#642039</code>
+                                    <code class="badge" style="--bg-color: #37A6A6;">#37A6A6</code>
+                                    <code class="badge" style="--bg-color: #3F8C7E;">#3F8C7E</code>
+                                    <code class="badge" style="--bg-color: #D9A84E;">#D9A84E</code>
+                                    <code class="badge" style="--bg-color: #687E8C;">#687E8C</code>
+                                    <code class="badge" style="--bg-color: #33402D;">#33402D</code>
+                                    <code class="badge" style="--bg-color: #63494F;">#63494F</code>
+                                </div>
+                                You can also try <a href="https://getbootstrap.com/docs/5.3/customize/color/#all-colors/" target="_blank">these Bootstrap colour palettes</a>, <a href="https://materialui.co/colors/" target="_blank">these Material colour palettes</a> or even <a href="https://randomcolour.com/" target="_blank">this random colour generator</a>.
+                            </small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Menu:</td>
+                        <td>
+                            <label>
+                                <input type="number" id="--number-of-menu-friends" value="10" min="0" data-initial="10" />
+                                friends in the dropdown-menu
+                            </label>
+                            <br>
+                            <label>
+                                <input type="number" id="--number-of-menu-pets" value="10" min="0" data-initial="10" />
+                                pets in the dropdown-menu
+                            </label>
+                            <br>
+                            <label>
+                                <input type="number" id="--number-of-menu-shops" value="10" min="0" data-initial="10" />
+                                shops in the dropdown-menu
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sidebar:</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-sidebar-battlepet-buttons" />
+                                Hide buttons for battlepet-widget
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-sidebar-currency-headers" />
+                                Hide headers for currency-widget (Active | Seasonal | Events)
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Misc:</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-floating-item" />
+                                Hide floating items (like flowers during survival)
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-hustler" />
+                                Hide Hustler-banner
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-quest-intro" />
+                                Hide Quests' intro-text
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="form">
+                <thead><tr><th colspan="2">Commerce</thcols></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>Special Shops:</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-subeautique-intro" />
+                                Subeautique » Hide intro-text
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Your Shops:</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-yourshop-item-category" />
+                                Edit Items » Hide categories (in the filters <i>and</i> the items-list)
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-yourshop-quickstock-delete" />
+                                 Quick Stock » Hide delete-option
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-yourshop-sales-info" />
+                                Sales History » Hide info-text about sold items
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="form">
+                <thead><tr><th colspan="2">Interact</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>Forums » Home:</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-forum-pulse" />
+                                Hide forum pulse
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="number" id="--number-of-boards" value="3" min="1" max="5" data-initial="3" data-type="col" />
+                                number of boards per row
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Forums » Posts:</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-forum-post-image" />
+                                Posts » Hide post images
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-forum-post-signature" />
+                                Posts » Hide signatures
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-forum-post-report" />
+                                Posts » Hide button to report post
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Forums » Misc:</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-forum-subscribed-intro" />
+                                Subscribed Threads » Hide intro-text
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-forum-group-intro" />
+                                Forum Groups » Hide intro-text
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="form">
+                <thead><tr><th colspan="2">Personal</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>Inventory:</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-inventory-locked" />
+                                Hide info-text about locked items
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pets » Overview:</td>
+                        <td>
+                            <label>
+                                <input type="number" id="--number-of-pets" value="3" min="1" max="5" data-initial="3" data-type="col" />
+                                number of pets per row
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Edit Description":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-description" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-description" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Edit Headshot":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-headshot" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-headshot" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Change Name":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-name" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-name" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Change Case":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-case" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-case" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Friends":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-friends" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-friends" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "View Profile":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-profile" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-profile" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Books Read":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-books" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-books" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Food Eaten":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-food" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-food" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Train":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-train" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-train" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Heal":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-heal" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-heal" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Scrolls":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-scrolls" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-scrolls" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Treasure (x / y)":</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-treasure" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-treasure" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "TC Mass Add"</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-tcmass" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-tcmass" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Abandon"</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-abandon" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-abandon" data-type="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Dropdown » "Give to Friend"</span>
+                            <label>
+                                <input type="checkbox" id="--display-pet-option-give" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-pet-option-give" data-type="bold" />
+                                Put link in bold
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pets » Job Agency:</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-pets-job-intro" />
+                                Hide intro-text
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="number" id="--number-of-pets-job" value="3" min="1" max="5" data-initial="3" data-type="col" />
+                                number of pets per row (uses the same value from Pets » Overview, by default)
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="form">
+                <thead><tr><th colspan="2">Subeta</th></tr></thead>
+                <tbody>
+                    <tr>
+                        <td>Explore » Darkside</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-pet-zapper-warning" />
+                                Pet Zapper » Hide warning about zapping
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-pet-zapper-intro" />
+                                Pet Zapper » Hide intro-text
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-pet-zapper-adoption" />
+                                Pet Zapper » Hide text about adopting a Qrykee or Yaherra
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Explore » Shengui Guo</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-shenguiguo-floatingmarket-intro" />
+                                Floating Market » Hide all intro-texts (for Dara, Jogoh <i>and</i> Ujin)
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-shenguiguo-dara-intro" />
+                                Floating Market » Hide intro-text for Dara
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-shenguiguo-jogoh-intro" />
+                                Floating Market » Hide intro-text for Jogoh
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-shenguiguo-ujin-intro" />
+                                Floating Market » Hide intro-text for Ujin
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Games » Battle</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-battle-training-intro" />
+                                Training Center » Hide intro-text
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-battle-training-warning" />
+                                Training Center » Hide warning-text about level cap and autotraining
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-battle-training-auto" />
+                                Training Center » Hide autotraining buttons
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="number" id="--number-of-pets-training" value="3" min="1" max="5" data-initial="3" data-type="col" />
+                                number of pets per row in the Training Center (uses the same value from Pets » Overview, by default)
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Games » Collections</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-stickers-unstack" />
+                                Sticker Album » Hide "unstack" link under stickers
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>News</td>
+                        <td>
+                            <label>
+                                <input type="checkbox" id="--display-news-intro" />
+                                Hide intro-text
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-news-checkout" />
+                                Hide "Check Out" block
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-news-upcoming" />
+                                Hide "Upcoming" block
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-news-daily" />
+                                Hide "Daily" block
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-news-daily-dailies" />
+                                Hide "Dailies" link in the "Daily" block
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-news-daily-recycle" />
+                                Hide "Recycle Beast" link in the "Daily" block
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="checkbox" id="--display-news-daily-lottery" />
+                                Hide "Winner" link in the "Daily" block
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button id="submit">Generate ❤</button>
+
+            <p>
+                <strong>
+                    Copy the code below into the box on your
+                    <a href="https://subeta.net/preferences.php?act=customcss">CustomCSS page</a>:
+                </strong>
+            </p>
+            <pre id="code" style="display: block; padding: 1em;">@import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css');</pre>
+        </div>
+    </article></div></main>
+
+    <style>
+        .badges {
+            display: flex;
+            gap: .75em;
+            margin: .5em 0;
+        }
+
+        .badge {
+            padding: .25em .5em;
+            border: 0;
+            border-radius: 1em;
+            background-color: var(--bg-color, #000);
+            color: var(--fg-color, #FFF);
+        }
+
+        .form {
+            tr {
+                width: 100%;
+            }
+
+            td:nth-child(1) {
+                width: 25%;
+                white-space: nowrap;
+            }
+
+            td:nth-child(2) {
+                width: 100%;
+            }
+
+            hr {
+                margin: .5em 0;
+                border: 1px solid #404040;
+                border-bottom: 0;
+            }
+
+            input,
+            label {
+                cursor: pointer;
+            }
+
+            input {
+                margin-right: .25em;
+                border: 2px solid;
+                border-radius: .25em;
+            }
+
+            input[type='number'] {
+                width: 2em;
+                font: inherit;
+                text-align: right;
+            }
+
+            .option_prefix {
+                display: inline-flex;
+                width: 50%;
+
+                @media (min-width: 1024px) {
+                    width: 30%;
+                }
+            }
+        }
+
+        #submit {
+            margin-bottom: 2em;
+            padding: .25em .5em;
+            font: inherit;
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        // TODO - Add on:change event for number-of-pets; to propagate to number-of-pets-training and number-of-pets-job
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('submit').addEventListener('click', (e) => {
+                generateCSS();
+            });
+        }, false);
+
+        function generateCSS() {
+            var properties = [];
+
+            document.querySelectorAll('input').forEach((input) => {
+                if (input.dataset.initial) {
+                    if (input.value != input.dataset.initial.toLowerCase()) {
+                        if (input.dataset.type && input.dataset.type == 'col') {
+                            properties.push({id: input.id, value: 'var(--col-' + input.value + ')'});
+                        } else {
+                            properties.push({id: input.id, value: input.value});
+                        }
+                    }
+                } else if (input.checked) {
+                    if (input.dataset.type && input.dataset.type == 'bold') {
+                        properties.push({id: input.id, value: 'bold'});
+                    } else {
+                        properties.push({id: input.id, value: 'none'});
+                    }
+                }
+            });
+
+            var code = "@import url('https://hongske.github.io/subeta/custom-css/Modernised/theme.css');";
+            if (properties.length) {
+                code += "\n\n:root {";
+
+                properties.forEach((property) => {
+                    code += "\n    " + property.id + ": " + property.value + ";";
+                });
+
+                code += "\n}";
+            }
+
+            document.getElementById("code").innerHTML = code;
+        }
+    </script>
+</body>
+</html>
