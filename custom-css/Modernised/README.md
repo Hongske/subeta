@@ -585,11 +585,9 @@ Don't feel comfortable customising the theme through messing with code yourself?
 <input type="submit" onclick="generateCSS()" id="generator__button" />
 </form>
 <pre id="generator__result"></pre>
-<script>
-function generateCSS() {
-    document.getElementById("generator__result").innerHTML = "test";
-}
-</script>
+<script>function generateCSS() {
+document.getElementById("generator__result").innerHTML = "test";
+}</script>
 
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 <br>
