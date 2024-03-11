@@ -104,6 +104,7 @@
         --col-3: 100%;
         --col-4: 100%;
         --col-5: 100%;
+        --primary: var(--color-primary-mobile, var(--color-primary));
         --content-col-4: 100%;
         --content-col-8: 100%;
         --content-width-fixed: calc((100vw / var(--mobile-zoom)) - 2rem);
@@ -2080,7 +2081,7 @@ img[src='//img.subeta.net/icons/email_open.png'] {
     /* Achievement unlocked » On Pets-page */
     #pet_list > & {
         width: 100%;
-        margin-bottom: 0;
+        margin: 0;
     }
 }
 
@@ -2381,11 +2382,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     width: var(--item-size-medium);
     margin: 0 !important;
     position: fixed !important;
-    top: 50% !important;
-    bottom: auto !important;
-    left: 50% !important;
-    right: 0 !important;
-    transform: translate(-50%, -50%);
+    top: var(--floating-item-top, 50%) !important;
+    bottom: var(--floating-item-bottom, auto) !important;
+    left: var(--floating-item-left, 50%) !important;
+    right: var(--floating-item-right, 0) !important;
+    transform: var(--floating-item-transform, translate(-50%, -50%));
     z-index: 9999 !important;
     text-align: center;
 

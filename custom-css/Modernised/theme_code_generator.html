@@ -37,8 +37,11 @@
                     <tr>
                         <td>Colours:</td>
                         <td>
-                            <input type="color" id="--color-primary" value="#9BA84F" data-initial="#9BA84F" />
+                            <input type="color" id="--color-primary" value="#9BA84F" data-initial="#9BA84F" data-link-type="master" data-link-property="--color-primary" />
                             <label for="--color-primary">Main theme colour</label>
+                            <hr>
+                            <input type="color" id="--color-primary-mobile" value="#9BA84F" data-initial="#9BA84F" data-link-type="slave" data-link-property="--color-primary" />
+                            <label for="--color-primary-mobile">Main theme colour (mobile)</label>
                             <hr>
                             <input type="color" id="--color-blue" value="#0DCAF0" data-initial="#0DCAF0" />
                             <label for="--color-blue">Blue colour (used for alerts)</label>
@@ -109,6 +112,21 @@
                                 <input type="checkbox" id="--display-floating-item" />
                                 Hide floating items (like flowers during survival)
                             </label>
+                            <hr>
+                            <input type="radio" name="floating-item-align" value="top_left" />
+                            <input type="radio" name="floating-item-align" value="top_center" />
+                            <input type="radio" name="floating-item-align" value="top_right" />
+                            <br>
+                            <input type="radio" name="floating-item-align" value="middle_left" />
+                            <input type="radio" name="floating-item-align" value="middle_center" checked />
+                            <input type="radio" name="floating-item-align" value="middle_right" />
+                            <label>
+                                Change alignment of floating items on the page
+                            </label>
+                            <br>
+                            <input type="radio" name="floating-item-align" value="bottom_left" />
+                            <input type="radio" name="floating-item-align" value="bottom_center" />
+                            <input type="radio" name="floating-item-align" value="bottom_right" />
                             <hr>
                             <label>
                                 <input type="checkbox" id="--display-hustler" />
@@ -224,7 +242,7 @@
                         <td>Pets » Overview:</td>
                         <td>
                             <label>
-                                <input type="number" id="--number-of-pets" value="3" min="1" max="5" data-initial="3" data-type="col" />
+                                <input type="number" id="--number-of-pets" value="3" min="1" max="5" data-initial="3" data-type="col" data-link-type="master" data-link-property="--number-of-pets" />
                                 number of pets per row
                             </label>
                             <hr>
@@ -388,7 +406,7 @@
                             </label>
                             <hr>
                             <label>
-                                <input type="number" id="--number-of-pets-job" value="3" min="1" max="5" data-initial="3" data-type="col" />
+                                <input type="number" id="--number-of-pets-job" value="3" min="1" max="5" data-initial="3" data-type="col" data-link-type="slave" data-link-property="--number-of-pets" />
                                 number of pets per row
                             </label>
                         </td>
@@ -460,7 +478,7 @@
                             </label>
                             <hr>
                             <label>
-                                <input type="number" id="--number-of-pets-training" value="3" min="1" max="5" data-initial="3" data-type="col" />
+                                <input type="number" id="--number-of-pets-training" value="3" min="1" max="5" data-initial="3" data-type="col" data-link-type="slave" data-link-property="--number-of-pets" />
                                 number of pets per row in the Training Center
                             </label>
                         </td>
@@ -604,25 +622,57 @@
                 generateCSS();
             });
 
-            document.getElementById('--number-of-pets').addEventListener('change', (e) => {
-                var rows = [];
-                rows.push(document.getElementById('--number-of-pets-job'));
-                rows.push(document.getElementById('--number-of-pets-training'));
-
-                rows.forEach((row) => {
-                    if (row.dataset.initial && row.value == row.dataset.initial.toLowerCase()) {
-                        row.value = e.target.value;
-                        row.dataset.initial = e.target.value;
-                    }
+            document.querySelectorAll('input[data-link-type="master"]').forEach((item) => {
+                item.addEventListener('change', (e) => {
+                    updateLinked(e);
                 });
             });
         }, false);
+
+        function updateLinked(e) {
+            var targetProperty = e.target.dataset.linkProperty;
+            var targetLinks = document.querySelectorAll('input[data-link-type="slave"][data-link-property="' + targetProperty + '"]');
+
+            targetLinks.forEach((item) => {
+                if (item.dataset.initial && item.value == item.dataset.initial.toLowerCase()) {
+                    item.value = e.target.value;
+                    item.dataset.initial = e.target.value;
+                }
+            });
+        }
 
         function generateCSS() {
             var properties = [];
 
             document.querySelectorAll('input').forEach((input) => {
-                if (input.dataset.initial) {
+                if(input.name == 'floating-item-align' && input.checked == true) {
+                    var translateX = '0';
+                    var translateY = '0';
+
+                    if (input.value.includes('top')) {
+                        properties.push({id: '--floating-item-top', value: '0'});
+                        properties.push({id: '--floating-item-bottom', value: 'auto'});
+                    } else if (input.value.includes('bottom')) {
+                        properties.push({id: '--floating-item-top', value: 'auto'});
+                        properties.push({id: '--floating-item-bottom', value: '0'});
+                    } else if (input.value.includes('middle')) {
+                        translateY = '-50%';
+                    }
+
+                    if (input.value.includes('left')) {
+                        properties.push({id: '--floating-item-left', value: '0'});
+                        properties.push({id: '--floating-item-right', value: 'auto'});
+                    } else if (input.value.includes('right')) {
+                        properties.push({id: '--floating-item-left', value: 'auto'});
+                        properties.push({id: '--floating-item-right', value: '0'});
+                    } else if (input.value.includes('center')) {
+                        translateX = '-50%';
+                    }
+
+                    if (input.value != 'middle_center') {
+                        properties.push({id: '--floating-item-transform', value: 'translate(' + translateX + ',' + translateY + ')'})
+                    }
+                } else if (input.dataset.initial) {
                     if (input.value != input.dataset.initial.toLowerCase()) {
                         if (input.dataset.type && input.dataset.type == 'col') {
                             properties.push({id: input.id, value: 'var(--col-' + input.value + ')'});

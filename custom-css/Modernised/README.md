@@ -308,14 +308,16 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-<strong>📅 2024/03/10</strong>
-
-- Created a theme code generator to make it easier to customise the theme
+- <strong>📅 2024/03/11</strong>
+  - Added option `--color-primary-mobile`, so that you can have a different theme color on mobile
+  - Added options `--floating-item-top`, `--floating-item-bottom`, `--floating-item-left`, `--floating-item-right` and `--floating-item-transform`, so that you can pick the placement of floating items (easiest through the generator)
 
 <br>
 <details>
 <summary>📅 2024 March</summary>
 
+- <strong>📅 2024/03/10</strong>
+  - Created a theme code generator to make it easier to customise the theme
 - <strong>2024/03/09</strong>
   - Added option `--number-of-boards` to change the number of boards per row
   - Added the images for forum boards back, to make it easier to find the board you want
