@@ -5031,12 +5031,12 @@
 
         /* Subeta » Explore » Shengui Guo » Hide Ujin's intro-text */
         img[src='//img.subeta.net/npc_ujin.png'] + br + br + div[style='text-align: left;'] {
-            display: var(--display-shenguiguo-ujin-intro, var(----display-shenguiguo-floatingmarket-intro, none));
+            display: var(--display-shenguiguo-ujin-intro, block);
         }
 
         /* Subeta » Explore » Shengui Guo » Hide Dara's intro-text */
         img[src='//img.subeta.net/npc_dara.png'] + br + br + div[style='text-align: left;'] {
-            display: var(--display-shenguiguo-dara-intro, var(----display-shenguiguo-floatingmarket-intro, none));
+            display: var(--display-shenguiguo-dara-intro, block);
         }
     }
 
@@ -6228,7 +6228,7 @@
 
             /* Subeta » Explore » Shengui Guo » Hide Jogoh's intro-text */
             > img[src='//img.subeta.net/npc_jogoh.png'] + .ui.segment.basic.left.aligned {
-                display: var(--display-shenguiguo-jogoh-intro, var(----display-shenguiguo-floatingmarket-intro, none));
+                display: var(--display-shenguiguo-jogoh-intro, block);
             }
 
             > .ui.segment.basic.left.aligned {
@@ -7500,10 +7500,23 @@
 
                 br,
                 .icon.star,
-                .text_center[data-userid],
                 .stats,
                 .stats + div .ui.image.circular {
                     display: none;
+                }
+
+                .text_center[data-userid] {
+                    display: var(--display-forum-avatar, none);
+                    width: var(--item-size);
+                    height: var(--item-size);
+                    overflow: hidden;
+                    margin-right: calc(var(--spacing-y) / 2);
+                    border-radius: 50%;
+                    background-color: color-mix(in srgb, var(--post-color) 10%, transparent);
+
+                    img {
+                        margin-top: -12%;
+                    }
                 }
 
                 p {
@@ -8780,12 +8793,22 @@
 
 /* Commerce » User Shops */
 #shop-header + #shop-searchbar {
+    padding: 0 !important;
+
     a {
         display: inline-flex;
         margin-top: var(--spacing-y);
     }
 
-    + hr + #shop-items {
+    ~ #shop-categories {
+        padding: 0 !important;
+
+        strong {
+            display: none;
+        }
+    }
+
+    ~ #shop-items {
         padding: 0 !important;
 
         > .col-12.mb-3 {

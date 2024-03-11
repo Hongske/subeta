@@ -49,8 +49,8 @@
   --border: 2px solid var(--primary-light);
   --border-radius: .25rem;
   --spacing: var(--spacing-y) var(--spacing-x);
-  --spacing-y: 1rem;
-  --spacing-x: 1rem;
+  --spacing-x: var(--whitespace-x, 1rem);
+  --spacing-y: var(--whitespace-y, 1rem);
   --backdrop-blur: blur(.5rem);
   --box-shadow-blur: .75rem;
   --box-shadow-color: color-mix(in srgb, var(--black) 33%, transparent);
@@ -68,10 +68,10 @@
   --alert-padding: var(--spacing);
   /* Defaults » Columns --------------------------------------------------------------------------------------------*/
   --col-1: 100%;
-  --col-2: calc((100% - 1rem) / 2);
-  --col-3: calc((100% - 2rem) / 3);
-  --col-4: calc((100% - 3rem) / 4);
-  --col-5: calc((100% - 4rem) / 5);
+  --col-2: calc((100% - (var(--spacing-y) * 1)) / 2);
+  --col-3: calc((100% - (var(--spacing-y) * 2)) / 3);
+  --col-4: calc((100% - (var(--spacing-y) * 3)) / 4);
+  --col-5: calc((100% - (var(--spacing-y) * 4)) / 5);
   /* Defaults » Item -----------------------------------------------------------------------------------------------*/
   --item-padding: var(--spacing);
   --item-radius: var(--border-radius);
@@ -113,7 +113,8 @@
     --menu-height: 6rem;
     --sidebar-width: 100%;
     --sidebar-height: calc((100vh / var(--mobile-zoom)) - var(--menu-height));
-    --spacing-y: .5rem;
+    --spacing-x: var(--whitespace-x-mobile, var(--whitespace-x, 1rem));
+    --spacing-y: var(--whitespace-y-mobile, calc(var(--whitespace-y, 1rem) / 2));
   }
 }
 @media (min-device-width: 769px) and (max-width: 1300px) {
@@ -1619,6 +1620,9 @@ nav .breadcrumb {
   height: auto !important;
   line-height: normal !important;
 }
+.input-group .form-control#item-search {
+  border-radius: var(--border-radius) 0 0 var(--border-radius) !important;
+}
 .form-control, .form-control:hover, .form-control:focus {
   border-color: var(--black);
   outline: 0;
@@ -1630,6 +1634,10 @@ nav .breadcrumb {
 }
 .form-control.btn:hover, .form-control.btn:focus {
   color: var(--button-fg-hover);
+}
+
+.form-row {
+  margin: 0;
 }
 
 .modal.show {

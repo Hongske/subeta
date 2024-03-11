@@ -25,7 +25,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 - 👁‍🗨 means this feature is only for mobile
 - 📷 means this is a link to a screenshot
 
-<details id="features_general">
+<details>
 <summary>📌 List of general layout changes</summary>
 
 - Modernised the layout
@@ -84,7 +84,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Added options to modify theme colours ([see ⭐ Customising the theme](#⭐-customising-the-theme))
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details id="features_page">
+<details>
 <summary>📌 List of page changes</summary>
 
 - Restyled **Vending** • [📷 screenshot desktop](screenshots/pages/vending--desktop.png) • [📷 screenshot mobile](screenshots/pages/vending--mobile.png)
@@ -101,7 +101,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 - Restyled **[Your Events](https://subeta.net/events.php)** • [📷 screenshot desktop](screenshots/pages/events--desktop.png) • [📷 screenshot mobile](screenshots/pages/events--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details id="features_page_commerce">
+<details>
 <summary>📌 List of page changes [Commerce]</summary>
 
 - Restyled **[Search Shops](https://subeta.net/user_shops.php/search)** • [📷 screenshot desktop](screenshots/pages/commerce__search_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__search_shops--mobile.png)
@@ -136,10 +136,10 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 - Restyled **User Shops** • [📷 screenshot desktop](screenshots/pages/commerce__user_shop--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__user_shop--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details id="features_page_interact">
+<details>
 <summary>📌 List of page changes [Interact]</summary>
 
-- **[Forums](https://subeta.net/forums.php)**
+- Restyled **[Forums](https://subeta.net/forums.php)**
   - Restyled **[Forum Home](https://subeta.net/forums.php)** • [📷 screenshot desktop](screenshots/pages/interact__forums__home--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__home--mobile.png)
     - Added option `--display-forum-pulse` to completely hide forum-pulse
     - Added option `--number-of-boards` to change the number of boards per row
@@ -151,8 +151,9 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
       - Topics you have replied on have their text in black
       - Topics you haven't replied on have their text in your theme's accent colour
     - Restyled **Topics** • [📷 screenshot desktop](screenshots/pages/interact__forums__home__topic--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__home__topic--mobile.png)
-      - Removed user avatars, leashed pets and options to like avatar/post
       - Removed the ping- and report-buttons on own posts
+      - Removed user avatars, leashed pets and options to like avatar/post
+      - Added option `--display-forum-avatar` to show the avatar again (in the form of a headshot)
       - Added option `--display-forum-post-report` to hide the report-button on posts
       - Added option `--display-forum-post-image` to hide post images
       - Added option `--display-forum-post-signature` to hide signatures
@@ -180,7 +181,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Restyled **[Edit Folders](https://subeta.net/mail.php?act=editfolders)** • [📷 screenshot desktop](screenshots/pages/interact__smail__edit_folders--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__edit_folders--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details id="features_page_personal">
+<details>
 <summary>📌 List of page changes [Personal]</summary>
 
 - Restyled **[Account Search](https://subeta.net/isearch.php)** • [📷 screenshot desktop](screenshots/pages/personal__account_search--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__account_search--mobile.png)
@@ -221,7 +222,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Restyled **[Buffs](https://subeta.net/preferences.php?act=buffs)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__buffs--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__buffs--mobile.png)
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
-<details id="features_page_subeta">
+<details>
 <summary>📌 List of page changes [Subeta]</summary>
 
 - **[Explore » Coda Caves](https://subeta.net/explore/codacaves.php)**
@@ -241,14 +242,13 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 - **[Explore » Shadowglen » Underground » Underground Fishing](https://subeta.net/explore/underground/fishing.php)**
   - 👁‍🗨 Removed NPC-image
 - **[Explore » Shengui Guo » Floating Market](https://subeta.net/explore/shengui_guo/river.php)**
-  - Added option `--display-shenguiguo-floatingmarket-intro` to collectively hide Dara's, Jogoh's and Ujin's intro-texts
   - 👁‍🗨 Removed NPC-image + intro-text
   - Restyled **[Dara's Darlings](https://subeta.net/explore/shengui_guo/dara.php)**  [📷 screenshot desktop](screenshots/pages/subeta__explore__shengui_guo__dara--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__shengui_guo__dara--mobile.png)
-    - Added option `--display-shenguiguo-dara-intro` to individually hide Dara's intro-text
+    - Added option `--display-shenguiguo-dara-intro` to hide Dara's intro-text
   - Restyled **[Fine Fabrics](https://subeta.net/explore/shengui_guo/clothing.php)** • [📷 screenshot desktop](screenshots/pages/subeta__explore__shengui_guo__jogoh--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__shengui_guo__jogoh--mobile.png)
-    - Added option `--display-shenguiguo-jogoh-intro` to individually hide Jogoh's intro-text
+    - Added option `--display-shenguiguo-jogoh-intro` to hide Jogoh's intro-text
   - Restyled **[Fresh and Flavorful](https://subeta.net/explore/shengui_guo/ujin.php)** • [📷 screenshot desktop](screenshots/pages/subeta__explore__shengui_guo__ujin--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__explore__shengui_guo__ujin--mobile.png)
-    - Added option `--display-shenguiguo-ujin-intro` to individually hide Ujin's intro-text
+    - Added option `--display-shenguiguo-ujin-intro` to hide Ujin's intro-text
 - **Games** • [📷 screenshot desktop](screenshots/pages/subeta__games--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games--mobile.png)
   - Restyled the games overview-page
 - **Games » Battle**
@@ -311,6 +311,9 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 - <strong>📅 2024/03/11</strong>
   - Added option `--color-primary-mobile`, so that you can have a different theme color on mobile
   - Added options `--floating-item-top`, `--floating-item-bottom`, `--floating-item-left`, `--floating-item-right` and `--floating-item-transform`, so that you can pick the placement of floating items (easiest through the generator)
+  - Added option `--display-forum-avatar`, to show avatars again (in the form of a headshot)
+  - Fixed display for the intro-texts for Dara, Jogoh and Ujin
+  - Fixed display of items in user shops when there's categories present
 
 <br>
 <details>

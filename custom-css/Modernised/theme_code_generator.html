@@ -195,6 +195,11 @@
                         <td>Forums » Posts:</td>
                         <td>
                             <label>
+                                <input type="checkbox" id="--display-forum-avatar" data-value="block" />
+                                Posts » Show avatars (as headshots)
+                            </label>
+                            <hr>
+                            <label>
                                 <input type="checkbox" id="--display-forum-post-image" />
                                 Posts » Hide post images
                             </label>
@@ -252,7 +257,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-description" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-description" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -262,7 +267,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-headshot" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-headshot" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -272,7 +277,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-name" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-name" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -282,7 +287,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-case" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-case" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -292,7 +297,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-friends" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-friends" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -302,7 +307,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-profile" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-profile" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -312,7 +317,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-books" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-books" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -322,7 +327,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-food" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-food" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -332,7 +337,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-train" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-train" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -342,7 +347,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-heal" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-heal" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -352,7 +357,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-scrolls" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-scrolls" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -362,7 +367,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-treasure" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-treasure" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -372,7 +377,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-tcmass" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-tcmass" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -382,7 +387,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-abandon" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-abandon" data-value="bold" />
                                 Put link in bold
                             </label>
                             <hr>
@@ -392,7 +397,7 @@
                                 Hide link
                             </label>
                             <label>
-                                <input type="checkbox" id="--fontweight-pet-option-give" data-type="bold" />
+                                <input type="checkbox" id="--fontweight-pet-option-give" data-value="bold" />
                                 Put link in bold
                             </label>
                         </td>
@@ -438,11 +443,6 @@
                     <tr>
                         <td>Explore » Shengui Guo</td>
                         <td>
-                            <label>
-                                <input type="checkbox" id="--display-shenguiguo-floatingmarket-intro" />
-                                Floating Market » Hide all intro-texts (for Dara, Jogoh <i>and</i> Ujin)
-                            </label>
-                            <hr>
                             <label>
                                 <input type="checkbox" id="--display-shenguiguo-dara-intro" />
                                 Floating Market » Hide intro-text for Dara
@@ -681,8 +681,8 @@
                         }
                     }
                 } else if (input.checked) {
-                    if (input.dataset.type && input.dataset.type == 'bold') {
-                        properties.push({id: input.id, value: 'bold'});
+                    if (input.dataset.value) {
+                        properties.push({id: input.id, value: input.dataset.value});
                     } else {
                         properties.push({id: input.id, value: 'none'});
                     }
