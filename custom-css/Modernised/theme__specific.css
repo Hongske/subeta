@@ -532,7 +532,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: var(--number-of-pets-training, var(--number-of-pets));
+            width: var(--number-of-pets-training, var(--number-of-pets, var(--number-of-cols)));
             padding: var(--spacing) !important;
             border: var(--border);
             border-radius: var(--border-radius);
@@ -803,7 +803,7 @@
                 display: flex !important;
                 align-items: center;
                 gap: var(--spacing-x);
-                width: var(--col-3) !important;
+                width: var(--number-of-cols) !important;
                 margin: 0 !important;
                 padding: var(--spacing) !important;
                 border: var(--border) !important;
@@ -1347,7 +1347,7 @@
                 display: flex;
                 align-items: center;
                 gap: var(--spacing-x);
-                width: var(--col-3) !important;
+                width: var(--number-of-cols) !important;
                 margin: 0;
                 padding: var(--spacing);
                 border: var(--border);
@@ -2205,7 +2205,7 @@
                     .petjob-box {
                         display: flex;
                         flex-direction: column;
-                        width: var(--number-of-pets-job, var(--number-of-pets));
+                        width: var(--number-of-pets-job, var(--number-of-pets, var(--number-of-cols)));
                         margin: 0;
                         padding: var(--spacing);
                         border: var(--border);
@@ -2284,7 +2284,7 @@
                     display: flex !important;
                     align-items: center;
                     gap: var(--spacing-x);
-                    width: var(--col-3) !important;
+                    width: var(--number-of-cols) !important;
                     margin: 0 !important;
                     padding: var(--spacing) !important;
                     border: var(--border);
@@ -2394,7 +2394,7 @@
                     .col-12.col-sm-6.p-3 {
                         --image-size: 40px;
 
-                        width: var(--number-of-boards, var(--col-3));
+                        width: var(--number-of-boards, var(--number-of-cols));
                         padding: var(--spacing) !important;
                         border: var(--border);
                         border-radius: var(--border-radius);
@@ -2522,7 +2522,7 @@
                         .form-group {
                             flex-basis: auto;
                             max-width: 100%;
-                            width: var(--col-3);
+                            width: var(--number-of-cols);
                             margin: 0;
                             padding: 0;
                         }
@@ -2559,7 +2559,7 @@
 
                         /* Personal » Vault » Item Storage » Content » Item */
                         .vault-item {
-                            width: var(--col-3);
+                            width: var(--number-of-cols);
                             margin: 0 !important;
                             padding: var(--item-padding) !important;
                             border: var(--border) !important;
@@ -2719,7 +2719,7 @@
                                 }
 
                                 > .three.wide.column {
-                                    width: var(--col-3);
+                                    width: var(--number-of-cols);
                                     margin: 0;
                                     padding: var(--spacing);
                                     border: var(--border);
@@ -2929,7 +2929,7 @@
                     }
 
                     .category {
-                        width: var(--col-3);
+                        width: var(--number-of-cols);
                         padding: 0 !important;
                         border: var(--border);
                         border-radius: var(--border-radius);
@@ -3187,7 +3187,7 @@
                     }
 
                     .wishlist-item {
-                        width: var(--col-3) !important;
+                        width: var(--number-of-cols) !important;
                         padding: 0 !important;
                         text-align: left !important;
 
@@ -3289,7 +3289,7 @@
                     gap: var(--spacing-y);
 
                     .column {
-                        width: var(--col-3);
+                        width: var(--number-of-cols);
                         margin: 0;
                         padding: var(--spacing);
                         border: var(--border);
@@ -3520,7 +3520,7 @@
                                 display: flex;
                                 align-items: center;
                                 gap: var(--spacing-x);
-                                width: var(--col-3);
+                                width: var(--number-of-cols);
                                 padding: var(--spacing);
                                 border: var(--border);
                                 border-radius: var(--border-radius);
@@ -4932,7 +4932,7 @@
                             display: flex;
                             align-items: center;
                             gap: var(--spacing-x);
-                            width: var(--col-3);
+                            width: var(--number-of-cols);
                             min-height: 0 !important;
                             margin: 0;
                             padding: var(--spacing);
@@ -5075,7 +5075,7 @@
                 display: flex !important;
                 align-items: center;
                 gap: 1em;
-                width: var(--col-3) !important;
+                width: var(--number-of-cols) !important;
                 margin: 0 !important;
                 padding: var(--spacing) !important;
                 border: var(--border);
@@ -5137,7 +5137,7 @@
 
         #choices {
             .rr-ticket {
-                width: var(--col-3);
+                width: var(--number-of-cols);
 
                 @media (max-device-width: 768px) {
                     width: calc((100% - 1rem) / 2);
@@ -5210,7 +5210,7 @@
                 .col {
                     flex-grow: 0;
                     flex-basis: auto;
-                    width: var(--col-3);
+                    width: var(--number-of-cols);
                     padding: 0;
 
                     &:nth-child(3) {
@@ -6300,7 +6300,7 @@
                     display: flex;
                     align-items: center;
                     gap: var(--spacing-x);
-                    width: var(--col-3);
+                    width: var(--number-of-cols);
                     margin: 0;
                     padding: var(--spacing);
                     border: var(--border);
@@ -6415,7 +6415,7 @@
                             gap: var(--spacing-y);
 
                             .p-2.text-center {
-                                width: var(--col-3) !important;
+                                width: var(--number-of-cols) !important;
                                 padding: var(--spacing) !important;
                                 border: var(--border);
                                 border-radius: var(--border-radius);
@@ -6953,7 +6953,7 @@
 
         /* Interact » Forums » Board » Subforums */
         .col-12.col-sm-6.col-md-4.col-lg-3.p-3 {
-            width: var(--col-3);
+            width: var(--number-of-cols);
             padding: var(--spacing) !important;
             border: var(--border);
             border-radius: var(--border-radius);
@@ -8073,7 +8073,7 @@
     gap: var(--spacing-y);
 
     .d-inline-block.align-top.text-center.p-2 {
-        width: var(--col-3) !important;
+        width: var(--number-of-cols) !important;
         padding: 0 !important;
         text-align: left !important;
 
@@ -8100,7 +8100,7 @@
         display: flex;
         flex-direction: column;
         gap: var(--spacing-y);
-        width: var(--number-of-pets, var(--col-3));
+        width: var(--number-of-pets, var(--number-of-cols));
         padding: var(--spacing) !important;
         border: var(--border);
         border-radius: var(--border-radius);
@@ -8827,7 +8827,7 @@
         }
 
         .shop-item-wrapper {
-            width: var(--col-3) !important;
+            width: var(--number-of-cols) !important;
             border: var(--border);
             border-radius: var(--border-radius);
             text-align: left !important;

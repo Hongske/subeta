@@ -68,6 +68,7 @@
     --content-col-8: calc((100% - var(--spacing-y)) / 12 * 8);
     --content-width: var(--page-width, 1300px);
     --fixed-popup-width: calc(var(--content-width) - var(--sidebar-width) - 2rem);
+    --number-of-cols: var(--number-of-items, var(--col-3));
     --menu-height: 4rem;
     --sidebar-height: calc(100vh - var(--menu-height));
     --sidebar-width: 320px;
@@ -1319,15 +1320,15 @@ select {
             }
         }
 
-        >.container-fluid {
-            >center {
+        > .container-fluid {
+            > center {
 
                 >a[href^='/games/index.php'],
                 >a[href^='/alert.php'] {
                     margin: .5rem;
                 }
 
-                >img:first-child {
+                > img:first-child {
                     padding: .5rem;
                     border-radius: var(--border-radius);
                     background-color: var(--white);

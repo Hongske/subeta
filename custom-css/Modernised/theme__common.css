@@ -63,6 +63,7 @@
   --content-col-8: calc((100% - var(--spacing-y)) / 12 * 8);
   --content-width: var(--page-width, 1300px);
   --fixed-popup-width: calc(var(--content-width) - var(--sidebar-width) - 2rem);
+  --number-of-cols: var(--number-of-items, var(--col-3));
   --menu-height: 4rem;
   --sidebar-height: calc(100vh - var(--menu-height));
   --sidebar-width: 320px;
