@@ -1355,6 +1355,7 @@ select {
     right: 50%;
     transform: translate(calc((100% + var(--sidebar-width)) / 2), 0);
     background-color: var(--white);
+    font-size: var(--font-size-medium);
     font-style: normal;
     box-shadow: var(--box-shadow--down);
     z-index: 2;
@@ -1384,6 +1385,7 @@ select {
             font-family: var(--font-family);
             font-size: inherit !important;
             font-weight: bold;
+            white-space: nowrap;
             transition: var(--button-transition);
 
             &:hover {

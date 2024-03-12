@@ -311,6 +311,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 - <strong>📅 2024/03/12</strong>
   - Added option `--page-width` so you can set a custom page width (default is 1300px).
   - Added option `--number-of-items`, which determines the number of items per row for shops, inventory, vault, ...
+  - Fixed issue with bookmarks appearing on multiple lines
 
 <br>
 <details>
