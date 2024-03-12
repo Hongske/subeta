@@ -57,8 +57,8 @@
   --box-shadow--all: 0 0 var(--box-shadow-blur) var(--box-shadow-color);
   --box-shadow--down: 0 .375em var(--box-shadow-blur) var(--box-shadow-color);
   /* Defaults ------------------------------------------------------------------------------------------------------*/
-  --content-width-max: 1300px;
-  --content-width-fixed: calc(1300px - var(--sidebar-width) - 2rem);
+  --content-width-max: var(--page-width, 1300px);
+  --content-width-fixed: calc(var(--content-width-max) - var(--sidebar-width) - 2rem);
   --content-col-4: calc((100% - var(--spacing-y)) / 12 * 4);
   --content-col-8: calc((100% - var(--spacing-y)) / 12 * 8);
   --menu-height: 4rem;
@@ -72,6 +72,9 @@
   --col-3: calc((100% - (var(--spacing-y) * 2)) / 3);
   --col-4: calc((100% - (var(--spacing-y) * 3)) / 4);
   --col-5: calc((100% - (var(--spacing-y) * 4)) / 5);
+  --col-6: calc((100% - (var(--spacing-y) * 4)) / 6);
+  --col-7: calc((100% - (var(--spacing-y) * 4)) / 7);
+  --col-8: calc((100% - (var(--spacing-y) * 4)) / 8);
   /* Defaults » Item -----------------------------------------------------------------------------------------------*/
   --item-padding: var(--spacing);
   --item-radius: var(--border-radius);
@@ -104,15 +107,18 @@
     --col-3: 100%;
     --col-4: 100%;
     --col-5: 100%;
-    --primary: var(--color-primary-mobile, var(--color-primary));
+    --col-6: 100%;
+    --col-7: 100%;
+    --col-8: 100%;
     --content-col-4: 100%;
     --content-col-8: 100%;
     --content-width-fixed: calc((100vw / var(--mobile-zoom)) - 2rem);
-    --item-size: var(--item-size-small);
     --font-size-title: 1.25rem;
+    --item-size: var(--item-size-small);
     --menu-height: 6rem;
-    --sidebar-width: 100%;
+    --primary: var(--color-primary-mobile, var(--color-primary));
     --sidebar-height: calc((100vh / var(--mobile-zoom)) - var(--menu-height));
+    --sidebar-width: 100%;
     --spacing-y: .5rem;
   }
 }
@@ -1929,7 +1935,7 @@ body > .ui.message.yellow {
 }
 @media (min-device-width: 769px) and (min-width: 1301px) {
   body > .ui.message.yellow {
-    left: calc((100vw - 1300px) / 2 + 1rem);
+    left: calc((100vw - var(--content-width-max)) / 2 + 1rem);
   }
 }
 body > .ui.message.yellow:nth-child(2) {
