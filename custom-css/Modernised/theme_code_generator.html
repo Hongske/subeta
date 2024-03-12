@@ -110,7 +110,7 @@
                         <td>
                             <label>
                                 Page-width:
-                                <input type="number" id="--page-width" value="1300" min="1000" data-initial="1300"  style="width: 4em;" />
+                                <input type="number" id="--page-width" value="1300" min="1000" data-initial="1300" data-type="px"  style="width: 4em;" />px
                             </label>
                             <hr>
                             <label>
@@ -687,6 +687,8 @@
                     if (input.value != input.dataset.initial.toLowerCase()) {
                         if (input.dataset.type && input.dataset.type == 'col') {
                             properties.push({id: input.id, value: 'var(--col-' + input.value + ')'});
+                        } else if (input.dataset.type && input.dataset.type == 'px') {
+                            properties.push({id: input.id, value: input.value + 'px'});
                         } else {
                             properties.push({id: input.id, value: input.value});
                         }
