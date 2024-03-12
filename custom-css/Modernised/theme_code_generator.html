@@ -106,8 +106,18 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>Misc:</td>
+                        <td>Content:</td>
                         <td>
+                            <label>
+                                Page-width:
+                                <input type="number" id="--page-width" value="1300" min="1000" data-initial="1300"  style="width: 4em;" />
+                            </label>
+                            <hr>
+                            <label>
+                                <input type="number" id="--number-of-items" value="3" min="1" max="8" data-initial="3" data-type="col" />
+                                items per row (like dailies, shops, shop-items, etc.)
+                            </label>
+                            <hr>
                             <label>
                                 <input type="checkbox" id="--display-floating-item" />
                                 Hide floating items (like flowers during survival)
@@ -186,7 +196,7 @@
                             </label>
                             <hr>
                             <label>
-                                <input type="number" id="--number-of-boards" value="3" min="1" max="5" data-initial="3" data-type="col" />
+                                <input type="number" id="--number-of-boards" value="3" min="1" max="8" data-initial="3" data-type="col" />
                                 number of boards per row
                             </label>
                         </td>
@@ -247,7 +257,7 @@
                         <td>Pets » Overview:</td>
                         <td>
                             <label>
-                                <input type="number" id="--number-of-pets" value="3" min="1" max="5" data-initial="3" data-type="col" data-link-type="master" data-link-property="--number-of-pets" />
+                                <input type="number" id="--number-of-pets" value="3" min="1" max="8" data-initial="3" data-type="col" data-link-type="master" data-link-property="--number-of-pets" />
                                 number of pets per row
                             </label>
                             <hr>
@@ -411,7 +421,7 @@
                             </label>
                             <hr>
                             <label>
-                                <input type="number" id="--number-of-pets-job" value="3" min="1" max="5" data-initial="3" data-type="col" data-link-type="slave" data-link-property="--number-of-pets" />
+                                <input type="number" id="--number-of-pets-job" value="3" min="1" max="8" data-initial="3" data-type="col" data-link-type="slave" data-link-property="--number-of-pets" />
                                 number of pets per row
                             </label>
                         </td>
@@ -478,7 +488,7 @@
                             </label>
                             <hr>
                             <label>
-                                <input type="number" id="--number-of-pets-training" value="3" min="1" max="5" data-initial="3" data-type="col" data-link-type="slave" data-link-property="--number-of-pets" />
+                                <input type="number" id="--number-of-pets-training" value="3" min="1" max="8" data-initial="3" data-type="col" data-link-type="slave" data-link-property="--number-of-pets" />
                                 number of pets per row in the Training Center
                             </label>
                         </td>
@@ -643,6 +653,7 @@
 
         function generateCSS() {
             var properties = [];
+            var number_of_items = document.getElementById('--number-of-items');
 
             document.querySelectorAll('input').forEach((input) => {
                 if(input.name == 'floating-item-align' && input.checked == true) {
