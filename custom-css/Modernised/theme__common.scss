@@ -53,8 +53,8 @@
     --border: 2px solid var(--primary-light);
     --border-radius: .25rem;
     --spacing: var(--spacing-y) var(--spacing-x);
-    --spacing-x: var(--whitespace-x, 1rem);
-    --spacing-y: var(--whitespace-y, 1rem);
+    --spacing-x: 1rem;
+    --spacing-y: 1rem;
     --backdrop-blur: blur(.5rem);
     --box-shadow-blur: .75rem;
     --box-shadow-color: color-mix(in srgb, var(--black) 33%, transparent);
@@ -113,8 +113,7 @@
         --menu-height: 6rem;
         --sidebar-width: 100%;
         --sidebar-height: calc((100vh / var(--mobile-zoom)) - var(--menu-height));
-        --spacing-x: var(--whitespace-x-mobile, var(--whitespace-x, 1rem));
-        --spacing-y: var(--whitespace-y-mobile, calc(var(--whitespace-y, 1rem) / 2));
+        --spacing-y: .5rem;
     }
 
     @media (min-device-width: 769px) and (max-width: 1300px) {
@@ -177,6 +176,10 @@ a, a:link, a:active, a:visited,
 
 center:empty {
     display: none;
+}
+
+img, .image {
+    object-fit: contain;
 }
 
 ol,
@@ -1713,6 +1716,10 @@ img[src='//img.subeta.net/icons/email_open.png'] {
     .card-body {
         padding: 0;
     }
+}
+
+.container {
+    max-width: 100%;
 }
 
 .form-control {

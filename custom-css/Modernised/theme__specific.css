@@ -387,6 +387,7 @@
 
                 .ui.circular.image {
                     width: var(--item-size);
+                    height: var(--item-size);
                     padding: .25em;
                     border: 0 !important;
                     border-radius: var(--border-radius);
@@ -486,7 +487,6 @@
                         width: 100%;
                         height: var(--item-size-medium);
                         margin-right: 0;
-                        object-fit: contain;
                     }
                 }
 
@@ -996,6 +996,7 @@
 
                     @media (max-device-width: 768px) {
                         width: var(--item-size-large);
+                        height: var(--item-size-large);
                     }
                 }
             }
@@ -1158,7 +1159,6 @@
                             > img {
                                 width: var(--item-size-large);
                                 height: var(--item-size-large);
-                                object-fit: contain;
                                 margin-right: 100%;
                                 margin-bottom: 1rem;
                             }
@@ -1801,7 +1801,6 @@
                     width: var(--item-size-large);
                     height: var(--item-size-large) !important;
                     margin: 0 !important;
-                    object-fit: contain;
                 }
 
                 a {
@@ -2099,6 +2098,7 @@
 
                         p img[src^='//img.subeta.net/icon_'] {
                             width: var(--item-size-large);
+                            height: var(--item-size-large);
                             margin: 0 auto;
                         }
 
@@ -2168,6 +2168,7 @@
 
                 img {
                     width: var(--item-size);
+                    height: var(--item-size);
                 }
             }
         }
@@ -4429,6 +4430,7 @@
         /* Personal » Pets » Job Agency » Pet */
         > b + br + br + img[src^='//img.subeta.net/pets/1550_chibi.png'][border='0'] {
             width: var(--item-size-large);
+            height: var(--item-size-large);
 
             /* Personal » Pets » Job Agency » Pet » Table Styling*/
             ~ table,
@@ -4469,6 +4471,7 @@
 
                 img {
                     width: var(--item-size);
+                    height: var(--item-size);
                 }
 
                 + br + br {
@@ -4796,6 +4799,8 @@
                         }
 
                         .btn {
+                            color: var(--button-fg);
+
                             @media (max-device-width: 768px) {
                                 font-size: var(--font-size-small);
                             }
@@ -7916,6 +7921,7 @@
 
             img {
                 width: var(--item-size);
+                height: var(--item-size);
             }
 
             b {
@@ -8158,6 +8164,7 @@
 
                             img {
                                 width: var(--item-size);
+                                height: var(--item-size);
                             }
                         }
                     }

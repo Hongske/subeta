@@ -308,18 +308,20 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-- <strong>📅 2024/03/11</strong>
-  - Added option `--color-primary-mobile`, so that you can have a different theme color on mobile
-  - Added options `--floating-item-top`, `--floating-item-bottom`, `--floating-item-left`, `--floating-item-right` and `--floating-item-transform`, so that you can pick the placement of floating items (easiest through the generator)
-  - Added option `--display-forum-avatar`, to show avatars again (in the form of a headshot)
-  - Fixed display for the intro-texts for Dara, Jogoh and Ujin
-  - Fixed display of items in user shops when there's categories present
+- <strong>📅 2024/03/12</strong>
+  -
 
 <br>
 <details>
 <summary>📅 2024 March</summary>
 
-- <strong>📅 2024/03/10</strong>
+- <strong>2024/03/11</strong>
+  - Added option `--color-primary-mobile`, so that you can have a different theme color on mobile
+  - Added options `--floating-item-top`, `--floating-item-bottom`, `--floating-item-left`, `--floating-item-right` and `--floating-item-transform`, so that you can pick the placement of floating items (easiest through the generator)
+  - Added option `--display-forum-avatar`, to show avatars again (in the form of a headshot)
+  - Fixed display for the intro-texts for Dara, Jogoh and Ujin
+  - Fixed display of items in user shops when there's categories present
+- <strong>2024/03/10</strong>
   - Created a theme code generator to make it easier to customise the theme
 - <strong>2024/03/09</strong>
   - Added option `--number-of-boards` to change the number of boards per row
