@@ -2851,9 +2851,10 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
     }
 
     .hover-item {
+        display: block;
         max-width: none;
-        width: inherit;
-        height: inherit;
+        width: var(--item-size);
+        height: var(--item-size);
         font-size: 0;
         transition: opacity .2s;
     }
