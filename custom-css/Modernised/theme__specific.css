@@ -2613,7 +2613,7 @@
                             display: flex;
                             align-items: center;
                             gap: var(--spacing-x);
-                            width: var(--content-width-fixed);
+                            width: var(--fixed-popup-width);
                             border: 0 !important;
                             border-radius: var(--border-radius) var(--border-radius) 0 0;
                             position: fixed;
@@ -3939,14 +3939,14 @@
                     &.sp-sub,
                     &.sp-header {
                         --content-width-fixed-part: 12.2rem;
-                        --content-width-fixed-total: calc(var(--content-width-fixed) - var(--content-width-fixed-part));
+                        --content-width-fixed-total: calc(var(--fixed-popup-width) - var(--content-width-fixed-part));
                         padding: var(--spacing);
                         position: fixed;
                         bottom: 0;
                         background-color: var(--primary-light);
 
                         @media (max-device-width: 768px) {
-                            width: var(--content-width-fixed) !important;
+                            width: var(--fixed-popup-width) !important;
                         }
 
                         td {
@@ -4123,7 +4123,7 @@
             }
 
             #replyzone {
-                width: var(--content-width-fixed);
+                width: var(--fixed-popup-width);
                 padding: var(--spacing);
                 position: fixed;
                 bottom: 0;
@@ -5496,7 +5496,7 @@
                     align-items: center;
                     flex-wrap: wrap;
                     gap: var(--spacing-y);
-                    width: var(--content-width-fixed);
+                    width: var(--fixed-popup-width);
                     border-radius: var(--border-radius);
                     border: 0;
                     position: fixed;
@@ -7735,7 +7735,7 @@
             }
 
             ~ .card.bg-light.m-3 {
-                width: var(--content-width-fixed);
+                width: var(--fixed-popup-width);
                 margin: 0 !important;
                 padding: var(--spacing);
                 border-radius: var(--border-radius) var(--border-radius) 0 0;

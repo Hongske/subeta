@@ -62,15 +62,15 @@
     --box-shadow--down: 0 .375em var(--box-shadow-blur) var(--box-shadow-color);
 
     /* Defaults ------------------------------------------------------------------------------------------------------*/
-    --content-width-max: var(--page-width, 1300px);
-    --content-width-fixed: calc(var(--content-width-max) - var(--sidebar-width) - 2rem);
+    --alert-padding: var(--spacing);
+    --alert-radius: var(--border-radius);
     --content-col-4: calc((100% - var(--spacing-y)) / 12 * 4);
     --content-col-8: calc((100% - var(--spacing-y)) / 12 * 8);
+    --content-width: var(--page-width, 1300px);
+    --fixed-popup-width: calc(var(--content-width) - var(--sidebar-width) - 2rem);
     --menu-height: 4rem;
-    --sidebar-width: 320px;
     --sidebar-height: calc(100vh - var(--menu-height));
-    --alert-radius: var(--border-radius);
-    --alert-padding: var(--spacing);
+    --sidebar-width: 320px;
 
     /* Defaults » Columns --------------------------------------------------------------------------------------------*/
     --col-1: 100%;
@@ -236,7 +236,7 @@ select {
 /* PAGE                                                                                                               */
 /* ================================================================================================================== */
 #page {
-    max-width: var(--content-width-max);
+    max-width: var(--content-width);
     width: 100%;
     margin: 0 auto !important;
     background-color: var(--white);
@@ -250,7 +250,7 @@ select {
     #menu {
         display: flex;
         align-items: center;
-        max-width: var(--content-width-max);
+        max-width: var(--content-width);
         height: var(--menu-height);
         margin: 0;
         position: fixed;
@@ -1345,7 +1345,7 @@ select {
     display: flex;
     align-items: center;
     gap: var(--spacing-x);
-    max-width: calc(var(--content-width-max) - var(--sidebar-width));
+    max-width: calc(var(--content-width) - var(--sidebar-width));
     width: calc(100% - var(--sidebar-width));
     height: var(--menu-height);
     padding: 0 1rem;
@@ -2076,7 +2076,7 @@ img[src='//img.subeta.net/icons/email_open.png'] {
         z-index: 999;
 
         @media (min-device-width: 769px) and (min-width: 1301px) {
-            left: calc(((100vw - var(--content-width-max)) / 2) + 1rem);
+            left: calc(((100vw - var(--content-width)) / 2) + 1rem);
         }
 
         &:nth-child(2) {
