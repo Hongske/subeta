@@ -480,6 +480,12 @@ select {
   #page #menu #menu-ul .menu-btn > ul[role=menu] > li:nth-child(odd) {
     border-right: 1px solid color-mix(in srgb, var(--primary), transparent);
   }
+  #page #menu #menu-ul .menu-btn > ul[role=menu] > li:nth-child(odd):nth-last-child(1), #page #menu #menu-ul .menu-btn > ul[role=menu] > li:nth-child(odd):nth-last-child(2), #page #menu #menu-ul .menu-btn > ul[role=menu] > li:nth-child(even):nth-last-child(1) {
+    border-bottom: 0 !important;
+  }
+  #page #menu #menu-ul .menu-btn > ul[role=menu] > li.bottom {
+    border-bottom: 0;
+  }
 }
 #page #menu #menu-ul .menu-btn > ul[role=menu] > li:hover {
   background-color: color-mix(in srgb, var(--primary), transparent);

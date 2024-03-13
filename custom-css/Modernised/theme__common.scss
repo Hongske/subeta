@@ -445,12 +445,12 @@ select {
                 }
             }
 
-            .menu-btn.pf-active>ul[role='menu'] {
+            .menu-btn.pf-active > ul[role='menu'] {
                 display: flex;
             }
 
-            .menu-btn>ul[role='menu'],
-            .menu-btn>ul[role='menu'] .menu-dropdown {
+            .menu-btn > ul[role='menu'],
+            .menu-btn > ul[role='menu'] .menu-dropdown {
                 flex-direction: column;
                 width: calc(var(--sidebar-width) / 2) !important;
                 padding: 0;
@@ -479,7 +479,7 @@ select {
                 }
             }
 
-            .menu-btn>ul[role='menu'] {
+            .menu-btn > ul[role='menu'] {
                 top: 3em;
                 right: 50%;
                 transform: translate(50%, 0);
@@ -499,7 +499,7 @@ select {
                     box-shadow: inset var(--box-shadow--down), var(--box-shadow--down);
                 }
 
-                >li {
+                > li {
                     display: flex;
                     gap: .25em;
                     border-bottom: 1px solid color-mix(in srgb, var(--primary), var(--white));
@@ -513,6 +513,16 @@ select {
                         &:nth-child(odd) {
                             border-right: 1px solid color-mix(in srgb, var(--primary), transparent);
                         }
+
+                        &:nth-child(odd):nth-last-child(1),
+                        &:nth-child(odd):nth-last-child(2),
+                        &:nth-child(even):nth-last-child(1) {
+                            border-bottom: 0 !important;
+                        }
+
+                        &.bottom {
+                            border-bottom: 0;
+                        }
                     }
 
                     &:hover {
@@ -521,7 +531,7 @@ select {
                         z-index: 200;
                     }
 
-                    >a {
+                    > a {
                         display: flex;
                         align-items: center;
                         gap: .5em;
@@ -550,7 +560,7 @@ select {
                 }
             }
 
-            .menu-btn>ul[role='menu'] .menu-dropdown {
+            .menu-btn > ul[role='menu'] .menu-dropdown {
                 top: .5rem;
                 left: calc(100% - .5rem);
                 background-color: var(--primary);
@@ -1002,7 +1012,7 @@ select {
                     flex-direction: column;
                     font-weight: bold;
 
-                    >a img {
+                    > a img {
                         width: var(--item-size-large) !important;
                         height: var(--item-size-large);
                         margin-top: 0 !important;
@@ -1078,7 +1088,7 @@ select {
 
 
                 td {
-                    >font {
+                    > font {
                         margin-top: .5em;
                         background-color: var(--white);
                     }
@@ -1315,7 +1325,7 @@ select {
                 padding-left: 0;
             }
 
-            >.container-fluid {
+            > .container-fluid {
                 padding: var(--spacing-x);
             }
         }
@@ -1323,8 +1333,8 @@ select {
         > .container-fluid {
             > center {
 
-                >a[href^='/games/index.php'],
-                >a[href^='/alert.php'] {
+                > a[href^='/games/index.php'],
+                > a[href^='/alert.php'] {
                     margin: .5rem;
                 }
 
