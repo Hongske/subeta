@@ -1440,10 +1440,10 @@ input[type=submit]:focus {
 .ui.button.negative:hover {
   background-color: var(--red-dark) !important;
 }
-.ui.button.large, .ui.button.tiny {
+.ui.button.large, .ui.button.big, .ui.button.small, .ui.button.tiny {
   font-size: var(--font-size-base);
 }
-.ui.button[href^="/explore/"]:not([href*=buy]) {
+.ui.button[href^="/explore/"]:not([href*=buy]):not([href^="/explore/gifts.php/"]) {
   display: none;
 }
 
@@ -1456,6 +1456,8 @@ input[type=submit][value^="Exchange your tokens"] {
 .achievement .completed .icon.check:after,
 .achievement .doesnothave a[href^="/user_shops.php/search/shops/"]:after,
 .btn.buy_button:after,
+.btn.open_gift:after,
+.btn.view-gift:after,
 .btn#check_all_remove:after,
 .btn#uncheck_all_remove:after,
 .button.buy-button:after,
@@ -1622,6 +1624,10 @@ nav .breadcrumb {
 
 .container {
   max-width: 100%;
+}
+
+.container-fluid > .container-fluid {
+  padding: 0;
 }
 
 .form-control {
@@ -1858,6 +1864,10 @@ h1 + .pagination {
 .alert img,
 .ui.message img {
   border-radius: var(--item-radius);
+}
+
+.ui.message {
+  background-color: var(--grey);
 }
 
 .alert-danger,

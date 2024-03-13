@@ -308,15 +308,22 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-- <strong>📅 2024/03/12</strong>
-  - Added option `--page-width` so you can set a custom page width (default is 1300px).
-  - Added option `--number-of-items`, which determines the number of items per row for shops, inventory, vault, ...
-  - Fixed issue with bookmarks appearing on multiple lines
+- <strong>2024/03/13</strong>
+  - Fixed small issues with colours, alignment and spacing for various elements
+  - Restyled the **Gifts Center**
+    - Removed NPC-image
+    - Put the 3 buttons (Send a Gift, Your Gifts and Sent History) into a navbar, to match other pages
+    - Restyled **[Your Gifts](https://subeta.net/explore/gifts.php/gifts)** and **[Sent History](https://subeta.net/explore/gifts.php/sent)**
+    - Restyled **Send a Gift » Gift Page**
 
 <br>
 <details>
 <summary>📅 2024 March</summary>
 
+- <strong>2024/03/12</strong>
+  - Added option `--page-width` so you can set a custom page width (default is 1300px).
+  - Added option `--number-of-items`, which determines the number of items per row for shops, inventory, vault, ...
+  - Fixed issue with bookmarks appearing on multiple lines
 - <strong>2024/03/11</strong>
   - Added option `--color-primary-mobile`, so that you can have a different theme color on mobile
   - Added options `--floating-item-top`, `--floating-item-bottom`, `--floating-item-left`, `--floating-item-right` and `--floating-item-transform`, so that you can pick the placement of floating items (easiest through the generator)

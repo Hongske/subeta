@@ -1531,11 +1531,13 @@ input[type='submit'] {
     }
 
     &.large,
+    &.big,
+    &.small,
     &.tiny {
         font-size: var(--font-size-base);
     }
 
-    &[href^='/explore/']:not([href*='buy']) {
+    &[href^='/explore/']:not([href*='buy']):not([href^='/explore/gifts.php/']) {
         display: none;
     }
 }
@@ -1549,6 +1551,8 @@ input[type='submit'][value^='Exchange your tokens'] {
 .achievement .completed .icon.check,
 .achievement .doesnothave a[href^='/user_shops.php/search/shops/'],
 .btn.buy_button,
+.btn.open_gift,
+.btn.view-gift,
 .btn#check_all_remove,
 .btn#uncheck_all_remove,
 .button.buy-button,
@@ -1729,6 +1733,12 @@ img[src='//img.subeta.net/icons/email_open.png'] {
 
 .container {
     max-width: 100%;
+}
+
+.container-fluid {
+    > .container-fluid {
+        padding: 0;
+    }
 }
 
 .form-control {
@@ -1995,6 +2005,10 @@ img[src='//img.subeta.net/icons/email_open.png'] {
     img {
         border-radius: var(--item-radius);
     }
+}
+
+.ui.message {
+    background-color: var(--grey);
 }
 
 .alert-danger,

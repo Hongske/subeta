@@ -1069,6 +1069,369 @@
         }
     }
 
+    /* Gifts Center */
+    + .container-fluid > .row {
+        img[src='https://sapi.subeta.net/avatar/638910.png'] {
+            display: none;
+
+            ~ p {
+                display: flex;
+                align-items: center;
+                gap: var(--navbar-gap);
+
+                &:nth-of-type(n + 2):before {
+                    content: '|';
+                }
+
+                a[href^='/explore/gifts.php'] {
+                    .ui.button.basic.big, &.ui.button.basic.big {
+                        padding: 0;
+                        background-color: transparent !important;
+                        color: var(--navbar-link) !important;
+                        font-size: inherit;
+                        font-weight: normal;
+
+                        &:hover, &:focus {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .col-sm-6 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+
+            /* Gifts Center » Menu */
+            &.col-md-4.col-lg-3.text-center {
+                gap: var(--navbar-gap);
+                padding: var(--navbar-padding);
+                border-radius: var(--navbar-radius);
+                background-color: var(--navbar-bg);
+                color: var(--navbar-fg);
+                font-size: var(--navbar-font-size);
+            }
+
+            /* Gifts Center » Content */
+            &.col-md-8.col-lg-9 {
+                gap: var(--spacing-y);
+
+                /* Gifts Center » Content » Title + date */
+                h1,
+                .ui.message {
+                    width: var(--col-2);
+                }
+
+                /* Gifts Center » Content » Title */
+                h1 {
+                    margin: 0;
+                }
+
+                /* Gifts Center » Content » Date */
+                .ui.message form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: var(--spacing-y);
+
+                    select {
+                        border: 1px solid var(--black);
+                        border-radius: var(--border-radius);
+                        padding: .25em;
+                    }
+
+                    input[type='submit'] {
+                        line-height: 15px;
+                    }
+
+                    span {
+                        margin-right: auto;
+
+                        @media (max-device-width: 768px) {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                /* Gifts Center » Content » Gift Detail */
+                #gift_opened,
+                #gift-view {
+                    width: 100%;
+
+                    .ui.grid {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: flex-start;
+                        gap: var(--spacing-x);
+                        padding: var(--spacing);
+                        border: var(--border);
+                        border-radius: var(--border-radius);
+                    }
+
+                    .column.text_center {
+                        margin: 0;
+                        padding: 0;
+                        text-align: left !important;
+
+                        @media (max-device-width: 768px) {
+                            width: 100%;
+                        }
+
+                        /* Gifts Center » Content » Gift Detail » User */
+                        &.four.wide {
+                            display: flex;
+                            flex-direction: column;
+                            gap: var(--spacing-y);
+                            width: var(--content-col-4);
+
+                            img[src^='https://sapi.subeta.net/avatar/'] {
+                                width: var(--item-size-medium);
+                                height: var(--item-size-medium);
+                                margin-right: var(--spacing-x);
+                                object-fit: cover;
+                                object-position: 0 12%;
+                                overflow: hidden;
+                                border-radius: 50%;
+                                background-color: var(--grey);
+                            }
+
+                            p {
+                                font-size: 0;
+                            }
+
+                            a {
+                                display: inline-flex;
+                                padding: var(--button-padding);
+                                border-radius: var(--button-radius);
+                                background-color: var(--button-bg);
+                                color: var(--button-fg);
+                                font-size: var(--font-size-base);
+                                font-weight: bold;
+                                transition: var(--button-transition);
+
+                                &:hover, &:focus {
+                                    background-color: var(--button-bg-hover);
+                                    color: var(--button-fg-hover);
+                                }
+
+                                &[href^='/users/'] {
+                                    --button-bg: var(--primary-light);
+                                    --button-fg: var(--primary);
+                                    --button-bg-hover: var(--button-bg);
+                                    --button-fg-hover: var(--button-fg);
+                                }
+
+                                &[href^='/comment.php'] {
+                                    text-decoration: none;
+                                }
+                            }
+                        }
+
+                        /* Gifts Center » Content » Gift Detail » Items + Message */
+                        &.twelve.wide {
+                            width: var(--content-col-8);
+
+                            h2 {
+                                &:nth-of-type(2) {
+                                    margin-top: var(--spacing-y);
+                                }
+                            }
+
+                            .wl_item {
+                                margin-right: var(--spacing-x);
+                                margin-bottom: var(--spacing-y);
+                            }
+                        }
+                    }
+
+                    ~ .ui.grid {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: var(--spacing-y);
+                        width: 100%;
+
+                        /* Gifts Center » Content » Gifts */
+                        .two.wide.column.text_center {
+                            display: grid;
+                            grid-template-areas:
+                                "item_image item_from item_from"
+                                "item_image item_date item_button";
+                            grid-column-gap: var(--spacing-x);
+                            grid-row-gap: .5em;
+                            align-items: center;
+                            width: var(--number-of-cols);
+                            margin: 0;
+                            padding: var(--spacing);
+                            border: var(--border);
+                            border-radius: var(--border-radius);
+                            font-size: var(--font-size-small) !important;
+                            text-align: left !important;
+
+                            p:nth-child(1) {
+                                grid-area: item_image;
+                                width: var(--item-size);
+                                height: var(--item-size);
+                            }
+
+                            p:nth-child(2) {
+                                grid-area: item_from;
+                                font-size: 0;
+
+                                a {
+                                    font-size: var(--font-size-small);
+                                    font-weight: bold;
+                                }
+                            }
+
+                            p:nth-child(3) {
+                                grid-area: item_date;
+                                display: flex;
+                                align-items: center;
+                                height: 2rem;
+                                padding: .25em .5em;
+                                border-radius: var(--border-radius);
+                                background-color: var(--primary-light);
+                                line-height: 1;
+                            }
+
+                            p:nth-child(4) {
+                                grid-area: item_button;
+
+                                .btn.open_gift,
+                                .btn.view-gift {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 2rem;
+                                    height: 2rem;
+                                    font-size: 0;
+
+                                    /*TODO - Check if icon for new gift is different*/
+                                    &:after {
+                                        content: '\f06e';
+                                        font-size: var(--font-size-base);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .pagination {
+                    width: 100%;
+                    margin: 0;
+                }
+
+                > .text_center > img[src^='https://img.subeta.net/items/'] {
+                    width: var(--item-size);
+                    height: var(--item-size);
+
+                    &:first-child + br + .form {
+                        margin-top: var(--spacing-y);
+
+                        > p:first-child {
+                            br,
+                            + p {
+                                display: none;
+                            }
+
+                            + p + p + .ui.grid {
+                                align-items: flex-start;
+                                margin: var(--spacing-y) 0;
+
+                                .column {
+                                    width: var(--col-2);
+                                    margin: 0;
+                                    padding: 0;
+
+                                    &:first-child {
+                                        display: flex;
+                                        flex-direction: column;
+                                        gap: var(--spacing-y);
+                                    }
+
+                                    &#message_preview {
+                                        padding: var(--spacing);
+                                        border-radius: var(--border-radius);
+                                        background-color: var(--primary-light);
+                                    }
+                                }
+                            }
+
+                            + p + p + .ui.grid + p + .ui.grid {
+                                gap: var(--spacing-y);
+                                margin-top: calc(var(--spacing-y) * 2);
+                                margin-bottom: var(--spacing-y);
+
+                                .three.wide.column.text_center {
+                                    width: var(--number-of-cols);
+                                    min-height: 0 !important;
+                                    margin: 0;
+                                    padding: var(--spacing);
+                                    border: var(--border);
+                                    border-radius: var(--border-radius);
+                                    text-align: left !important;
+
+                                    label {
+                                        display: flex;
+                                        align-items: center;
+                                        gap: var(--spacing-x);
+                                        cursor: pointer;
+                                    }
+
+                                    img {
+                                        flex-shrink: 0;
+                                        width: var(--item-size);
+                                        height: var(--item-size);
+                                    }
+
+                                    small {
+                                        flex-grow: 1;
+                                        font-size: var(--font-size-small);
+                                    }
+
+                                    center {
+                                        flex-shrink: 0;
+                                        line-height: 1;
+                                    }
+
+                                    br {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+
+                        .ui.grid {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: var(--spacing-y);
+                        }
+                    }
+                }
+
+                > center {
+                    width: 100%;
+
+                    > img:first-child {
+                        margin-bottom: var(--spacing-y);
+                    }
+
+                    > p {
+                        margin: var(--spacing-y) 0;
+                    }
+                }
+            }
+        }
+    }
+
     /* Subeta » News */
     + .jumbotron.pt-3.pb-3 {
         /* Subeta » News » Intro */
@@ -1682,17 +2045,22 @@
                     ~ table[width='750'] {
                         width: 100%;
 
+                        tr:empty {
+                            display: none;
+                        }
+
                         tr:not(:empty) {
                             display: flex;
-                            flex-wrap: wrap;
                             justify-content: center;
-                            gap: var(--spacing-y);
+                            gap: .5rem;
 
                             td {
                                 display: flex;
                                 align-items: center;
                                 max-width: 100% !important;
                                 min-width: 0 !important;
+                                margin-bottom: .5rem;
+                                padding: .5rem;
                                 border: var(--border);
                                 border-radius: var(--border-radius);
                                 font-size: 0;
@@ -1930,8 +2298,8 @@
                                 flex-grow: 1;
                                 display: grid;
                                 grid-template-areas:
-                                    "item_name    item_button"
-                                    "item_price   item_button";
+                                    "item_name  item_button"
+                                    "item_price item_button";
                                 grid-column-gap: var(--spacing-x);
                                 grid-row-gap: .5em;
                                 align-items: center;
@@ -2006,9 +2374,9 @@
                         .ui.segment {
                             display: grid;
                             grid-template-areas:
-                                "item_image    item_name        item_button"
-                                "item_image    item_price       item_button"
-                                "item_image    item_quantity    item_button";
+                                "item_image item_name     item_button"
+                                "item_image item_price    item_button"
+                                "item_image item_quantity item_button";
                             grid-template-columns: calc(var(--item-size) + 4px) 1fr;
                             grid-column-gap: var(--spacing-x);
                             grid-row-gap: .5em;
@@ -2469,7 +2837,6 @@
             /* Interact » Forums » Subscribed Threads */
             + .ui.message {
                 display: var(--display-forum-subscribed-intro, block);
-                background-color: var(--grey);
                 font-size: var(--font-size-medium);
             }
 
@@ -3275,7 +3642,6 @@
             /* Interact » Forums » Groups » Intro */
             display: var(--display-forum-group-intro, block);
             font-size: var(--font-size-medium);
-            background-color: var(--grey);
 
             h2 {
                 font-size: inherit;
@@ -3370,6 +3736,7 @@
                         }
 
                         .twelve.column.wide {
+                            flex-grow: 1;
                             display: flex;
                             flex-direction: column;
                             gap: var(--spacing-y);
@@ -3435,11 +3802,12 @@
 
                             .ui.menu.secondary {
                                 margin: 0;
+                                padding: 0;
                                 border-radius: var(--navbar-radius);
                                 background-color: var(--navbar-bg);
 
                                 .item {
-                                    margin: 0;
+                                    margin: var(--spacing);
                                     padding: 0;
 
                                     .icon.moon,
@@ -4485,6 +4853,7 @@
                     tr {
                         display: flex;
                         align-items: center;
+                        justify-content: center;
                         gap: var(--spacing-y);
                         background-color: transparent !important;
 
@@ -6435,8 +6804,8 @@
                                         flex-grow: 1;
                                         display: grid;
                                         grid-template-areas:
-                                            "item_name    item_button"
-                                            "item_price   item_button";
+                                            "item_name  item_button"
+                                            "item_price item_button";
                                         grid-column-gap: var(--spacing-x);
                                         grid-row-gap: .5em;
                                         align-items: center;
