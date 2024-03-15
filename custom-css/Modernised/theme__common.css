@@ -1883,6 +1883,7 @@ h1 + .pagination {
   padding: var(--alert-padding);
   border: 0;
   border-radius: var(--alert-radius);
+  line-height: normal;
 }
 .alert:not(:first-child),
 .ui.message:not(:first-child) {

@@ -1987,6 +1987,7 @@ img[src='//img.subeta.net/icons/email_open.png'] {
     padding: var(--alert-padding);
     border: 0;
     border-radius: var(--alert-radius);
+    line-height: normal;
 
     &:not(:first-child) {
         margin-top: var(--spacing-y);
