@@ -1313,10 +1313,17 @@
                                     height: 2rem;
                                     font-size: 0;
 
-                                    /*TODO - Check if icon for new gift is different*/
                                     &:after {
                                         content: '\f06e';
                                         font-size: var(--font-size-base);
+                                    }
+
+                                    &.btn-primary:after {
+                                        content: '\f06b';
+                                    }
+
+                                    &:not(.btn-primary) {
+                                        opacity: .75;
                                     }
                                 }
                             }
