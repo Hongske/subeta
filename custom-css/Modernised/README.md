@@ -308,6 +308,13 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
+- <strong>2024/03/15</strong>
+  - Added styling for disabled buttons
+
+<br>
+<details>
+<summary>📅 2024 March</summary>
+
 - <strong>2024/03/13</strong>
   - Fixed small issues with colours, alignment and spacing for various elements
   - Restyled the **Gifts Center**
@@ -315,11 +322,6 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Put the 3 buttons (Send a Gift, Your Gifts and Sent History) into a navbar, to match other pages
     - Restyled **[Your Gifts](https://subeta.net/explore/gifts.php/gifts)** and **[Sent History](https://subeta.net/explore/gifts.php/sent)**
     - Restyled **Send a Gift » Gift Page**
-
-<br>
-<details>
-<summary>📅 2024 March</summary>
-
 - <strong>2024/03/12</strong>
   - Added option `--page-width` so you can set a custom page width (default is 1300px).
   - Added option `--number-of-items`, which determines the number of items per row for shops, inventory, vault, ...

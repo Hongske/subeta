@@ -1462,6 +1462,10 @@ input[type='submit'] {
         text-decoration: none;
         box-shadow: none;
     }
+
+    &.disabled, &:disabled {
+        background-color: color-mix(in srgb, var(--primary) 75%, var(--white));
+    }
 }
 
 .awesome.blue.large,
