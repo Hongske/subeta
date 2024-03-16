@@ -87,6 +87,11 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 <details>
 <summary>📌 List of page changes</summary>
 
+- Restyled **Gifts Center**
+  - Removed NPC-image
+  - Restyled **[Your Gifts](https://subeta.net/explore/gifts.php/gifts)**
+  - Restyled **[Sent History](https://subeta.net/explore/gifts.php/sent)**
+  - Restyled **Send a Gift » Gift Page**
 - Restyled **Vending** • [📷 screenshot desktop](screenshots/pages/vending--desktop.png) • [📷 screenshot mobile](screenshots/pages/vending--mobile.png)
   - Modified the items so that they're easier to read
   - 👁‍🗨 Changed the image of the vending machine to a big red button
@@ -198,12 +203,12 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Modified the pet-dropdown with options so that it's always shown
   - Added options to hide individual links in the pet-dropdown ([see the display options for pets](#⭐-customising-the-theme))
   - Added options to change the font-weight of individual links in the pet-dropdown ([see the font-weight options for pets](#⭐-customising-the-theme))
-  - Added option `--number-of-pets` to change the number of pet per row
+  - Added option `--number-of-pets` to change the number of pets per row
   - Added icons for hunger and happiness
   - Modified icon for likes
   - Restyled **[Job Agency](https://subeta.net/explore/job_agency.php)** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency--mobile.png)
     - Added option `--display-pets-job-intro` to hide the intro-text
-    - Added option `--number-of-pets-job` to change the number of pet per row
+    - Added option `--number-of-pets-job` to change the number of pets per row
     - Restyled **Pet Overview** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency__pet--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency__pet--mobile.png)
     - Restyled **Job Listings** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency__job_listings--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency__job_listings--mobile.png)
 - Restyled **Vault**
@@ -253,13 +258,21 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Restyled the games overview-page
 - **Games » Battle**
   - Removed images in the menu-bar
-  - Restyled **[Spend Exp](https://subeta.net/games/battle/exp.php)**
+  - Restyled **[Battle » Challenge Opponent](https://subeta.net/games/battle/challenge.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_opponent--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_opponent--mobile.png)
+    - Added option `--number-of-challengers` to change the number of challengers per row
+    - Added option `--display-battle-opponent-weapons` to hide the "Choose Weapons" button
+    - Restyled the fight-screen • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_fight--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_fight--mobile.gif)
+  - Restyled **[Spend Exp](https://subeta.net/games/battle/exp.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__spend_exp--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__spend_exp--mobile.png)
+    - Added option `--display-battle-exp-intro` to hide the intro-text
+    - Added option `--number-of-pets-spendexp` to change the number of pets per row
+    - Restyled **Spend Exp » Pet** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__spend_exp_detail--desktop.png)
+      - Added option `--display-battle-exp-pet-intro` to hide the intro-text
   - Restyled **[Training Center](https://subeta.net/explore/train.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__training--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__training--mobile.gif)
     - Removed NPC-image
     - Added option `--display-battle-training-intro` to hide intro-text
     - Added option `--display-battle-training-warning` to hide warning about level cap and autotraining
     - Added option `--display-battle-training-auto` to hide autotraining buttons
-    - Added option `--number-of-pets-training` to change the number of pet per row
+    - Added option `--number-of-pets-training` to change the number of pets per row
 - **[Games » Chance » Fishing](https://subeta.net/games/fishing.php)**
   - 👁‍🗨 Removed NPC-image
 - **[Games » Chance » Mindreader](https://subeta.net/games/mind_reader.php)**
@@ -308,19 +321,29 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-- <strong>2024/03/15</strong>
-  - Added styling for disabled buttons
+- <strong>2024/03/16</strong>
+  - Restyled **[Battle » Challenge Opponent](https://subeta.net/games/battle/challenge.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_opponent--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_opponent--mobile.png)
+    - Added option `--number-of-challengers` to change the number of challengers per row
+    - Added option `--display-battle-opponent-weapons` to hide the "Choose Weapons" button
+    - Restyled the fight-screen • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_fight--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_fight--mobile.gif)
+  - Updated styling for **Battle » Spend Exp**
+    - Added option `--display-battle-exp-intro` to hide the intro-text
+    - Added option `--number-of-pets-spendexp` to change the number of pets per row
+    - Added option `--display-battle-exp-pet-intro` to hide the intro-text the pet-detail page
 
 <br>
 <details>
 <summary>📅 2024 March</summary>
 
+- <strong>2024/03/15</strong>
+  - Added styling for disabled buttons
 - <strong>2024/03/13</strong>
   - Fixed small issues with colours, alignment and spacing for various elements
   - Restyled the **Gifts Center**
     - Removed NPC-image
     - Put the 3 buttons (Send a Gift, Your Gifts and Sent History) into a navbar, to match other pages
-    - Restyled **[Your Gifts](https://subeta.net/explore/gifts.php/gifts)** and **[Sent History](https://subeta.net/explore/gifts.php/sent)**
+    - Restyled **[Your Gifts](https://subeta.net/explore/gifts.php/gifts)**
+    - Restyled **[Sent History](https://subeta.net/explore/gifts.php/sent)**
     - Restyled **Send a Gift » Gift Page**
 - <strong>2024/03/12</strong>
   - Added option `--page-width` so you can set a custom page width (default is 1300px).
@@ -349,7 +372,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Fixed bug with spacing of the currency-items in your vault
   - Restyled **[Job Agency](https://subeta.net/explore/job_agency.php)** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency--mobile.png)
     - Added option `--display-pets-job-intro` to hide the intro-text
-    - Added option `--number-of-pets-job` to change the number of pet per row
+    - Added option `--number-of-pets-job` to change the number of pets per row
     - Restyled **Pet Overview** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency__pet--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency__pet--mobile.png)
     - Restyled **Job Listings** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency__job_listings--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency__job_listings--mobile.png)
   - Restyled **[Explore » Shadowglen » Underground » Underground Fishing](https://subeta.net/explore/underground/fishing.php)**

@@ -1883,6 +1883,9 @@ h1 + .pagination {
   padding: var(--alert-padding);
   border: 0;
   border-radius: var(--alert-radius);
+  background-color: var(--grey);
+  color: var(--black);
+  font-size: var(--font-size-medium);
   line-height: normal;
 }
 .alert:not(:first-child),
@@ -1918,10 +1921,6 @@ h1 + .pagination {
 .alert img,
 .ui.message img {
   border-radius: var(--item-radius);
-}
-
-.ui.message {
-  background-color: var(--grey);
 }
 
 .alert-danger,

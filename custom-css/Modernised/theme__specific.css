@@ -459,61 +459,55 @@
         > .text-center {
             width: 100%;
 
+            /* Subeta » Games » Battle » Content » Spend Exp » Intro */
+            &.col-12 {
+                display: var(--display-battle-exp-intro, block);
+                width: 100%;
+
+                p {
+                    margin: var(--spacing-y) 0 !important;
+                    font-size: var(--font-size-medium);
+                }
+            }
+
+            /* Subeta » Games » Battle » Content » Spend Exp » Pet */
             &.col-12 ~ .text-center.rounded.border.m-3.p-3 {
                 display: flex;
                 flex-wrap: wrap;
-                width: var(--col-2);
+                justify-content: center;
+                gap: var(--spacing-y);
+                width: var(--number-of-pets-spendexp, var(--number-of-pets, var(--col-3)));
                 margin: 0 !important;
+                padding: var(--spacing) !important;
+                border: var(--border) !important;
                 text-align: left !important;
 
-                @media (max-device-width: 768px) {
-                    justify-content: center;
-                    gap: var(--spacing-y);
-                }
-
-                @media (min-device-width: 769px) {
-                    flex-direction: column;
-                    align-items: flex-start;
-                    height: calc(var(--item-size-large) + (2 * var(--spacing-y)));
-                }
-
                 img[src^='//img.subeta.net/pets/'] {
-                    order: -1;
-                    width: var(--item-size-large);
+                    width: 100%;
                     height: var(--item-size-large);
-                    margin-right: var(--spacing-x);
 
                     @media (max-device-width: 768px) {
-                        width: 100%;
                         height: var(--item-size-medium);
-                        margin-right: 0;
                     }
                 }
 
                 h2 {
-                    @media (min-device-width: 769px) {
-                        width: calc(100% - var(--item-size-large) - var(--spacing-x));
-                    }
+                    margin: 0;
 
                     &:nth-of-type(1) {
-                        @media (max-device-width: 768px) {
-                            width: 100%;
-                            text-align: center;
-                        }
+                        width: 100%;
+                        font-size: var(--font-size-title);
+                        text-align: center;
                     }
 
                     &:nth-of-type(2) {
-                        margin: 0;
+                        margin-right: calc(0px - var(--spacing-y) + .25em);
                         font-size: var(--font-size-base) !important;
                     }
                 }
 
                 .btn {
-                    margin-top: auto;
-
-                    @media (max-device-width: 768px) {
-                        width: 100%;
-                    }
+                    width: 100%;
                 }
 
                 br {
@@ -538,17 +532,24 @@
             border-radius: var(--border-radius);
 
             > center {
+                display: flex;
+                flex-direction: column-reverse;
                 width: 100%;
 
                 br {
                     display: none;
                 }
+
+                b {
+                    font-size: var(--font-size-title);
+                }
             }
 
             .ui.image {
                 max-width: 100% !important;
-                width: var(--item-size-large);
+                width: 100%;
                 height: var(--item-size-large);
+                margin-top: var(--spacing-y);
             }
 
             > .p-1 {
@@ -612,136 +613,565 @@
         }
     }
 
-    /* Subeta » Games » Battle » Content » Spend Exp */
-    + .container #spend-exp-form {
-        .table.m-3 {
-            margin: 0 !important;
-            font-size: var(--font-size-medium);
+    /* Subeta » Games » Battle » Content » Spend Exp » Pet Detail */
+    + .container {
+        padding: 0;
 
-            tr:nth-child(n + 2) {
-                border-top: 1px solid var(--primary-light);
+        > .row.w-100:first-child {
+            display: none;
+        }
+
+        > .row.w-100:first-child + .row.w-100 {
+            .col-12.col-md-4.text-center {
+                img {
+                    width: var(--item-size-large);
+                    height: var(--item-size-large);
+                    margin-bottom: var(--spacing-y);
+                }
+
+                > div > p {
+                    font-size: var(--font-size-base) !important;
+
+                    &:first-child {
+                        display: inline-flex;
+                        padding: .25em .5em;
+                        border-radius: var(--border-radius);
+                        background-color: var(--green);
+                        color: var(--white);
+                    }
+                }
             }
 
-            tr:nth-last-child(n + 2) td {
-                vertical-align: middle;
+            .col-12.col-md-8.text-center {
+                .alert.alert-info.text-left {
+                    display: var(--display-battle-exp-pet-intro, block);
+                }
+            }
+        }
+
+        #spend-exp-form {
+            .table.m-3 {
+                margin: 0 !important;
+                font-size: var(--font-size-medium);
+
+                tr:nth-child(n + 2) {
+                    border-top: 1px solid var(--primary-light);
+                }
+
+                tr:nth-last-child(n + 2) td {
+                    vertical-align: middle;
+                }
+
+                th,
+                td {
+                    width: auto !important;
+                    padding: var(--button-padding);
+                    border: 0;
+                    text-align: right;
+                    white-space: nowrap;
+
+                    &:nth-child(1) {
+                        text-align: left;
+                    }
+                }
+
+                th {
+                    background-color: var(--primary-light);
+                    color: var(--primary-dark);
+
+                    &:first-child {
+                        border-radius: var(--border-radius) 0 0 var(--border-radius);
+                    }
+
+                    &:last-child {
+                        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+                    }
+                }
             }
 
-            th,
-            td {
-                width: auto !important;
-                padding: var(--button-padding);
-                border: 0;
+            .stat-input {
+                padding: .25em;
                 text-align: right;
-                white-space: nowrap;
-
-                &:nth-child(1) {
-                    text-align: left;
-                }
             }
 
-            th {
-                background-color: var(--primary-light);
-                color: var(--primary-dark);
-
-                &:first-child {
-                    border-radius: var(--border-radius) 0 0 var(--border-radius);
-                }
-
-                &:last-child {
-                    border-radius: 0 var(--border-radius) var(--border-radius) 0;
-                }
+            .total-stats,
+            .total-exp {
+                font-weight: bold;
             }
-        }
 
-        .stat-input {
-            padding: .25em;
-            text-align: right;
-        }
+            .submit-exp {
+                margin-top: var(--spacing-y);
 
-        .total-stats,
-        .total-exp {
-            font-weight: bold;
-        }
-
-        .submit-exp {
-            margin-top: var(--spacing-y);
-
-            + .mt-3 {
-                display: none;
+                + .mt-3 {
+                    display: none;
+                }
             }
         }
     }
 
-    /* Subeta » Games » Battle » Content » Training Center » Training done, another session? */
-    + center img[src*='/pets/'] {
-        max-width: 100% !important;
-        width: var(--item-size-large);
-        height: var(--item-size-large);
-        margin-bottom: 1rem;
+    + center {
+        margin-bottom: var(--spacing-y);
 
-        ~ a[href='train.php'] {
-            display: none;
+        /* Subeta » Games » Battle » Content » Challenge Opponent » Title */
+        h2 {
+            font-size: var(--font-size-title);
         }
 
-        ~ a[href^='/alert.php'] {
-            display: inline-flex;
-            margin-top: 1rem;
+        /* Subeta » Games » Battle » Content » Training Center » Training done, another session? */
+        img[src*='/pets/'] {
+            max-width: 100% !important;
+            width: var(--item-size-large);
+            height: var(--item-size-large);
+            margin-bottom: 1rem;
 
-            ~ p a {
+            ~ a[href='train.php'] {
+                display: none;
+            }
+
+            ~ a[href^='/alert.php'] {
+                display: inline-flex;
+                margin-top: 1rem;
+
+                ~ p a {
+                    display: none;
+                }
+            }
+
+            ~ .mx-auto.d-inline-block.p-3.border.rounded {
+                border: 2px solid var(--primary-light) !important;
+                border-radius: var(--border-radius);
+                background-color: var(--white);
+                font-size: .75em;
+
+                p,
+                b {
+                    font-size: var(--font-size-base);
+                }
+
+                select[name='stat'] {
+                    width: var(--sidebar-width) !important;
+                    padding: var(--button-padding);
+                    border-radius: var(--border-radius);
+                    outline: 0;
+                    font-size: var(--font-size-medium) !important;
+                    text-align: center;
+                }
+
+                .btn {
+                    display: block;
+                    width: var(--sidebar-width);
+                    margin-top: 1rem;
+                    font-size: var(--font-size-base) !important;
+                    font-weight: bold;
+                    text-align: left;
+                    outline: 0;
+                    transition: var(--button-transition);
+
+                    &[name='train_normal'],
+                    &[name='train_auto'] {
+                        text-align: center;
+
+                        &:hover {
+                            background-color: var(--button-bg-hover);
+                            color: var(--button-fg-hover);
+                        }
+                    }
+
+                    &[name='train_normal'] {
+                        background-color: var(--button-bg);
+                        color: var(--button-fg);
+                    }
+
+                    &[name='train_auto'] {
+                        display: var(--display-battle-training-auto, inline-block);
+                        margin-bottom: var(--spacing-y);
+                        background-color: var(--grey);
+                        color: var(--black);
+                    }
+                }
+            }
+        }
+
+        /* Subeta » Games » Battle » Content » Challenge Opponent » Fight */
+        #battle-ui-main {
+            display: flex;
+            height: auto;
+            padding: 0;
+            border: 2px solid var(--grey);
+            border-radius: var(--border-radius);
+
+            @media (max-device-width: 768px) {
+                flex-direction: column-reverse;
+            }
+        }
+
+        .battle-ui-arena,
+        .battle-ui-controls {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-y);
+            padding: var(--spacing-x);
+            position: relative;
+
+            @media (max-device-width: 768px) {
+                width: 100% !important;
+            }
+
+            > div:first-child {
                 display: none;
             }
         }
 
-        ~ .mx-auto.d-inline-block.p-3.border.rounded {
-            border: 2px solid var(--primary-light) !important;
-            border-radius: var(--border-radius);
-            background-color: var(--white);
-            font-size: .75em;
+        /* Subeta » Games » Battle » Content » Challenge Opponent » Fight » Arena */
+        .battle-ui-arena {
+            width: calc(100% / 12 * 8);
+        }
 
-            p,
-            b {
-                font-size: var(--font-size-base);
+        .battle-images,
+        .battle-names,
+        .battle-healthbars {
+            display: flex;
+
+            > div {
+                width: 50% !important;
+            }
+        }
+
+        .battle-image img {
+            width: var(--item-size-large);
+            height: var(--item-size-large);
+            margin-bottom: 0;
+
+            @media (max-device-width: 768px) {
+                width: var(--item-size-medium);
+                height: var(--item-size-medium);
+            }
+        }
+
+        .battle-pet-name,
+        .battle-opponent-name {
+            font-size: var(--font-size-medium);
+
+            @media (max-device-width: 768px) {
+                font-size: var(--font-size-small);
+            }
+        }
+
+        .battle-healthbars {
+            padding: 0;
+        }
+
+        .health_total {
+            height: .5rem;
+            overflow: hidden;
+            margin-bottom: .5em;
+            border: 0;
+            border-radius: var(--border-radius);
+            background-color: var(--grey);
+        }
+
+        .health_now {
+            background-color: var(--green) !important;
+        }
+
+        .battle-commentary {
+            margin: 0;
+            padding: 0;
+            font-size: var(--font-size-medium);
+        }
+
+        #battleIconsPet,
+        #battleIconsOpponent {
+            display: flex;
+            flex-wrap: wrap;
+            width: 25%;
+            padding: 0;
+            border: 0;
+            text-align: left;
+
+            p {
+                width: 100%;
+                margin-bottom: 0;
+
+                &:not(:first-of-type):not(:last-child) {
+                    margin-top: var(--spacing-y);
+                }
+
+                &:nth-last-child(-n + 2) {
+                    font-weight: bold;
+                }
             }
 
-            select[name='stat'] {
-                width: var(--sidebar-width) !important;
-                padding: var(--button-padding);
+            div {
+                font-size: var(--font-size-small);
+
+                img {
+                    margin-bottom: .25em;
+                }
+            }
+        }
+
+        #battleLog {
+            width: calc(50% - (var(--spacing-x) * 2));
+            margin: 0 var(--spacing-x);
+            padding: 0 var(--spacing-x);
+            border: 1px solid var(--grey);
+            border-width: 0 1px;
+        }
+
+        /* Subeta » Games » Battle » Content » Challenge Opponent » Fight » Next Turn */
+        .battle-ui-controls {
+            gap: 0;
+            width: calc(100% / 12 * 4);
+            border: 0;
+            background-color: var(--grey);
+        }
+
+        #petChoices {
+            order: 1;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-y);
+        }
+
+        .battle-section-title {
+            margin: 0;
+            font-variant: normal;
+            font-weight: bold;
+        }
+
+        .weapons-box-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+            gap: .5em;
+            margin-bottom: var(--spacing-y);
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+        }
+
+        .weapon-option {
+            width: calc((100% - 1.5em) / 4);
+            overflow: hidden;
+            padding: .5em;
+            border-radius: var(--border-radius);
+            background-color: var(--white);
+            opacity: .5;
+            transition: opacity .2s;
+
+            img {
+                width: 100%;
+                height: auto;
+                box-shadow: none !important;
+            }
+        }
+
+        .battle-select {
+            display: flex;
+            width: 100%;
+            padding: 0;
+        }
+
+        #weapon_1,
+        #weapon_2 {
+            align-items: center;
+            gap: var(--spacing-x);
+
+            &.active {
+                .arrow {
+                    color: var(--black);
+                }
+
+                .preview_img {
+                    box-shadow: var(--box-shadow--all);
+                }
+            }
+
+            .arrow {
+                order: 1;
+                transform: rotate(90deg);
+            }
+
+            .preview_img {
+                width: var(--item-size);
+                height: var(--item-size);
+                margin: 0;
+                padding: .5em;
+                border: 0;
                 border-radius: var(--border-radius);
-                outline: 0;
-                font-size: var(--font-size-medium) !important;
+                background-color: var(--white);
+            }
+
+            .weapon-name {
+                font-size: var(--font-size-small);
+                text-align: left;
+            }
+        }
+
+        #potion,
+        #spell {
+            flex-direction: column;
+            gap: var(--spacing-y);
+            margin-top: var(--spacing-y);
+
+            .choices-box {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-y);
+                height: auto;
+                overflow: visible;
+                padding: 0;
+                border: 0;
+                border-radius: 0;
+            }
+
+            .potion-choice,
+            .spell-choice {
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-x);
+
+                img {
+                    width: var(--item-size);
+                    height: var(--item-size);
+                    padding: .5em;
+                    border-radius: var(--border-radius);
+                    background-color: var(--white);
+                }
+
+                &.selected {
+                    font-weight: bold;
+
+                    img {
+                        box-shadow: var(--box-shadow--all);
+                    }
+                }
+            }
+
+            .choice-name {
+                font-size: var(--font-size-small);
+            }
+        }
+
+        #turn_button,
+        .end-game-btn {
+            margin-bottom: calc(var(--spacing-y) * 2);
+        }
+
+        #turn_button {
+            margin-top: 0;
+        }
+    }
+
+    /* Subeta » Games » Battle » Content » Challenge Opponent » Opponents */
+    + center + #battle_challengers {
+        .ui.menu {
+            justify-content: center;
+            margin-bottom: var(--spacing-y);
+        }
+
+        .opponents-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-y);
+            margin: 0;
+            padding: 0;
+            top: 0;
+            box-shadow: none;
+
+            > center {
+                display: none;
+            }
+
+            .card.m-3 {
+                display: flex !important;
+                flex-direction: column;
+                gap: var(--spacing-y);
+                width: var(--number-of-challengers, var(--col-3)) !important;
+                margin: 0 !important;
+                padding: var(--spacing);
+                border: var(--border);
+                border-radius: var(--border-radius);
+            }
+
+            .card-header {
+                margin: 0;
+                color: var(--black);
                 text-align: center;
             }
 
-            .btn {
-                display: block;
-                width: var(--sidebar-width);
-                margin-top: 1rem;
-                font-size: var(--font-size-base) !important;
-                font-weight: bold;
-                text-align: left;
-                outline: 0;
-                transition: var(--button-transition);
+            .card-img-top img {
+                height: var(--item-size-large);
 
-                &[name='train_normal'],
-                &[name='train_auto'] {
-                    text-align: center;
+                @media (max-device-width: 768px) {
+                    height: var(--item-size-medium);
+                }
+            }
 
-                    &:hover {
-                        background-color: var(--button-bg-hover);
-                        color: var(--button-fg-hover);
-                    }
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-y);
+
+                b,
+                br {
+                    display: none;
                 }
 
-                &[name='train_normal'] {
-                    background-color: var(--button-bg);
-                    color: var(--button-fg);
+                small {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    gap: .25em;
+                    font-size: var(--font-size-small);
+                    line-height: 1;
                 }
 
-                &[name='train_auto'] {
-                    display: var(--display-battle-training-auto, inline-block);
-                    margin-bottom: var(--spacing-y);
+                .statbar {
+                    width: 100%;
+                    height: .5rem;
+                    overflow: hidden;
+                    margin-top: -1.5em;
+                    margin-left: 40%;
+                    border: 0;
+                    border-radius: var(--border-radius);
                     background-color: var(--grey);
-                    color: var(--black);
+                }
+
+                .stat {
+                    height: 100%;
+                    background-color: var(--green);
+                }
+
+                form {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: var(--spacing-y);
+                    width: 100%;
+
+                    .mt-1, .mt-2 {
+                        margin: 0 !important;
+                    }
+
+                    select {
+                        width: 100% !important;
+                        padding: .25em 0;
+                        border: 1px solid;
+                        border-radius: var(--border-radius);
+                    }
+
+                    p,
+                    .btn {
+                        width: 100%;
+                        margin: 0;
+                    }
+
+                    p {
+                        display: var(--display-battle-opponent-weapons, block);
+                    }
                 }
             }
         }
@@ -1799,8 +2229,6 @@
 
                     /* Quests » Content » Intro */
                     ~ .ui.message {
-                        font-size: var(--font-size-medium);
-
                         &.green {
                             margin: 1rem 0;
                             min-height: 0;
@@ -2351,7 +2779,6 @@
                     padding: 0;
                     background-color: transparent;
                     color: var(--black);
-                    font-size: var(--font-size-medium);
 
                     p i {
                         font-style: normal;
@@ -2686,7 +3113,6 @@
                 display: var(--display-forum-pulse, block);
                 background-color: var(--grey);
                 color: var(--black);
-                font-size: var(--font-size-medium);
             }
 
             /* Interact » Forums » Home » Forum Pulse - Enabled */
@@ -2844,7 +3270,6 @@
             /* Interact » Forums » Subscribed Threads */
             + .ui.message {
                 display: var(--display-forum-subscribed-intro, block);
-                font-size: var(--font-size-medium);
             }
 
             /* Personal » Vault */
@@ -3648,7 +4073,6 @@
         + .intro.ui.message {
             /* Interact » Forums » Groups » Intro */
             display: var(--display-forum-group-intro, block);
-            font-size: var(--font-size-medium);
 
             h2 {
                 font-size: inherit;
@@ -6389,7 +6813,6 @@
             /* Commerce » Your Shops » Content » Sales History » Info*/
             .alert-info {
                 display: var(--display-yourshop-sales-info, block);
-                font-size: var(--font-size-medium);
             }
 
             /* Commerce » Your Shops » Content » Sales History » Items*/

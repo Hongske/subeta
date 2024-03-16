@@ -1987,6 +1987,9 @@ img[src='//img.subeta.net/icons/email_open.png'] {
     padding: var(--alert-padding);
     border: 0;
     border-radius: var(--alert-radius);
+    background-color: var(--grey);
+    color: var(--black);
+    font-size: var(--font-size-medium);
     line-height: normal;
 
     &:not(:first-child) {
@@ -2020,10 +2023,6 @@ img[src='//img.subeta.net/icons/email_open.png'] {
     img {
         border-radius: var(--item-radius);
     }
-}
-
-.ui.message {
-    background-color: var(--grey);
 }
 
 .alert-danger,
