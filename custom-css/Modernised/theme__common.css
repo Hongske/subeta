@@ -1515,6 +1515,7 @@ input[type=submit][value^="Exchange your tokens"] {
 .btn#uncheck_all_remove:after,
 .button.buy-button:after,
 .button[href^="/explore/subeautique.php/buy/"]:after,
+.button[href^="?act=remove&id="]:after,
 .card .icon.lock.massive:after,
 .card .fa.fa-lock.fa-4x:after,
 .category .media-body div a:after,

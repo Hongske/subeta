@@ -417,6 +417,102 @@
         display: none;
     }
 
+    /* Subeta » Games » Battle » Content » Spend Exp » Pet Detail */
+    + .container {
+        padding: 0;
+
+        > .row.w-100:first-child h1 {
+            display: none;
+        }
+
+        > .row.w-100:first-child + .row.w-100 {
+            .col-12.col-md-4.text-center {
+                img {
+                    width: var(--item-size-large);
+                    height: var(--item-size-large);
+                    margin-bottom: var(--spacing-y);
+                }
+
+                > div > p {
+                    font-size: var(--font-size-base) !important;
+
+                    &:first-child {
+                        display: inline-flex;
+                        padding: .25em .5em;
+                        border-radius: var(--border-radius);
+                        background-color: var(--green);
+                        color: var(--white);
+                    }
+                }
+            }
+
+            .col-12.col-md-8.text-center {
+                .alert.alert-info.text-left {
+                    display: var(--display-battle-exp-pet-intro, block);
+                }
+            }
+        }
+
+        #spend-exp-form {
+            .table.m-3 {
+                margin: 0 !important;
+                font-size: var(--font-size-medium);
+
+                tr:nth-child(n + 2) {
+                    border-top: 1px solid var(--primary-light);
+                }
+
+                tr:nth-last-child(n + 2) td {
+                    vertical-align: middle;
+                }
+
+                th,
+                td {
+                    width: auto !important;
+                    padding: var(--button-padding);
+                    border: 0;
+                    text-align: right;
+                    white-space: nowrap;
+
+                    &:nth-child(1) {
+                        text-align: left;
+                    }
+                }
+
+                th {
+                    background-color: var(--primary-light);
+                    color: var(--primary-dark);
+
+                    &:first-child {
+                        border-radius: var(--border-radius) 0 0 var(--border-radius);
+                    }
+
+                    &:last-child {
+                        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+                    }
+                }
+            }
+
+            .stat-input {
+                padding: .25em;
+                text-align: right;
+            }
+
+            .total-stats,
+            .total-exp {
+                font-weight: bold;
+            }
+
+            .submit-exp {
+                margin-top: var(--spacing-y);
+
+                + .mt-3 {
+                    display: none;
+                }
+            }
+        }
+    }
+
     /* Subeta » Games » Battle » Content */
     + .row.w-100 {
         > .col-md-4 {
@@ -613,98 +709,206 @@
         }
     }
 
-    /* Subeta » Games » Battle » Content » Spend Exp » Pet Detail */
-    + .container {
+    /* Subeta » Games » Battle » Content » Armory */
+    ~ .ui.basic.segment .ui.grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-y);
+        width: 100%;
+
+        .two.wide.column.center.aligned {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-x);
+            width: var(--number-of-cols);
+            margin: 0;
+            padding: 0;
+            font-size: var(--font-size-small) !important;
+            text-align: left;
+
+            .hover-weapon {
+                width: var(--item-size);
+                height: var(--item-size);
+            }
+
+            .button[href^='?act=remove&id='] {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2rem;
+                height: 2rem;
+                background-color: var(--red);
+                font-size: 0;
+
+                &:hover, &:focus {
+                    background-color: var(--red-dark);
+                }
+
+                &:after {
+                    content: '\f2ed';
+                    font-size: var(--font-size-base);
+                }
+            }
+
+            br {
+                display: none;
+            }
+        }
+    }
+    + .ui.basic.segment.center.aligned,
+    + .ui.basic.segment.center.aligned + .ui.basic.segment.center.aligned,
+    + .ui.basic.segment.center.aligned + .ui.basic.segment.center.aligned + .ui.basic.segment {
+        margin: var(--spacing-y) 0;
         padding: 0;
-
-        > .row.w-100:first-child {
-            display: none;
+    }
+    + .ui.basic.segment.center.aligned {
+        .ui.message.info {
+            padding: 0;
+            background-color: transparent;
+            color: var(--black);
         }
 
-        > .row.w-100:first-child + .row.w-100 {
-            .col-12.col-md-4.text-center {
-                img {
-                    width: var(--item-size-large);
-                    height: var(--item-size-large);
-                    margin-bottom: var(--spacing-y);
-                }
+        .ui.header {
+            font-size: var(--font-size-title) !important;
+        }
+    }
+    + .ui.basic.segment.center.aligned + .ui.basic.segment.center.aligned {
+        display: flex;
+        justify-content: center;
+        gap: var(--spacing-y);
 
-                > div > p {
-                    font-size: var(--font-size-base) !important;
+        @media (max-device-width: 768px) {
+            flex-direction: column;
+        }
+    }
+    + .ui.basic.segment.center.aligned + .ui.basic.segment.center.aligned + .ui.basic.segment {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-y);
 
-                    &:first-child {
-                        display: inline-flex;
-                        padding: .25em .5em;
-                        border-radius: var(--border-radius);
-                        background-color: var(--green);
-                        color: var(--white);
-                    }
-                }
-            }
+        .ui.segment {
+            margin: 0;
 
-            .col-12.col-md-8.text-center {
-                .alert.alert-info.text-left {
-                    display: var(--display-battle-exp-pet-intro, block);
-                }
+            &:after {
+                display: none;
             }
         }
 
-        #spend-exp-form {
-            .table.m-3 {
-                margin: 0 !important;
-                font-size: var(--font-size-medium);
+        > .ui.segment:not(.basic) {
+            padding: var(--spacing);
+            border: var(--border);
+            box-shadow: none;
 
-                tr:nth-child(n + 2) {
-                    border-top: 1px solid var(--primary-light);
+            h2 {
+                .ui.label,
+                .ui.button {
+                    margin-left: 1em;
+                    padding: .25em .5em;
+                    font-size: var(--font-size-small);
+                    font-weight: bold;
+                    text-transform: lowercase;
                 }
 
-                tr:nth-last-child(n + 2) td {
-                    vertical-align: middle;
-                }
-
-                th,
-                td {
-                    width: auto !important;
-                    padding: var(--button-padding);
-                    border: 0;
-                    text-align: right;
-                    white-space: nowrap;
-
-                    &:nth-child(1) {
-                        text-align: left;
-                    }
-                }
-
-                th {
-                    background-color: var(--primary-light);
-                    color: var(--primary-dark);
-
-                    &:first-child {
-                        border-radius: var(--border-radius) 0 0 var(--border-radius);
-                    }
-
-                    &:last-child {
-                        border-radius: 0 var(--border-radius) var(--border-radius) 0;
-                    }
+                .ui.label {
+                    background-color: var(--primary-light) !important;
+                    color: var(--black) !important;
                 }
             }
 
-            .stat-input {
-                padding: .25em;
-                text-align: right;
-            }
-
-            .total-stats,
-            .total-exp {
-                font-weight: bold;
-            }
-
-            .submit-exp {
+            > .ui.basic.segment {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: var(--spacing-y);
                 margin-top: var(--spacing-y);
+                padding: 0;
 
-                + .mt-3 {
+                .ui.button {
+                    @media (min-device-width: 769px) {
+                        margin-top: -3.5rem;
+                    }
+
+                    &:not(.red) {
+                        margin-left: auto;
+                    }
+
+                    &.red {
+                        background-color: var(--red);
+
+                        &:hover, &:focus {
+                            background-color: var(--red-dark);
+                        }
+                    }
+                }
+
+                strong {
+                    margin-right: calc(0px - var(--spacing-y));
+                }
+
+                br {
                     display: none;
                 }
+            }
+        }
+
+        > .ui.segment.basic {
+            margin-top: var(--spacing-y);
+            padding: 0;
+
+            h2 small {
+                display: block;
+                margin-top: var(--spacing-y);
+                margin-bottom: calc(0px - var(--spacing-y));
+                font-size: var(--font-size-medium);
+            }
+
+            .two.wide.column.center.aligned {
+                padding: var(--spacing);
+                border: var(--border);
+                border-radius: var(--border-radius);
+
+                label {
+                    flex-grow: 1;
+
+                    img {
+                        float: left;
+                        margin-right: var(--spacing-x);
+
+                        + br {
+                            display: none;
+                        }
+                    }
+
+                    b:empty {
+                        display: none;
+                    }
+
+                    br {
+                        display: block;
+                    }
+                }
+
+
+            }
+        }
+    }
+    + .ui.basic.segment.center.aligned + .ui.basic.segment:not(.center):not(.aligned) {
+        padding: 0;
+
+        .two.wide.column.center.aligned.draggable {
+            padding: var(--spacing);
+            border: var(--border);
+            border-radius: var(--border-radius);
+
+            label {
+                flex-grow: 1;
+            }
+
+            img {
+                width: 100%;
+                object-position: left;
+                margin-bottom: var(--spacing-y);
             }
         }
     }
@@ -792,6 +996,25 @@
             }
         }
 
+        /* Subeta » Games » Battle » Content » Challenge Opponent » » Fight » Results */
+        img[src^='//img.subeta.net/battle/opponents/'] {
+            width: var(--item-size-large);
+            height: var(--item-size-large);
+            margin-bottom: var(--spacing-y);
+            padding: 0 !important;
+
+            ~ .scode-item-name {
+                margin-bottom: var(--spacing-y);
+
+                ~ p:last-of-type {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: var(--spacing-y);
+                }
+            }
+        }
+
         /* Subeta » Games » Battle » Content » Challenge Opponent » Fight */
         #battle-ui-main {
             display: flex;
@@ -803,120 +1026,120 @@
             @media (max-device-width: 768px) {
                 flex-direction: column-reverse;
             }
-        }
 
-        .battle-ui-arena,
-        .battle-ui-controls {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-y);
-            padding: var(--spacing-x);
-            position: relative;
+            .battle-ui-arena,
+            .battle-ui-controls {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-y);
+                padding: var(--spacing-x);
+                position: relative;
 
-            @media (max-device-width: 768px) {
-                width: 100% !important;
-            }
+                @media (max-device-width: 768px) {
+                    width: 100% !important;
+                }
 
-            > div:first-child {
-                display: none;
+                > div:first-child {
+                    display: none;
+                }
             }
         }
 
         /* Subeta » Games » Battle » Content » Challenge Opponent » Fight » Arena */
         .battle-ui-arena {
             width: calc(100% / 12 * 8);
-        }
 
-        .battle-images,
-        .battle-names,
-        .battle-healthbars {
-            display: flex;
+            .battle-images,
+            .battle-names,
+            .battle-healthbars {
+                display: flex;
 
-            > div {
-                width: 50% !important;
+                > div {
+                    width: 50% !important;
+                }
             }
-        }
 
-        .battle-image img {
-            width: var(--item-size-large);
-            height: var(--item-size-large);
-            margin-bottom: 0;
-
-            @media (max-device-width: 768px) {
-                width: var(--item-size-medium);
-                height: var(--item-size-medium);
-            }
-        }
-
-        .battle-pet-name,
-        .battle-opponent-name {
-            font-size: var(--font-size-medium);
-
-            @media (max-device-width: 768px) {
-                font-size: var(--font-size-small);
-            }
-        }
-
-        .battle-healthbars {
-            padding: 0;
-        }
-
-        .health_total {
-            height: .5rem;
-            overflow: hidden;
-            margin-bottom: .5em;
-            border: 0;
-            border-radius: var(--border-radius);
-            background-color: var(--grey);
-        }
-
-        .health_now {
-            background-color: var(--green) !important;
-        }
-
-        .battle-commentary {
-            margin: 0;
-            padding: 0;
-            font-size: var(--font-size-medium);
-        }
-
-        #battleIconsPet,
-        #battleIconsOpponent {
-            display: flex;
-            flex-wrap: wrap;
-            width: 25%;
-            padding: 0;
-            border: 0;
-            text-align: left;
-
-            p {
-                width: 100%;
+            .battle-image img {
+                width: var(--item-size-large);
+                height: var(--item-size-large);
                 margin-bottom: 0;
 
-                &:not(:first-of-type):not(:last-child) {
-                    margin-top: var(--spacing-y);
-                }
-
-                &:nth-last-child(-n + 2) {
-                    font-weight: bold;
+                @media (max-device-width: 768px) {
+                    width: var(--item-size-medium);
+                    height: var(--item-size-medium);
                 }
             }
 
-            div {
-                font-size: var(--font-size-small);
+            .battle-pet-name,
+            .battle-opponent-name {
+                font-size: var(--font-size-medium);
 
-                img {
-                    margin-bottom: .25em;
+                @media (max-device-width: 768px) {
+                    font-size: var(--font-size-small);
                 }
             }
-        }
 
-        #battleLog {
-            width: calc(50% - (var(--spacing-x) * 2));
-            margin: 0 var(--spacing-x);
-            padding: 0 var(--spacing-x);
-            border: 1px solid var(--grey);
-            border-width: 0 1px;
+            .battle-healthbars {
+                padding: 0;
+            }
+
+            .health_total {
+                height: .5rem;
+                overflow: hidden;
+                margin-bottom: .5em;
+                border: 0;
+                border-radius: var(--border-radius);
+                background-color: var(--grey);
+            }
+
+            .health_now {
+                background-color: var(--green) !important;
+            }
+
+            .battle-commentary {
+                margin: 0;
+                padding: 0;
+                font-size: var(--font-size-medium);
+            }
+
+            #battleIconsPet,
+            #battleIconsOpponent {
+                display: flex;
+                flex-wrap: wrap;
+                width: 25%;
+                padding: 0;
+                border: 0;
+                text-align: left;
+
+                p {
+                    width: 100%;
+                    margin-bottom: 0;
+
+                    &:not(:first-of-type):not(:last-child) {
+                        margin-top: var(--spacing-y);
+                    }
+
+                    &:nth-last-child(-n + 2) {
+                        font-weight: bold;
+                    }
+                }
+
+                div {
+                    font-size: var(--font-size-small);
+
+                    img {
+                        margin-bottom: .25em;
+                    }
+                }
+            }
+
+            #battleLog {
+                width: calc(50% - (var(--spacing-x) * 2));
+                margin: 0 var(--spacing-x);
+                padding: 0 var(--spacing-x);
+                border: 1px solid var(--grey);
+                border-width: 0 1px;
+            }
         }
 
         /* Subeta » Games » Battle » Content » Challenge Opponent » Fight » Next Turn */
@@ -925,144 +1148,149 @@
             width: calc(100% / 12 * 4);
             border: 0;
             background-color: var(--grey);
-        }
 
-        #petChoices {
-            order: 1;
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-y);
-        }
-
-        .battle-section-title {
-            margin: 0;
-            font-variant: normal;
-            font-weight: bold;
-        }
-
-        .weapons-box-options {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-            height: auto;
-            gap: .5em;
-            margin-bottom: var(--spacing-y);
-            padding: 0;
-            border: 0;
-            border-radius: 0;
-        }
-
-        .weapon-option {
-            width: calc((100% - 1.5em) / 4);
-            overflow: hidden;
-            padding: .5em;
-            border-radius: var(--border-radius);
-            background-color: var(--white);
-            opacity: .5;
-            transition: opacity .2s;
-
-            img {
-                width: 100%;
-                height: auto;
-                box-shadow: none !important;
-            }
-        }
-
-        .battle-select {
-            display: flex;
-            width: 100%;
-            padding: 0;
-        }
-
-        #weapon_1,
-        #weapon_2 {
-            align-items: center;
-            gap: var(--spacing-x);
-
-            &.active {
-                .arrow {
-                    color: var(--black);
-                }
-
-                .preview_img {
-                    box-shadow: var(--box-shadow--all);
-                }
-            }
-
-            .arrow {
+            #petChoices {
                 order: 1;
-                transform: rotate(90deg);
-            }
-
-            .preview_img {
-                width: var(--item-size);
-                height: var(--item-size);
-                margin: 0;
-                padding: .5em;
-                border: 0;
-                border-radius: var(--border-radius);
-                background-color: var(--white);
-            }
-
-            .weapon-name {
-                font-size: var(--font-size-small);
-                text-align: left;
-            }
-        }
-
-        #potion,
-        #spell {
-            flex-direction: column;
-            gap: var(--spacing-y);
-            margin-top: var(--spacing-y);
-
-            .choices-box {
                 display: flex;
                 flex-direction: column;
                 gap: var(--spacing-y);
+            }
+
+            .battle-section-title {
+                margin: 0;
+                font-variant: normal;
+                font-weight: bold;
+            }
+
+            .weapons-box-options {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                width: 100%;
                 height: auto;
-                overflow: visible;
+                gap: .5em;
+                margin-bottom: var(--spacing-y);
                 padding: 0;
                 border: 0;
                 border-radius: 0;
             }
 
-            .potion-choice,
-            .spell-choice {
+            .weapon-option {
+                width: calc((100% - 1.5em) / 4);
+                overflow: hidden;
+                padding: .5em;
+                border-radius: var(--border-radius);
+                background-color: var(--white);
+                opacity: .5;
+                transition: opacity .2s;
+
+                &.selected,
+                &:hover {
+                    opacity: 1;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    box-shadow: none !important;
+                }
+            }
+
+            .battle-select {
                 display: flex;
+                width: 100%;
+                padding: 0;
+            }
+
+            #weapon_1,
+            #weapon_2 {
                 align-items: center;
                 gap: var(--spacing-x);
 
-                img {
+                &.active {
+                    .arrow {
+                        color: var(--black);
+                    }
+
+                    .preview_img {
+                        box-shadow: var(--box-shadow--all);
+                    }
+                }
+
+                .arrow {
+                    order: 1;
+                    transform: rotate(90deg);
+                }
+
+                .preview_img {
                     width: var(--item-size);
                     height: var(--item-size);
+                    margin: 0;
                     padding: .5em;
+                    border: 0;
                     border-radius: var(--border-radius);
                     background-color: var(--white);
                 }
 
-                &.selected {
-                    font-weight: bold;
-
-                    img {
-                        box-shadow: var(--box-shadow--all);
-                    }
+                .weapon-name {
+                    font-size: var(--font-size-small);
+                    text-align: left;
                 }
             }
 
-            .choice-name {
-                font-size: var(--font-size-small);
+            #potion,
+            #spell {
+                flex-direction: column;
+                gap: var(--spacing-y);
+                margin-top: var(--spacing-y);
+
+                .choices-box {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--spacing-y);
+                    height: auto;
+                    overflow: visible;
+                    padding: 0;
+                    border: 0;
+                    border-radius: 0;
+                }
+
+                .potion-choice,
+                .spell-choice {
+                    display: flex;
+                    align-items: center;
+                    gap: var(--spacing-x);
+
+                    img {
+                        width: var(--item-size);
+                        height: var(--item-size);
+                        padding: .5em;
+                        border-radius: var(--border-radius);
+                        background-color: var(--white);
+                    }
+
+                    &.selected {
+                        font-weight: bold;
+
+                        img {
+                            box-shadow: var(--box-shadow--all);
+                        }
+                    }
+                }
+
+                .choice-name {
+                    font-size: var(--font-size-small);
+                }
             }
-        }
 
-        #turn_button,
-        .end-game-btn {
-            margin-bottom: calc(var(--spacing-y) * 2);
-        }
+            #turn_button,
+            .end-game-btn {
+                margin-bottom: calc(var(--spacing-y) * 2);
+            }
 
-        #turn_button {
-            margin-top: 0;
+            #turn_button {
+                margin-top: 0;
+            }
         }
     }
 

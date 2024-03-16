@@ -262,6 +262,8 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Added option `--number-of-challengers` to change the number of challengers per row
     - Added option `--display-battle-opponent-weapons` to hide the "Choose Weapons" button
     - Restyled the fight-screen • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_fight--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_fight--mobile.gif)
+  - Restyled **[Armory](https://subeta.net/games/battle/weapons.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory--mobile.png)
+    - Restyled **Armory » Edit Set**  • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory_edit--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory_edit--mobile.png)
   - Restyled **[Spend Exp](https://subeta.net/games/battle/exp.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__spend_exp--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__spend_exp--mobile.png)
     - Added option `--display-battle-exp-intro` to hide the intro-text
     - Added option `--number-of-pets-spendexp` to change the number of pets per row
@@ -326,6 +328,8 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Added option `--number-of-challengers` to change the number of challengers per row
     - Added option `--display-battle-opponent-weapons` to hide the "Choose Weapons" button
     - Restyled the fight-screen • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_fight--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_fight--mobile.gif)
+  - Restyled **[Armory](https://subeta.net/games/battle/weapons.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory--mobile.png)
+    - Restyled **Armory » Edit Set**  • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory_edit--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory_edit--mobile.png)
   - Updated styling for **Battle » Spend Exp**
     - Added option `--display-battle-exp-intro` to hide the intro-text
     - Added option `--number-of-pets-spendexp` to change the number of pets per row
