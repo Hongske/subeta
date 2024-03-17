@@ -49,6 +49,7 @@
                     }
 
                     &:hover,
+                    &:focus,
                     &.active {
                         background-color: var(--button-bg) !important;
                         color: var(--button-fg) !important;
@@ -89,7 +90,7 @@
                             padding: 0;
                             color: var(--navbar-link);
 
-                            &:hover {
+                            &:hover, &:focus {
                                 text-decoration: underline;
                             }
 
@@ -116,7 +117,7 @@
                 .item {
                     border: 0;
 
-                    &:hover {
+                    &:hover, &:focus {
                         background-color: transparent;
                         text-decoration: none;
                     }
@@ -322,7 +323,7 @@
                         background-color: var(--accent);
                         font-size: 0;
 
-                        &:hover {
+                        &:hover, &:focus {
                             text-decoration: none;
                         }
 
@@ -347,7 +348,7 @@
                     a[href^='/user_shops.php/search/shops/'] {
                         transition: var(--button-transition);
 
-                        &:hover {
+                        &:hover, &:focus {
                             --accent: var(--red-dark);
                         }
 
@@ -733,7 +734,7 @@
                         background-color: var(--button-danger-bg);
                         color: var(--button-danger-fg);
 
-                        &:hover {
+                        &:hover, &:focus {
                             background-color: var(--button-danger-bg-hover);
                             color: var(--button-danger-fg-hover);
                         }
@@ -799,7 +800,7 @@
                 tr {
                     border: var(--border);
 
-                    &:hover {
+                    &:hover, &:focus {
                         background-color: transparent;
                     }
 
@@ -830,7 +831,9 @@
                     }
                 }
 
-                .wins, .ties, .losses {
+                .wins,
+                .ties,
+                .losses {
                     font-size: inherit;
 
                     span[style*='color:#ccc'] {
@@ -1119,7 +1122,7 @@
                     &[name='train_auto'] {
                         text-align: center;
 
-                        &:hover {
+                        &:hover, &:focus {
                             background-color: var(--button-bg-hover);
                             color: var(--button-fg-hover);
                         }
@@ -1353,7 +1356,7 @@
                 transition: opacity .2s;
 
                 &.selected,
-                &:hover {
+                &:hover, &:focus {
                     opacity: 1;
                 }
 
@@ -1552,7 +1555,8 @@
                     gap: var(--spacing-y);
                     width: 100%;
 
-                    .mt-1, .mt-2 {
+                    .mt-1,
+                    .mt-2 {
                         margin: 0 !important;
                     }
 
@@ -1592,7 +1596,8 @@
             justify-content: center;
             gap: var(--spacing-y);
 
-            br, img {
+            br,
+            img {
                 display: none;
             }
 
@@ -1775,10 +1780,8 @@
                 font-weight: bold;
             }
 
-            .card-body {
-                p:last-child {
-                    margin-bottom: 0;
-                }
+            .card-body p:last-child {
+                margin-bottom: 0;
             }
 
             input[type='submit'] {
@@ -1990,7 +1993,8 @@
                 }
 
                 a[href^='/explore/gifts.php'] {
-                    .ui.button.basic.big, &.ui.button.basic.big {
+                    .ui.button.basic.big,
+                    &.ui.button.basic.big {
                         padding: 0;
                         background-color: transparent !important;
                         color: var(--navbar-link) !important;
@@ -2650,10 +2654,8 @@
                 }
             }
 
-            .item-display-extra {
-                &:empty {
-                    display: none;
-                }
+            .item-display-extra:empty {
+                display: none;
             }
 
             .item-list-search {
@@ -2671,7 +2673,7 @@
                     transition: var(--button-transition);
                 }
 
-                &:hover:after {
+                &:hover:after, &:focus:after {
                     background-color: var(--button-bg-hover);
                     color: var(--button-fg-hover);
                 }
@@ -2847,7 +2849,7 @@
                         background-color: var(--green) !important;
                         color: var(--white) !important;
 
-                        &:hover {
+                        &:hover, &:focus {
                             background-color: var(--green-dark) !important;
                             color: var(--white) !important;
                         }
@@ -2858,7 +2860,7 @@
                 a[href='/explore/goddess.php'] {
                     background-color: var(--green);
 
-                    &:hover {
+                    &:hover, &:focus {
                         background-color: var(--green-dark);
                     }
                 }
@@ -2898,7 +2900,7 @@
                         input[value='turnin'] + br + .btn-success {
                             background-color: var(--green);
 
-                            &:hover {
+                            &:hover, &:focus {
                                 background-color: var(--green-dark);
                             }
                         }
@@ -3521,7 +3523,8 @@
                             border: 2px solid var(--white);
                             border-radius: var(--border-radius);
                             position: relative;
-                            top: 0; left: 0;
+                            top: 0;
+                            left: 0;
                         }
 
                         i {
@@ -3810,7 +3813,7 @@
                             &.btn {
                                 border: 2px solid var(--button-bg);
 
-                                &:hover {
+                                &:hover, &:focus {
                                     border-color: var(--button-bg-hover);
                                 }
                             }
@@ -4107,7 +4110,7 @@
                             background-color: var(--button-bg) !important;
                             color: var(--button-fg) !important;
 
-                            &:hover {
+                            &:hover, &:focus {
                                 background-color: var(--button-bg-hover) !important;
                                 color: var(--button-fg-hover) !important;
                             }
@@ -4321,7 +4324,7 @@
                                 background-color: var(--accent);
                                 color: var(--white);
 
-                                &:hover {
+                                &:hover, &:focus {
                                     background-color: color-mix(in srgb, var(--accent), var(--black));
                                 }
                             }
@@ -4331,7 +4334,7 @@
                                 border-color: var(--accent);
                                 color: var(--accent);
 
-                                &:hover {
+                                &:hover, &:focus {
                                     background-color: var(--accent);
                                     color: var(--white);
                                 }
@@ -4415,13 +4418,11 @@
                 + form[method='post'] .card {
                     padding: 0;
 
-                    .card-header {
-                        h2 {
-                            margin: 0;
+                    .card-header h2 {
+                        margin: 0;
 
-                            .ui.button.basic {
-                                display: none;
-                            }
+                        .ui.button.basic {
+                            display: none;
                         }
                     }
 
@@ -4536,7 +4537,7 @@
                                 content: '\f002';
                             }
 
-                            &:hover {
+                            &:hover, &:focus {
                                 background-color: var(--button-bg-hover);
                             }
                         }
@@ -4685,9 +4686,9 @@
                                 }
 
                                 a,
+                                strong,
                                 p,
-                                span,
-                                strong {
+                                span {
                                     white-space: nowrap;
                                     font-size: var(--font-size-base);
                                     font-weight: inherit;
@@ -4956,7 +4957,7 @@
             font-weight: normal;
             box-shadow: none !important;
 
-            &:hover {
+            &:hover, &:focus {
                 text-decoration: underline;
             }
 
@@ -4992,7 +4993,7 @@
             input {
                 border: 2px solid var(--button-bg);
 
-                &:hover {
+                &:hover, &:focus {
                     border-color: var(--button-bg-hover);
                 }
             }
@@ -5169,7 +5170,7 @@
                             padding: var(--spacing);
                         }
 
-                        &:hover {
+                        &:hover, &:focus {
                             background-color: transparent !important;
                         }
 
@@ -5290,7 +5291,7 @@
                         span {
                             cursor: pointer;
 
-                            &:hover {
+                            &:hover, &:focus {
                                 color: inherit !important;
                                 text-decoration: underline;
                             }
@@ -5724,7 +5725,8 @@
                     border: 0 !important;
                 }
 
-                h1, h3 {
+                h1,
+                h3 {
                     margin: 0;
                 }
             }
@@ -5791,7 +5793,7 @@
                             text-decoration: none;
                             transition: var(--button-transition);
 
-                            &:hover {
+                            &:hover, &:focus {
                                 background-color: var(--button-bg-hover);
                                 color: var(--button-fg-hover);
                             }
@@ -5913,7 +5915,7 @@
                     text-decoration: none;
                     transition: var(--button-transition);
 
-                    &:hover {
+                    &:hover, &:focus {
                         background-color: var(--button-bg-hover);
                         color: var(--button-fg-hover);
                     }
@@ -6084,7 +6086,7 @@
                             &.btn-outline-secondary {
                                 background-color: var(--primary-dark);
 
-                                &:hover {
+                                &:hover, &:focus {
                                     background-color: var(--black);
                                 }
                             }
@@ -6093,7 +6095,7 @@
                                 margin-left: auto;
                                 background-color: var(--red);
 
-                                &:hover {
+                                &:hover, &:focus {
                                     background-color: var(--red-dark);
                                 }
                             }
@@ -7166,7 +7168,7 @@
                 .button.red {
                     background-color: var(--red);
 
-                    &:hover {
+                    &:hover, &:focus {
                         background-color: var(--red-dark);
                     }
                 }
@@ -7614,7 +7616,7 @@
                 color: var(--black) !important;
                 transition: opacity .2s;
 
-                &:hover {
+                &:hover, &:focus {
                     opacity: 1 !important;
                 }
 
@@ -7887,7 +7889,7 @@
                                 .btn {
                                     background-color: var(--yellow);
 
-                                    &:hover {
+                                    &:hover, &:focus {
                                         background-color: var(--yellow-dark);
                                     }
                                 }
@@ -8288,7 +8290,7 @@
                 font-weight: bold;
                 box-shadow: none !important;
 
-                &:hover {
+                &:hover, &:focus {
                     text-decoration: underline;
                 }
 
@@ -8521,7 +8523,7 @@
                                 background-color: var(--green);
                                 text-transform: uppercase;
 
-                                &:hover {
+                                &:hover, &:focus {
                                     background-color: var(--green-dark);
                                 }
                             }
@@ -8530,7 +8532,7 @@
                                 background-color: var(--red);
                                 text-transform: capitalize;
 
-                                &:hover {
+                                &:hover, &:focus {
                                     background-color: var(--red-dark);
                                 }
                             }
@@ -8561,19 +8563,19 @@
                             content: '\f09c';
                         }
 
-                        &:hover:after {
+                        &:hover:after, &:focus:after {
                             content: '\f023';
                         }
                     }
 
                     &.checkmark {
-                        &:hover:after,
+                        &:hover:after, &:focus:after,
                         &.green:after {
                             content: '\f0f3';
                         }
 
                         &:after,
-                        &.green:hover:after {
+                        &.green:hover:after, &.green:focus:after {
                             content: '\f1f6';
                             color: var(--white);
                         }
@@ -8921,7 +8923,7 @@
                             color: var(--post-color);
                         }
 
-                        &:hover {
+                        &:hover, &:focus {
                             border-color: transparent;
                             background-color: color-mix(in srgb, var(--post-color), transparent);
                             background-image: none;
@@ -9048,7 +9050,7 @@
                                 }
 
                                 .button {
-                                    &:hover {
+                                    &:hover, &:focus {
                                         background-color: var(--primary-dark);
                                         color: var(--white);
                                     }
@@ -9103,7 +9105,7 @@
                             }
 
                             .btn {
-                                &:hover {
+                                &:hover, &:focus {
                                     background-color: var(--primary-dark);
                                     color: var(--white);
                                 }
