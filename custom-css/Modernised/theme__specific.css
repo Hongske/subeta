@@ -2872,6 +2872,148 @@
         }
 
         &.w-100.mx-auto {
+            /* Cash Shop » Navigation */
+            > .col-12.p-0 .nav.border.mb-3.nav-fill {
+                margin-bottom: var(--spacing-y) !important;
+            }
+
+            /* Cash Shop » Balance */
+            + .row.p-1.w-100.mx-auto.bg-light.border.rounded.align-items-center {
+                padding: var(--navbar-padding) !important;
+                border: 0 !important;
+                border-radius: var(--navbar-radius) !important;
+                background-color: var(--primary) !important;
+                color: var(--white);
+                font-size: var(--navbar-font-size);
+
+                .col-auto {
+                    width: 100%;
+                    padding: 0;
+                }
+
+                a {
+                    color: var(--primary-light);
+                }
+
+                /* Cash Shop » Title */
+                + .row.w-100.mx-auto.m-3 {
+                    margin: var(--spacing-y) 0 !important;
+
+                    h1 {
+                        margin: 0;
+                        padding: 0 !important;
+                    }
+                }
+
+                /* Cash Shop » Content » Home */
+                + .row.w-100.mx-auto.m-3 + .row.p-3.mx-auto {
+                    padding: 0 !important;
+
+                    > .col-12 > .card {
+                        padding: 0;
+
+                        .card-header {
+                            padding: var(--spacing);
+                            border-radius: var(--border-radius);
+
+                            h2 {
+                                margin: 0;
+                            }
+                        }
+
+                        .card-body img[src='//img.subeta.net/npc_csrobot_heart.png'].float-right {
+                            display: none;
+                        }
+
+                        .p-1.border.rounded.bg-light {
+                            margin-top: var(--spacing-y);
+                            padding: 0 !important;
+                            border: 0 !important;
+                            background-color: transparent !important;
+
+                            b {
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            a {
+                                margin-left: auto;
+                                padding: var(--button-padding);
+                                border-radius: var(--button-radius);
+                                background-color: var(--primary);
+                                color: var(--white);
+                                text-decoration: none;
+                                transition: var(--button-transition);
+
+                                &:hover, &:focus {
+                                    background-color: var(--primary-dark);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                /* Cash Shop » Content » Gold Accounts, Items, Bonus Items, Neela */
+                + .row.w-100.mx-auto.m-3 + style + .row.w-100 {
+                    .col-md-4.col-lg-3.text_center {
+                        display: none;
+                    }
+
+                    .col-md-8.col-lg-9 {
+                        width: 100%;
+
+                        > .card.bg-light.mt-3.mb-3 {
+                            margin: 0 !important;
+                            padding: 0;
+                            background-color: transparent !important;
+                            font-size: var(--font-size-medium);
+
+                            #text-welcome {
+                                display: flex;
+                                flex-wrap: wrap;
+                                gap: var(--spacing-y);
+
+                                div[style^='display:inline-block'] {
+                                    display: flex !important;
+                                    flex-direction: column;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    min-width: 0 !important;
+                                    width: var(--number-of-cols) !important;
+                                    min-height: calc(var(--item-size) + (var(--spacing-y) * 2));
+                                    height: auto !important;
+                                    margin: 0 !important;
+                                    padding: var(--spacing) !important;
+                                    padding-left: calc(var(--item-size) + (var(--spacing-x) * 2)) !important;
+                                    border: var(--border);
+                                    border-radius: var(--border-radius);
+                                    position: relative;
+                                    font-size: var(--font-size-small) !important;
+
+                                    img {
+                                        width: var(--item-size) !important;
+                                        margin: 0 !important;
+                                        border: 0 !important;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: var(--spacing-x);
+                                        transform: translate(0, -50%);
+                                    }
+                                }
+
+                                p {
+                                    margin: 0;
+                                }
+
+                                br, hr {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
             /* Subeta » Games » Chance » Scratchcards » Content */
             + .row .col-sm-6.col-md-8.col-lg-9 {
                 .border.rounded.p-3 {
@@ -7689,77 +7831,6 @@
                             font-weight: bold;
                         }
                     }
-
-                    + p ~ .ui.bottom.attached.segment.item-list {
-                        margin: 0;
-                        padding: var(--spacing-y) 0;
-                        box-shadow: none;
-
-                        .items.d-flex.align-content-start.flex-wrap {
-                            width: 100%;
-                            gap: var(--spacing-y);
-
-                            .p-2.text-center {
-                                width: var(--number-of-cols) !important;
-                                padding: var(--spacing) !important;
-                                border: var(--border);
-                                border-radius: var(--border-radius);
-                                font-size: var(--font-size-small);
-                                text-align: left !important;
-
-                                > .d-flex.flex-column {
-                                    align-items: center;
-                                    flex-direction: row !important;
-                                    gap: var(--spacing-x);
-
-                                    .p-2 {
-                                        padding: 0 !important;
-                                    }
-
-                                    .p-2 + .p-2 {
-                                        flex-grow: 1;
-                                        display: grid;
-                                        grid-template-areas:
-                                            "item_name  item_button"
-                                            "item_price item_button";
-                                        grid-column-gap: var(--spacing-x);
-                                        grid-row-gap: .5em;
-                                        align-items: center;
-                                    }
-                                }
-
-                                .buy_buttons.mb-3 {
-                                    justify-self: end;
-                                    grid-area: item_button;
-                                    margin-bottom: 0 !important;
-
-                                    .buy_button {
-                                        display: flex;
-                                        align-items: center;
-                                        justify-content: center;
-                                        width: 2rem;
-                                        height: 2rem;
-                                        font-size: 0;
-
-                                        &:after {
-                                            content: '\f07a';
-                                            font-size: var(--font-size-base);
-                                        }
-                                    }
-                                }
-
-                                .buy_buttons + p {
-                                    grid-area: item_name;
-                                    margin: 0;
-                                }
-
-                                .buy_buttons + p + p {
-                                    grid-area: item_price;
-                                    font-weight: bold;
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -9227,6 +9298,97 @@
     }
 }
 
+/* Commerce » Shops » Items */
+.item-list {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+
+    .items {
+        width: 100%;
+        gap: var(--spacing-y);
+
+        .p-2.text-center {
+            display: flex;
+            align-items: center;
+            width: var(--number-of-cols) !important;
+            padding: var(--spacing) !important;
+            border: var(--border);
+            border-radius: var(--border-radius);
+            font-size: var(--font-size-small);
+            text-align: left !important;
+        }
+
+        .d-flex.flex-column {
+            align-items: center;
+            flex-direction: row !important;
+            gap: var(--spacing-x);
+            width: 100%;
+
+            .p-2 {
+                padding: 0 !important;
+            }
+
+            .p-2 + .p-2 {
+                flex-grow: 1;
+                display: grid;
+                grid-template-areas:
+                    "item_name  item_buttons"
+                    "item_price item_buttons";
+                grid-column-gap: var(--spacing-x);
+                grid-row-gap: .5em;
+                align-items: center;
+            }
+        }
+
+        .buy_buttons {
+            justify-self: end;
+            grid-area: item_buttons;
+            margin-bottom: 0 !important;
+            font-size: 0;
+
+            .buy_button,
+            .cart_button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 2rem;
+                height: 2rem;
+                font-size: 0;
+
+                &:after {
+                    font-size: var(--font-size-base);
+                }
+            }
+
+            .buy_button:after {
+                content: '\f07a';
+
+            }
+
+            .cart_button {
+                margin-top: var(--spacing-y);
+
+                &:after {
+                    content: '\2b';
+                }
+            }
+        }
+
+        .buy_buttons + p {
+            align-self: end;
+            grid-area: item_name;
+            margin: 0;
+        }
+
+        .buy_buttons + p + p {
+            align-self: start;
+            grid-area: item_price;
+            font-weight: bold;
+        }
+    }
+}
+
 /* Subeta » Games » Collection » Minion Zoo */
 #minion_fights > .ui.basic.segment.center.aligned {
     padding: 0;
@@ -10169,29 +10331,26 @@
             form {
                 display: flex;
                 flex-direction: column;
-                flex-wrap: wrap;
-                align-content: flex-start;
-                align-items: flex-start;
                 justify-content: center;
-                height: calc(var(--item-size) + (var(--spacing-y) * 2) + 4px);
+                min-height: calc(var(--item-size) + (var(--spacing-y) * 2) + 4px);
                 padding: var(--spacing);
+                padding-left: calc(var(--item-size) + (var(--spacing-x) * 2));
                 border: var(--border);
                 border-radius: var(--border-radius);
+                position: relative;
                 font-size: var(--font-size-small);
-
-                @media (max-device-width: 768px) {
-                    flex-direction: row;
-                    flex-wrap: nowrap;
-                    align-items: center;
-                }
+                text-align: left;
 
                 .ui.image {
                     flex-shrink: 0;
                     width: var(--item-size) !important;
                     height: var(--item-size) !important;
-                    margin-right: var(--spacing-x);
                     padding: 0 !important;
                     border: 0 !important;
+                    position: absolute;
+                    top: 50%;
+                    left: var(--spacing-x);
+                    transform: translate(0, -50%);
                 }
 
                 br {
@@ -10200,11 +10359,6 @@
 
                 font {
                     font-size: inherit !important;
-
-                    @media (max-device-width: 768px) {
-                        margin-left: auto;
-                        text-align: right;
-                    }
 
                     b {
                         display: block;

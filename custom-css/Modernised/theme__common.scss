@@ -1577,6 +1577,7 @@ input[type='submit'][value^='Exchange your tokens'] {
 .achievement .completed .icon.check,
 .achievement .doesnothave a[href^='/user_shops.php/search/shops/'],
 .btn.buy_button,
+.btn.cart_button,
 .btn.open_gift,
 .btn.view-gift,
 .btn#check_all_remove,
@@ -2371,6 +2372,7 @@ img[src='//img.subeta.net/icons/email_open.png'] {
             display: flex;
             flex-wrap: wrap;
             gap: var(--navbar-gap);
+            margin-bottom: var(--spacing-y);
             padding: var(--navbar-padding);
             border: 0;
             border-radius: var(--navbar-radius);

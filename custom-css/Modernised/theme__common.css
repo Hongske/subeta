@@ -1521,6 +1521,7 @@ input[type=submit][value^="Exchange your tokens"] {
 .achievement .completed .icon.check:after,
 .achievement .doesnothave a[href^="/user_shops.php/search/shops/"]:after,
 .btn.buy_button:after,
+.btn.cart_button:after,
 .btn.open_gift:after,
 .btn.view-gift:after,
 .btn#check_all_remove:after,
@@ -2227,6 +2228,7 @@ body > .ui.message.yellow p {
   display: flex;
   flex-wrap: wrap;
   gap: var(--navbar-gap);
+  margin-bottom: var(--spacing-y);
   padding: var(--navbar-padding);
   border: 0;
   border-radius: var(--navbar-radius);
