@@ -1531,6 +1531,7 @@ input[type=submit][value^="Exchange your tokens"] {
 .button[href^="?act=remove&id="]:after,
 .card .icon.lock.massive:after,
 .card .fa.fa-lock.fa-4x:after,
+.cashshop-cart .cart-remove-item:after,
 .category .media-body div a:after,
 .event-remove-cat:after,
 .event-remove:after,

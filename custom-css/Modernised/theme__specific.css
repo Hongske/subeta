@@ -2905,10 +2905,27 @@
                     }
                 }
 
-                /* Cash Shop » Content » Home */
+                /* Cash Shop » Content » Cart */
+                + .row.w-100.mx-auto.m-3 + .col-12.col-md-10.col-lg-7.mx-auto {
+                    max-width: 100% !important;
+                    margin: 0 !important;
+                    padding: 0;
+
+                    .cart-remove-item {
+                        font-size: 0;
+
+                        &:after {
+                            content: '\f2ed';
+                            font-size: var(--font-size-base);
+                        }
+                    }
+                }
+
+                /* Cash Shop » Content » Home, Costume Trunks Detail */
                 + .row.w-100.mx-auto.m-3 + .row.p-3.mx-auto {
                     padding: 0 !important;
 
+                    /* Cash Shop » Content » Home */
                     > .col-12 > .card {
                         padding: 0;
 
@@ -2948,6 +2965,201 @@
                                 &:hover, &:focus {
                                     background-color: var(--primary-dark);
                                 }
+                            }
+                        }
+                    }
+
+                    /* Cash Shop » Content » Costume Trunks Detail » Trunk */
+                    > .bg-light.border.rounded.col-12.p-3.text-center {
+                        padding: 0 !important;
+                        border: 0 !important;
+                        background: transparent !important;
+
+                        p {
+                            margin: 0;
+                        }
+
+                        form[action='/cs/trunks.php'] {
+                            margin: var(--spacing-y) 0;
+                        }
+
+                        a[href='/cs/trunks.php'] {
+                            display: inline-flex;
+                            margin-bottom: var(--spacing-x);
+                        }
+                    }
+
+                    /* Cash Shop » Content » Costume Trunks Detail » Items */
+                    + .row.mx-auto.p-3 {
+                        padding: 0 !important;
+
+                        .col-12.col-md-6.text-center {
+                            display: flex;
+                            align-content: flex-start;
+                            flex-wrap: wrap;
+                            gap: var(--spacing-y);
+                            width: var(--col-2);
+
+                            @media (max-device-width: 768px) {
+                                width: calc((100% - var(--spacing-y)) / 2);
+                            }
+
+                            &:first-child {
+                                padding-right: var(--spacing-x);
+                            }
+
+                            &:last-child {
+                                padding-left: var(--spacing-y);
+                            }
+
+                            > div {
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
+                                gap: var(--spacing-y);
+                                width: 100%;
+                                padding: var(--spacing);
+                                border: var(--border);
+                                border-radius: var(--border-radius);
+
+                                br, hr {
+                                    display: none;
+                                }
+
+                                .btn {
+                                    @media (max-device-width: 768px) {
+                                        font-size: var(--font-size-small) !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                /* Cash Shop » Content » Boutique, Chance */
+                + .row.w-100.mx-auto.m-3 + .row.p-3:not(.mx-auto) {
+                    padding: 0 !important;
+
+                    /* Cash Shop » Content » Boutique » Intro */
+                    > .bg-light.border.rounded.col-12.p-3.text-center {
+                        padding: 0 !important;
+                        border: 0 !important;
+                        background-color: transparent !important;
+
+                        a[href='/cs/boutique.php'] {
+                            display: inline-flex;
+                            margin-top: var(--spacing-y);
+                            margin-bottom: var(--spacing-x);
+                        }
+
+                        > p > img {
+                            @media (max-device-width: 768px) {
+                                height: 125px;
+                            }
+                        }
+                    }
+
+                    /* Cash Shop » Content » Chance */
+                    > .col.text-center {
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-x);
+                        padding: var(--spacing);
+                        border: var(--border);
+                        border-radius: var(--border-radius);
+                        font-size: var(--font-size-small);
+                        text-align: left !important;
+
+                        br {
+                            display: none;
+                        }
+
+                        a:hover + a,
+                        a:focus + a {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+
+                + .row.w-100.mx-auto.m-3 + .row.p-3:not(.mx-auto) + .row {
+                    /* Cash Shop » Content » Boutique » Sets */
+                    .col-sm-4.col-md-3.col-lg-2.p-3.text-center {
+                        width: var(--number-of-cols);
+                        padding: var(--spacing) !important;
+                        border: var(--border);
+                        border-radius: var(--border-radius);
+
+                        .card {
+                            padding: 0 !important;
+
+                            em {
+                                font-style: normal;
+                            }
+                        }
+
+                        a[href^='?set'] img {
+                            @media (max-device-width: 768px) {
+                                height: 125px;
+                            }
+                        }
+                    }
+
+                    /* Cash Shop » Content » Boutique » Sets » Items */
+                    .col-6.text-center.p-3 {
+                        width: var(--number-of-cols);
+                        border: var(--border);
+                        border-radius: var(--border-radius);
+
+                        form {
+                            display: flex;
+                            justify-content: center;
+                            gap: var(--spacing-x);
+                            margin-top: var(--spacing-x);
+
+                            .cart_button {
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                width: 2rem;
+                                font-size: 0;
+
+                                &:after {
+                                    content: '\2b';
+                                    font-size: var(--font-size-base);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                /* Cash Shop » Content » Costume Trunks */
+                + .row.w-100.mx-auto.m-3 + .row.mx-auto:not(.p-3) {
+                    .col-sm-4.col-md-3.col-lg-2.p-3.text-center {
+                        width: var(--number-of-cols);
+                        padding: var(--spacing);
+                        border: var(--border);
+                        border-radius: var(--border-radius);
+
+                        .card {
+                            padding: 0 !important;
+                        }
+
+                        .card-header {
+                            display: flex;
+                            align-items: center;
+                            gap: var(--spacing-x);
+                            margin: 0;
+                            font-size: var(--font-size-small);
+                            font-weight: normal;
+                            text-align: left;
+
+                            a:hover + br + a,
+                            a:focus + br + a {
+                                text-decoration: underline;
+                            }
+
+                            br {
+                                display: none;
                             }
                         }
                     }
@@ -3006,6 +3218,63 @@
                                 }
 
                                 br, hr {
+                                    display: none;
+                                }
+
+                                a {
+                                    font-weight: bold;
+                                }
+
+                                tt {
+                                    font: inherit;
+                                }
+
+                                .img-thumbnail {
+                                    width: var(--item-size-large);
+                                    height: var(--item-size-large);
+                                    padding: 0;
+                                    border: 0;
+                                }
+
+                                form[action='/cs/neela_process.php'] {
+                                    @media (max-device-width: 768px) {
+                                        width: 100%;
+                                    }
+
+                                    .form-row {
+                                        flex-direction: column;
+                                        gap: var(--spacing-y);
+
+                                        .col-12 {
+                                            max-width: 100%;
+                                            padding: 0;
+                                        }
+
+                                        .btn,
+                                        .form-control {
+                                            width: var(--sidebar-width);
+                                            white-space: nowrap;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        /* Cash Shop » Content » Gold Accounts */
+                        > .item-list#items-Gold_Accounts {
+                            border-top: 1px solid var(--primary-light);
+                            padding-top: var(--spacing-x) !important;
+
+                            .buy_buttons + p + p {
+                                s {
+                                    margin-right: .25em;
+                                }
+
+                                i {
+                                    display: block;
+                                }
+
+                                br {
                                     display: none;
                                 }
                             }
@@ -9363,7 +9632,6 @@
 
             .buy_button:after {
                 content: '\f07a';
-
             }
 
             .cart_button {
@@ -9385,6 +9653,10 @@
             align-self: start;
             grid-area: item_price;
             font-weight: bold;
+
+            a[href='/payments.php'] {
+                pointer-events: none;
+            }
         }
     }
 }

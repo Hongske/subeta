@@ -107,9 +107,25 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
+<summary>📌 List of page changes [Cash Shop]</summary>
+
+- Restyled **[Home](https://subeta.net/cs/index.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__home--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__home--mobile.png)
+- Restyled **[Gold Accounts](https://subeta.net/ss.php/goldaccount)** • [📷 screenshot desktop](screenshots/pages/cashshop__gold_account--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__gold_account--mobile.png)
+- Restyled **[Items](https://subeta.net/ss.php/cashshop)** • [📷 screenshot desktop](screenshots/pages/cashshop__items--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__items--mobile.png)
+- Restyled **[Boutique](https://subeta.net/cs/boutique.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__boutique--desktop.gif) • [📷 screenshot mobile](screenshots/pages/cashshop__boutique--mobile.gif)
+- Restyled **[Bonus Items](https://subeta.net/ss.php/csitems)** • [📷 screenshot desktop](screenshots/pages/cashshop__bonus_items--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__bonus_items--mobile.png)
+- Restyled **[Neela](https://subeta.net/ss.php/neela)** • [📷 screenshot desktop](screenshots/pages/cashshop__neela--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__neela--mobile.png)
+- Restyled **[Trunks](https://subeta.net/cs/trunks.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__costume_trunks--desktop.gif) • [📷 screenshot mobile](screenshots/pages/cashshop__costume_trunks--mobile.gif)
+- Restyled **[Cart](https://subeta.net/cs/cart.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__cart--desktop.png)
+<!-- TODO - Restyled **[Chance](https://subeta.net/cs/chance.php)** • [📷 screenshot desktop](screenshots/pages) • [📷 screenshot mobile](screenshots/pages) -->
+<!-- TODO - Restyled **[Billboards](https://subeta.net/billboards.php)** • [📷 screenshot desktop](screenshots/pages) • [📷 screenshot mobile](screenshots/pages) -->
+<!-- TODO - Restyled **[Purchase Logs](https://subeta.net/cs/purchase_logs.php)** • [📷 screenshot desktop](screenshots/pages) • [📷 screenshot mobile](screenshots/pages) -->
+</details>
+<!--------------------------------------------------------------------------------------------------------------------->
+<details>
 <summary>📌 List of page changes [Commerce]</summary>
 
-- Restyled **[Main Shops](https://subeta.net/shops.php)**  • [📷 screenshot desktop](screenshots/pages/commerce__main_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__main_shops--mobile.png)
+- Restyled **[Main Shops](https://subeta.net/shops.php)** • [📷 screenshot desktop](screenshots/pages/commerce__main_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__main_shops--mobile.png)
   - Restyled detail of shop • [📷 screenshot desktop](screenshots/pages/commerce__main_shops_detail--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__main_shops_detail--mobile.png)
 - Restyled **[Search Shops](https://subeta.net/user_shops.php/search)** • [📷 screenshot desktop](screenshots/pages/commerce__search_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__search_shops--mobile.png)
   - Restyled input for searching shops
@@ -264,7 +280,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Added option `--display-battle-opponent-weapons` to hide the "Choose Weapons" button
     - Restyled the fight-screen • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_fight--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_fight--mobile.gif)
   - Restyled **[Armory](https://subeta.net/games/battle/weapons.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory--mobile.png)
-    - Restyled **Armory » Edit Set**  • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory_edit--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory_edit--mobile.png)
+    - Restyled **Armory » Edit Set** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory_edit--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory_edit--mobile.png)
   - Restyled **[Battle » Statistics](https://subeta.net/games/battle/stats.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__statistics--desktop.gif)
   - Restyled **[Spend Exp](https://subeta.net/games/battle/exp.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__spend_exp--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__spend_exp--mobile.png)
     - Added option `--display-battle-exp-intro` to hide the intro-text
@@ -309,7 +325,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Added option `--display-news-daily-lottery` to hide Daily » Potion Lottery Winner
   - Removed daily support goal (but only because it doesn't seem to work anymore)
   - Restyled **[Dailies](https://subeta.net/dailies.php)** • [📷 screenshot desktop](screenshots/pages/subeta__news__dailies--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__news__dailies--mobile.png)
-<!-- TODO - Restyled **[Subetapedia](https://subeta.net/subetapedia/)** -->
+<!-- TODO - Restyled **[Subetapedia](https://subeta.net/subetapedia/)** • [📷 screenshot desktop](screenshots/pages) • [📷 screenshot mobile](screenshots/pages) -->
 </details>
 
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
@@ -334,6 +350,15 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Added option `--number-of-pets-healer` to change the number of pets per row
   - Restyled **[Battle » Battle Quests](https://subeta.net/games/battle/quest.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__battle_quest--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__battle_quest--mobile.gif)
   - Restyled **Commerce » Main Shops » Shop** • [📷 screenshot desktop](screenshots/pages/commerce__main_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__main_shops--mobile.png)
+  - Restyle **Cash Shop**
+    - Restyled **[Home](https://subeta.net/cs/index.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__home--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__home--mobile.png)
+    - Restyled **[Gold Accounts](https://subeta.net/ss.php/goldaccount)** • [📷 screenshot desktop](screenshots/pages/cashshop__gold_account--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__gold_account--mobile.png)
+    - Restyled **[Items](https://subeta.net/ss.php/cashshop)** • [📷 screenshot desktop](screenshots/pages/cashshop__items--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__items--mobile.png)
+    - Restyled **[Boutique](https://subeta.net/cs/boutique.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__boutique--desktop.gif) • [📷 screenshot mobile](screenshots/pages/cashshop__boutique--mobile.gif)
+    - Restyled **[Bonus Items](https://subeta.net/ss.php/csitems)** • [📷 screenshot desktop](screenshots/pages/cashshop__bonus_items--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__bonus_items--mobile.png)
+    - Restyled **[Neela](https://subeta.net/ss.php/neela)** • [📷 screenshot desktop](screenshots/pages/cashshop__neela--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__neela--mobile.png)
+    - Restyled **[Trunks](https://subeta.net/cs/trunks.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__costume_trunks--desktop.gif) • [📷 screenshot mobile](screenshots/pages/cashshop__costume_trunks--mobile.gif)
+    - Restyled **[Cart](https://subeta.net/cs/cart.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__cart--desktop.png)
 
 <br>
 <details>
@@ -345,7 +370,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Added option `--display-battle-opponent-weapons` to hide the "Choose Weapons" button
     - Restyled the fight-screen • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_fight--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_fight--mobile.gif)
   - Restyled **[Armory](https://subeta.net/games/battle/weapons.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory--mobile.png)
-    - Restyled **Armory » Edit Set**  • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory_edit--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory_edit--mobile.png)
+    - Restyled **Armory » Edit Set** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory_edit--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory_edit--mobile.png)
   - Updated styling for **Battle » Spend Exp**
     - Added option `--display-battle-exp-intro` to hide the intro-text
     - Added option `--number-of-pets-spendexp` to change the number of pets per row
