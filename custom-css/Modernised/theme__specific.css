@@ -1459,6 +1459,10 @@
             #turn_button {
                 margin-top: 0;
             }
+
+            h2 {
+                display: none;
+            }
         }
     }
 
