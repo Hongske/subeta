@@ -5961,7 +5961,15 @@
             }
         }
 
-        /* Subeta » Explore » Shadowglen » Underground » Underground Fishing  */
+        /* Commerce » Main Shops » Hide NPC-image */
+        > h1:first-child + span[style='color: #767676'] + br + a img,
+        > h1:first-child + span[style='color: green;'] + br + a img {
+            @media (max-device-width: 768px) {
+                display: none;
+            }
+        }
+
+        /* Subeta » Explore » Shadowglen » Underground » Underground Fishing */
         > img[src='//img.subeta.net/npc_zombie_benjamin.png'] {
             @media (max-device-width: 768px) {
                 &,
@@ -10134,6 +10142,74 @@
             .item-name {
                 margin-bottom: .5em;
                 font-weight: bold;
+            }
+        }
+    }
+}
+
+/* Commerce » Main Shops */
+.shop_item_container {
+    width: 100% !important;
+    padding: 0 !important;
+
+    .ui.grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-y);
+
+        .two.wide.column {
+            width: var(--number-of-cols);
+            margin: 0 !important;
+            padding: 0;
+
+            div[style='min-height: 100px'] {
+                min-height: 0 !important;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-content: flex-start;
+                align-items: flex-start;
+                justify-content: center;
+                height: calc(var(--item-size) + (var(--spacing-y) * 2) + 4px);
+                padding: var(--spacing);
+                border: var(--border);
+                border-radius: var(--border-radius);
+                font-size: var(--font-size-small);
+
+                @media (max-device-width: 768px) {
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                }
+
+                .ui.image {
+                    flex-shrink: 0;
+                    width: var(--item-size) !important;
+                    height: var(--item-size) !important;
+                    margin-right: var(--spacing-x);
+                    padding: 0 !important;
+                    border: 0 !important;
+                }
+
+                br {
+                    display: none;
+                }
+
+                font {
+                    font-size: inherit !important;
+
+                    @media (max-device-width: 768px) {
+                        margin-left: auto;
+                        text-align: right;
+                    }
+
+                    b {
+                        display: block;
+                    }
+                }
             }
         }
     }

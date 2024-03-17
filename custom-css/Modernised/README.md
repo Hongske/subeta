@@ -109,12 +109,13 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 <details>
 <summary>📌 List of page changes [Commerce]</summary>
 
+- Restyled **[Main Shops](https://subeta.net/shops.php)**  • [📷 screenshot desktop](screenshots/pages/commerce__main_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__main_shops--mobile.png)
+  - Restyled detail of shop • [📷 screenshot desktop](screenshots/pages/commerce__main_shops_detail--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__main_shops_detail--mobile.png)
 - Restyled **[Search Shops](https://subeta.net/user_shops.php/search)** • [📷 screenshot desktop](screenshots/pages/commerce__search_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__search_shops--mobile.png)
   - Restyled input for searching shops
   - Restyled search results
-- Restyled **[Special Shops](https://subeta.net/ss.php)**
-  - Restyled overview of shops • [📷 screenshot desktop](screenshots/pages/commerce__special_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shops--mobile.png)
-  - Restyled detail of shop • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__yearly--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__yearly--mobile.png)
+- Restyled **[Special Shops](https://subeta.net/ss.php)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shops--mobile.png)
+  - Restyled detail of shop • [📷 screenshot desktop](screenshots/pages/commerce__special_shops_detail--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shops_detail--mobile.png)
     - Restyled the items
     - Removed the sidebar with NPC-image, NPC name and buttons
   - Restyled **[Subeautique](https://subeta.net/explore/subeautique.php)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__sbq--mobile.png)
@@ -332,6 +333,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Restyled **[Battle » Healer](https://subeta.net/explore/healer.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__healer--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__healer--mobile.png)
     - Added option `--number-of-pets-healer` to change the number of pets per row
   - Restyled **[Battle » Battle Quests](https://subeta.net/games/battle/quest.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__battle_quest--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__battle_quest--mobile.gif)
+  - Restyled **Commerce » Main Shops » Shop** • [📷 screenshot desktop](screenshots/pages/commerce__main_shops--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__main_shops--mobile.png)
 
 <br>
 <details>
