@@ -264,11 +264,15 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Restyled the fight-screen • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_fight--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_fight--mobile.gif)
   - Restyled **[Armory](https://subeta.net/games/battle/weapons.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory--mobile.png)
     - Restyled **Armory » Edit Set**  • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__armory_edit--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__armory_edit--mobile.png)
+  - Restyled **[Battle » Statistics](https://subeta.net/games/battle/stats.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__statistics--desktop.gif)
   - Restyled **[Spend Exp](https://subeta.net/games/battle/exp.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__spend_exp--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__spend_exp--mobile.png)
     - Added option `--display-battle-exp-intro` to hide the intro-text
     - Added option `--number-of-pets-spendexp` to change the number of pets per row
     - Restyled **Spend Exp » Pet** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__spend_exp_detail--desktop.png)
       - Added option `--display-battle-exp-pet-intro` to hide the intro-text
+  - Restyled **[Battle » Healer](https://subeta.net/explore/healer.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__healer--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__healer--mobile.png)
+    - Added option `--number-of-pets-healer` to change the number of pets per row
+  - Restyled **[Battle » Battle Quests](https://subeta.net/games/battle/quest.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__battle_quest--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__battle_quest--mobile.gif)
   - Restyled **[Training Center](https://subeta.net/explore/train.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__training--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__training--mobile.gif)
     - Removed NPC-image
     - Added option `--display-battle-training-intro` to hide intro-text
@@ -323,6 +327,16 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
+- <strong>2024/03/17</strong>
+  - Restyled **[Battle » Statistics](https://subeta.net/games/battle/stats.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__statistics--desktop.gif)
+  - Restyled **[Battle » Healer](https://subeta.net/explore/healer.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__healer--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__healer--mobile.png)
+    - Added option `--number-of-pets-healer` to change the number of pets per row
+  - Restyled **[Battle » Battle Quests](https://subeta.net/games/battle/quest.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__battle_quest--desktop.gif) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__battle_quest--mobile.gif)
+
+<br>
+<details>
+<summary>📅 2024 March</summary>
+
 - <strong>2024/03/16</strong>
   - Restyled **[Battle » Challenge Opponent](https://subeta.net/games/battle/challenge.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_opponent--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_opponent--mobile.png)
     - Added option `--number-of-challengers` to change the number of challengers per row
@@ -334,11 +348,6 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Added option `--display-battle-exp-intro` to hide the intro-text
     - Added option `--number-of-pets-spendexp` to change the number of pets per row
     - Added option `--display-battle-exp-pet-intro` to hide the intro-text the pet-detail page
-
-<br>
-<details>
-<summary>📅 2024 March</summary>
-
 - <strong>2024/03/15</strong>
   - Added styling for disabled buttons
 - <strong>2024/03/13</strong>

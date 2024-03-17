@@ -513,7 +513,45 @@
         }
     }
 
-    /* Subeta » Games » Battle » Content */
+    /* Subeta » Games » Battle » Content » Battle Quests */
+    + .row:not(.w-100) {
+        .border.rounded.bg-light.p-3.mb-3 {
+            padding: 0 !important;
+            border: 0 !important;
+            background-color: transparent !important;
+            font-size: var(--font-size-medium);
+        }
+
+        .ui.icon.message.green {
+            .content {
+                padding-left: 0;
+            }
+
+            .icon,
+            .wl_item + br {
+                display: none;
+            }
+
+            .wl_item {
+                display: block;
+                margin: .5em 0 .25em;
+            }
+
+            + p .ui.button {
+                background-color: var(--green);
+
+                &:hover, &:focus {
+                    background-color: var(--green-dark);
+                }
+            }
+        }
+
+        img[src^='//img.subeta.net/battle/opponents/'] {
+            width: var(--item-size-large);
+            height: var(--item-size-large);
+        }
+    }
+
     + .row.w-100 {
         > .col-md-4 {
             /* Subeta » Games » Battle » Content » Training Center » Hide NPC */
@@ -549,7 +587,16 @@
                 }
             }
 
+            /* Subeta » Games » Battle » Content » Healer » Intro */
+            .card.bg-light.mt-3.mb-3 {
+                padding: 0;
+                background-color: transparent !important;
+                font-size: var(--font-size-medium);
 
+                center {
+                    text-align: Left;
+                }
+            }
         }
 
         > .text-center {
@@ -704,6 +751,103 @@
                             font-size: var(--font-size-medium);
                         }
                     }
+                }
+            }
+        }
+    }
+
+    /* Subeta » Games » Battle » Content » Healer » Pets */
+    + .row.w-100 + .row:not(.w-100) {
+        margin-top: var(--spacing-y);
+
+        .healing-pet {
+            width: var(--number-of-pets-healer, var(--number-of-pets, var(--col-3)));
+            padding: var(--spacing);
+            border: var(--border);
+            border-radius: var(--border-radius);
+
+            img {
+                width: var(--item-size-large);
+                height: var(--item-size-large);
+            }
+
+            .btn {
+                margin-top: var(--spacing-y);
+                font-weight: normal;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    + .text-center {
+        /* Subeta » Games » Battle » Content » Statistics » Details */
+        h1 + h2 + p + p {
+            img {
+                width: var(--item-size-large);
+                height: var(--item-size-large);
+                margin: 0 !important;
+            }
+
+            ~ .table.table-hover.table-condensed.table-bordered {
+                overflow: hidden;
+                border: 0;
+                border-radius: var(--border-radius);
+
+                tr {
+                    border: var(--border);
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+
+                    &:only-child td {
+                        border-bottom: 0;
+                    }
+
+                    &:last-child {
+                        background-color: var(--primary-light);
+
+                        td {
+                            border-color: var(--white)
+                        }
+                    }
+
+                    &:not(:only-child):not(:last-child) {
+                        border-top-width: 1px;
+                        border-bottom: 0;
+                    }
+                }
+
+                td {
+                    padding: .5em;
+                    border-color: var(--primary-light);
+
+                    &:nth-child(n + 2) {
+                        text-align: right;
+                    }
+                }
+
+                .wins, .ties, .losses {
+                    font-size: inherit;
+
+                    span[style*='color:#ccc'] {
+                        color: var(--primary-light) !important;
+                    }
+                }
+
+                .wins {
+                    color: var(--green);
+                }
+
+                .ties {
+                    color: var(--yellow);
+                }
+
+                .losses {
+                    color: var(--red);
                 }
             }
         }
@@ -1003,14 +1147,27 @@
             margin-bottom: var(--spacing-y);
             padding: 0 !important;
 
+            ~ p:last-of-type {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: var(--spacing-y);
+            }
+
             ~ .scode-item-name {
                 margin-bottom: var(--spacing-y);
+            }
 
-                ~ p:last-of-type {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: var(--spacing-y);
+            ~ .ui.message {
+                background-color: var(--green-light);
+                color: var(--green-dark);
+
+                + p + .ui.button {
+                    background-color: var(--green);
+
+                    &:hover, &:focus {
+                        background-color: var(--green-dark);
+                    }
                 }
             }
         }
@@ -1094,6 +1251,17 @@
 
             .health_now {
                 background-color: var(--green) !important;
+            }
+
+            .battle-status {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #statusPet,
+            #statusOpponent {
+                width: 25%;
+                text-align: center;
             }
 
             .battle-commentary {
@@ -1400,6 +1568,82 @@
                     p {
                         display: var(--display-battle-opponent-weapons, block);
                     }
+                }
+            }
+        }
+    }
+
+    /* Subeta » Games » Battle » Content » Statistics */
+    + style + .container.text-center {
+        hr {
+            display: none;
+        }
+
+        h1.text-center.battle-stats-title {
+            font-variant: normal;
+        }
+
+        h4.text-center {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-y);
+
+            br, img {
+                display: none;
+            }
+
+            .bs-count {
+                margin-left: .25em;
+                font-size: inherit;
+            }
+        }
+
+        .col-12.col-md-6 {
+            width: var(--content-col-6) !important;
+            margin: 0 !important;
+            border: var(--border);
+            border-radius: var(--border-radius);
+        }
+
+        .card {
+            gap: var(--spacing-y);
+        }
+
+        .card-header,
+        .card-title {
+            margin: 0;
+        }
+
+        .card-body p {
+            margin: 0;
+
+            #selected-pet,
+            #selected-opponent {
+                width: var(--item-size-large);
+                height: var(--item-size-large) !important;
+            }
+        }
+
+        .card-footer {
+            padding: 0;
+            border: 0;
+            background-color: transparent;
+
+            .form-inline .form-group {
+                flex-wrap: nowrap;
+                gap: var(--spacing-x);
+                width: 100%;
+
+                select.form-control {
+                    flex-grow: 1;
+                    flex-shrink: 1;
+                    width: 100%;
+                }
+
+                input.form-control {
+                    flex-grow: 0;
+                    flex-shrink: 0;
+                    line-height: 23px;
                 }
             }
         }

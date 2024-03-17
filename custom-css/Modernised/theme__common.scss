@@ -65,6 +65,7 @@
     --alert-padding: var(--spacing);
     --alert-radius: var(--border-radius);
     --content-col-4: calc((100% - var(--spacing-y)) / 12 * 4);
+    --content-col-6: calc((100% - var(--spacing-y)) / 12 * 6);
     --content-col-8: calc((100% - var(--spacing-y)) / 12 * 8);
     --content-width: var(--page-width, 1300px);
     --fixed-popup-width: calc(var(--content-width) - var(--sidebar-width) - 2rem);
@@ -112,6 +113,7 @@
         --col-7: 100%;
         --col-8: 100%;
         --content-col-4: 100%;
+        --content-col-6: 100%;
         --content-col-8: 100%;
         --content-width-fixed: calc((100vw / var(--mobile-zoom)) - 2rem);
         --font-size-title: 1.25rem;
@@ -177,7 +179,7 @@ h2, h3, h4 {
 }
 
 a, a:link, a:active, a:visited,
-.btn-link, .btn-link:hover {
+.btn-link, .btn-link:hover, .btn-link:focus {
     color: var(--primary);
 }
 
@@ -343,7 +345,7 @@ select {
                 font-size: var(--font-size-base);
             }
 
-            &:hover {
+            &:hover, &:focus {
                 transform: rotate(-90deg);
                 border-color: var(--primary-dark);
                 background-color: var(--primary-dark);
@@ -438,7 +440,7 @@ select {
                         }
                     }
 
-                    &:hover {
+                    &:hover, &:focus {
                         background-color: transparent;
                         color: var(--button-bg) !important;
                     }
@@ -525,7 +527,7 @@ select {
                         }
                     }
 
-                    &:hover {
+                    &:hover, &:focus {
                         background-color: color-mix(in srgb, var(--primary), transparent);
                         color: var(--white);
                         z-index: 200;
@@ -664,7 +666,7 @@ select {
                 transition: var(--button-transition);
                 cursor: pointer;
 
-                &:hover,
+                &:hover, &:focus,
                 &.sidebar-btn-active {
                     background-color: var(--button-fg);
                     color: var(--button-bg);
@@ -699,6 +701,7 @@ select {
                 }
 
                 &:hover+#events-counter-wrapper,
+                &:focus+#events-counter-wrapper,
                 &.sidebar-btn-active+#events-counter-wrapper {
                     background-color: var(--button-fg);
                     color: var(--button-bg);
@@ -784,7 +787,7 @@ select {
                     display: none;
                 }
 
-                &:hover {
+                &:hover, &:focus {
                     opacity: .5;
                 }
             }
@@ -858,7 +861,7 @@ select {
                     content: '\e4be';
                 }
 
-                &:hover {
+                &:hover, &:focus {
                     opacity: .5;
                 }
             }
@@ -921,7 +924,7 @@ select {
                     border-radius: 1em;
                     transition: padding .2s, background-color .2s;
 
-                    &:hover {
+                    &:hover, &:focus {
                         padding: 0 .25em;
                         background-color: color-mix(in srgb, var(--primary) 25%, transparent);
                     }
@@ -1398,7 +1401,7 @@ select {
             white-space: nowrap;
             transition: var(--button-transition);
 
-            &:hover {
+            &:hover, &:focus {
                 border-color: var(--primary-dark);
                 background-color: transparent;
                 color: var(--primary-dark);
@@ -1476,7 +1479,7 @@ input[type='submit'] {
     text-shadow: none;
     line-height: normal;
 
-    &:hover {
+    &:hover, &:focus {
         color: var(--button-fg-hover) !important;
     }
 }
@@ -1505,9 +1508,18 @@ input[type='submit'] {
         background-color: var(--red) !important;
         color: var(--white) !important;
 
-        &:hover {
+        &:hover, &:focus {
             background-color: var(--red-dark) !important;
             color: var(--white) !important;
+        }
+    }
+
+    .alert-info & {
+        background-color: var(--blue);
+        color: var(--white);
+
+        &:hover, &:focus {
+            background-color: var(--blue-dark);
         }
     }
 }
@@ -1522,7 +1534,7 @@ input[type='submit'] {
             color: var(--button-fg) !important;
         }
 
-        &:hover {
+        &:hover, &:focus {
             background-color: var(--button-bg-hover) !important;
             color: var(--button-fg-hover) !important;
         }
@@ -1531,7 +1543,7 @@ input[type='submit'] {
     &.positive {
         background-color: var(--green) !important;
 
-        &:hover {
+        &:hover, &:focus {
             background-color: var(--green-dark) !important;
         }
     }
@@ -1539,7 +1551,7 @@ input[type='submit'] {
     &.negative {
         background-color: var(--red) !important;
 
-        &:hover {
+        &:hover, &:focus {
             background-color: var(--red-dark) !important;
         }
     }
@@ -1670,6 +1682,30 @@ img[src='//img.subeta.net/icons/email_open.png'] {
 }
 
 /* System » Bootstrap ------------------------------------------------------------------------------------------------*/
+.badge {
+    padding: .25em .5em;
+    border-radius: var(--border-radius);
+    color: var(--white);
+    font-size: var(--font-size-small);
+    line-height: normal;
+
+    &.badge-info {
+        background-color: var(--blue);
+    }
+
+    &.badge-success {
+        background-color: var(--green);
+    }
+
+    &.badge-warning {
+        background-color: var(--yellow);
+    }
+
+    &.badge-danger {
+        background-color: var(--red);
+    }
+}
+
 .bg-light {
     background-color: var(--primary-light) !important;
 }
@@ -1866,7 +1902,7 @@ img[src='//img.subeta.net/icons/email_open.png'] {
         padding: 0;
         color: var(--navbar-link);
 
-        &:hover {
+        &:hover, &:focus {
             text-decoration: underline;
         }
     }
@@ -1920,6 +1956,8 @@ img[src='//img.subeta.net/icons/email_open.png'] {
 
         &.active a,
         &:hover a,
+        &:focus a,
+        a:hover,
         a:focus {
             color: var(--white);
         }
@@ -2234,8 +2272,7 @@ img[src='//img.subeta.net/icons/email_open.png'] {
             font-size: inherit !important;
             line-height: normal;
 
-            &:active,
-            &:hover {
+            &:active, &:hover, &:focus {
                 background-color: transparent !important;
                 text-decoration: underline;
             }
@@ -2349,8 +2386,7 @@ img[src='//img.subeta.net/icons/email_open.png'] {
                 border: 0;
                 color: var(--navbar-link);
 
-                &:hover,
-                &.active {
+                &:hover, &:focus, &.active {
                     margin: 0;
                     background-color: transparent;
                     color: var(--navbar-link) !important;
@@ -2516,7 +2552,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             background-color: var(--white) !important;
             color: var(--black) !important;
 
-            &:hover {
+            &:hover, &:focus {
                 background-color: var(--red-light) !important;
                 color: var(--red-dark) !important;
             }
@@ -2527,7 +2563,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             transition: var(--button-transition);
             cursor: pointer;
 
-            &:hover {
+            &:hover, &:focus {
                 background-color: var(--red-dark);
                 color: var(--red-light);
             }
@@ -2599,7 +2635,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                     content: '\f00d';
                 }
 
-                &:hover {
+                &:hover, &:focus {
                     opacity: .5;
                 }
 
@@ -2648,7 +2684,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                 text-decoration: none;
                 transition: var(--button-transition);
 
-                &:hover {
+                &:hover, &:focus {
                     background-color: var(--button-bg-hover);
                     color: var(--button-fg-hover);
                 }
@@ -2832,11 +2868,12 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         }
     }
 
-    &:hover .wl_plus {
+    &:hover .wl_plus,
+    &:focus .wl_plus {
         transform: translate(50%, -50%);
         opacity: 1;
 
-        &:hover {
+        &:hover, &:focus {
             transform: translate(50%, -50%) scale(1.5);
             border: 2px solid white !important;
         }
@@ -2844,7 +2881,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
     &.non_wishlist {
         @media (min-device-width: 769px) {
-            &:hover {
+            &:hover, &:focus {
                 border-color: var(--green);
             }
         }
@@ -2863,7 +2900,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
         background-color: var(--primary);
 
         @media (min-device-width: 769px) {
-            &:hover {
+            &:hover, &:focus {
                 border-color: var(--red);
             }
         }
@@ -2964,7 +3001,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
             a {
                 white-space: nowrap;
 
-                &:hover {
+                &:hover, &:focus {
                     color: var(--primary);
                 }
             }
@@ -3020,7 +3057,7 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
                             padding: 0;
                             transition: transform .2s, opacity .2s;
 
-                            &:hover {
+                            &:hover, &:focus {
                                 transform: scale(1.25);
                             }
                         }
