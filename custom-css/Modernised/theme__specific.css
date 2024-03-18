@@ -4313,7 +4313,6 @@
 
                             @media (max-device-width: 768px) {
                                 flex-wrap: wrap;
-                                width: calc(100% - 2rem);
                                 font-size: 0;
                             }
 
@@ -7202,6 +7201,11 @@
                     z-index: 2;
                     box-shadow: var(--box-shadow--all);
 
+                    @media (max-device-width: 768px) {
+                        border-bottom-left-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+
                     .form-group {
                         display: flex;
                         align-items: center;
@@ -9370,10 +9374,6 @@
                 box-shadow: var(--box-shadow--all);
                 z-index: 998;
 
-                @media (max-device-width: 768px) {
-                    width: calc(100% - 2rem);
-                }
-
                 .card-body {
                     .row {
                         gap: var(--spacing-y);
@@ -10555,6 +10555,8 @@
         .shop-item {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            padding-left: calc(var(--item-size) + 4px + var(--spacing-x));
             min-height: var(--item-size);
             position: relative;
             font-size: var(--font-size-small);
@@ -10563,14 +10565,9 @@
             > .wl_item {
                 margin-right: var(--spacing-x);
                 position: absolute;
-                top: 0;
+                top: 50%;
                 left: 0;
-            }
-
-            .item-name,
-            .item-price,
-            .item-qty {
-                padding-left: calc(var(--item-size) + 4px + var(--spacing-x));
+                transform: translate(0, -50%);
             }
 
             .item-name {

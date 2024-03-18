@@ -344,6 +344,14 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
+- <strong>2024/03/18</strong>
+  - Fixed small issue with widths on mobile
+  - Fixed alignment for items in user shops
+
+<br>
+<details>
+<summary>📅 2024 March</summary>
+
 - <strong>2024/03/17</strong>
   - Restyled **[Battle » Statistics](https://subeta.net/games/battle/stats.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__statistics--desktop.gif)
   - Restyled **[Battle » Healer](https://subeta.net/explore/healer.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__healer--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__healer--mobile.png)
@@ -359,11 +367,6 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Restyled **[Neela](https://subeta.net/ss.php/neela)** • [📷 screenshot desktop](screenshots/pages/cashshop__neela--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__neela--mobile.png)
     - Restyled **[Trunks](https://subeta.net/cs/trunks.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__costume_trunks--desktop.gif) • [📷 screenshot mobile](screenshots/pages/cashshop__costume_trunks--mobile.gif)
     - Restyled **[Cart](https://subeta.net/cs/cart.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__cart--desktop.png)
-
-<br>
-<details>
-<summary>📅 2024 March</summary>
-
 - <strong>2024/03/16</strong>
   - Restyled **[Battle » Challenge Opponent](https://subeta.net/games/battle/challenge.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_opponent--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_opponent--mobile.png)
     - Added option `--number-of-challengers` to change the number of challengers per row

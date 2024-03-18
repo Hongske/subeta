@@ -116,6 +116,7 @@
     --content-col-6: 100%;
     --content-col-8: 100%;
     --content-width-fixed: calc((100vw / var(--mobile-zoom)) - 2rem);
+    --fixed-popup-width: calc(100% - 2rem);
     --font-size-title: 1.25rem;
     --item-size: var(--item-size-small);
     --menu-height: 6rem;
