@@ -6042,6 +6042,11 @@
                         .card-title + i ~ br + a {
                             display: block;
                         }
+
+                        /* Personal » Inventory » Items » Detail » Send a Friend block */
+                        &:nth-last-child(n + 4) ~ .card:nth-child(4) {
+                            display: var(--display-inventory-sendfriend, block) !important;
+                        }
                     }
 
                     /* Personal » Inventory » Items » Detail » 1st block after item description */
