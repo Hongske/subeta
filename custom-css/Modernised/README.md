@@ -217,6 +217,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Replaced the lock-images with colour-coded icons
   - Restyled the item detail page • [📷 screenshot desktop](screenshots/pages/personal__inventory__detail--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__inventory__detail--mobile.png)
     - Added option `--display-inventory-sendfriend` to hide the "Send to a Friend" link
+    - Added option `--display-inventory-sendfriend-mobile` to hide the "Send to a Friend" link on an item's detail page in the inventory, but **only on mobile**
 - Restyled **[Pets](https://subeta.net/pets.php)** • [📷 screenshot desktop](screenshots/pages/personal__pets--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets--mobile.png)
   - Modified the pet-dropdown with options so that it's always shown
   - Added options to hide individual links in the pet-dropdown ([see the display options for pets](#⭐-customising-the-theme))
@@ -345,13 +346,17 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-- <strong>2024/03/19</strong>
-  - Added option `--display-inventory-sendfriend` to hide the "Send to a Friend" link on an item's detail page in the inventory
+- <strong>2024/03/21</strong>
+  - Added option `--display-inventory-sendfriend-mobile` to hide the "Send to a Friend" link on an item's detail page in the inventory, but **only on mobile**
+  - Added birthday-icon in front of usernames
+  - Fixed notification for getting an achievement in the Sticker Album
 
 <br>
 <details>
 <summary>📅 2024 March</summary>
 
+- <strong>2024/03/19</strong>
+  - Added option `--display-inventory-sendfriend` to hide the "Send to a Friend" link on an item's detail page in the inventory
 - <strong>2024/03/18</strong>
   - Fixed small issue with widths on mobile
   - Fixed alignment for items in user shops

@@ -3442,45 +3442,6 @@
                         }
                     }
                 }
-
-                #stickerlist {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: .5em
-                }
-
-                .stickerlist_sticker {
-                    display: flex;
-                    flex-direction: column;
-                    gap: .25em;
-                    width: calc((100% - 4.5rem) / 10);
-                    height: auto;
-                    max-height: none;
-                    padding: .5em;
-                    border: 0;
-                    background-color: transparent;
-                    font-size: var(--font-size-small);
-                    box-sizing: border-box;
-                    cursor: move;
-                    cursor: grab;
-
-                    @media (max-device-width: 768px) {
-                        width: calc((100% - 2rem) / 5);
-                    }
-
-                    &:active {
-                        cursor: grabbing;
-                    }
-
-                    a {
-                        display: var(--display-stickers-unstack, block);
-                    }
-
-                    br,
-                    .wl_plus {
-                        display: none;
-                    }
-                }
             }
 
             /* Personal » Pets » Books Read / Food Eaten » Intro */
@@ -6046,6 +6007,10 @@
                         /* Personal » Inventory » Items » Detail » Send a Friend block */
                         &:nth-last-child(n + 4) ~ .card:nth-child(4) {
                             display: var(--display-inventory-sendfriend, block) !important;
+
+                            @media (max-device-width: 768px) {
+                                display: var(--display-inventory-sendfriend-mobile, block) !important;
+                            }
                         }
                     }
 
@@ -10640,5 +10605,52 @@
                 }
             }
         }
+    }
+}
+
+/* Subeta » Games » Collections » Sticker Album » Sticker List */
+#stickerlist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+
+    .stickerlist_sticker {
+        display: flex;
+        flex-direction: column;
+        gap: .25em;
+        width: calc((100% - 6rem) / 13);
+        height: auto;
+        max-height: none;
+        padding: .5em;
+        border: 0;
+        background-color: transparent;
+        font-size: var(--font-size-small);
+        box-sizing: border-box;
+        cursor: move;
+        cursor: grab;
+
+        @media (max-device-width: 768px) {
+            width: calc((100% - 2rem) / 5);
+        }
+
+        &:active {
+            cursor: grabbing;
+        }
+
+        a {
+            display: var(--display-stickers-unstack, block);
+        }
+
+        br,
+        .wl_plus {
+            display: none;
+        }
+    }
+
+    .ui.message.yellow {
+        order: -1;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: calc(var(--spacing-y) - .5em);
     }
 }
