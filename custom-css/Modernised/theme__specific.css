@@ -4058,6 +4058,7 @@
                         .media > img {
                             width: var(--image-size) !important;
                             margin: 0 !important;
+                            border-radius: 50%;
                             position: absolute;
                         }
 
@@ -4104,7 +4105,7 @@
                                     width: 100%;
                                     margin-bottom: .25em;
                                     color: var(--black);
-                                    font-size: var(--font-size-base);
+                                    font-size: var(--font-size-medium);
                                     line-height: normal;
 
                                     + a {

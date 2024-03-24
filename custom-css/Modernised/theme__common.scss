@@ -2491,6 +2491,11 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 }
 
 .hover-user {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: .25em;
+
     img:not([src$='cake.png']) {
         display: none;
     }
