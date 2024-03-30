@@ -2951,8 +2951,8 @@ img[src^='//img.subeta.net/ads/'] + .holiday {
 
     .custom_wearable {
         top: 0;
-        bottom: auto;
-        left: auto;
+        bottom: auto !important;
+        left: auto !important;
         right: 0;
     }
 

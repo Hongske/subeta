@@ -4396,6 +4396,10 @@
                                         width: 100%;
                                         font-size: 0 !important;
                                     }
+
+                                    a {
+                                        font-weight: bold;
+                                    }
                                 }
                             }
 
@@ -5339,6 +5343,116 @@
 
             .icon {
                 display: none;
+            }
+        }
+    }
+
+    /* Interact » Forums » View Outfit */
+    + .ui.segment {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+
+        .ui.grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-y);
+        }
+
+        > .ui.grid {
+            align-items: center;
+
+            > .column {
+                margin: 0;
+                padding: 0;
+
+                &.three.wide {
+                    order: 1;
+                    width: var(--number-of-cols);
+
+                    .text_center {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: var(--spacing-y);
+                    }
+                }
+
+                &.thirteen.wide {
+                    order: 3;
+                    width: 100%;
+
+                    .column {
+                        display: flex;
+                        align-items: center;
+                        gap: var(--spacing-x);
+                        width: var(--number-of-cols);
+                        margin: 0;
+                        padding: var(--spacing);
+                        border: var(--border);
+                        border-radius: var(--border-radius);
+                    }
+
+                    .text_center {
+                        height: auto !important;
+                        text-align: left !important;
+
+                        &:first-child {
+                            flex-grow: 1;
+                        }
+
+                        &.has {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 2rem;
+                        }
+
+                        > small {
+                            display: flex;
+                            align-items: center;
+                            gap: var(--spacing-x);
+                        }
+
+                        br {
+                            display: none;
+                        }
+                    }
+
+                    .button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 2rem;
+                        height: 2rem;
+                        font-size: 0;
+                    }
+
+                    .icon {
+                        margin: 0;
+                        opacity: 1;
+
+                        &.cart {
+                            display: block;
+                            width: auto;
+                            height: auto;
+                        }
+
+                        &.cart:before {
+                            font: var(--fa-font-solid);
+                            font-size: var(--font-size-base);
+                        }
+                    }
+                }
+
+                &.sixteen.wide {
+                    order: 2;
+                    width: calc(100% - var(--number-of-cols) - var(--spacing-y));
+
+                    @media (max-device-width: 768px) {
+                        width: 100%;
+                    }
+                }
             }
         }
     }

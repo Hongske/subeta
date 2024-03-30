@@ -185,6 +185,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
       - Fixed the lock-icon on the locked-message for locked topics, so it's less ginormous
       - Removed the ping-options from the reply form
       - 👁‍🗨 Removed the formatting-options from the reply form
+      - Restyled Shared Outfits • [📷 screenshot desktop](screenshots/pages/interact__forums__shared_outfits--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__shared_outfits--mobile.png)
   - Restyled **[Subscribed Threads](https://subeta.net/forums.php/subscriptions)** • [📷 screenshot desktop](screenshots/pages/interact__forums__subscribed_threads--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__subscribed_threads--mobile.png)
     - Added option `--display-forum-subscribed-intro` to hide the intro-text
   - Restyled **[Recent Topics](https://subeta.net/forums.php/recent/topics)** • [📷 screenshot desktop](screenshots/pages/interact__forums__recent_topics--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__recent_topics--mobile.png)
@@ -346,15 +347,18 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-- <strong>2024/03/21</strong>
-  - Added option `--display-inventory-sendfriend-mobile` to hide the "Send to a Friend" link on an item's detail page in the inventory, but **only on mobile**
-  - Added birthday-icon in front of usernames
-  - Fixed notification for getting an achievement in the Sticker Album
+- <strong>2024/03/30</strong>
+  - Emphasised links in Vault » Currency Storage
+  - Restyled Shared Outfits in Forums • [📷 screenshot desktop](screenshots/pages/interact__forums__shared_outfits--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__shared_outfits--mobile.png)
 
 <br>
 <details>
 <summary>📅 2024 March</summary>
 
+- <strong>2024/03/21</strong>
+  - Added option `--display-inventory-sendfriend-mobile` to hide the "Send to a Friend" link on an item's detail page in the inventory, but **only on mobile**
+  - Added birthday-icon in front of usernames
+  - Fixed notification for getting an achievement in the Sticker Album
 - <strong>2024/03/19</strong>
   - Added option `--display-inventory-sendfriend` to hide the "Send to a Friend" link on an item's detail page in the inventory
 - <strong>2024/03/18</strong>
