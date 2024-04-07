@@ -8516,7 +8516,8 @@
                 }
                 [data-itemid^='258'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='259'] ~ .alert [href*='den.php']:after,
-                [data-itemid^='259'] ~ .alert [href*='louis']:after {
+                [data-itemid^='259'] ~ .alert [href*='louis']:after,
+                [data-itemid^='260'] ~ .alert [href*='esther']:after {
                     content: ' (2024)';
                 }
             }

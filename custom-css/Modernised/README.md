@@ -347,14 +347,16 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-- <strong>2024/03/30</strong>
-  - Emphasised links in Vault » Currency Storage
-  - Restyled Shared Outfits in Forums • [📷 screenshot desktop](screenshots/pages/interact__forums__shared_outfits--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__shared_outfits--mobile.png)
+- <strong>2024/04/07</strong>
+  - Added 2024's yearly indicator for Vesnali items
 
 <br>
 <details>
 <summary>📅 2024 March</summary>
 
+- <strong>2024/03/30</strong>
+  - Emphasised links in Vault » Currency Storage
+  - Restyled Shared Outfits in Forums • [📷 screenshot desktop](screenshots/pages/interact__forums__shared_outfits--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__shared_outfits--mobile.png)
 - <strong>2024/03/21</strong>
   - Added option `--display-inventory-sendfriend-mobile` to hide the "Send to a Friend" link on an item's detail page in the inventory, but **only on mobile**
   - Added birthday-icon in front of usernames
