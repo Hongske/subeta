@@ -2299,6 +2299,7 @@ table.ui[width="50%"] a {
 .create_ad,
 a[href^="/ad_click.php"],
 img[src^="//img.subeta.net/ads/"],
+img[src^="//img.subeta.net/ads/"] + a,
 img[src^="//img.subeta.net/ads/"] + .holiday {
   display: none;
 }
