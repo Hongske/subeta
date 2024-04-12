@@ -4920,6 +4920,83 @@
                     }
                 }
             }
+
+            /* Personal » Wishlist » View a list */
+            + form[method='post'] .card {
+                padding: 0;
+
+                .card-header h2 {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .card-body.p-3.container-fluid {
+                    padding: 0 !important;
+
+                    > .row {
+                        margin-top: var(--spacing-y) !important;
+                        padding: 0 !important;
+                    }
+
+                    .pagination {
+                        margin-bottom: 0;
+                    }
+
+                    .wishlist-item {
+                        width: var(--number-of-cols) !important;
+                        padding: 0 !important;
+                        text-align: left !important;
+
+                        .border.rounded.p-2 {
+                            display: flex;
+                            align-items: center;
+                            border: var(--border) !important;
+                            border-radius: var(--border-radius) !important;
+                            padding: var(--spacing) !important;
+
+                            > label {
+                                flex-grow: 1;
+                                display: flex;
+                                align-items: center;
+                                gap: var(--spacing-x);
+                                font-size: var(--font-size-small) !important;
+                            }
+
+                            > p {
+                                flex-shrink: 0;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: var(--spacing-y);
+
+                                a {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 2rem;
+                                    height: 2rem;
+                                    border-radius: var(--button-radius);
+                                    background-color: var(--button-bg);
+                                    color: var(--button-fg);
+                                    text-decoration: none;
+                                    transition: var(--button-transition);
+
+                                    &:hover {
+                                        background-color: var(--button-bg-hover);
+                                        color: var(--button-fg-hover);
+                                    }
+
+                                    .icon {
+                                        margin: 0;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         /* Interact » Forums » Groups */

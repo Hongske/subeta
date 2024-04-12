@@ -347,13 +347,15 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-- <strong>2024/04/08</strong>
-  - Updated adblock for Vesnali
+- <strong>2024/04/12</strong>
+  - Added styling for when you view someone else's wishlist
 
 <br>
 <details>
 <summary>📅 2024 April</summary>
 
+- <strong>2024/04/08</strong>
+  - Updated adblock for Vesnali
 - <strong>2024/04/07</strong>
   - Added 2024's yearly indicator for Vesnali items
 </details>
