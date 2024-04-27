@@ -22,14 +22,18 @@
                 </p>
             </div>
             <br>
-            <p>
-                To install the theme:
+            To install the theme:
                 <ol>
                     <li>Pick your preferred options in the tables below.</li>
                     <li>Click the "Generate ❤" button.</li>
                     <li>Copy the code at the bottom of the page into the box on your <a href="https://subeta.net/preferences.php?act=customcss" target="_blank">CustomCSS page</a>.</li>
                 </ol>
-            </p>
+
+            To load existing theme-options, copy the code from the box on your <a href="https://subeta.net/preferences.php?act=customcss" target="_blank">CustomCSS page</a>, paste it into the box below and click the "Load theme" button:
+            <div class="load_code">
+                <textarea id="code_old"></textarea>
+                <button id="load">Load theme</button>
+            </div>
 
             <table class="form">
                 <thead><tr><th colspan="2">General</th></tr></thead>
@@ -482,6 +486,146 @@
                     <tr>
                         <td>Games » Battle</td>
                         <td>
+                            <span class="option_prefix">Menu » "Armory":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-weapons" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-weapons" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Scrolls":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-scrolls" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-scrolls" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Beginner Guide":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-newbies" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-newbies" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "In-depth Guide":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-battleguide" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-battleguide" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Statistics":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-stats" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-stats" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Spend Exp":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-exp" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-exp" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Battle Shop":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-shop" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-shop" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "High Scores":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-scores" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-scores" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Boss Prizes":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-boss" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-boss" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Healer":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-healer" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-healer" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Battle Quests":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-quest" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-quest" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Training Center":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-train" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-train" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Battle Forums":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-forums" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-forums" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
+                            <span class="option_prefix">Menu » "Hustler":</span>
+                            <label>
+                                <input type="checkbox" id="--display-battle-menu-hustler" />
+                                Hide link
+                            </label>
+                            <label>
+                                <input type="checkbox" id="--fontweight-battle-menu-hustler" data-value="bold" />
+                                Put link in bold
+                            </label>
+                            <hr>
                             <label>
                                 <input type="number" id="--number-of-challengers" value="3" min="1" max="8" data-initial="3" data-type="col" />
                                 number of challengers per row for Challenge an Opponent
@@ -611,6 +755,17 @@
             color: var(--fg-color, #FFF);
         }
 
+        .load_code {
+            display: flex;
+            gap: .5em;
+            margin: 1em 0 2em;
+
+            #code_old {
+                flex-grow: 1;
+                resize: none;
+            }
+        }
+
         .form {
             tr {
                 width: 100%;
@@ -658,16 +813,23 @@
             }
         }
 
-        #submit {
-            margin-bottom: 2em;
+        button {
             padding: .25em .5em;
             font: inherit;
             cursor: pointer;
+
+            &#submit {
+                margin-bottom: 2em;
+            }
         }
     </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('load').addEventListener('click', (e) => {
+                loadCSS();
+            });
+
             document.getElementById('submit').addEventListener('click', (e) => {
                 generateCSS();
             });
@@ -679,16 +841,52 @@
             });
         }, false);
 
-        function updateLinked(e) {
-            var targetProperty = e.target.dataset.linkProperty;
-            var targetLinks = document.querySelectorAll('input[data-link-type="slave"][data-link-property="' + targetProperty + '"]');
+        String.prototype.has = function (string) {
+            if (this.indexOf(string) !== -1) {
+                return true;
+            } else {
+                return false;
+            }
+        }
 
-            targetLinks.forEach((item) => {
-                if (item.dataset.initial && item.value == item.dataset.initial.toLowerCase()) {
-                    item.value = e.target.value;
-                    item.dataset.initial = e.target.value;
-                }
-            });
+        function loadCSS() {
+            var code = document.getElementById('code_old').value;
+            var options_text_start = code.indexOf(':root');
+
+            if (options_text_start !== -1) {
+                var options_text = code.substring(options_text_start);
+                var options_text_end = options_text.indexOf('}');
+
+                options_text = options_text.substring(0, options_text_end);
+                options_text = options_text.replace(/(\r\n|\n|\r)/gm, '').replace(/\s/g, '').replace(':root', '').replace('{', '');
+
+                var options = options_text.split(';').map((e) => {
+                    return e.split(':');
+                });
+
+                options.forEach((option) => {
+                    var id = option[0];
+                    var value = option[1];
+                    var input = document.getElementById(id);
+
+                    if (id.has('display')) {
+                        if ((input.dataset.value && input.dataset.value == value)
+                        || value == 'none') {
+                            input.checked = true;
+                        }
+                    } else if (id.has('number')) {
+                        input.value = Number(value.replace('var(--col-', '').replace(')', ''));
+                    } else if (id.has('color')) {
+                        input.value = value;
+                    } else if (id.has('fontweight')) {
+                        if ((input.dataset.value && input.dataset.value == value)) {
+                            input.checked = true;
+                        }
+                    } else if (id.has('floating-item')) {
+                        // TODO
+                    }
+                });
+            }
         }
 
         function generateCSS() {
@@ -754,6 +952,18 @@
             }
 
             document.getElementById("code").innerHTML = code;
+        }
+
+        function updateLinked(e) {
+            var targetProperty = e.target.dataset.linkProperty;
+            var targetLinks = document.querySelectorAll('input[data-link-type="slave"][data-link-property="' + targetProperty + '"]');
+
+            targetLinks.forEach((item) => {
+                if (item.dataset.initial && item.value == item.dataset.initial.toLowerCase()) {
+                    item.value = e.target.value;
+                    item.dataset.initial = e.target.value;
+                }
+            });
         }
     </script>
 </body>

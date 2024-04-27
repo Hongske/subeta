@@ -410,13 +410,124 @@
     border: 0 !important;
     background-color: var(--navbar-bg);
     color: var(--navbar-fg);
-    font-size: var(--navbar-font-size);
+    font-size: 0;
     text-align: left !important;
 
     /* Subeta » Games » Battle » Menu » Hide images */
     > img {
         display: none;
     }
+
+    /* Subeta » Games » Battle » Menu » Links */
+    a {
+        font-size: var(--navbar-font-size);
+
+        &:nth-child(n + 3):before {
+            content: '|';
+            color: var(--navbar-fg);
+            margin: 0 .25em;
+            pointer-events: none;
+            cursor: default;
+        }
+
+        &[href$='weapons.php'] {
+            display: var(--display-battle-menu-weapons, inline);
+            font-weight: var(--fontweight-battle-menu-weapons, normal);
+        }
+
+        &[href$='scrolls.php'] {
+            display: var(--display-battle-menu-scrolls, inline);
+            font-weight: var(--fontweight-battle-menu-scrolls, normal);
+        }
+
+        &[href$='newbies.php'] {
+            display: var(--display-battle-menu-newbies, inline);
+            font-weight: var(--fontweight-battle-menu-newbies, normal);
+        }
+
+        &[href$='battleguide.php'] {
+            display: var(--display-battle-menu-battleguide, inline);
+            font-weight: var(--fontweight-battle-menu-battleguide, normal);
+        }
+
+        &[href$='stats.php'] {
+            display: var(--display-battle-menu-stats, inline);
+            font-weight: var(--fontweight-battle-menu-stats, normal);
+        }
+
+        &[href$='exp.php'] {
+            display: var(--display-battle-menu-exp, inline);
+            font-weight: var(--fontweight-battle-menu-exp, normal);
+        }
+
+        &[href$='shop.php'] {
+            display: var(--display-battle-menu-shop, inline);
+            font-weight: var(--fontweight-battle-menu-shop, normal);
+        }
+
+        &[href$='scores.php'] {
+            display: var(--display-battle-menu-scores, inline);
+            font-weight: var(--fontweight-battle-menu-scores, normal);
+        }
+
+        &[href$='boss_prizes.php'] {
+            display: var(--display-battle-menu-boss, inline);
+            font-weight: var(--fontweight-battle-menu-boss, normal);
+        }
+
+        &[href$='healer.php'] {
+            display: var(--display-battle-menu-healer, inline);
+            font-weight: var(--fontweight-battle-menu-healer, normal);
+        }
+
+        &[href$='quest.php'] {
+            display: var(--display-battle-menu-quest, inline);
+            font-weight: var(--fontweight-battle-menu-quest, normal);
+        }
+
+        &[href$='train.php'] {
+            display: var(--display-battle-menu-train, inline);
+            font-weight: var(--fontweight-battle-menu-train, normal);
+        }
+
+        &[href$='forum/35/Battle'] {
+            display: var(--display-battle-menu-forums, inline);
+            font-weight: var(--fontweight-battle-menu-forums, normal);
+        }
+
+        &[href$='hustler/battle'] {
+            display: var(--display-battle-menu-hustler, inline);
+            font-weight: var(--fontweight-battle-menu-hustler, normal);
+        }
+    }
+
+    .xbattle-menu {
+    font-size: 0;
+
+    a {
+        font-size: var(--navbar-font-size);
+
+        &:nth-child(n + 3):before {
+            content: '|';
+            margin: 0 .25em;
+            color: var(--navbar-fg);
+            pointer-events: none;
+            cursor: default;
+        }
+
+        &[href$='scrolls.php'],
+        &[href$='newbies.php'],
+        &[href$='battleguide.php'],
+        &[href$='scores.php'],
+        &[href$='boss_prizes.php'],
+        &[href$='/forum/35/Battle'],
+        &[href$='/hustler/battle'] {
+            &, &:before {
+                display: none;
+            }
+        }
+    }
+}
 
     /* Subeta » Games » Battle » Content » Spend Exp » Pet Detail */
     + .container {

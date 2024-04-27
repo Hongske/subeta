@@ -14,7 +14,7 @@
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 
 ## ⭐ Installing the theme
-To install the theme, please use the **[✨theme code generator✨](theme_code_generator.html)** to pick your preferred options and to generate the code. If you prefer *not* to use the generator, then you can find all invidiual options in the [features list](#features-amp-screenshots).
+To install the theme, please use the **[✨theme code generator✨](theme_code_generator.html)** to pick your preferred options and to generate the code.
 
 <!-- NEW SECTION ------------------------------------------------------------------------------------------------------>
 <br>
@@ -81,7 +81,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 - Added other general options
   - Added option `--display-floating-item` to hide floating items (like flowers during Survival)
   - Added option `--display-hustler` to hide Hustler-banner
-  - Added options to modify theme colours ([see ⭐ Customising the theme](#⭐-customising-the-theme))
+  - Added options to modify theme colours
 </details>
 <!--------------------------------------------------------------------------------------------------------------------->
 <details>
@@ -221,8 +221,8 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Added option `--display-inventory-sendfriend-mobile` to hide the "Send to a Friend" link on an item's detail page in the inventory, but **only on mobile**
 - Restyled **[Pets](https://subeta.net/pets.php)** • [📷 screenshot desktop](screenshots/pages/personal__pets--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets--mobile.png)
   - Modified the pet-dropdown with options so that it's always shown
-  - Added options to hide individual links in the pet-dropdown ([see the display options for pets](#⭐-customising-the-theme))
-  - Added options to change the font-weight of individual links in the pet-dropdown ([see the font-weight options for pets](#⭐-customising-the-theme))
+  - Added options to hide individual links in the pet-dropdown
+  - Added options to change the font-weight of individual links in the pet-dropdown
   - Added option `--number-of-pets` to change the number of pets per row
   - Added icons for hunger and happiness
   - Modified icon for likes
@@ -277,7 +277,9 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 - **Games** • [📷 screenshot desktop](screenshots/pages/subeta__games--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games--mobile.png)
   - Restyled the games overview-page
 - **Games » Battle**
-  - Removed images in the menu-bar
+  - Removed images in the battle-menu
+  - Added options to hide individual links in the battle-menu
+  - Added options to change the font-weight of individual links in the battle-menu
   - Restyled **[Battle » Challenge Opponent](https://subeta.net/games/battle/challenge.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_opponent--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_opponent--mobile.png)
     - Added option `--number-of-challengers` to change the number of challengers per row
     - Added option `--display-battle-opponent-weapons` to hide the "Choose Weapons" button
@@ -347,13 +349,17 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-- <strong>2024/04/12</strong>
-  - Added styling for when you view someone else's wishlist
+- <strong>2024/04/27</strong>
+  - Added options to hide individual links in the battle-menu
+  - Added options to change the font-weight of individual links in the battle-menu
+  - Updated the code generator for the new options and added a load-option (to load an existing config-list)
 
 <br>
 <details>
 <summary>📅 2024 April</summary>
 
+- <strong>2024/04/12</strong>
+  - Added styling for when you view someone else's wishlist
 - <strong>2024/04/08</strong>
   - Updated adblock for Vesnali
 - <strong>2024/04/07</strong>
@@ -520,8 +526,8 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 - <strong>2024/02/29</strong>
   - Added option `--display-inventory-locked` to hide the info-text about locked items in [Inventory](https://subeta.net/inventory.php)
   - Added option `--display-stickers-unstack` to hide the "unstack" link under stickers in the [Sticker Album](https://subeta.net/games/stickers.php)
-  - Added options to hide individual links in the pet-dropdown ([see the display options for pets](#⭐-customising-the-theme))
-  - Added options to change the font-weight of individual links in the pet-dropdown ([see the font-weight options for pets](#⭐-customising-the-theme))
+  - Added options to hide individual links in the pet-dropdown
+  - Added options to change the font-weight of individual links in the pet-dropdown
   - Added special options to change the number of pets shown on the [Pets-page](https://subeta.net/pets.php) and in the [Training Center](https://subeta.net/explore/train.php)
   - Fixed biting in forums (now you can only click the link if it says "Bite!")
   - Fixed the "new announcement" banner so the links are bold and removed the "close" link
