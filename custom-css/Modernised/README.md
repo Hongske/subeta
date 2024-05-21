@@ -349,15 +349,17 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-- <strong>2024/04/27</strong>
-  - Added options to hide individual links in the battle-menu
-  - Added options to change the font-weight of individual links in the battle-menu
-  - Updated the code generator for the new options and added a load-option (to load an existing config-list)
+- <strong>2024/05/21</strong>
+  - Bugfixed image-size for oracle-item in sidebar
 
 <br>
 <details>
 <summary>📅 2024 April</summary>
 
+- <strong>2024/04/27</strong>
+  - Added options to hide individual links in the battle-menu
+  - Added options to change the font-weight of individual links in the battle-menu
+  - Updated the code generator for the new options and added a load-option (to load an existing config-list)
 - <strong>2024/04/12</strong>
   - Added styling for when you view someone else's wishlist
 - <strong>2024/04/08</strong>

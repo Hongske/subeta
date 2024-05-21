@@ -1100,6 +1100,10 @@ select {
   height: var(--item-size-small);
   border-color: var(--white);
 }
+#page #sidebar #sidebar-inner .x-js-widget-oracle b .wl_item img {
+  width: 100%;
+  height: 100%;
+}
 #page #sidebar #sidebar-inner .x-js-widget-oracle b .wl_item .wl,
 #page #sidebar #sidebar-inner .x-js-widget-oracle b br {
   display: none;

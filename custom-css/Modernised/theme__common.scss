@@ -1281,6 +1281,11 @@ select {
                         width: var(--item-size-small);
                         height: var(--item-size-small);
                         border-color: var(--white);
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
 
                     .wl_item .wl,
