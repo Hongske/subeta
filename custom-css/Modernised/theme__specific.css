@@ -8705,7 +8705,9 @@
                 [data-itemid^='258'] ~ .alert [href*='newyears']:after,
                 [data-itemid^='259'] ~ .alert [href*='den.php']:after,
                 [data-itemid^='259'] ~ .alert [href*='louis']:after,
-                [data-itemid^='260'] ~ .alert [href*='esther']:after {
+                [data-itemid^='260'] ~ .alert [href*='esther']:after,
+                [data-itemid^='260'] ~ .alert [href*='masquerade']:after,
+                [data-itemid^='261'] ~ .alert [href*='masquerade']:after {
                     content: ' (2024)';
                 }
             }
