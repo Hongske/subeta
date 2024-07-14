@@ -351,6 +351,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 - <strong>2024/07/14</strong>
   - Bugfixed some line-breaks not rendering in forum posts
+  - Bugfixed wishlist items' sizing in profile comments
 
 - <strong>2024/06/29</strong>
   - Bugfixed table font-sizes
