@@ -6740,6 +6740,10 @@
                     .pb-3 {
                         padding-bottom: 0 !important;
                     }
+
+                    .wl-item {
+                        --item-size: 4rem;
+                    }
                 }
 
                 .card-footer {
@@ -9477,6 +9481,10 @@
 
             .post-body {
                 margin-bottom: 0;
+
+                br {
+                    display: block;
+                }
 
                 > br[clear='all'] {
                     @media (max-device-width: 768px) {

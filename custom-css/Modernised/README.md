@@ -349,6 +349,15 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
+- <strong>2024/07/14</strong>
+  - Bugfixed some line-breaks not rendering in forum posts
+
+- <strong>2024/06/29</strong>
+  - Bugfixed table font-sizes
+
+- <strong>2024/06/06</strong>
+  - Added 2024's year indicators for Masquerade items
+
 - <strong>2024/05/21</strong>
   - Bugfixed image-size for oracle-item in sidebar
 
