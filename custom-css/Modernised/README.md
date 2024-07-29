@@ -351,6 +351,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 - <strong>2024/07/29</strong>
   - Bugfixed the Alegarten Food Truck's menu-links
+  - Fixed font-size for "huge" buttons
 
 - <strong>2024/07/14</strong>
   - Bugfixed some line-breaks not rendering in forum posts

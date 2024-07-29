@@ -1512,7 +1512,7 @@ input[type=submit]:disabled {
 .ui.button.negative:hover, .ui.button.negative:focus {
   background-color: var(--red-dark) !important;
 }
-.ui.button.large, .ui.button.big, .ui.button.small, .ui.button.tiny {
+.ui.button.huge, .ui.button.large, .ui.button.big, .ui.button.small, .ui.button.tiny {
   font-size: var(--font-size-base);
 }
 .ui.button[href^="/explore/"]:not([href*=buy]):not([href^="/explore/gifts.php/"]) {
