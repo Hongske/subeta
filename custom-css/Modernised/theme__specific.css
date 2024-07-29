@@ -7136,6 +7136,20 @@
         }
     }
 
+    /* Subeta » Event » Alegarten Food Trucks */
+    + map[name='truck_board'] + .row {
+        --content-col-4: 374px;
+        --content-col-8: calc(100% - 1rem - var(--content-col-4));
+
+        @media (max-device-width: 768px) {
+            --content-col-8: 100%;
+
+            .col-md-6 {
+                max-width: none;
+            }
+        }
+    }
+
     /* Commerce » Your Shops */
     + script[src^='/js/autopricer.js'] + .container {
         padding: 0;
