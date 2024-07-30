@@ -1,0 +1,9 @@
+/* Code by Hongske */
+/* Image by Freepik: https://www.freepik.com/free-vector/hand-drawn-peach-pattern_14308320.htm */
+@import url('https://hongske.github.io/subeta/user-profiles/common.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Sofia&display=swap');
+
+:root {
+    --body-font-family: 'Poppins', sans-serif;
+    --heading-font-family: 'Sofia', cursive;
+}
