@@ -118,7 +118,8 @@ body {
 }
 
 #content_options {
-    /* add circle backgrounds to images */
+    /* TODO: add circle backgrounds to images */
+    /* TODO: remove ttl if it's after the avatar */
 }
 
 #content_pets {
@@ -189,11 +190,19 @@ body {
     }
 }
 
-#userinfo_0 {
-    --link-fg-color: var(--acccent-green);
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
+#content_userinfo1 {
+    .data {
+        text-align: left;
+    }
+}
+
+#content_userinfo2 {
+    .data {
+        --link-fg-color: var(--acccent-green);
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     b:nth-child(n + 2)::before {
         content: '•';
