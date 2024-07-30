@@ -1,7 +1,7 @@
 /* Code by Hongske */
 /* Image by Freepik: https://www.freepik.com/free-vector/hand-drawn-peach-pattern_14308320.htm */
-@import url('https://hongske.github.io/subeta/user-profiles/common.cssx');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Sofia&display=swap');
+@import url('//fonts.googleapis.com/css?family=Poppins:wght@400;700&family=Sofia&display=swap');
+@import url('//hongske.github.io/subeta/user-profiles/common.cssx');
 
 :root {
     --body-bg-image: url('https://hongske.github.io/subeta/user-profiles/Apricot/body-bg-image.png');
@@ -14,8 +14,10 @@
     --accent-green: #699567;
 
     --block-radius: .5rem;
+    --block-bg-color: transparent;
     --block_head-bg-color: var(--accent-green);
     --block_head-icon: url('https://hongske.github.io/subeta/user-profiles/Apricot/block_head-icon.png');
+    --block_content-bg-color: #fff;
 }
 
 #overall {
@@ -26,10 +28,22 @@
 
 .block {
     .header {
+        position: relative;
+        font-family: var(--heading-font-family);
+        font-weight: normal;
+        font-style: normal;
+
         &::after {
-            content: 'x';
+            content: '';
+            width: 75px;
+            height: 68px;
+            position: absolute;
+            top: 50%;
+            right: .5rem;
+            transform: translate(0, -50%);
             background-image: var(--block_head-icon);
             background-repeat: no-repeat;
+            background-size: contain;
         }
     }
 }
