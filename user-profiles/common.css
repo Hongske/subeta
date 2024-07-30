@@ -8,6 +8,11 @@ body {
     background-color: var(--body-bg-color, #eee);
     background-image: var(--body-bg-image, none);
     background-repeat: var(--body-bg-repeat, no-repeat);
+}
+
+body,
+input, textarea, select,
+#navigation {
     color: var(--font-color, #000);
     font-family: inherit;
     font-size: inherit;
@@ -23,7 +28,6 @@ body {
     background-image: var(--navigation-bg-image, none);
     background-repeat: var(--navigation-bg-repeat, no-repeat);
     color: var(--navigation-fg-color, white);
-    font-family: inherit;
     font-size: 0;
     font-weight: normal;
     letter-spacing: 0;
@@ -90,17 +94,6 @@ ul.column {
         background-repeat: var(--block_content-bg-repeat, no-repeat);
         font-size: var(--block_content-font-size, .75rem);
 
-        &#content_options {
-            .user-options {
-                display: flex;
-                gap: var(--block_content-spacing, .5rem);
-            }
-
-            .user-options img, input[type='image'] {
-                max-width: 100%;
-            }
-        }
-
         tbody {
             display: flex;
             flex-direction: column;
@@ -112,6 +105,11 @@ ul.column {
             tr {
                 display: flex;
                 gap: var(--block_content-spacing, .5rem);
+                width: 100%;
+
+                &:empty {
+                    display: none;
+                }
             }
 
             td {
@@ -122,6 +120,40 @@ ul.column {
 
         a {
             color: var(--link-fg-color, #666);
+        }
+
+        &#content_comment {
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: var(--block_content-spacing, .5rem);
+            }
+
+            textarea, input {
+                width: 100% !important;
+            }
+
+            br {
+                display: none;
+            }
+        }
+
+        &#content_options {
+            .user-options {
+                display: flex;
+                justify-content: center;
+                gap: var(--block_content-spacing, .5rem);
+            }
+
+            .user-options img, input[type='image'] {
+                max-width: 100%;
+            }
+        }
+
+        &#content_pets {
+            .avatar_head {
+                margin: 0;
+            }
         }
     }
 }
