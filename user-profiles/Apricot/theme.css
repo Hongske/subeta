@@ -11,24 +11,63 @@
 
     --heading-font-family: 'Sofia', cursive;
 
+    --accent-apricot: #ef997c;
     --accent-green: #699567;
 
+    --box-shadow: 0 0 0 .5rem color-mix(in srgb, var(--accent-apricot), transparent);
+
     --navigation-bg-color: var(--accent-green);
+    --navigation-spacing: .75rem;
 
     --overall-padding: 2rem;
     --overall-spacing: 2rem;
+
+    --column-spacing: 3rem;
 
     --block-radius: .5rem;
     --block-bg-color: transparent;
     --block_head-bg-color: transparent;
     --block_head-icon: url('https://hongske.github.io/subeta/user-profiles/Apricot/block_head-icon.png');
-    --block_content-bg-color: #fff;
+}
+
+body {
+    background-attachment: fixed;
 }
 
 #navigation {
+    align-content: center;
+    align-items: center;
     max-width: var(--content-width);
     border-radius: 0 0 1rem 1rem;
     margin: 0 auto;
+    overflow: hidden;
+
+    a {
+        position: relative;
+        z-index: 0;
+
+        &::before {
+            content: '';
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            background-color: var(--accent-apricot);
+            box-shadow: var(--box-shadow);
+            z-index: -1;
+            transition: transform .2s;
+        }
+
+        &:hover, &:focus {
+            text-decoration: none;
+
+            &::before {
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    }
 }
 
 #overall {
@@ -40,18 +79,17 @@
 .block {
     .header {
         margin-bottom: 1rem;
-        padding: 0;
-        padding-left: 1rem;
+        padding: 0 1rem;
         position: relative;
         font-family: var(--heading-font-family);
         font-weight: normal;
         font-size: 2rem;
         font-style: normal;
         text-shadow:
-             0px  2px 1px var(--accent-green),
-             0px -2px 1px var(--accent-green),
-             2px  0px 1px var(--accent-green),
-            -2px  0px 1px var(--accent-green);
+             0px  2px  0px var(--accent-green),
+             0px -2px  0px var(--accent-green),
+             2px  0px  0px var(--accent-green),
+            -2px  0px  0px var(--accent-green);
         z-index: 0;
 
         &::before {
@@ -59,8 +97,7 @@
             width: 100%;
             height: 1rem;
             position: absolute;
-            top: 50%;
-            left: 0;
+            top: 50%; left: 0;
             border-radius: .25rem;
             background-color: var(--accent-green);
             z-index: -1;
@@ -71,12 +108,100 @@
             width: 75px;
             height: 68px;
             position: absolute;
-            top: 50%;
-            right: .5rem;
+            top: 50%; right: .5rem;
             transform: translate(0, -50%);
             background-image: var(--block_head-icon);
             background-repeat: no-repeat;
             background-size: contain;
         }
+    }
+}
+
+#content_options {
+    /* add circle backgrounds to images */
+}
+
+#content_pets {
+    --link-fg-color: #000;
+
+    &:hover, &:focus {
+        a {
+            opacity: .5;
+
+            &:hover, &:focus {
+                opacity: 1;
+            }
+        }
+    }
+
+    tr {
+        flex-direction: column;
+    }
+
+    .data {
+        flex-basis: 100%;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        text-align: left;
+        z-index: 0;
+        transition: padding .2s, font-size .2s, opacity .2s;
+
+        &::before {
+            content: '';
+            display: block;
+            border-radius: 60px;
+            width: calc(100% - 1rem);
+            height: 60px;
+            position: absolute;
+            background-color: var(--accent-apricot);
+            opacity: 0;
+            z-index: -1;
+            transition: box-shadow .2s, opacity .2s;
+        }
+
+        &:hover, &:focus {
+            padding-left: 1rem;
+            font-family: var(--heading-font-family);
+            font-size: 1.5rem;
+            text-decoration: none;
+
+            &::before {
+                box-shadow: var(--box-shadow);
+                opacity: 1;
+            }
+
+            .avatar_head {
+                border-width: 3px;
+            }
+        }
+    }
+
+    .avatar_head {
+        border: 1px solid var(--accent-apricot);
+        border-radius: 50%;
+        background-color: var(--accent-apricot);
+        transition: border .2s;
+    }
+}
+
+#userinfo_0 {
+    --link-fg-color: var(--acccent-green);
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+
+    b:nth-child(n + 2)::before {
+        content: '•';
+        margin: 0 .25em;
+        color: var(--accent-apricot);
+    }
+
+    a {
+        margin-left: .25em;
     }
 }
