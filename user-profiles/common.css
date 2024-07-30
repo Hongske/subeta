@@ -74,7 +74,6 @@ ul.column {
 .block {
     border: 0;
     border-radius: var(--block-radius, .25rem);
-    overflow: hidden;
     background-color: var(--block-bg-color, #fff);
     background-image: var(--block-bg-image, none);
     background-repeat: var(--block-bg-repeat);
