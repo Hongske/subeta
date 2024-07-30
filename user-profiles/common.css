@@ -7,7 +7,8 @@ html {
 body {
     background-color: var(--body-bg-color, #eee);
     background-image: var(--body-bg-image, none);
-    background-repeat: var(--body-bg-repeat, no-repeat);
+    background-repeat: var(--body-bg-repeat);
+    background-size: var(--body-bg-size);
 
     @media (max-device-width: 768px) {
         zoom: 300%;
@@ -76,7 +77,8 @@ ul.column {
     overflow: hidden;
     background-color: var(--block-bg-color, #fff);
     background-image: var(--block-bg-image, none);
-    background-repeat: var(--block-bg-repeat, no-repeat);
+    background-repeat: var(--block-bg-repeat);
+    background-size: var(--block-bg-size);
     box-shadow: var(--block-shadow, none);
 
     .header {
@@ -85,7 +87,8 @@ ul.column {
         padding: var(--block_head-padding, .5rem);
         background-color: var(--block_head-bg-color, #222);
         background-image: var(--block_head-bg-image, none);
-        background-repeat: var(--block_head-bg-repeat, no-repeat);
+        background-repeat: var(--block_head-bg-repeat);
+        background-size: var(--block_head-bg-size);
         color: var(--block_head-fg-color, #fff);
         font-size: var(--block_content-font-size, inherit);
         letter-spacing: 0;
@@ -98,7 +101,8 @@ ul.column {
         padding: var(--block_content-padding, .5rem);
         background-color: var(--block_content-bg-color, transparent);
         background-image: var(--block_content-bg-image, none);
-        background-repeat: var(--block_content-bg-repeat, no-repeat);
+        background-repeat: var(--block_content-bg-repeat);
+        background-size: var(--block_content-bg-size);
         font-size: var(--block_content-font-size, .75rem);
 
         tbody {
