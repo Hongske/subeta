@@ -1,7 +1,7 @@
 /* Code by Hongske */
 /* Image by Freepik: https://www.freepik.com/free-vector/hand-drawn-peach-pattern_14308320.htm */
-@import url('//fonts.googleapis.com/css?family=Poppins:wght@400;700&family=Sofia&display=swap');
-@import url('//hongske.github.io/subeta/user-profiles/common.cssx');
+@import url('//hongske.github.io/subeta/user-profiles/common.css');
+@import url('//fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Sofia&display=swap');
 
 :root {
     --body-bg-image: url('https://hongske.github.io/subeta/user-profiles/Apricot/body-bg-image.png');
@@ -13,11 +13,22 @@
 
     --accent-green: #699567;
 
+    --navigation-bg-color: var(--accent-green);
+
+    --overall-padding: 2rem;
+    --overall-spacing: 2rem;
+
     --block-radius: .5rem;
     --block-bg-color: transparent;
-    --block_head-bg-color: var(--accent-green);
+    --block_head-bg-color: transparent;
     --block_head-icon: url('https://hongske.github.io/subeta/user-profiles/Apricot/block_head-icon.png');
     --block_content-bg-color: #fff;
+}
+
+#navigation {
+    max-width: var(--content-width);
+    border-radius: 0 0 1rem 1rem;
+    margin: 0 auto;
 }
 
 #overall {
@@ -28,10 +39,32 @@
 
 .block {
     .header {
+        margin-bottom: 1rem;
+        padding: 0;
+        padding-left: 1rem;
         position: relative;
         font-family: var(--heading-font-family);
         font-weight: normal;
+        font-size: 2rem;
         font-style: normal;
+        text-shadow:
+             0px  2px 1px var(--accent-green),
+             0px -2px 1px var(--accent-green),
+             2px  0px 1px var(--accent-green),
+            -2px  0px 1px var(--accent-green);
+        z-index: 0;
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 1rem;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            border-radius: .25rem;
+            background-color: var(--accent-green);
+            z-index: -1;
+        }
 
         &::after {
             content: '';

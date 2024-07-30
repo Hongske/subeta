@@ -1,7 +1,13 @@
 html {
+    --content-width: var(--breakpoint-xl);
+
     font-family: var(--body-font-family);
     font-size: 16px;
     line-height: normal;
+
+    @media (max-device-width: 768px) {
+        --content-width: calc(100% - 2rem);
+    }
 }
 
 body {
@@ -23,8 +29,14 @@ input, textarea, select,
     font-size: inherit;
 }
 
+#navigation,
+#overall {
+    max-width: var(--content-width);
+}
+
 #navigation {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: var(--navigation-spacing, .5rem);
     border: 0;
@@ -46,8 +58,7 @@ input, textarea, select,
 #overall {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--column-spacing, 1rem);
-    max-width: var(--breakpoint-xl);
+    gap: var(--overall-spacing, 1rem);
     margin: 0 auto;
     padding: var(--overall-padding, 1rem);
 }
