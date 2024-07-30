@@ -8,6 +8,10 @@ body {
     background-color: var(--body-bg-color, #eee);
     background-image: var(--body-bg-image, none);
     background-repeat: var(--body-bg-repeat, no-repeat);
+
+    @media (max-device-width: 768px) {
+        zoom: 300%;
+    }
 }
 
 body,
@@ -42,6 +46,8 @@ input, textarea, select,
     display: flex;
     flex-wrap: wrap;
     gap: var(--column-spacing, 1rem);
+    max-width: var(--breakpoint-xl);
+    margin: 0 auto;
     padding: var(--overall-padding, 1rem);
 }
 
@@ -71,6 +77,7 @@ ul.column {
     background-color: var(--block-bg-color, #fff);
     background-image: var(--block-bg-image, none);
     background-repeat: var(--block-bg-repeat, no-repeat);
+    box-shadow: var(--block-shadow, none);
 
     .header {
         height: auto;
