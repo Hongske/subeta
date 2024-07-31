@@ -19,6 +19,14 @@ body {
     @media (max-device-width: 768px) {
         zoom: 300%;
     }
+
+    &::after {
+        content: 'Profile by Hongske';
+        display: block;
+        margin: var(--overall-spacing) 0;
+        font-size: var(--body-font-size);
+        text-align: center;
+    }
 }
 
 body,
@@ -51,7 +59,7 @@ input, textarea, select,
 
     a {
         color: inherit;
-        font-size: var(--navigation-font-size, .75rem);
+        font-size: var(--navigation-font-size, var(--body-font-size, .75rem));
     }
 }
 
@@ -103,13 +111,6 @@ ul.column {
         font-size: var(--block_content-font-size, inherit);
         letter-spacing: 0;
         line-height: 1;
-
-        a {
-            &, &:link, &:hover, &:focus {
-                color: inherit;
-                text-decoration: none;
-            }
-        }
     }
 
     .info_block {
@@ -120,7 +121,7 @@ ul.column {
         background-image: var(--block_content-bg-image, none);
         background-repeat: var(--block_content-bg-repeat);
         background-size: var(--block_content-bg-size);
-        font-size: var(--block_content-font-size, .75rem);
+        font-size: var(--block_content-font-size, var(--body-font-size, .75rem));
 
         tbody {
             display: flex;
@@ -149,39 +150,55 @@ ul.column {
         a {
             color: var(--link-fg-color, #666);
         }
-
-        &#content_comment {
-            form {
-                display: flex;
-                flex-direction: column;
-                gap: var(--block_content-spacing, .5rem);
-            }
-
-            textarea, input {
-                width: 100% !important;
-            }
-
-            br {
-                display: none;
-            }
-        }
-
-        &#content_options {
-            .user-options {
-                display: flex;
-                justify-content: center;
-                gap: var(--block_content-spacing, .5rem);
-            }
-
-            .user-options img, input[type='image'] {
-                max-width: 100%;
-            }
-        }
-
-        &#content_pets {
-            .avatar_head {
-                margin: 0;
-            }
-        }
     }
 }
+
+#content_comment {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--block_content-spacing, .5rem);
+    }
+
+    textarea, input {
+        width: 100% !important;
+    }
+
+    br {
+        display: none;
+    }
+}
+
+#content_options {
+    .user-options {
+        display: flex;
+        justify-content: center;
+        gap: var(--block_content-spacing, .5rem);
+    }
+
+    .user-options img, input[type='image'] {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+#content_pets {
+    .avatar_head {
+        margin: 0;
+    }
+}
+
+#header_achievements { display: var(--display-header-achievements, block); }
+#header_blank { display: var(--display-header-blank, block); }
+#header_comment { display: var(--display-header-comment, block); }
+#header_comments { display: var(--display-header-comments, block); }
+#header_interests { display: var(--display-header-interests, block); }
+#header_medals { display: var(--display-header-medals, block); }
+#header_multimedia { display: var(--display-header-multimedia, block); }
+#header_options { display: var(--display-header-options, block); }
+#header_pets { display: var(--display-header-pets, block); }
+#header_profile { display: var(--display-header-profile, block); }
+#header_shops { display: var(--display-header-shops, block); }
+#header_userinfo1 { display: var(--display-header-userinfo1, block); }
+#header_userinfo2 { display: var(--display-header-userinfo2, block); }
+#header_wishlist { display: var(--display-header-wishlist, block); }
