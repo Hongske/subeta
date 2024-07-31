@@ -97,6 +97,7 @@ ul.column {
     background-image: var(--block-bg-image, none);
     background-repeat: var(--block-bg-repeat);
     background-size: var(--block-bg-size);
+    font-size: var(--block-font-size, var(--body-font-size, .75rem));
     box-shadow: var(--block-shadow, none);
 
     .header {
@@ -108,7 +109,7 @@ ul.column {
         background-repeat: var(--block_head-bg-repeat);
         background-size: var(--block_head-bg-size);
         color: var(--block_head-fg-color, #fff);
-        font-size: var(--block_content-font-size, inherit);
+        font-size: var(--block_head-font-size, inherit);
         letter-spacing: 0;
         line-height: 1;
     }
@@ -121,7 +122,6 @@ ul.column {
         background-image: var(--block_content-bg-image, none);
         background-repeat: var(--block_content-bg-repeat);
         background-size: var(--block_content-bg-size);
-        font-size: var(--block_content-font-size, var(--body-font-size, .75rem));
 
         tbody {
             display: flex;
@@ -150,6 +150,13 @@ ul.column {
         a {
             color: var(--link-fg-color, #666);
         }
+    }
+}
+
+#all_comments a {
+    &, &:link,
+    &:hover, &:focus {
+        color: var(--link-fg-color, #666);
     }
 }
 
@@ -185,6 +192,7 @@ ul.column {
 #content_pets {
     .avatar_head {
         margin: 0;
+        cursor: pointer;
     }
 }
 

@@ -8,13 +8,15 @@
     --body-bg-repeat: repeat;
     --body-bg-size: 350px;
     --body-font-family: 'Poppins', sans-serif;
+    --body-font-size: .75rem;
 
     --heading-font-family: 'Sofia', cursive;
 
     --accent-apricot: #ef997c;
     --accent-green: #699567;
 
-    --box-shadow: 0 0 0 .5rem color-mix(in srgb, var(--accent-apricot), transparent);
+    --box-shadow-size: .5rem;
+    --box-shadow: 0 0 0 var(--box-shadow-size) color-mix(in srgb, var(--accent-apricot), transparent);
 
     --navigation-bg-color: var(--accent-green);
     --navigation-spacing: .75rem;
@@ -27,7 +29,9 @@
     --block-radius: .5rem;
     --block-bg-color: transparent;
     --block_head-bg-color: transparent;
+    --block_head-font-size: 2rem;
     --block_head-icon: url('https://hongske.github.io/subeta/user-profiles/Apricot/block_head-icon.png');
+    --block_content-spacing: .5rem;
 }
 
 body {
@@ -56,8 +60,8 @@ body {
             transform: translate(-50%, -50%) scale(0);
             background-color: var(--accent-apricot);
             box-shadow: var(--box-shadow);
-            z-index: -1;
             transition: transform .2s;
+            z-index: -1;
         }
 
         &:hover, &:focus {
@@ -83,7 +87,6 @@ body {
         position: relative;
         font-family: var(--heading-font-family);
         font-weight: normal;
-        font-size: 2rem;
         font-style: normal;
         text-shadow:
              0px  2px  0px var(--accent-green),
@@ -117,100 +120,161 @@ body {
     }
 }
 
-#content_options {
-    /* TODO: add circle backgrounds to images */
-    /* TODO: remove ttl if it's after the avatar */
+#all_comments {
+    margin: 0;
+    padding: 0;
+    position: static;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    text-shadow: none;
+
+    &::before, &::after {
+        display: none;
+    }
 }
 
-#content_pets {
-    --link-fg-color: #000;
+#content_comment {
+    textarea,
+    input {
+        border-radius: .25rem;
+        padding: .5em;
+    }
 
-    &:hover, &:focus {
-        a {
-            opacity: .5;
+    textarea {
+        border: 2px dashed var(--accent-apricot);
 
-            &:hover, &:focus {
-                opacity: 1;
-            }
+        &:focus-visible {
+            outline: none;
+            border-style: solid;
         }
     }
 
+    input {
+        display: block;
+        border: 0;
+        margin-bottom: calc(2 * var(--box-shadow-size));
+        background-color: var(--accent-apricot);
+        color: #fff;
+        cursor: pointer;
+        transition: width .2s, margin .2s, box-shadow .2s;
+
+        &:hover, &:focus {
+            width: calc(100% - (2 * var(--box-shadow-size))) !important;
+            margin: var(--box-shadow-size);
+            box-shadow: var(--box-shadow);
+        }
+    }
+}
+
+#content_medals,
+#content_shops,
+#content_wishlist {
     tr {
         flex-direction: column;
     }
 
-    .data {
-        flex-basis: 100%;
+    center {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    img {
+        border: 2px solid var(--accent-apricot);
+        border-radius: 50%;
+        margin-right: var(--block_content-spacing);
+    }
+
+    br {
+        display: none;
     }
 
     a {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        position: relative;
-        text-align: left;
-        z-index: 0;
-        transition: padding .2s, font-size .2s, opacity .2s;
-
-        &::before {
-            content: '';
-            display: block;
-            border-radius: 60px;
-            width: calc(100% - 1rem);
-            height: 60px;
-            position: absolute;
-            background-color: var(--accent-apricot);
-            opacity: 0;
-            z-index: -1;
-            transition: box-shadow .2s, opacity .2s;
+        img {
+            transition: opacity .2s;
         }
 
         &:hover, &:focus {
-            padding-left: 1rem;
-            font-family: var(--heading-font-family);
-            font-size: 1.5rem;
-            text-decoration: none;
-
-            &::before {
-                box-shadow: var(--box-shadow);
-                opacity: 1;
-            }
-
-            .avatar_head {
-                border-width: 3px;
+            img {
+                opacity: .5;
             }
         }
     }
+}
 
-    .avatar_head {
-        border: 1px solid var(--accent-apricot);
-        border-radius: 50%;
-        background-color: var(--accent-apricot);
-        transition: border .2s;
+#content_options {
+    .user-options {
+        --block_content-spacing: 2rem;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 0;
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                border-radius: 50%;
+                background-color: var(--accent-apricot);
+                transition: box-shadow .2s;
+                z-index: -1;
+            }
+
+            img {
+                transition: max-width .2s;
+            }
+
+            &:hover, &:focus {
+                &::before {
+                    box-shadow: var(--box-shadow);
+                }
+
+                img {
+                    max-width: 75%;
+                }
+            }
+        }
     }
 }
 
-#content_userinfo1 {
+#content_pets {
     .data {
         text-align: left;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: var(--block_content-spacing);
+
+            &:hover, &:focus {
+                .avatar_head {
+                    opacity: .5;
+                }
+            }
+        }
+
+        .avatar_head {
+            border: 2px solid var(--accent-apricot);
+            border-radius: 50%;
+            transition: opacity .2s;
+        }
     }
 }
 
+#content_userinfo1,
 #content_userinfo2 {
     .data {
         --link-fg-color: var(--acccent-green);
         text-align: left;
-        display: flex;
-        flex-wrap: wrap;
     }
 
-    b:nth-child(n + 2)::before {
+    b::before {
         content: '•';
         margin: 0 .25em;
         color: var(--accent-apricot);
-    }
-
-    a {
-        margin-left: .25em;
     }
 }
