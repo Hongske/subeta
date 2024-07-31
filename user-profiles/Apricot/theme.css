@@ -316,21 +316,40 @@ body {
                 .avatar_head {
                     box-shadow: 0 0 0 calc(var(--box-shadow-size) + 2px) color-mix(in srgb, var(--accent-apricot), transparent);
                 }
-            }
-        }
 
-        .avatar_head {
-            width: 5rem !important;
-            height: 5rem !important;
-            border: 0;
-            border-radius: 50%;
-            margin: 2px;
-            background-color: white;
-            background-position: center !important;
-            background-repeat: no-repeat;
-            background-size: contain;
-            outline: 2px solid var(--accent-apricot);
-            transition: border .2s, box-shadow .2s;
+                > img {
+                    padding: .5rem;
+                    box-shadow: var(--box-shadow);
+                }
+            }
+
+            .avatar_head,
+            > img {
+                width: 5rem !important;
+                height: 5rem !important;
+                border-radius: 50%;
+            }
+
+            .avatar_head {
+                border: 0;
+                margin: 2px;
+                background-color: white;
+                background-position: center !important;
+                background-repeat: no-repeat;
+                background-size: contain;
+                outline: 2px solid var(--accent-apricot);
+                transition: border .2s, box-shadow .2s;
+            }
+
+            > img {
+                border: 2px solid var(--accent-apricot);
+                background-color: white;
+                transition: padding .2s, box-shadow .2s;
+            }
+
+            br {
+                display: none;
+            }
         }
     }
 }
