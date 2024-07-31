@@ -114,7 +114,7 @@ button, input, label, select {
     display: flex;
     flex-wrap: wrap;
     gap: var(--overall-spacing, 1rem);
-    border: var(--overall-radius);
+    border-radius: var(--overall-radius);
     margin: 0 auto;
     padding: var(--overall-padding, 1rem);
 }
