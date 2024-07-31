@@ -176,6 +176,12 @@ ul.column {
     }
 }
 
+#content_medals {
+    .data {
+        padding: 0 !important;
+    }
+}
+
 #content_options {
     .user-options {
         display: flex;
