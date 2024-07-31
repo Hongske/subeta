@@ -318,7 +318,6 @@ body {
                 }
 
                 > img {
-                    padding: .5rem;
                     box-shadow: var(--box-shadow);
                 }
             }
@@ -328,23 +327,21 @@ body {
                 width: 5rem !important;
                 height: 5rem !important;
                 border-radius: 50%;
+                background-color: white;
+                transition: border .2s, box-shadow .2s;
             }
 
             .avatar_head {
                 border: 0;
                 margin: 2px;
-                background-color: white;
                 background-position: center !important;
                 background-repeat: no-repeat;
                 background-size: contain;
                 outline: 2px solid var(--accent-apricot);
-                transition: border .2s, box-shadow .2s;
             }
 
             > img {
                 border: 2px solid var(--accent-apricot);
-                background-color: white;
-                transition: padding .2s, box-shadow .2s;
             }
 
             br {
