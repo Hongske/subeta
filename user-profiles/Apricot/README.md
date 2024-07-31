@@ -5,12 +5,12 @@
 
 <br>
 
-<table>
-    <tr>
-        <td valign='top'>
+<table style='border: 0; width: auto; margin: 0 auto;'>
+    <tr style='border: 0;'>
+        <td valign='top' style='border: 0;'>
             <img height='450' alt='Screenshot Desktop' src='screenshots/screenshot--desktop.png' />
         </td>
-        <td valign='top'>
+        <td valign='top' style='border: 0;'>
             <img height='450' alt='Screenshot Mobile' src='screenshots/screenshot--mobile.png' />
         </td>
     </tr>
@@ -24,14 +24,14 @@ To install the theme, go to [your profile settings](https://subeta.net/preferenc
 <style>@import url('//hongske.github.io/subeta/user-profiles/Apricot/theme.css');</style>
 ```
 
-That's about it! Feel free to look at the code and mess around with the variables.
+That's all there is to it! Feel free to look at the code and mess around with the variables.
 
 <br>
 
 ## ⭐ Credits
-- Poppins font by [Google Fonts](https://fonts.google.com/specimen/Poppins)
-- Sofia font by [Google Fonts](https://fonts.google.com/specimen/Sofia)
-- Background pattern and header icon by [Freepik](https://www.freepik.com/free-vector/hand-drawn-peach-pattern_14308320.htm)
+- [Poppins font from Google Fonts](https://fonts.google.com/specimen/Poppins)
+- [Sofia font from Google Fonts](https://fonts.google.com/specimen/Sofia)
+- [Background pattern and header icon from Freepik](https://www.freepik.com/free-vector/hand-drawn-peach-pattern_14308320.htm)
 
 <br>
 
