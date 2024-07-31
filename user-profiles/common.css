@@ -81,7 +81,6 @@ button, input, label, select {
     border: 0;
     border-radius: var(--overall-radius);
     width: 100%;
-    max-width: 100%;
     margin: var(--overall-spacing, 1rem);
     padding: var(--overall-spacing, 1rem);
     background-color: var(--toolbox-bg-color, color-mix(in srgb, white, transparent));
