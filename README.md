@@ -3,5 +3,8 @@
 [Home](https://hongske.github.io/subeta/)
 </div>
 
-## Available styling:
-- [Modernised Theme](https://hongske.github.io/subeta/custom-css/Modernised/) • A CustomCSS-theme for desktop and mobile
+## Custom CSS
+- [Modernised](https://hongske.github.io/subeta/custom-css/Modernised/)
+
+## User Profiles
+- [Apricot](https://hongske.github.io/subeta/user-profiles/Apricot/)
