@@ -25,3 +25,16 @@ To install the theme, go to [your profile settings](https://subeta.net/preferenc
 ```
 
 That's about it! Feel free to look at the code and mess around with the variables.
+
+<br>
+
+## ⭐ Credits
+- Poppins font by [Google Fonts](https://fonts.google.com/specimen/Poppins)
+- Sofia font by [Google Fonts](https://fonts.google.com/specimen/Sofia)
+- Background pattern and header icon by [Freepik](https://www.freepik.com/free-vector/hand-drawn-peach-pattern_14308320.htm)
+
+<br>
+
+## ⭐ Changelog
+- <strong>2024/07/31</strong>
+  - Initial setup
