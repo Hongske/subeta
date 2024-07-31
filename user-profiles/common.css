@@ -23,7 +23,7 @@ body {
     &::after {
         content: 'Profile by Hongske';
         display: block;
-        margin: var(--overall-spacing) 0;
+        margin: var(--overall-spacing, 1rem) 0;
         font-size: var(--body-font-size);
         text-align: center;
     }
@@ -37,7 +37,16 @@ input, textarea, select,
     font-size: inherit;
 }
 
+button, input, label, select {
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
 #navigation,
+#toolbox,
 #overall {
     max-width: var(--content-width);
 }
@@ -48,6 +57,7 @@ input, textarea, select,
     justify-content: center;
     gap: var(--navigation-spacing, .5rem);
     border: 0;
+    border-radius: 0 0 var(--navigation-radius, var(--overall-radius)) var(--navigation-radius, var(--overall-radius));
     padding: var(--navigation-padding, .5rem);
     background-color: var(--navigation-bg-color, #000);
     background-image: var(--navigation-bg-image, none);
@@ -63,10 +73,49 @@ input, textarea, select,
     }
 }
 
+#toolbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--toolbox-spacing, var(--block_content-spacing, .5rem));
+    border: 0;
+    border-radius: var(--overall-radius);
+    width: 100%;
+    max-width: 100%;
+    margin: var(--overall-spacing, 1rem);
+    padding: var(--overall-spacing, 1rem);
+    background-color: var(--toolbox-bg-color, color-mix(in srgb, white, transparent));
+    background-image: none;
+
+    b, p {
+        width: 100%;
+    }
+
+    button, input[type='submit'] {
+        border: 0;
+        border-radius: var(--button-radius);
+        padding: var(--button-padding);
+        background-color: var(--button-bg-color);
+        color: var(--button-fg-color);
+        line-height: var(--button-line-height);
+    }
+
+    br {
+        display: none;
+    }
+
+    #new-content {
+        label {
+            margin-left: .25em;
+        }
+    }
+}
+
 #overall {
     display: flex;
     flex-wrap: wrap;
     gap: var(--overall-spacing, 1rem);
+    border: var(--overall-radius);
     margin: 0 auto;
     padding: var(--overall-padding, 1rem);
 }
@@ -201,18 +250,3 @@ ul.column {
         cursor: pointer;
     }
 }
-
-#header_achievements { display: var(--display-header-achievements, block); }
-#header_blank { display: var(--display-header-blank, block); }
-#header_comment { display: var(--display-header-comment, block); }
-#header_comments { display: var(--display-header-comments, block); }
-#header_interests { display: var(--display-header-interests, block); }
-#header_medals { display: var(--display-header-medals, block); }
-#header_multimedia { display: var(--display-header-multimedia, block); }
-#header_options { display: var(--display-header-options, block); }
-#header_pets { display: var(--display-header-pets, block); }
-#header_profile { display: var(--display-header-profile, block); }
-#header_shops { display: var(--display-header-shops, block); }
-#header_userinfo1 { display: var(--display-header-userinfo1, block); }
-#header_userinfo2 { display: var(--display-header-userinfo2, block); }
-#header_wishlist { display: var(--display-header-wishlist, block); }

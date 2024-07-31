@@ -18,9 +18,19 @@
     --box-shadow-size: .5rem;
     --box-shadow: 0 0 0 var(--box-shadow-size) color-mix(in srgb, var(--accent-apricot), transparent);
 
+    --button-radius: .25rem;
+    --button-padding: .5em;
+    --button-bg-color: var(--accent-apricot);
+    --button-fg-color: white;
+    --button-line-height: 1.5;
+    --button-transition: width .2s, margin .2s, box-shadow .2s;
+
     --navigation-bg-color: var(--accent-green);
     --navigation-spacing: .75rem;
 
+    --toolbox-bg-color: color-mix(in srgb, var(--accent-apricot), transparent);
+
+    --overall-radius: 1rem;
     --overall-padding: 2rem;
     --overall-spacing: 2rem;
 
@@ -42,7 +52,6 @@ body {
     align-content: center;
     align-items: center;
     max-width: var(--content-width);
-    border-radius: 0 0 1rem 1rem;
     margin: 0 auto;
     overflow: hidden;
 
@@ -74,14 +83,50 @@ body {
     }
 }
 
+#toolbox {
+    --button-bg-color: var(--white);
+    --button-fg-color: black;
+
+    button, input[type='submit'] {
+        margin: 0 .5rem;
+
+        font-size: .75rem;
+        font-weight: normal;
+        transition: box-shadow .2s;
+
+        &:hover, &:focus {
+            box-shadow: var(--box-shadow);
+        }
+    }
+
+    #new-content {
+        margin-top: .5rem;
+        text-align: left !important;
+
+        .mt-2, p {
+            text-align: center;
+        }
+
+        input[type='submit'] {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .text-center {
+            text-align: left !important;
+        }
+    }
+}
+
 #overall {
-    border-radius: 1rem;
     margin-top: 2rem;
-    background-color: color-mix(in srgb, #fff, transparent);
+    background-color: color-mix(in srgb, white, transparent);
 }
 
 .block {
     .header {
+        display: flex;
+        align-items: center;
         margin-bottom: 1rem;
         padding: 0 1rem;
         position: relative;
@@ -117,6 +162,20 @@ body {
             background-repeat: no-repeat;
             background-size: contain;
         }
+
+        a {
+            margin-top: 1rem;
+            z-index: 2;
+        }
+
+        a:first-child {
+            margin-left: auto;
+            margin-right: .25rem;
+        }
+
+        a:last-child {
+            margin-right: 1rem;
+        }
     }
 }
 
@@ -146,25 +205,20 @@ body {
     }
 }
 
-#content_comment input,
-#content_wishlist a {
+#content_comment input {
     display: block;
     border: 0;
-    border-radius: .25rem;
+    border-radius: var(--button-radius);
     margin-bottom: calc(2 * var(--box-shadow-size));
-    padding: .5em;
-    width: 100%;
-    background-color: var(--accent-apricot);
-    color: #fff;
-    text-align: center;
-    line-height: 1.5;
-    cursor: pointer;
-    transition: width .2s, margin .2s, box-shadow .2s;
+    padding: var(--button-padding);
+    background-color: var(--button-bg-color);
+    color: var(--button-fg-color);
+    line-height: var(--button-line-height);
+    transition: var(--button-transition);
 
     &:hover, &:focus {
         width: calc(100% - (2 * var(--box-shadow-size))) !important;
         margin: var(--box-shadow-size);
-        text-decoration: none;
         box-shadow: var(--box-shadow);
     }
 }
@@ -188,7 +242,7 @@ body {
         border-radius: 50%;
         margin-right: var(--block_content-spacing);
         padding: .25rem;
-        background-color: #fff;
+        background-color: white;
     }
 
     a {
@@ -271,7 +325,7 @@ body {
             border: 0;
             border-radius: 50%;
             margin: 2px;
-            background-color: #fff;
+            background-color: white;
             background-position: center !important;
             background-repeat: no-repeat;
             background-size: contain;
@@ -297,10 +351,23 @@ body {
 
 #content_wishlist {
     a {
+        width: 100%;
+        border-radius: var(--button-radius);
         margin-top: 1rem;
+        margin-bottom: calc(2 * var(--box-shadow-size));
+        padding: var(--button-padding);
+        background-color: var(--button-bg-color);
+        color: var(--button-fg-color);
+        text-align: center;
+        line-height: var(--button-line-height);
+        transition: var(--button-transition);
 
-        &:hover {
+        &:hover, &:focus {
+            width: calc(100% - (2 * var(--box-shadow-size))) !important;
+            margin: var(--box-shadow-size);
             margin-top: calc(1rem + var(--box-shadow-size));
+            text-decoration: none;
+            box-shadow: var(--box-shadow);
         }
     }
 }
