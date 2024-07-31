@@ -324,24 +324,12 @@ body {
 
             .avatar_head,
             > img {
-                width: 5rem !important;
-                height: 5rem !important;
+                width: 60px !important;
+                height: 60px !important;
+                border: 2px solid var(--accent-apricot);
                 border-radius: 50%;
                 background-color: white;
-                transition: border .2s, box-shadow .2s;
-            }
-
-            .avatar_head {
-                border: 0;
-                margin: 2px;
-                background-position: center !important;
-                background-repeat: no-repeat;
-                background-size: contain;
-                outline: 2px solid var(--accent-apricot);
-            }
-
-            > img {
-                border: 2px solid var(--accent-apricot);
+                transition: box-shadow .2s;
             }
 
             br {
