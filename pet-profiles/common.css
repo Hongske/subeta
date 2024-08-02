@@ -18,6 +18,7 @@ body {
     background-repeat: var(--body-bg-repeat);
     background-size: var(--body-bg-size);
     font-family: inherit;
+    font-size: 1em !important;
 
     @media (max-device-width: 768px) {
         zoom: 300%;
