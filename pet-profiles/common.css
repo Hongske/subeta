@@ -60,4 +60,8 @@ body {
     min-width: 0;
     max-width: var(--content-width);
     width: 100%;
+
+    > div {
+        padding: 0;
+    }
 }
