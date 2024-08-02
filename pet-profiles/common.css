@@ -1,0 +1,62 @@
+html {
+    --content-width: 1200px;
+
+    height: auto;
+    font-family: var(--body-font-family);
+    font-size: 16px;
+    line-height: normal;
+
+    @media (max-device-width: 768px) {
+        --content-width: calc(100% - 2rem);
+    }
+}
+
+body {
+    height: auto;
+    background-color: var(--body-bg-color, #eee);
+    background-image: var(--body-bg-image, none);
+    background-repeat: var(--body-bg-repeat);
+    background-size: var(--body-bg-size);
+
+    @media (max-device-width: 768px) {
+        zoom: 300%;
+    }
+
+    &::after {
+        content: 'Profile by Hongske';
+        display: block;
+        margin: var(--body-spacing, 1rem) 0;
+        font-size: var(--body-font-size);
+        text-align: center;
+    }
+}
+
+
+#postcards,
+#header,
+#menu,
+#sidebar,
+#bookmarks {
+    display: none;
+}
+
+#page {
+    width: 100%;
+    margin: 0 auto !important;
+}
+
+#main-content {
+    float: none;
+    background-image: none;
+}
+
+#content {
+    padding: 0;
+    background-color: transparent;
+}
+
+#pet_info {
+    min-width: 0;
+    max-width: var(--content-width);
+    width: 100%;
+}
