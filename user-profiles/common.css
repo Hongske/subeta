@@ -202,10 +202,24 @@ ul.column {
     }
 }
 
-#all_comments a {
-    &, &:link,
-    &:hover, &:focus {
-        color: var(--link-fg-color, #666);
+
+#all_comments {
+    margin: 0;
+    padding: 0;
+    position: static;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    text-shadow: none;
+
+    &::before, &::after {
+        display: none;
+    }
+
+    a {
+        &, &:link,
+        &:hover, &:focus {
+            color: var(--link-fg-color, #666);
+        }
     }
 }
 

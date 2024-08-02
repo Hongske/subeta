@@ -178,19 +178,6 @@ body {
     }
 }
 
-#all_comments {
-    margin: 0;
-    padding: 0;
-    position: static;
-    font-family: var(--body-font-family);
-    font-size: var(--body-font-size);
-    text-shadow: none;
-
-    &::before, &::after {
-        display: none;
-    }
-}
-
 #content_comment {
     textarea {
         border: 2px dashed var(--accent-apricot);
