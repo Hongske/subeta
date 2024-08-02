@@ -1,7 +1,7 @@
 html {
     --content-width: 1200px;
 
-    height: auto;
+    height: auto !important;
     font-family: var(--body-font-family);
     font-size: 16px;
     line-height: normal;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    height: auto;
+    height: auto !important;
     background-color: var(--body-bg-color, #eee);
     background-image: var(--body-bg-image, none);
     background-repeat: var(--body-bg-repeat);
