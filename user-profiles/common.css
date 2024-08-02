@@ -58,6 +58,7 @@ button, input, label, select {
     gap: var(--navigation-spacing, .5rem);
     border: 0;
     border-radius: 0 0 var(--navigation-radius, var(--overall-radius)) var(--navigation-radius, var(--overall-radius));
+    margin: 0 auto;
     padding: var(--navigation-padding, .5rem);
     background-color: var(--navigation-bg-color, #000);
     background-image: var(--navigation-bg-image, none);

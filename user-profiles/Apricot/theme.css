@@ -52,7 +52,6 @@ body {
     align-content: center;
     align-items: center;
     max-width: var(--content-width);
-    margin: 0 auto;
     overflow: hidden;
 
     a {
