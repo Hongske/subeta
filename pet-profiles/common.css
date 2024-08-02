@@ -32,7 +32,6 @@ body {
     }
 }
 
-
 #postcards,
 #header,
 #menu,
@@ -63,5 +62,12 @@ body {
 
     > div {
         padding: 0;
+    }
+}
+
+a {
+    &,
+    &:link, &:active, &:visited {
+        color: inherit;
     }
 }
