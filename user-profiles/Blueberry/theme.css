@@ -8,6 +8,7 @@
 @import url('//fonts.googleapis.com/css2?family=Style+Script&family=Signika:wght@300..700&display=swap');
 
 :root {
+    --body-spacing: 0;
     --body-fg-color: ;
     --body-font-family: 'Signika', sans-serif;
     --body-font-size: 1rem;
@@ -19,9 +20,6 @@
     --accent-dark: #001724;
     --accent-mid: #495880;
     --accent-light: #A7A8C3;
-
-    --overall-padding: 0;
-    --overall-spacing: 0;
 
     --column-spacing: 3rem;
     --column-1-bg-image: url('https://hongske.github.io/subeta/user-profiles/Blueberry/assets/column-1-bg-image.jpeg');

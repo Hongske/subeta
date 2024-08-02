@@ -4,6 +4,8 @@
 @import url('//fonts.googleapis.com/css2?family=Sofia&family=Poppins:wght@400;700&display=swap');
 
 :root {
+    --body-radius: 1rem;
+    --body-spacing: 2rem;
     --body-bg-image: url('https://hongske.github.io/subeta/user-profiles/Apricot/assets/body-bg-image.png');
     --body-bg-repeat: repeat;
     --body-bg-size: 350px;
@@ -29,10 +31,6 @@
     --navigation-spacing: .75rem;
 
     --toolbox-bg-color: color-mix(in srgb, var(--accent-apricot), transparent);
-
-    --overall-radius: 1rem;
-    --overall-padding: 2rem;
-    --overall-spacing: 2rem;
 
     --column-spacing: 3rem;
 

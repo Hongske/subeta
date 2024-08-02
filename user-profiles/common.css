@@ -23,7 +23,7 @@ body {
     &::after {
         content: 'Profile by Hongske';
         display: block;
-        margin: var(--overall-spacing, 1rem) 0;
+        margin: var(--body-spacing, 1rem) 0;
         font-size: var(--body-font-size);
         text-align: center;
     }
@@ -57,7 +57,7 @@ button, input, label, select {
     justify-content: center;
     gap: var(--navigation-spacing, .5rem);
     border: 0;
-    border-radius: 0 0 var(--navigation-radius, var(--overall-radius)) var(--navigation-radius, var(--overall-radius));
+    border-radius: 0 0 var(--navigation-radius, var(--body-radius)) var(--navigation-radius, var(--body-radius));
     margin: 0 auto;
     padding: var(--navigation-padding, .5rem);
     background-color: var(--navigation-bg-color, #000);
@@ -80,10 +80,10 @@ button, input, label, select {
     justify-content: center;
     gap: var(--toolbox-spacing, var(--block_content-spacing, .5rem));
     border: 0;
-    border-radius: var(--overall-radius);
+    border-radius: var(--body-radius);
     width: 100%;
-    margin: var(--overall-spacing, 1rem);
-    padding: var(--overall-spacing, 1rem);
+    margin: var(--body-spacing, 1rem);
+    padding: var(--body-spacing, 1rem);
     background-color: var(--toolbox-bg-color, color-mix(in srgb, white, transparent));
     background-image: none;
 
@@ -114,10 +114,10 @@ button, input, label, select {
 #overall {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--overall-spacing, 1rem);
-    border-radius: var(--overall-radius);
+    gap: var(--body-spacing, 1rem);
+    border-radius: var(--body-radius);
     margin: 0 auto;
-    padding: var(--overall-padding, 1rem);
+    padding: var(--body-spacing, 1rem);
 }
 
 .div_float {
