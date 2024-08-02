@@ -1,0 +1,121 @@
+/* Code by Hongske */
+/*
+    Images by Freepik:
+    - https://www.freepik.com/free-photo/lots-blueberries_5873705.htm
+    - https://www.freepik.com/free-photo/lots-blueberries_5873704.htm
+*/
+@import url('//hongske.github.io/subeta/user-profiles/common.css');
+@import url('//fonts.googleapis.com/css2?family=Style+Script&family=Signika:wght@300..700&display=swap');
+
+:root {
+    --body-fg-color: ;
+    --body-font-family: 'Signika', sans-serif;
+    --body-font-size: 1rem;
+
+    --heading-font-family: 'Style Script', cursive;
+
+    --link-fg-color: ;
+
+    --accent-dark: #001724;
+    --accent-mid: #495880;
+    --accent-light: #A7A8C3;
+
+    --overall-padding: 0;
+    --overall-spacing: 0;
+
+    --column-spacing: 3rem;
+    --column-1-bg-image: url('https://hongske.github.io/subeta/user-profiles/Blueberry/assets/column-1-bg-image.jpeg');
+    --column-3-bg-image: url('https://hongske.github.io/subeta/user-profiles/Blueberry/assets/column-3-bg-image.jpeg');
+
+    --block-radius: 0;
+    --block-bg-color: transparent;
+    --block_head-fg-color: ;
+    --block_head-bg-color: transparent;
+    --block_head-font-size: 6rem;
+    --block_content-padding: 0;
+
+    @media (max-device-width: 768px) {
+        --column-spacing: 1rem;
+        --block_head-font-size: 3rem;
+    }
+}
+
+body {
+    background-color: color-mix(in srgb, var(--accent-light), white);
+    color: var(--accent-mid);
+}
+
+#navigation,
+#overall {
+    max-width: 100%;
+}
+
+#overall {
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.div_float {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+        color: white;
+    }
+
+    &:nth-child(1) {
+        background-image: var(--column-1-bg-image);
+        background-position: top center;
+    }
+
+    &:nth-child(3) {
+        background-image: var(--column-3-bg-image);
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: var(--accent-mid);
+            opacity: .75;
+            z-index: -1;
+        }
+    }
+}
+
+ul.column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: var(--column-spacing);
+    max-width: var(--content-width);
+    min-height: calc(var(--content-width) * .5);
+}
+
+.block {
+    flex-basis: calc(100% - (2 * var(--column-spacing)));
+    flex-grow: 1;
+
+    @media (min-device-width: 769px) {
+        flex-basis: 0;
+    }
+
+    .header {
+        font-family: var(--heading-font-family);
+        font-weight: normal;
+        white-space: nowrap;
+    }
+
+    .data {
+        text-align: left;
+    }
+}
+
+#content_avatar {
+    center {
+        text-align: left;
+    }
+}
