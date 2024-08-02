@@ -17,6 +17,7 @@ body {
     background-image: var(--body-bg-image, none);
     background-repeat: var(--body-bg-repeat);
     background-size: var(--body-bg-size);
+    font-family: inherit;
 
     @media (max-device-width: 768px) {
         zoom: 300%;
