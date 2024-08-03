@@ -28,14 +28,6 @@ body {
     @media (max-device-width: 768px) {
         zoom: 300%;
     }
-
-    &::after {
-        content: 'Profile by Hongske';
-        display: block;
-        margin: var(--body-spacing, 1rem) 0;
-        font-size: var(--body-font-size);
-        text-align: center;
-    }
 }
 
 #postcards,
