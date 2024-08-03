@@ -50,6 +50,7 @@ body {
 }
 
 #content {
+    height: 100% !important;
     padding: 0;
     background-color: transparent;
 }
