@@ -72,3 +72,11 @@ a {
         color: inherit;
     }
 }
+
+.pet_like {
+    cursor: pointer;
+
+    .like-this {
+        text-decoration: none;
+    }
+}
