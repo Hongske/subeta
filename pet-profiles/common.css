@@ -46,6 +46,7 @@ body {
 
 #main-content {
     float: none;
+    background-color: transparent;
     background-image: none;
 }
 
