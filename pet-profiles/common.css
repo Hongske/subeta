@@ -60,6 +60,10 @@ body {
     min-width: 0;
     max-width: var(--content-width);
     width: 100%;
+
+    + br {
+        display: none;
+    }
 }
 
 a {
