@@ -9489,9 +9489,9 @@
             .post-body {
                 margin-bottom: 1rem;
 
-                br {
+                /* br {
                     display: block;
-                }
+                } */
 
                 > br[clear='all'] {
                     display: none;
