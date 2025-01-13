@@ -55,6 +55,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Restyled "Battle Pet"
       - Added option `--display-sidebar-battlepet-buttons` to hide buttons • [📷 screenshot](screenshots/sidebar/widget__battlepet-2.png)
       - Emphasised the training center status • [📷 screenshot](screenshots/sidebar/widget__battlepet-1.gif)
+    - Restyled "Events"
     - Restyled "Friend Feed" • [📷 screenshot](screenshots/sidebar/widget__friendfeed.png)
     <!-- TODO - Restyled "Melody's Cottage" -->
     - Restyled "Navigation" • [📷 screenshot](screenshots/sidebar/widget__navigation.png)
@@ -62,13 +63,6 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
       - Added option `--display-sidebar-currency-headers` to hide the headers (Active, Seasonal and Events)
     - Restyled "Shop Search" and "Search Subeta" • [📷 screenshot](screenshots/sidebar/widget__search.png)
     - Restyled "Subscriptions" • [📷 screenshot](screenshots/sidebar/widget__subscriptions.png)
-    - Restyled "Your Avatar" and "Your Account"
-      - Removed headers • [📷 screenshot avatar](screenshots/sidebar/widget__avatar.png) • [📷 screenshot account](screenshots/sidebar/widget__account.png)
-      - Snapped the widgets together if you put "Your Avatar" **above** "Your Account" • [📷 screenshot](screenshots/sidebar/widget__combo_avatar_account.png)
-    - Restyled "The Oracle" and "Coda Caves"
-      - Removed headers
-      - Snapped the widgets together if you put "The Oracle" **above** "Coda Caves" • [📷 screenshot](screenshots/sidebar/widget__limited.png)
-      - Snapped the widgets together if you put "Coda Caves" **above** "The Oracle"
 - Modified item-views
   - Modified the item orientation so that item-images and -text are shown next to each other (instead of below each other)
   - Modified styling for wishlist-items so that they're more obvious • [📷 screenshot](screenshots/wishlist.gif)
@@ -280,6 +274,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Removed images in the battle-menu
   - Added options to hide individual links in the battle-menu
   - Added options to change the font-weight of individual links in the battle-menu
+  - Restyled the warning for on-going battles
   - Restyled **[Battle » Challenge Opponent](https://subeta.net/games/battle/challenge.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_opponent--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_opponent--mobile.png)
     - Added option `--number-of-challengers` to change the number of challengers per row
     - Added option `--display-battle-opponent-weapons` to hide the "Choose Weapons" button
@@ -349,6 +344,20 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
+- <strong>2025/01/13</strong>
+  - Bugfixed post spacing in Firefox
+  - Restyled the warning for on-going battles
+  - Restyled event-widget in the sidebar
+  - Added options to hide widget headings in the sidebar
+  - Added 2025's year indicators for New Years items
+  <!-- TODO - Updated layout for battling -->
+  <!-- TODO - Added options for hiding battle stuff -->
+
+<br>
+
+<details>
+<summary>📅 2024</summary>
+
 - <strong>2024/07/29</strong>
   - Bugfixed the Alegarten Food Truck's menu-links
   - Fixed font-size for "huge" buttons
@@ -366,37 +375,36 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 - <strong>2024/05/21</strong>
   - Bugfixed image-size for oracle-item in sidebar
 
-<br>
-<details>
-<summary>📅 2024 April</summary>
-
 - <strong>2024/04/27</strong>
   - Added options to hide individual links in the battle-menu
   - Added options to change the font-weight of individual links in the battle-menu
   - Updated the code generator for the new options and added a load-option (to load an existing config-list)
+
 - <strong>2024/04/12</strong>
   - Added styling for when you view someone else's wishlist
+
 - <strong>2024/04/08</strong>
   - Updated adblock for Vesnali
+
 - <strong>2024/04/07</strong>
   - Added 2024's yearly indicator for Vesnali items
-</details>
-<!--------------------------------------------------------------------------------------------------------------------->
-<details>
-<summary>📅 2024 March</summary>
 
 - <strong>2024/03/30</strong>
   - Emphasised links in Vault » Currency Storage
   - Restyled Shared Outfits in Forums • [📷 screenshot desktop](screenshots/pages/interact__forums__shared_outfits--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__shared_outfits--mobile.png)
+
 - <strong>2024/03/21</strong>
   - Added option `--display-inventory-sendfriend-mobile` to hide the "Send to a Friend" link on an item's detail page in the inventory, but **only on mobile**
   - Added birthday-icon in front of usernames
   - Fixed notification for getting an achievement in the Sticker Album
+
 - <strong>2024/03/19</strong>
   - Added option `--display-inventory-sendfriend` to hide the "Send to a Friend" link on an item's detail page in the inventory
+
 - <strong>2024/03/18</strong>
   - Fixed small issue with widths on mobile
   - Fixed alignment for items in user shops
+
 - <strong>2024/03/17</strong>
   - Restyled **[Battle » Statistics](https://subeta.net/games/battle/stats.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__statistics--desktop.gif)
   - Restyled **[Battle » Healer](https://subeta.net/explore/healer.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__healer--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__healer--mobile.png)
@@ -412,6 +420,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Restyled **[Neela](https://subeta.net/ss.php/neela)** • [📷 screenshot desktop](screenshots/pages/cashshop__neela--desktop.png) • [📷 screenshot mobile](screenshots/pages/cashshop__neela--mobile.png)
     - Restyled **[Trunks](https://subeta.net/cs/trunks.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__costume_trunks--desktop.gif) • [📷 screenshot mobile](screenshots/pages/cashshop__costume_trunks--mobile.gif)
     - Restyled **[Cart](https://subeta.net/cs/cart.php)** • [📷 screenshot desktop](screenshots/pages/cashshop__cart--desktop.png)
+
 - <strong>2024/03/16</strong>
   - Restyled **[Battle » Challenge Opponent](https://subeta.net/games/battle/challenge.php)** • [📷 screenshot desktop](screenshots/pages/subeta__games__battle__challenge_opponent--desktop.png) • [📷 screenshot mobile](screenshots/pages/subeta__games__battle__challenge_opponent--mobile.png)
     - Added option `--number-of-challengers` to change the number of challengers per row
@@ -423,8 +432,10 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Added option `--display-battle-exp-intro` to hide the intro-text
     - Added option `--number-of-pets-spendexp` to change the number of pets per row
     - Added option `--display-battle-exp-pet-intro` to hide the intro-text the pet-detail page
+
 - <strong>2024/03/15</strong>
   - Added styling for disabled buttons
+
 - <strong>2024/03/13</strong>
   - Fixed small issues with colours, alignment and spacing for various elements
   - Restyled the **Gifts Center**
@@ -433,18 +444,22 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Restyled **[Your Gifts](https://subeta.net/explore/gifts.php/gifts)**
     - Restyled **[Sent History](https://subeta.net/explore/gifts.php/sent)**
     - Restyled **Send a Gift » Gift Page**
+
 - <strong>2024/03/12</strong>
   - Added option `--page-width` so you can set a custom page width (default is 1300px).
   - Added option `--number-of-items`, which determines the number of items per row for shops, inventory, vault, ...
   - Fixed issue with bookmarks appearing on multiple lines
+
 - <strong>2024/03/11</strong>
   - Added option `--color-primary-mobile`, so that you can have a different theme color on mobile
   - Added options `--floating-item-top`, `--floating-item-bottom`, `--floating-item-left`, `--floating-item-right` and `--floating-item-transform`, so that you can pick the placement of floating items (easiest through the generator)
   - Added option `--display-forum-avatar`, to show avatars again (in the form of a headshot)
   - Fixed display for the intro-texts for Dara, Jogoh and Ujin
   - Fixed display of items in user shops when there's categories present
+
 - <strong>2024/03/10</strong>
   - Created a theme code generator to make it easier to customise the theme
+
 - <strong>2024/03/09</strong>
   - Added option `--number-of-boards` to change the number of boards per row
   - Added the images for forum boards back, to make it easier to find the board you want
@@ -454,6 +469,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Restyled **[Subeautique Clothing](https://subeta.net/explore/subeautique.php/shop)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq__clothing--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__sbq__clothing--mobile.png)
     - Restyled **[Subeautique Makeup](https://subeta.net/explore/subeautique.php/makeup)** • [📷 screenshot desktop](screenshots/pages/commerce__special_shop__sbq__makeup--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__special_shop__subeautique__makeup--mobile.png)
   - Updated styling for yearly event shops' items to match Subeautique- and quest-items
+
 - <strong>2024/03/08</strong>
   - Fixed bug with rewards-text not showing correctly for Item Hunt
   - Fixed bug with the user-popup shrinking your pet's image if their name was too long
@@ -465,8 +481,10 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Restyled **Job Listings** • [📷 screenshot desktop](screenshots/pages/personal__pets__job_agency__job_listings--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__pets__job_agency__job_listings--mobile.png)
   - Restyled **[Explore » Shadowglen » Underground » Underground Fishing](https://subeta.net/explore/underground/fishing.php)**
     - 👁‍🗨 Removed NPC-image
+
 - <strong>2024/03/07</strong>
   - Fixed styling for bookmarks when you hover over them
+
 - <strong>2024/03/06</strong>
   - Added styling for codacaves
   - Added styling for codacaves-widget in the sidebar
@@ -475,6 +493,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Fixed bookmarks on explore-pages
   - Fixed error with wishlist-styling
   - Fixed Hidden Opponent styling on explore-pages
+
 - <strong>2024/03/05</strong>
   - Fixed some bugs with styling for menu's in shops, achievements, etc
   - Fixed margins for shop-related random events (Morty or discount card)
@@ -482,6 +501,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Fixed the alignment of the shop-icon for required items in Achievements
   - Restyled **User Shops** • [📷 screenshot desktop](screenshots/pages/commerce__user_shop--desktop.png) • [📷 screenshot mobile](screenshots/pages/commerce__user_shop--mobile.png)
   - Split the styling up into multiple CSS-files, some of them minified
+
 - <strong>2024/03/04</strong>
   - Restyled Forum pages:
     - Restyled **[Subscribed Threads](https://subeta.net/forums.php/subscriptions)** • [📷 screenshot desktop](screenshots/pages/interact__forums__subscribed_threads--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__subscribed_threads--mobile.png)
@@ -499,6 +519,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Restyled **[Widgets](https://subeta.net/preferences.php?act=sidebar)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__widgets--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__widgets--mobile.png)
     - Restyled **[Bookmarks](https://subeta.net/preferences.php?act=bookmarks)** • [📷 screenshot](screenshots/pages/personal__dashboard__bookmarks--desktop.png)
     - Restyled **[Preferences](https://subeta.net/preferences.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/personal__dashboard__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/personal__dashboard__preferences--mobile.png)
+
 - <strong>2024/03/03</strong>
   - Added screenshots to this page
   - Restyled **[sMail](https://subeta.net/mail.php)**
@@ -509,6 +530,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Restyled **[Preferences](https://subeta.net/mail.php?act=prefs)** • [📷 screenshot desktop](screenshots/pages/interact__smail__preferences--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__preferences--mobile.png)
     - Restyled **[Edit Folders](https://subeta.net/mail.php?act=editfolders)** • [📷 screenshot desktop](screenshots/pages/interact__smail__edit_folders--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__smail__edit_folders--mobile.png)
   - Restyled the popup you get when you hover over users • [📷 screenshot](screenshots/hover_user.png)
+
 - <strong>2024/03/02</strong>
   - Added styling for editing a topic-name in the forums
   - Added styling for the buttons on the Oracle quest-page
@@ -521,6 +543,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Updated styling for sidebar-widget "The Oracle"
   - Updated styling for the Rift items so that they're left-aligned instead of centered
   - Updated styling for the "+ wishlist" and "- wishlist" hovers to add and remove items from your wishlist
+
 - <strong>2024/03/01</strong>
   - Added styling for minions to the [Pets-page](https://subeta.net/pets.php)
   - Fixed bookmark styling for the "Search Subeta" page (default styling had them all in italics)
@@ -534,10 +557,6 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
     - Updated "Special Currencies" widget
       - Added option `--display-sidebar-currency-headers` to hide the headers (Active, Seasonal and Events) for "Active Currencies"
   - Updated styling for the "+ wishlist" and "- wishlist" hovers to add and remove items from your wishlist
-</details>
-<!--------------------------------------------------------------------------------------------------------------------->
-<details>
-<summary>📅 2024 February</summary>
 
 - <strong>2024/02/29</strong>
   - Added option `--display-inventory-locked` to hide the info-text about locked items in [Inventory](https://subeta.net/inventory.php)
@@ -550,6 +569,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Updated styling for categories on [Wishlist](https://subeta.net/wishlists.php)
   - Updated styling on item detail-page in [Inventory](https://subeta.net/inventory.php)
   - Updated year indicators for yearly event shops
+
 - <strong>2024/02/28</strong>
   - Added option `--display-quest-intro` to hide intro-text of main quests
   - Added option `--display-yourshop-quickstock-delete` to hide delete-option completely in quick stock
@@ -570,6 +590,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Fixed link colours in forum signatures, so that they're the same as the rest of the signature text
   - Removed Chase's image and name on mobile in [Item Hunter](https://subeta.net/games/hunt.php)
   - Updated year indicators for yearly event shops
+
 - <strong>2024/02/27</strong>
   - Moved menu-item's dropdown in the main menu-bar to the side of the menu-items
   - Added options `--number-of-menu-pets`, `--number-of-menu-friends` and `--number-of-menu-shops` so you can pick how many items you want to see in the menu's
@@ -578,6 +599,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Added option `--display-forum-post-report` to hide report-button on posts
   - Added styling for shop-related random events (Morty or discount card)
   - Updated styling for comments (mainly reordered things a bit in the individual comments)
+
 - <strong>2024/02/26</strong>
   - Rewrote the page-specific section, for easier expansion considering the design patterns on the current Subeta website
   - Added option `--display-battle-training-intro` to hide Jim's intro-text in the Training Center
@@ -591,17 +613,20 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
   - Added option `--display-pet-zapper-adoption` to hide message about adopting a Qrykee or Yaherra at the Ultimate Pet Zapper
   - Added option `--display-yourshop-item-category` to hide category-search (in both the filter- and item-list) for Your Shop » Edit Items
   - Added option `--display-yourshop-sales-info` to hide info-text for Your Shop » Sales History
+
 - <strong>2024/02/25</strong>
   - Added extra styling for sidebar-widgets, inspired by [the Widget Overhaul](https://karlpiper.com/subeta/customcss/#Overhaul-All-Widgets) that [Sorcerer](https://subeta.net/users/Sorcerer) made
   - Added option `--display-sidebar-battlepet-buttons` to hide battlepet buttons in the sidebar, again inspired by Sorcerer's Widget Overhaul (see link above)
   - Added minor layout tweaks for Ruffie Raffle, after you get a doll (mostly mobile)
   - Fixed spacing for the Ruffie Raffle buttons, after you get a doll
+
 - <strong>2024/02/24</strong>
   - Added styling for [the special shops page](https://subeta.net/ss.php)
   - Added button-styles for the link back to Shinwa on quest-pages (after finishing the quest)
   - Fixed sidebar toggling so that content correctly displays over the whole page when you hide sidebar
   - Fixed events counter in the sidebar, so that it overflows correctly
   - Fixed click-area for floating items so that it's limited to the item itself
+
 - <strong>2024/02/23</strong>
   - Initial commit (rewrite of the original theme)
 </details>

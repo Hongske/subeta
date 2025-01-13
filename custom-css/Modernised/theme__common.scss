@@ -907,6 +907,10 @@ table {
             }
 
             .x-js-currency {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-currency-header, flex);
+                }
+
                 .widget-currency-header {
                     display: var(--display-sidebar-currency-headers, block) !important;
                     margin-top: 0;
@@ -941,29 +945,52 @@ table {
                 }
             }
 
-            .x-js-login,
-            .x-js-wardrobe,
-            .x-js-widget-codacave,
-            .x-js-widget-oracle {
-                z-index: 1;
-
+            .x-js-events {
                 .sidebar-widget-header {
-                    display: none;
+                    display: var(--display-sidebar-events-header, flex);
                 }
-            }
-
-            .x-js-wardrobe+.x-js-login,
-            .x-js-widget-codacave+.x-js-widget-oracle,
-            .x-js-widget-oracle+.x-js-widget-codacave {
-                margin-top: -2rem;
-                z-index: 0;
 
                 .sidebar-widget-contents {
-                    padding-top: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1em;
+
+                    h2 {
+                        display: flex;
+                        align-items: center;
+                        font-size: inherit;
+
+                        .event-remove-cat {
+                            order: -1;
+                            width: 1.5em !important;
+                            position: relative;
+                            top: -.125em;
+                            left: 0;
+                            background-image: none;
+                        }
+                    }
+
+                    p {
+                        position: relative;
+                        padding: 0;
+                        padding-top: .25em;
+                        padding-left: 2.125em;
+
+                        .event-remove {
+                            width: 1.5em !important;
+                            top: 0;
+                            left: .125em;
+                            background-image: none;
+                        }
+                    }
                 }
             }
 
             .x-js-login {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-login-header, flex);
+                }
+
                 a[href='/preferences.php?act=buffs'] {
                     margin-right: .25em;
 
@@ -974,6 +1001,10 @@ table {
             }
 
             .x-js-nav {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-nav-header, flex);
+                }
+
                 h3 {
                     margin-top: 0;
                     margin-bottom: .5em;
@@ -1005,6 +1036,10 @@ table {
             }
 
             .x-js-wardrobe {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-wardrobe-header, flex);
+                }
+
                 .sidebar-widget-contents {
                     height: auto;
                 }
@@ -1067,6 +1102,10 @@ table {
             }
 
             .x-js-widget-activepet {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-activepet-header, flex);
+                }
+
                 td a {
                     &[href^='/pet.php?act=desc']:after {
                         content: '\f31c';
@@ -1087,6 +1126,10 @@ table {
             }
 
             .x-js-widget-battlepet {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-battlepet-header, flex);
+                }
+
                 table[style='font-size:.9em; padding:0px;'] {
                     font-size: inherit !important;
                 }
@@ -1143,6 +1186,10 @@ table {
             }
 
             .x-js-widget-codacave {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-codacave-header, flex);
+                }
+
                 center {
                     display: flex;
                     align-items: center;
@@ -1167,6 +1214,10 @@ table {
             }
 
             .x-js-widget-feed {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-feed-header, flex);
+                }
+
                 .ui.feed {
                     display: flex;
                     flex-direction: column;
@@ -1214,7 +1265,17 @@ table {
                 }
             }
 
+            .x-js-widget-friends {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-friends-header, flex);
+                }
+            }
+
             .x-js-widget-forumsub {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-forumsub-header, flex);
+                }
+
                 .sidebar-widget-contents {
                     display: flex;
                     flex-direction: column;
@@ -1237,6 +1298,10 @@ table {
             }
 
             .x-js-widget-mainshop {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-mainshop-header, flex);
+                }
+
                 .sidebar-widget-contents {
                     display: flex;
                     flex-wrap: wrap;
@@ -1261,7 +1326,17 @@ table {
                 }
             }
 
+            .x-js-widget-melody {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-melody-header, flex);
+                }
+            }
+
             .x-js-widget-notepad {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-notepad-header, flex);
+                }
+
                 #x-notepad-content + br {
                     display: none;
                 }
@@ -1272,6 +1347,10 @@ table {
             }
 
             .x-js-widget-oracle {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-oracle-header, flex);
+                }
+
                 .text-center {
                     text-align: left !important;
                 }
@@ -1299,6 +1378,12 @@ table {
                 }
             }
 
+            .x-js-widget-quests {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-quests-header, flex);
+                }
+            }
+
             .x-js-widget-search,
             .x-js-widget-shopsearch {
                 form {
@@ -1314,6 +1399,30 @@ table {
                     border: 0;
                     border-radius: var(--button-radius);
                     outline: 0;
+                }
+            }
+
+            .x-js-widget-search {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-search-header, flex);
+                }
+            }
+
+            .x-js-widget-shopsearch {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-shopsearch-header, flex);
+                }
+            }
+
+            .x-js-widget-uProfit {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-uprofit-header, flex);
+                }
+            }
+
+            .x-js-widget-uShopList {
+                .sidebar-widget-header {
+                    display: var(--display-sidebar-ushoplist-header, flex);
                 }
             }
         }
@@ -1428,6 +1537,8 @@ table {
 /* Buttons -----------------------------------------------------------------------------------------------------------*/
 .awesome.blue.large,
 .awesome.default.small,
+.battle-menu + center .alert.alert-danger b a,
+.battle-menu + center .alert.alert-danger b + br + a,
 .btn,
 .button,
 .card-header a[href='/wishlists.php/new_category'],
@@ -1519,6 +1630,12 @@ input[type='submit'] {
             background-color: var(--red-dark) !important;
             color: var(--white) !important;
         }
+
+        /* TODO - Check if this works! */
+        --button-bg: var(--red);
+        --button-fg: var(--white);
+        --button-bg-hover: var(--red-dark);
+        --button-fg-hover: var(--white);
     }
 
     .alert-info & {

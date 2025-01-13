@@ -501,34 +501,6 @@
         }
     }
 
-    .xbattle-menu {
-    font-size: 0;
-
-    a {
-        font-size: var(--navbar-font-size);
-
-        &:nth-child(n + 3):before {
-            content: '|';
-            margin: 0 .25em;
-            color: var(--navbar-fg);
-            pointer-events: none;
-            cursor: default;
-        }
-
-        &[href$='scrolls.php'],
-        &[href$='newbies.php'],
-        &[href$='battleguide.php'],
-        &[href$='scores.php'],
-        &[href$='boss_prizes.php'],
-        &[href$='/forum/35/Battle'],
-        &[href$='/hustler/battle'] {
-            &, &:before {
-                display: none;
-            }
-        }
-    }
-}
-
     /* Subeta » Games » Battle » Content » Spend Exp » Pet Detail */
     + .container {
         padding: 0;
@@ -1179,6 +1151,7 @@
             font-size: var(--font-size-title);
         }
 
+
         /* Subeta » Games » Battle » Content » Training Center » Training done, another session? */
         img[src*='/pets/'] {
             max-width: 100% !important;
@@ -1313,6 +1286,25 @@
                 > div:first-child {
                     display: none;
                 }
+            }
+        }
+
+        /* Subeta » Games » Battle » Content » Challenga Opponent » On-going battle */
+        .alert.alert-danger {
+            b {
+                a {
+                    --button-bg: var(--green);
+                    --button-bg-hover: var(--green-dark);
+                }
+
+                + br + a {
+                    --button-bg: var(--red);
+                    --button-bg-hover: var(--red-dark);
+                }
+            }
+
+            br {
+                display: none;
             }
         }
 
@@ -1673,9 +1665,10 @@
 
                     select {
                         width: 100% !important;
-                        padding: .25em 0;
+                        padding: .25em;
                         border: 1px solid;
                         border-radius: var(--border-radius);
+                        background-color: var(--white);
                     }
 
                     p,
@@ -4099,9 +4092,6 @@
                         font-size: inherit;
                     }
                 }
-
-                /* TODO - Check if forum pulse actually still works?? */
-                /*#forum-pulse {}*/
             }
 
             /* Interact » Forums » Home » Boards */
@@ -8728,6 +8718,9 @@
                 [data-itemid^='261'] ~ .alert [href*='masquerade']:after {
                     content: ' (2024)';
                 }
+                [data-itemid^='265'] ~ .alert [href*='newyears']:after {
+                    content: ' (2025)';
+                }
             }
         }
     }
@@ -9494,16 +9487,14 @@
             }
 
             .post-body {
-                margin-bottom: 0;
+                margin-bottom: 1rem;
 
                 br {
                     display: block;
                 }
 
                 > br[clear='all'] {
-                    @media (max-device-width: 768px) {
-                        display: none;
-                    }
+                    display: none;
                 }
             }
 

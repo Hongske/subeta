@@ -810,6 +810,9 @@ table {
 #page #sidebar #sidebar-inner .sidebar-widget-contents .holiday.survival .holiday-kiss {
   padding: 0;
 }
+#page #sidebar #sidebar-inner .x-js-currency .sidebar-widget-header {
+  display: var(--display-sidebar-currency-header, flex);
+}
 #page #sidebar #sidebar-inner .x-js-currency .widget-currency-header {
   display: var(--display-sidebar-currency-headers, block) !important;
   margin-top: 0;
@@ -837,34 +840,50 @@ table {
 #page #sidebar #sidebar-inner .x-js-currency a {
   text-decoration: none;
 }
-#page #sidebar #sidebar-inner .x-js-login,
-#page #sidebar #sidebar-inner .x-js-wardrobe,
-#page #sidebar #sidebar-inner .x-js-widget-codacave,
-#page #sidebar #sidebar-inner .x-js-widget-oracle {
-  z-index: 1;
+#page #sidebar #sidebar-inner .x-js-events .sidebar-widget-header {
+  display: var(--display-sidebar-events-header, flex);
 }
-#page #sidebar #sidebar-inner .x-js-login .sidebar-widget-header,
-#page #sidebar #sidebar-inner .x-js-wardrobe .sidebar-widget-header,
-#page #sidebar #sidebar-inner .x-js-widget-codacave .sidebar-widget-header,
-#page #sidebar #sidebar-inner .x-js-widget-oracle .sidebar-widget-header {
-  display: none;
+#page #sidebar #sidebar-inner .x-js-events .sidebar-widget-contents {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
-#page #sidebar #sidebar-inner .x-js-wardrobe + .x-js-login,
-#page #sidebar #sidebar-inner .x-js-widget-codacave + .x-js-widget-oracle,
-#page #sidebar #sidebar-inner .x-js-widget-oracle + .x-js-widget-codacave {
-  margin-top: -2rem;
-  z-index: 0;
+#page #sidebar #sidebar-inner .x-js-events .sidebar-widget-contents h2 {
+  display: flex;
+  align-items: center;
+  font-size: inherit;
 }
-#page #sidebar #sidebar-inner .x-js-wardrobe + .x-js-login .sidebar-widget-contents,
-#page #sidebar #sidebar-inner .x-js-widget-codacave + .x-js-widget-oracle .sidebar-widget-contents,
-#page #sidebar #sidebar-inner .x-js-widget-oracle + .x-js-widget-codacave .sidebar-widget-contents {
-  padding-top: 1rem;
+#page #sidebar #sidebar-inner .x-js-events .sidebar-widget-contents h2 .event-remove-cat {
+  order: -1;
+  width: 1.5em !important;
+  position: relative;
+  top: -0.125em;
+  left: 0;
+  background-image: none;
+}
+#page #sidebar #sidebar-inner .x-js-events .sidebar-widget-contents p {
+  position: relative;
+  padding: 0;
+  padding-top: 0.25em;
+  padding-left: 2.125em;
+}
+#page #sidebar #sidebar-inner .x-js-events .sidebar-widget-contents p .event-remove {
+  width: 1.5em !important;
+  top: 0;
+  left: 0.125em;
+  background-image: none;
+}
+#page #sidebar #sidebar-inner .x-js-login .sidebar-widget-header {
+  display: var(--display-sidebar-login-header, flex);
 }
 #page #sidebar #sidebar-inner .x-js-login a[href="/preferences.php?act=buffs"] {
   margin-right: 0.25em;
 }
 #page #sidebar #sidebar-inner .x-js-login a[href="/preferences.php?act=buffs"] img {
   border-radius: 50%;
+}
+#page #sidebar #sidebar-inner .x-js-nav .sidebar-widget-header {
+  display: var(--display-sidebar-nav-header, flex);
 }
 #page #sidebar #sidebar-inner .x-js-nav h3 {
   margin-top: 0;
@@ -889,6 +908,9 @@ table {
 }
 #page #sidebar #sidebar-inner .x-js-nav li:nth-child(n+2):before {
   content: "|";
+}
+#page #sidebar #sidebar-inner .x-js-wardrobe .sidebar-widget-header {
+  display: var(--display-sidebar-wardrobe-header, flex);
 }
 #page #sidebar #sidebar-inner .x-js-wardrobe .sidebar-widget-contents {
   height: auto;
@@ -945,6 +967,9 @@ table {
 #page #sidebar #sidebar-inner .x-js-widget-battlepet br {
   display: none;
 }
+#page #sidebar #sidebar-inner .x-js-widget-activepet .sidebar-widget-header {
+  display: var(--display-sidebar-activepet-header, flex);
+}
 #page #sidebar #sidebar-inner .x-js-widget-activepet td a[href^="/pet.php?act=desc"]:after {
   content: "\f31c";
 }
@@ -956,6 +981,9 @@ table {
 }
 #page #sidebar #sidebar-inner .x-js-widget-activepet td a[href^="/pet.php?act=minion"]:after {
   content: "\f1b0";
+}
+#page #sidebar #sidebar-inner .x-js-widget-battlepet .sidebar-widget-header {
+  display: var(--display-sidebar-battlepet-header, flex);
 }
 #page #sidebar #sidebar-inner .x-js-widget-battlepet table[style="font-size:.9em; padding:0px;"] {
   font-size: inherit !important;
@@ -995,6 +1023,9 @@ table {
 #page #sidebar #sidebar-inner .x-js-widget-battlepet td a[href="/games/battle/scrolls.php"]:after {
   content: "\f70e";
 }
+#page #sidebar #sidebar-inner .x-js-widget-codacave .sidebar-widget-header {
+  display: var(--display-sidebar-codacave-header, flex);
+}
 #page #sidebar #sidebar-inner .x-js-widget-codacave center {
   display: flex;
   align-items: center;
@@ -1012,6 +1043,9 @@ table {
 #page #sidebar #sidebar-inner .x-js-widget-codacave img[src$="gem_blackcrystal.gif"],
 #page #sidebar #sidebar-inner .x-js-widget-codacave img[src$="gem_blackcrystal.gif"] + br {
   display: none;
+}
+#page #sidebar #sidebar-inner .x-js-widget-feed .sidebar-widget-header {
+  display: var(--display-sidebar-feed-header, flex);
 }
 #page #sidebar #sidebar-inner .x-js-widget-feed .ui.feed {
   display: flex;
@@ -1050,6 +1084,12 @@ table {
 #page #sidebar #sidebar-inner .x-js-widget-feed table.ui {
   display: none;
 }
+#page #sidebar #sidebar-inner .x-js-widget-friends .sidebar-widget-header {
+  display: var(--display-sidebar-friends-header, flex);
+}
+#page #sidebar #sidebar-inner .x-js-widget-forumsub .sidebar-widget-header {
+  display: var(--display-sidebar-forumsub-header, flex);
+}
 #page #sidebar #sidebar-inner .x-js-widget-forumsub .sidebar-widget-contents {
   display: flex;
   flex-direction: column;
@@ -1065,6 +1105,9 @@ table {
 }
 #page #sidebar #sidebar-inner .x-js-widget-forumsub .sidebar-widget-contents br {
   display: none;
+}
+#page #sidebar #sidebar-inner .x-js-widget-mainshop .sidebar-widget-header {
+  display: var(--display-sidebar-mainshop-header, flex);
 }
 #page #sidebar #sidebar-inner .x-js-widget-mainshop .sidebar-widget-contents {
   display: flex;
@@ -1085,11 +1128,20 @@ table {
 #page #sidebar #sidebar-inner .x-js-widget-mainshop .sidebar-widget-contents br {
   display: none;
 }
+#page #sidebar #sidebar-inner .x-js-widget-melody .sidebar-widget-header {
+  display: var(--display-sidebar-melody-header, flex);
+}
+#page #sidebar #sidebar-inner .x-js-widget-notepad .sidebar-widget-header {
+  display: var(--display-sidebar-notepad-header, flex);
+}
 #page #sidebar #sidebar-inner .x-js-widget-notepad #x-notepad-content + br {
   display: none;
 }
 #page #sidebar #sidebar-inner .x-js-widget-notepad ol, #page #sidebar #sidebar-inner .x-js-widget-notepad ul {
   margin-bottom: 0;
+}
+#page #sidebar #sidebar-inner .x-js-widget-oracle .sidebar-widget-header {
+  display: var(--display-sidebar-oracle-header, flex);
 }
 #page #sidebar #sidebar-inner .x-js-widget-oracle .text-center {
   text-align: left !important;
@@ -1112,6 +1164,9 @@ table {
 #page #sidebar #sidebar-inner .x-js-widget-oracle b br {
   display: none;
 }
+#page #sidebar #sidebar-inner .x-js-widget-quests .sidebar-widget-header {
+  display: var(--display-sidebar-quests-header, flex);
+}
 #page #sidebar #sidebar-inner .x-js-widget-search form,
 #page #sidebar #sidebar-inner .x-js-widget-shopsearch form {
   display: flex;
@@ -1126,6 +1181,18 @@ table {
   border: 0;
   border-radius: var(--button-radius);
   outline: 0;
+}
+#page #sidebar #sidebar-inner .x-js-widget-search .sidebar-widget-header {
+  display: var(--display-sidebar-search-header, flex);
+}
+#page #sidebar #sidebar-inner .x-js-widget-shopsearch .sidebar-widget-header {
+  display: var(--display-sidebar-shopsearch-header, flex);
+}
+#page #sidebar #sidebar-inner .x-js-widget-uProfit .sidebar-widget-header {
+  display: var(--display-sidebar-uprofit-header, flex);
+}
+#page #sidebar #sidebar-inner .x-js-widget-uShopList .sidebar-widget-header {
+  display: var(--display-sidebar-ushoplist-header, flex);
 }
 @media (min-device-width: 769px) {
   #page #content {
@@ -1218,6 +1285,8 @@ table {
 /* Buttons -----------------------------------------------------------------------------------------------------------*/
 .awesome.blue.large,
 .awesome.default.small,
+.battle-menu + center .alert.alert-danger b a,
+.battle-menu + center .alert.alert-danger b + br + a,
 .btn,
 .button,
 .card-header a[href="/wishlists.php/new_category"],
@@ -1255,6 +1324,14 @@ input[type=submit] {
 .awesome.default.small:link,
 .awesome.default.small:active,
 .awesome.default.small:visited,
+.battle-menu + center .alert.alert-danger b a,
+.battle-menu + center .alert.alert-danger b a:link,
+.battle-menu + center .alert.alert-danger b a:active,
+.battle-menu + center .alert.alert-danger b a:visited,
+.battle-menu + center .alert.alert-danger b + br + a,
+.battle-menu + center .alert.alert-danger b + br + a:link,
+.battle-menu + center .alert.alert-danger b + br + a:active,
+.battle-menu + center .alert.alert-danger b + br + a:visited,
 .btn,
 .btn:link,
 .btn:active,
@@ -1345,6 +1422,10 @@ input[type=submit]:visited {
 .awesome.blue.large:hover, .awesome.blue.large:focus,
 .awesome.default.small:hover,
 .awesome.default.small:focus,
+.battle-menu + center .alert.alert-danger b a:hover,
+.battle-menu + center .alert.alert-danger b a:focus,
+.battle-menu + center .alert.alert-danger b + br + a:hover,
+.battle-menu + center .alert.alert-danger b + br + a:focus,
 .btn:hover,
 .btn:focus,
 .button:hover,
@@ -1396,6 +1477,10 @@ input[type=submit]:focus {
 .awesome.blue.large.disabled, .awesome.blue.large:disabled,
 .awesome.default.small.disabled,
 .awesome.default.small:disabled,
+.battle-menu + center .alert.alert-danger b a.disabled,
+.battle-menu + center .alert.alert-danger b a:disabled,
+.battle-menu + center .alert.alert-danger b + br + a.disabled,
+.battle-menu + center .alert.alert-danger b + br + a:disabled,
 .btn.disabled,
 .btn:disabled,
 .button.disabled,
@@ -1475,6 +1560,11 @@ input[type=submit]:disabled {
 .btn.btn-danger {
   background-color: var(--red) !important;
   color: var(--white) !important;
+  /* TODO - Check if this works! */
+  --button-bg: var(--red);
+  --button-fg: var(--white);
+  --button-bg-hover: var(--red-dark);
+  --button-fg-hover: var(--white);
 }
 .btn.btn-danger:hover, .btn.btn-danger:focus {
   background-color: var(--red-dark) !important;
