@@ -9568,7 +9568,8 @@
                 margin-top: -.5em;
                 border: 0 !important;
                 border-radius: var(--border-radius);
-                background-color: var(--white) !important;
+                background-color: var(--canvas-bg) !important;
+                color: var(--canvas-fg);
                 line-height: normal !important;
             }
 
