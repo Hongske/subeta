@@ -168,7 +168,7 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
       - Topics you haven't replied on have their text in your theme's accent colour
     - Restyled **Topics** • [📷 screenshot desktop](screenshots/pages/interact__forums__home__topic--desktop.png) • [📷 screenshot mobile](screenshots/pages/interact__forums__home__topic--mobile.png)
       - Removed the ping- and report-buttons on own posts
-      - Removed user avatars, leashed pets and options to like avatar/post
+      - Removed leashed pets
       - Added option `--display-forum-avatar` to show the avatar again (in the form of a headshot)
       - Added option `--display-forum-post-report` to hide the report-button on posts
       - Added option `--display-forum-post-image` to hide post images
@@ -344,14 +344,18 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
+- <strong>2025/01/25</strong>
+  - Added a dark mode option (see the **[✨theme code generator✨](theme_code_generator.html)**)
+  - Added the option to like the forum post and its avatar back
+  - Added the option to hide the above
+  - Optimised bits and pieces
+
 - <strong>2025/01/13</strong>
   - Bugfixed post spacing in Firefox
   - Restyled the warning for on-going battles
   - Restyled event-widget in the sidebar
   - Added options to hide widget headings in the sidebar
   - Added 2025's year indicators for New Years items
-  <!-- TODO - Updated layout for battling -->
-  <!-- TODO - Added options for hiding battle stuff -->
 
 <br>
 
