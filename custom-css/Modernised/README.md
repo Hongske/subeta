@@ -344,13 +344,14 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
-- 2025/01/25
+- <strong>2025/01/25</strong>
   - Added a dark mode option (still experimental tho)
   - Added the option to like the forum post and its avatar back
   - Added the option to hide the above
   - Optimised bits and pieces
 
-- 2025/01/13
+
+- <strong>2025/01/13</strong>
   - Bugfixed post spacing in Firefox
   - Restyled the warning for on-going battles
   - Restyled event-widget in the sidebar
