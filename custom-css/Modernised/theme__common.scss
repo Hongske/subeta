@@ -225,9 +225,13 @@ label,
 select,
 textarea {
     margin: 0;
-    background-color: var(--canvas-bg);
     color: inherit;
     font-size: inherit !important;
+}
+
+select,
+textarea {
+    background-color: var(--canvas-bg);
 }
 
 input[type='checkbox'],
