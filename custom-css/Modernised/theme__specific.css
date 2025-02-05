@@ -2434,7 +2434,7 @@
         }
 
         /* Subeta » News » Content */
-        + .row.w-100.mx-auto {
+        ~ .row.w-100.mx-auto {
             display: flex;
             flex-direction: column-reverse;
 
