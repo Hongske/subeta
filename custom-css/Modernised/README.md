@@ -344,6 +344,11 @@ To install the theme, please use the **[✨theme code generator✨](theme_code_g
 
 ## ⭐ Changelog
 
+- <strong>2025/02/06</strong>
+  - Bugfixed the reply box covering the topic in threads that only have 1 page
+  - Bugfixed post spacing in general
+
+
 - <strong>2025/01/25</strong>
   - Added a dark mode option (still experimental tho)
   - Added the option to like the forum post and its avatar back

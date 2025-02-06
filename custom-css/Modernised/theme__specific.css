@@ -9467,14 +9467,6 @@
 
             .post-body {
                 margin-bottom: 1rem;
-
-                br {
-                    display: block;
-                }
-
-                > br[clear='all'] {
-                    display: none;
-                }
             }
 
             .post-editable {
@@ -9630,6 +9622,7 @@
                 }
 
                 + center {
+                    display: block;
                     margin-bottom: 232px;
 
                     @media (max-device-width: 768px) {
